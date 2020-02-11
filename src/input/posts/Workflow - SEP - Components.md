@@ -1,11 +1,15 @@
 ---
 title: Workflow - SEP - Components
-# tags:
-#     - 
+tags:
+    - Workflow
+    - SEP
+    - Component
 author: AlexHedley
 # description: 
 articleId: 3769501
 published: 2018-05-09
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-sep-components?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ![QuarantineMachine](images\QuarantineMachine.png)

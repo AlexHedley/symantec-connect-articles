@@ -1,10 +1,14 @@
 ---
 title: Workflow - Tools
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Tools
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-05-03
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-tools?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 Symantec Workflow comes with a number of tools.

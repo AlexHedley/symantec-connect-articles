@@ -1,10 +1,13 @@
 ---
 title: SMP - Patch Management - Associated Bulletins
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-04-19
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/groups/viewdocument/smp-patch-management-associated?CommunityKey=ec843fbd-bc71-48c5-bb12-c9d8042d7cb0&tab=librarydocuments
 ---
 
 I’m was working on a Patch Management Workflow and wanting to get the bulletins contained in a Policy created from the Patch Web Service.

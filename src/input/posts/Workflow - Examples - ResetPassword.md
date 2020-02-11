@@ -1,11 +1,14 @@
 ---
 title: Workflow - Examples - ResetPassword
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Examples
 author: AlexHedley
 # description: 
 articleId: 3812001
 published: 2019-02-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-examples-resetpassword?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## Reset Password

@@ -1,10 +1,14 @@
 ---
 title: ServiceDesk - Software Request Process - Hidden Reports
-# tags:
-#     - 
+tags:
+    - ServiceDesk
+    - Software Request Process
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-09-07
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-software-request-proc?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 With the new "Software Request Process" in [ServiceDesk](https://www.symantec.com/products/service-desk) 8.1 there have been some new [Reports](https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=24530d5f-01a3-464d-846b-01482ee0c85e&amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;tab=librarydocuments) added to the SMP.

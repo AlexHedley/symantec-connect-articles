@@ -1,11 +1,13 @@
 ---
 title: SEP - Scripts
-# tags:
-#     - 
+tags:
+    - SEP
 author: AlexHedley
 # description: 
 articleId: 3850861
 published: 2019-09-03
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/sep-scripts?CommunityKey=1ecf5f55-9545-44d6-b0f4-4e4a7f5f5e68&tab=librarydocuments
 ---
 
 Following on from an excellent Article '[Handy SQL Queries for SEPM v14](https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=1a8ba0b4-1d5d-4850-8bd0-3d5a1abe7a24&amp;CommunityKey=1ecf5f55-9545-44d6-b0f4-4e4a7f5f5e68&amp;tab=librarydocuments)' from [Tony Sutton](https://www.symantec.com/connect/user/tony-sutton) I thought it would be useful to create a site to collate all this information in an easy to use format.

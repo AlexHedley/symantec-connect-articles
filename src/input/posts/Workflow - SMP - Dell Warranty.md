@@ -1,10 +1,14 @@
 ---
 title: Workflow - SMP - Dell Warranty
-# tags:
-#     - 
+tags:
+    - Workflow
+    - SMP
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-07-22
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-smp-dell-warranty?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I'm going to explain how to use the new DELL API to get Warranty information and add it to your Assets in the SMP.

@@ -1,10 +1,13 @@
 ---
 title: SMP - Map AD Status from AD Import
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-10-08
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-map-ad-status-from-ad-import?CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&tab=librarydocuments
 ---
 
 In this Article I'm going to show you how to extend the User Resource to include extra properties you can retrieve from the AD Import to gain extra information about your user base. We are going to map the AD Status value (aka UserAccountControl)

@@ -1,10 +1,14 @@
 ---
 title: ServiceDesk - API - Configuring
-# tags:
-#     - 
+tags:
+    - ServiceDesk
+    - API
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-10-01
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-api-configuring?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 - [Index](https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d54b726c-cf91-42f3-a0fe-436a3d559c14&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments)

@@ -1,13 +1,16 @@
 ---
 title: Workflow
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-04-27
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
-> ![](images\article-3767641-files_Workflow.png) Workflow Solution is used to create and implement automated processes that link together people, process, and technology, including the ability to create enduser forms and communicate between disparate technologies.
+> ![Workflow](images\Workflow.png) Workflow Solution is used to create and implement automated processes that link together people, process, and technology, including the ability to create enduser forms and communicate between disparate technologies.
 
 Here is a list of links to useful Workflow Articles.
   

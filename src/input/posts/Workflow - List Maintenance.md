@@ -1,10 +1,13 @@
 ---
 title: Workflow - List Maintenance
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-08-19
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-list-maintenance?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I will explain how to maintain a list using Workflow components.

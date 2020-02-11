@@ -1,11 +1,14 @@
 ---
 title: Workflow - Examples - TerminateUser
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Examples
 author: AlexHedley
 # description: 
 articleId: 3812011
 published: 2019-02-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/search?executeSearch=true&SearchTerm=Workflow%20-%20Examples%20-%20TerminateUser&l=1
 ---
 
 ## Terminate User

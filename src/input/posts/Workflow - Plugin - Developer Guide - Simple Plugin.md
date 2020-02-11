@@ -1,10 +1,15 @@
 ---
 title: Workflow - Plugin - Developer Guide - Simple Plugin
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Plugin
+    - Developer Guide
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-05-18
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-plugin-developer-guide-4?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I'm going to explain how to create a simple Plugin with the basic properties and show some infomation about the current Project.

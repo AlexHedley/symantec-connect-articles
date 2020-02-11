@@ -1,10 +1,15 @@
 ---
 title: Workflow - Component - Developer Guide - Globals
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Component
+    - Developer Guide
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-11-09
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-component-developer-gu-1?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I'm going to explain how to create a Global variable and add it to the Project when a Component is added into Workflow.

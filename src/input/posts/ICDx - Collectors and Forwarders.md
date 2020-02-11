@@ -1,11 +1,13 @@
 ---
 title: ICDx - Collectors and Forwarders
-# tags:
-#     - 
+tags:
+    - ICDx
 author: AlexHedley
 # description: 
 articleId: 3865501
 published: 2019-12-09
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/icdx-collectors-and-forwarders?CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&tab=librarydocuments
 ---
 
 ## ![ICDx Logo](images\ICDx-logo-small.png) ICDx

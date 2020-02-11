@@ -1,10 +1,13 @@
 ---
 title: ICT Documentation
-# tags:
-#     - 
+tags:
+    - ICT
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-11-28
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/icdx-documentation?CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&tab=librarydocuments
 ---
 
 ## ![ICT Logo](images\ictimage100px.png)

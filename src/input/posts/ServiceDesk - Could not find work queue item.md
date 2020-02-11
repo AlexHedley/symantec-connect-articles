@@ -1,10 +1,13 @@
 ---
 title: ServiceDesk - Could not find work queue item
-# tags:
-#     - 
+tags:
+    - ServiceDesk
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-10-29
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-could-not-find-work-q?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 You many see the following error message when you try and work a Task against a Ticket.

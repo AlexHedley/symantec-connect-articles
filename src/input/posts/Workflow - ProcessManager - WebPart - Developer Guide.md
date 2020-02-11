@@ -1,10 +1,16 @@
 ---
 title: Workflow - ProcessManager - WebPart - Developer Guide
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Process Manager
+    - WebPart
+    - Developer Guide
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-07-11
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-processmanager-webpart-1?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this set of Articles I'm going to explain how to create a simple webpart for use within ![Workflow](images\Workflow.png) Workflow / ServiceDesk ProcessManager.

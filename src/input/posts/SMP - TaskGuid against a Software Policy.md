@@ -1,10 +1,13 @@
 ---
 title: SMP - TaskGuid against a Software Policy
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-04-19
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-taskguid-against-a-software-p?CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&tab=librarydocuments
 ---
 
 Whilst working with Software Delivery in the SMP I needed some information that was only available in the XML of the Policy itself.

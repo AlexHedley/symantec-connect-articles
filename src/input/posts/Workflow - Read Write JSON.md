@@ -1,10 +1,13 @@
 ---
 title: Workflow - Read Write JSON
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-05-16
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-read-write-json?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 There was a question on the Forums from @[Lark](https://www-secure.symantec.com/connect/user/lark) about Reading/Writing JSON in Workflow

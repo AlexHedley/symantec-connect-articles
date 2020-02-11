@@ -1,11 +1,14 @@
 ---
 title: Workflow - Examples
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Examples
 author: AlexHedley
 # description: 
 articleId: 3811961
 published: 2019-02-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-examples?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ![](images\Workflow.png) Workflow comes with a set of Examples to get to grips with how to work with the Designer and allow you to run those common scenarios in your company.

@@ -1,10 +1,14 @@
 ---
 title: Workflow - Tools - License Status Manager
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Tools
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-01-23
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-tools-license-status-m?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 Table Of Contents

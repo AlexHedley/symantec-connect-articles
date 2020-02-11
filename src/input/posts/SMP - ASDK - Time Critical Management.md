@@ -1,10 +1,14 @@
 ---
 title: SMP - ASDK - Time Critical Management
-# tags:
-#     - 
+tags:
+    - SMP
+    - ASDK
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-09-29
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-asdk-time-critical-manageme-1?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 IT Management Suite (ITMS) 8.5 Documentation  

@@ -1,10 +1,15 @@
 ---
 title: Workflow - SMP - ASDK - Asset Ownership
-# tags:
-#     - 
+tags:
+    - Workflow
+    - SMP
+    - ASDK
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-10-09
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/groups/viewdocument/workflow-smp-asdk-asset-owner?CommunityKey=f076336e-1f97-4c5f-b14c-73b1bcb3af7c&tab=librarydocuments
 ---
 
 In this Article I'm going to explain how Asset Ownership is controlled in the ![smp](images\smp.png) SMP and how to maintain it using ![Workflow](images\Workflow.png) Workflow and the ASDK.

@@ -1,10 +1,15 @@
 ---
 title: Workflow - Plugin - Developer Guide - Deploy
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Plugin
+    - Developer Guide
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-07-11
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-plugin-developer-guide?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I'm going to explain how to deploy the Plugin to a ![Workflow](images\Workflow.png) Workflow server.

@@ -1,10 +1,16 @@
 ---
 title: Workflow - ProcessManager - WebPart - Developer Guide - Deploy
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Process Manager
+    - WebPart
+    - Developer Guide
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-07-11
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-processmanager-webpart-6?CommunityKey=a067504a-9710-492c-bbef-18d2ed6b44af&tab=librarydocuments
 ---
 
 In this Article I'm going to explain how to deploy a WebPart to your Process Manager.

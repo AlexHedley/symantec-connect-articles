@@ -1,10 +1,15 @@
 ---
 title: Workflow - SEP 14 - Components
-# tags:
-#     - 
+tags:
+    - Workflow
+    - SEP
+    - Component
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-03-29
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-sep-14-components?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 With the ![Workflow](images\Workflow.png) WF 8.1 RU5 release a new set of ![SEP Task Tray](images\SEPTaskTray.png) SEP 14 Components were added to the Solution.
@@ -33,7 +38,7 @@ These will show in your Component list under
 Symantec | SEP14
   
 ![SEP 14 Components](images\SEP14Components.png)
-  
+
 There are then a number of sub groups containing Components.
   
 Admin

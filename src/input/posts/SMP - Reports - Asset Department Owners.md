@@ -1,11 +1,13 @@
 ---
 title: SMP - Reports - Asset Department Owners
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
 articleId: 3814431
 published: 2019-01-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-reports-asset-department-ow?CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&tab=librarydocuments
 ---
 
 ## ![SMP](images\smp.png) SMP

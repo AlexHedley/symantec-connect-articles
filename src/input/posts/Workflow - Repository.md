@@ -1,10 +1,13 @@
 ---
 title: Workflow - Repository
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-12-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-repository-1?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I'm going to show you how to use the Repository in [Workflow](https://support.symantec.com/en_US/defaultProductLanding.56410.html).

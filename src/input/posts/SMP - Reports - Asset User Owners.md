@@ -1,11 +1,13 @@
 ---
 title: SMP - Reports - Asset User Owners
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
 articleId: 3814441
 published: 2019-01-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/groups/viewdocument/smp-reports-asset-user-owners-1?CommunityKey=d89b2b1b-1b1c-40c7-88de-8a8a52ebf2a5&tab=librarydocuments
 ---
 
 ## ![SMP](images\smp.png) SMP

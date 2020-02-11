@@ -1,10 +1,15 @@
 ---
 title: Workflow - Integration - Generators - DTD Generator
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Integration
+    - Generators
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-09-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/search?executeSearch=true&SearchTerm=Workflow%20-%20Integration%20-%20Generators%20-%20DTD%20Generator&l=1
 ---
 
 - [Workflow - Integration - Generators](https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=79ea49b7-0c3c-49a1-b6ee-66404e1c4477&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments)

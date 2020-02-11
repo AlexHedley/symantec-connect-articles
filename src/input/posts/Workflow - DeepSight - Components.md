@@ -1,11 +1,15 @@
 ---
 title: Workflow - DeepSight - Components
-# tags:
-#     - 
+tags:
+    - Workflow
+    - DeepSight
+    - Component
 author: AlexHedley
 # description: 
 articleId: 3768101
 published: 2018-05-01
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-deepsight-components?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## DeepSight™ Intelligence

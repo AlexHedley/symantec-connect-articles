@@ -1,10 +1,14 @@
 ---
 title: Workflow - Plugins - Export Translation Strings Plugin
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Plugin
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-05-24
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-plugins-export-transla?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## Export Translation Strings Plugin

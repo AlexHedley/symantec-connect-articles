@@ -1,11 +1,13 @@
 ---
 title: SMP - Resource Target - Operations
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
 articleId: 3808001
 published: 2018-11-29
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-resource-target-operations?CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&tab=librarydocuments
 ---
 
 ## ![SMP](images\smp.png) SMP

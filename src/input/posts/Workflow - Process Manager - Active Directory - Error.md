@@ -9,6 +9,8 @@ author: AlexHedley
 # description:
 # articleId:  
 published: 2019-04-09
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-process-manager-active?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 You may notice that Active Directory isn't pulling in new Users or updating existing ones on your Schedule.

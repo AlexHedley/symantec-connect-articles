@@ -1,10 +1,14 @@
 ---
 title: ServiceDesk - Software Request Process - WFs
-# tags:
-#     - 
+tags:
+    - ServiceDesk
+    - Software Request Process
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-10-10
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-software-request-proc-5?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this series of Articles I'm going to explain how the new **Software Request Process** works in [ServiceDesk](https://www.symantec.com/products/service-desk) 8.1

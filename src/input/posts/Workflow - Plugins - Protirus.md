@@ -1,10 +1,14 @@
 ---
 title: Workflow - Plugins - Protirus
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Plugin
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-12-06
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-plugins-protirus?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 Symantec ![Workflow](images\Workflow.png) Workflow Manager has a number of Plugins available from install.

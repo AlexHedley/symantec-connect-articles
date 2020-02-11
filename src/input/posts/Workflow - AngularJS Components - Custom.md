@@ -1,10 +1,14 @@
 ---
 title: Workflow - AngularJS Components - Custom
-# tags:
-#     - 
+tags:
+    - Workflow
+    - AngularJS
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-09-07
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-angularjs-components-c?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I will run through how to use some custom [AngularJS](https://angular.io/) javascript and css to add anything to a form.

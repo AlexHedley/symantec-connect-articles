@@ -1,10 +1,14 @@
 ---
 title: SMP - ASDK - Web Service - Update Resource Target
-# tags:
-#     - 
+tags:
+    - SMP
+    - ASDK
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-10-12
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-asdk-web-service-update-r-1?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 I raised an [Idea](https://www.symantec.com/connect/endpoint-management/ideas) on connect - [SMP - ASDK - Web Service - InvalidateTargetMembership](https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=ecf4247c-6459-4fee-ae38-8528124c4c00&amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;tab=librarydocuments) asking for a way to programatically update a Target in an efficient way.

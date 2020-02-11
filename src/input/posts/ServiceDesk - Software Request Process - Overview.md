@@ -1,10 +1,14 @@
 ---
 title: ServiceDesk - Software Request Process - Overview
-# tags:
-#     - 
+tags:
+    - ServiceDesk
+    - Software Request Process
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-10-10
+# symantecUrl:
+broadcomUrl: 
 ---
 
 In this Article I'm going to explain how the new **Software Request Process** works in [ServiceDesk](https://www.symantec.com/products/service-desk) 8.1.

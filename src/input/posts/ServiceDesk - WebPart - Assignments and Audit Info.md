@@ -1,10 +1,14 @@
 ---
 title: ServiceDesk - WebPart - Assignments and Audit Info
-# tags:
-#     - 
+tags:
+    - ServiceDesk
+    - WebPart
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-06-05
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-webpart-assignments?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 | Version | SD 7.6 |

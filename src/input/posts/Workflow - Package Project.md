@@ -1,11 +1,13 @@
 ---
 title: Workflow - Package Project
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
 articleId: 3767451
 published: 2018-04-26
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-package-project?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ### Package Project

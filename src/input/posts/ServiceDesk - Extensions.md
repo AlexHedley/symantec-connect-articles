@@ -1,10 +1,13 @@
 ---
 title: ServiceDesk - Extensions
-# tags:
-#     - 
+tags:
+    - ServiceDesk
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-11-09
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-extensions?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## ServiceDesk

@@ -1,10 +1,14 @@
 ---
 title: Workflow - AngularJS Components - Page Source
-# tags:
-#     - 
+tags:
+    - Workflow
+    - AngularJS
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-09-07
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-angularjs-components-p?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I will run through the differences in the Page Source when you add [AngularJS](https://angular.io/) to your Web Forms.

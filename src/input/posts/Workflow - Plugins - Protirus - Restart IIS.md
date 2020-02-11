@@ -1,10 +1,14 @@
 ---
 title: Workflow - Plugins - Protirus - Restart IIS
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Plugin
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-12-06
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-plugins-protirus-res-1?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## Restart IIS

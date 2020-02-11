@@ -1,10 +1,14 @@
 ---
 title: Workflow ServiceDesk - Projects
-# tags:
-#     - 
+tags:
+    - Workflow
+    - ServiceDesk
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-05-08
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-servicedesk-projects?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 Here is a list of [Workflow](https://www.symantec.com/connect/product/workflow-solution-0)/[ServiceDesk](https://www.symantec.com/connect/product/servicedesk) Projects not included in the base install of WF/SD.

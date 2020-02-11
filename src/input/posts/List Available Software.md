@@ -1,10 +1,14 @@
 ---
 title: List Available Software
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Component
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-10-06
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/list-available-software?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ### Component definition

@@ -1,15 +1,18 @@
 ---
 title: Using a User Defined Type with the Script Component - Workflow
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-05-21
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/using-a-user-defined-type-with-the?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I will show you how to use a custom data type within the Script Component.
   
-So you've created a "User Defined Type" from the **Authoring** section in a ![Int.png](images\article-3419801-files_Int.png) Workflow Integration Component
+So you've created a "User Defined Type" from the **Authoring** section in a ![Int.png](images\Int.png) Workflow Integration Component
   
 ![Create Generator (UDT).png](images\Create%2520Generator%2520%2528UDT%2529.png)
   
@@ -95,4 +98,4 @@ Obviously you can do more complex things than just getting a single Property but
 
 * * *
 
-![Protirus.png](images\article-3419801-files_Protirus.png)
+![Protirus.png](images\Protirus.png)

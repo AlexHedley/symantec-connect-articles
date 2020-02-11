@@ -1,11 +1,15 @@
 ---
 title: Workflow - CCS - Components
-# tags:
-#     - 
+tags:
+    - Workflow
+    - CCS
+    - Component
 author: AlexHedley
 # description: 
 articleId: 3767741
 published: 2018-04-27
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-ccs-components?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ### Symantec Control Compliance Suite

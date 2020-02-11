@@ -1,10 +1,13 @@
 ---
 title: SMP - Altiris Agent - Send Notification Task
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-04-05
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/groups/viewdocument/smp-altiris-agent-send-notifica-1?CommunityKey=2eae875e-f73e-4358-8452-7bb8f7f27f59&tab=librarydocuments
 ---
 
 In this Article I'm going to explain how to send a message to the Altiris Agent via a Task, this is possible due to a method within the Agent called **DisplayBalloon**.

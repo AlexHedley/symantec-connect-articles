@@ -1,10 +1,14 @@
 ---
 title: Workflow - REST - Response Header
-# tags:
-#     - 
+tags:
+    - Workflow
+    - REST
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-02-09
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-rest-response-header?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 A question from [@epkpej](https://www.symantec.com/connect/user/epkpej) was asked on another of my Articles

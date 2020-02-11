@@ -1,10 +1,13 @@
 ---
 title: Workflow - Tag Finder
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-06-10
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-tag-finder?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this article I will show you how to use the 'Extract Text By Pattern' component in the ![Forms (Web).png](images\Forms%2520%2528Web%2529.png) Forms (Web) Project Type

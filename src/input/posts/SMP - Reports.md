@@ -1,11 +1,13 @@
 ---
 title: SMP - Reports
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
 # articleId: 
 published: 2019-01-12
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/groups/viewdocument/smp-reports-1?CommunityKey=d89b2b1b-1b1c-40c7-88de-8a8a52ebf2a5&tab=librarydocuments
 ---
 
 ## Reports

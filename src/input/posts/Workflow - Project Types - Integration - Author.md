@@ -1,10 +1,13 @@
 ---
 title: Workflow - Project Types - Integration - Author
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-03-16
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-project-types-integrat?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 Workflow Projects allow you to change meta data like the "Name", "Author mail" and "Description" within the Project editor.

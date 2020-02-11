@@ -1,10 +1,13 @@
 ---
 title: Workflow - Grid View Column Cell Colouring
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-07-15
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-grid-view-column-cell-co?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this article I will show you how to change the colour of a cell (in a given column) in a ![Grid](images\Grid.png) Grid Component in the ![Forms (Web).png](images\Forms%2520%2528Web%2529.png) Forms (Web) Project Type.

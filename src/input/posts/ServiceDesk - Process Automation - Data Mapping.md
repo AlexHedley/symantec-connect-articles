@@ -1,11 +1,14 @@
 ---
 title: ServiceDesk - Process Automation - Data Mapping
-# tags:
-#     - 
+tags:
+    - ServiceDesk
+    - Process Automation
 author: AlexHedley
 # description: 
 articleId: 3733071
 published: 2018-05-03
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-process-automation-3?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 Table Of Contents

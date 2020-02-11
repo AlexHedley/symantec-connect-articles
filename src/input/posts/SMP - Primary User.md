@@ -1,10 +1,13 @@
 ---
 title: SMP - Primary User
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-09-27
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/communities/community-home/librarydocuments/viewdocument?DocumentKey=18f40e96-7044-451b-aba7-66f330053d92&CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 The Symantec Management Agent (SMA) calculates the Primary User based on the length of time a user has been logged onto a machine.

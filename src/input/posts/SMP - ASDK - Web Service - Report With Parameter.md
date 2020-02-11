@@ -1,11 +1,14 @@
 ---
 title: SMP - ASDK - Web Service - Report With Parameter
-# tags:
-#     - 
+tags:
+    - SMP
+    - ASDK
 author: AlexHedley
 # description: 
 articleId: 3841861
 published: 2019-07-11
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-asdk-web-service-report-w?CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&tab=librarydocuments
 ---
 
 There's times you wish to get data from the SMP but don't have access to the DB.

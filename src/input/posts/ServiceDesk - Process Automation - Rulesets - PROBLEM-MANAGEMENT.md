@@ -1,10 +1,15 @@
 ---
 title: ServiceDesk - Process Automation - Rulesets - PROBLEM-MANAGEMENT
-# tags:
-#     - 
+tags:
+    - ServiceDesk
+    - Process Automation
+    - Rulesets
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-05-03
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-process-automation-10?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 Admin | Process Automation | [Choose Service] | Service Dashboard

@@ -1,10 +1,14 @@
 ---
 title: ServiceDesk - Software Request Process - Reports
-# tags:
-#     - 
+tags:
+    - ServiceDesk
+    - Software Request Process
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-08-30
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-software-request-proc-6?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 With the new "Software Request Process" in [ServiceDesk](https://www.symantec.com/products/service-desk) 8.1 there have been some new Reports added to the SMP.

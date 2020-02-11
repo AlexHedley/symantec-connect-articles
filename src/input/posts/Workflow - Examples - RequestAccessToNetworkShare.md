@@ -1,11 +1,14 @@
 ---
 title: Workflow - Examples - RequestAccessToNetworkShare
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Examples
 author: AlexHedley
 # description: 
 articleId: 3811981
 published: 2019-02-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-examples-requestaccess?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## Request Access To Network Share

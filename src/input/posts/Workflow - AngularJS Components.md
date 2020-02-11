@@ -1,10 +1,14 @@
 ---
 title: Workflow - AngularJS Components
-# tags:
-#     - 
+tags:
+    - Workflow
+    - AngularJS
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-09-04
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-angularjs-components?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this series of Articles I will run through using the new AngularJS Components in ![Workflow](images\Workflow.png) Workflow.

@@ -5,7 +5,10 @@ tags:
     - Error
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-07-17
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-theme-editor-control-s?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 I was recently working with the Theme Editor and got the following error.

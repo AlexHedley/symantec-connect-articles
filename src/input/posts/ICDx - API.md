@@ -1,11 +1,14 @@
 ---
 title: ICDx - API
-# tags:
-#     - 
+tags:
+    - ICDx
+    - API
 author: AlexHedley
 # description: 
 articleId: 3865491
 published: 2019-12-09
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/icdx-api?CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&tab=librarydocuments
 ---
 
 ## ![ICDx Logo](images\ICDx-logo-small.png) ICDx

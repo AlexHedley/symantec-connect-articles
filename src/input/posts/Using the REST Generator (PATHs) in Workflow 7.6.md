@@ -1,10 +1,16 @@
 ---
 title: Using the REST Generator (PATHs) in Workflow 7.6
-# tags:
-#     - 
+tags:
+    - Workflow
+    - REST
+    - 7.6
+    - Mobility Suite
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-01-05
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/using-the-rest-generator-paths-in?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I will explain how to use the REST Generator (PATHs) within [Workflow](http://www.symantec.com/connect/workflow-servicedesk) 7.6.

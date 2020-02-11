@@ -1,10 +1,15 @@
 ---
 title: SMP - ASDK - 8.5
-# tags:
-#     - 
+tags:
+    - SMP
+    - ASDK
+    - 8.5
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2019-06-04
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-asdk-85?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 With the release of ITMS 8.5 there were some new Web Service methods added to the following:

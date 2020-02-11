@@ -1,10 +1,14 @@
 ---
 title: Workflow - Plugins - Reset Cache
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Plugin
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-05-23
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-plugins-reset-cache?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## Reset Cache

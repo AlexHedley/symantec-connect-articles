@@ -1,10 +1,14 @@
 ---
 title: SMP - ASDK
-# tags:
-#     - 
+tags:
+    - SMP
+    - ASDK
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2019-06-04
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-asdk?CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&tab=librarydocuments
 ---
 
 > The Administrator Software Development Kit (ASDK) is a set of application programming interfaces (APIs) that access the functionality of Notification Server (NS), Task Server and various NS solutions.

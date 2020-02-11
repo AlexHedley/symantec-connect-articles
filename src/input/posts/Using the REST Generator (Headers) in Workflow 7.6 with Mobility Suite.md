@@ -1,10 +1,16 @@
 ---
 title: Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite
-# tags:
-#     - 
+tags:
+    - Workflow
+    - REST
+    - 7.6
+    - Mobility Suite
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-05-06
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/using-the-rest-generator-response?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I'm going to show you how to use HEADERS in the REST Component.

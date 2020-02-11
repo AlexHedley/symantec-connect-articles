@@ -1,10 +1,13 @@
 ---
 title: ServiceDesk - Classification
-# tags:
-#     - 
+tags:
+    - ServiceDesk
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-02-29
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-classification?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I'm going to explain a way of getting the Classifications from the Process Manager db for use within your Workflows.

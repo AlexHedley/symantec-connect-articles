@@ -1,10 +1,13 @@
 ---
 title: Workflow - Cookie (using code) - Web App
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-06-05
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-cookie-using-code-we?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this article I will show you how to create and retrieve Cookies in the ![App.png](images\App.png)Web App Project Type

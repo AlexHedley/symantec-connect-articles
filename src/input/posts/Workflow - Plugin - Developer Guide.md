@@ -1,10 +1,15 @@
 ---
 title: Workflow - Plugin - Developer Guide
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Plugin
+    - Developer Guide
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-05-18
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-plugin-developer-guide-5?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this set of Articles I'm going to explain how to create a Plugin for use within ![Workflow](images\Workflow.png) Workflow.

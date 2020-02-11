@@ -1,10 +1,14 @@
 ---
 title: Workflow - REST Generator
-# tags:
-#     - 
+tags:
+    - Workflow
+    - REST
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-01-19
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-rest-generator?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 I've written a number of Articles on the [Workflow](http://www.symantec.com/connect/workflow-servicedesk) REST Generator, here is a list:

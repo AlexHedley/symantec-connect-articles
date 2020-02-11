@@ -1,10 +1,15 @@
 ---
 title: DLP - API - PowerShell
-# tags:
-#     - 
+tags:
+    - DLP
+    - API
+    - PowerShell
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2020-02-10
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/dlp-api-powershell?CommunityKey=65cf8c43-bb97-4e96-ae0b-0db8ba1b4d07&tab=librarydocuments
 ---
 
 With the release of DLP 15.7 a new REST API has been added to Enforce.

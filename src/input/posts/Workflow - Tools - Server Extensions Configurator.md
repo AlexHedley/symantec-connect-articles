@@ -1,11 +1,14 @@
 ---
 title: Workflow - Tools - Server Extensions Configurator
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Tools
 author: AlexHedley
 # description: 
 articleId: 3737591
 published: 2018-01-23
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-tools-server-extension?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 - [Application Editor](https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=19195da8-6f79-40a5-b020-7932e20a53f4&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments)

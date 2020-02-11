@@ -1,10 +1,15 @@
 ---
 title: Workflow - Integration - Generators
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Integration
+    - Generators
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-07-13
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-integration-generators-1?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 There are a number of Project Types in ![Workflow.png](images\Workflow.png) Symantec Workflow Manager, when you open the Application and go to File | New

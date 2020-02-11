@@ -1,10 +1,13 @@
 ---
 title: Workflow - SendCompleteWorkflowMessage - Event Listeners
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-11-30
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-sendcompleteworkflowmess?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I will explain how to use the 'SendCompleteWorkflowMessage' to hook into a Dialog Workflow via the Event Listeners.

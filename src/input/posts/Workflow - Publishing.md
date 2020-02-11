@@ -1,11 +1,13 @@
 ---
 title: Workflow - Publishing
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
 articleId: 3869401
 published: 2020-01-13
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-publishing?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I'm going to show you how to Publish a project in ![Workflow](images\Workflow.png) [Workflow](https://support.symantec.com/en_US/defaultProductLanding.56410.html).

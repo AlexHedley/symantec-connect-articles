@@ -1,11 +1,15 @@
 ---
 title: Workflow - SWG - Components
-# tags:
-#     - 
+tags:
+    - Workflow
+    - SWG
+    - Component
 author: AlexHedley
 # description: 
 articleId: 3768121
 published: 2018-05-01
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-swg-components?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ##  Symantec Secure Web Gateway: ProxySG & ASG

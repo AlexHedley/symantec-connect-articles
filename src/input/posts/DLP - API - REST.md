@@ -1,10 +1,15 @@
 ---
 title: DLP - API - REST
-# tags:
-#     - 
+tags:
+    - DLP
+    - API
+    - REST
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2020-02-10
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/communities/community-home/librarydocuments/viewdocument?DocumentKey=f6319a99-6c61-4d58-8554-f8cbdd380e4d&CommunityKey=65cf8c43-bb97-4e96-ae0b-0db8ba1b4d07&tab=librarydocuments
 ---
 
 What's New and What's Changed in Symantec Data Loss Prevention 15.x  

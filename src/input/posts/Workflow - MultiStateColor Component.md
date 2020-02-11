@@ -1,10 +1,13 @@
 ---
 title: Workflow - MultiStateColor Component
-# tags:
-#     - 
+tags:
+    - Workflow
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-06-25
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-multistatecolor-componen?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this article I will show you how to use the 'MultiStateColor' component in the ![Forms (Web).png](images\Forms%2520%2528Web%2529.png) Forms (Web) Project Type

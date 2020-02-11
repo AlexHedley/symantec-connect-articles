@@ -1,10 +1,15 @@
 ---
 title: Workflow - ELMAH - Custom Logging
-# tags:
-#     - 
+tags:
+    - Workflow
+    - ELMAH
+    - Logging
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2017-07-17
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-elmah-custom-logging?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this article I will explain how to add custom logging to a Workflow Project using the Elmah project.

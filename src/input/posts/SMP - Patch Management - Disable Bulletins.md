@@ -1,10 +1,13 @@
 ---
 title: SMP - Patch Management - Disable Bulletins
-# tags:
-#     - 
+tags:
+    - SMP
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2018-11-02
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/smp-patch-management-disable-bu?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## ![SMP](images\smp.png) SMP

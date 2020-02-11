@@ -1,10 +1,16 @@
 ---
 title: Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite
-# tags:
-#     - 
+tags:
+    - Workflow
+    - REST
+    - 7.6
+    - Mobility Suite
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2015-12-01
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/using-the-rest-generator-post-in-1?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I will explain how to use POST requests in the REST Generator within [Workflow](http://www.symantec.com/connect/workflow-servicedesk) and [Mobility Suite](http://www.symantec.com/mobility/).

@@ -1,10 +1,14 @@
 ---
 title: Workflow - Tests
-# tags:
-#     - 
+tags:
+    - Workflow
+    - Tests
 author: AlexHedley
 # description: 
+# articleId: 
 published: 2016-07-14
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-tests?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 In this Article I will explain how to add Tests to your Workflow projects.

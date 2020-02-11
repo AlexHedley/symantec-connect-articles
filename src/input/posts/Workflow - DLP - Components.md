@@ -1,11 +1,15 @@
 ---
 title: Workflow - DLP - Components
-# tags:
-#     - 
+tags:
+    - Workflow
+    - DLP
+    - Component
 author: AlexHedley
 # description: 
 articleId: 3768111
 published: 2018-05-01
+# symantecUrl:
+broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/workflow-dlp-components?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
 ## Symantec Data Loss Prevention
