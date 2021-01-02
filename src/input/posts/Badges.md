@@ -6,6 +6,8 @@ author: AlexHedley
 # description: 
 articleId: 3745671
 published: 2018-02-28
+# symantecUrl:
+# broadcomUrl: 
 ---
 
 ![Accredited](images/Accredited.png "Accredited")
@@ -25,5 +27,7 @@ published: 2018-02-28
 ## Broadcom
 
 ![Ribbon Green](images/Ribbon_Green.png "Ribbon Green")
+
+![Ribbon Red](images/Ribbon_Red.png "Ribbon Red")
 
 ![Trusted Advisor (Broadcom)](images/TrustedAdvisor_B.png "Trusted Advisor (Broadcom)")
