@@ -135,12 +135,23 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/symantec_connect_profile.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/symantec_connect_profile.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "2sb6m+18OVAJhpZLfyMFeg=="
+          "hash": "N63f9zki7VUvoweaebEy+Q=="
         }
       },
       "is_incremental": false,
