@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>https://alexhedley.github.io/symantec-connect-articles</id>
+	<title />
+	<link rel="self" href="https://alexhedley.github.io/symantec-connect-articles" />
+	<rights>Copyright © 2023</rights>
+	<updated>2023-05-28T13:32:32Z</updated>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library</id>
+		<title>String with name 'XXX' has already been added - Workflow Integration Library</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library" />
+		<updated>2015-05-13T00:00:00Z</updated>
+		<content>&lt;p&gt;So you've created an &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int.png"&gt;&amp;nbsp;Integration Component with SQL Generators etc included.&lt;/p&gt;
+&lt;p&gt;You add a new Generator to the list, get to the end and after you '&lt;strong&gt;Recompile and close&lt;/strong&gt;' the following warning shows:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Integration%20Library%20-%20Error%20%281%29.png" alt="Integration Library - Error (1).png"&gt;&lt;/p&gt;
+&lt;p&gt;Open up &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3417051-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;&lt;strong&gt;Symantec Workflow Explorer&lt;/strong&gt; and go to the &lt;strong&gt;Log Viewer&lt;/strong&gt; tab.&lt;/p&gt;
+&lt;p&gt;(&lt;install drive=""&gt;:\Program Files\Altiris\Workflow\Logs\logicbase.tool.generator.exe.log)&lt;/install&gt;&lt;/p&gt;
+&lt;pre&gt;Application Name : LogicBase.Tool.Generator.exe Process ID : _##_ Date :_DD_/_MM_/_YYYY_ _HH_:_NN_:_SS_ Log Level :Error Log Category :LogicBase.Tool.Repository.OperationManager Machine Name : _&lt;servername&gt;_ Message : System.ArgumentException: String with name '**XXX**' has already been added Parameter name: name at Symantec.Workflow.HelpEditor.Internal.ResxFile.AddString(String name, String value) at Symantec.Workflow.HelpEditor.Internal.FileWriter.WriteToolboxCategories(String baseCategoryPath, IEnumerable`1 categories) at Symantec.Workflow.HelpEditor.Internal.FileWriter.WriteToolbox(XmlWriter xml) at Symantec.Workflow.HelpEditor.AssemblyWriteFile.ExecuteAsync() at Symantec.Workflow.Manager.Common.Operation.BeginExecution()&lt;/servername&gt;&lt;/pre&gt;
+&lt;p&gt;The Help Editor will still open but you won't have the folder containing the component, like it would usually, given the Component name.&lt;/p&gt;
+&lt;p&gt;The reason from the Logs show there is an issue with a name that is trying to be created in the Help Editor File.&lt;/p&gt;
+&lt;p&gt;The component still exists it just won't be in it's own folder.&lt;/p&gt;
+&lt;p&gt;You will need to manually create this.&lt;/p&gt;
+&lt;p&gt;Select &lt;strong&gt;Components&lt;/strong&gt; from the &lt;strong&gt;Type&lt;/strong&gt; section and it will show:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Help%20Editor%20%281%29.png" alt="Help Editor (1).png"&gt;&lt;/p&gt;
+&lt;p&gt;Under Toolbox select the top level folder &lt;em&gt;right-click&lt;/em&gt; and &lt;strong&gt;Add&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Help%20Editor%20%282%29.png" alt="Help Editor (2).png"&gt;&lt;/p&gt;
+&lt;p&gt;Give it a &lt;strong&gt;Name&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3417051-files_Help%20Editor%20-%20Name.png" alt="Help Editor - Name.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now drag the component from the Components section into this new folder:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Help%20Editor%20%283%29.png" alt="Help Editor (3).png"&gt;&lt;/p&gt;
+&lt;p&gt;It may appear in the top level folder as well (Test_INT) so just move it from there into the sub-folder.&lt;/p&gt;
+&lt;table border="0" cellpadding="0" cellspacing="0" style="width: 500px"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;The fix will be added to the next rollup release for Workflow **7.6**.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
+		<summary>&lt;p&gt;So you've created an &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int.png"&gt;&amp;nbsp;Integration Component with SQL Generators etc included.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-headers-in-workflow-7.6-with-mobility-suite</id>
+		<title>Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-headers-in-workflow-7.6-with-mobility-suite" />
+		<updated>2015-05-06T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I'm going to show you how to use HEADERS in the REST Component.&lt;/p&gt;
+&lt;p&gt;This builds upon a past &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;article&lt;/a&gt; but shows using Parameters in Headers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I noted before that&lt;/p&gt;
+&lt;p&gt;| **Warning!**Passing the API key as a query parameter is not recommended and is deprecated.&lt;br&gt;
+&lt;br&gt;Support for passing the key via URL parameters will be removed in the near future. |
+| --- |&lt;/p&gt;
+&lt;p&gt;So to rectify this we can pass it in the Header.&lt;/p&gt;
+&lt;p&gt;When you're creating the REST Generator there is a "&lt;strong&gt;Headers...&lt;/strong&gt;" button, click this.&lt;/p&gt;
+&lt;p&gt;Now add the requried values.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Content-Type&lt;/th&gt;
+&lt;th&gt;application/json&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;X-Nukona-API-Key-v1&lt;/td&gt;
+&lt;td&gt;[lockapikey]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Here [lockapikey] is a parameter denoted by the square brackets [ ].&lt;/p&gt;
+&lt;p&gt;If you have multiple methods make sure to name this apikey differently each time or you will get an error.&lt;/p&gt;
+&lt;p&gt;This will then be available within the Workflow.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Request+Headers.png" alt="Request Headers.png"&gt;&lt;/p&gt;
+&lt;p&gt;Once completed you can then set the Properties on your variable.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Component+Properties.png" alt="Component Properties.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now in your Workflow you can set the API Key&amp;nbsp;dynamically.&lt;/p&gt;
+&lt;p&gt;I like to use Profile Properties within Process Manager, so there is one place to maintain/administer it.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_REST+Generator+General.png" alt="REST Generator General.png"&gt;&lt;/p&gt;
+&lt;p&gt;There is also a StatusCode you can get returned from the REST Generator, give this a name, but to use it you will need to declare it before.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_REST+Generator+HTTP.png" alt="REST Generator HTTP.png"&gt;&lt;/p&gt;
+&lt;p&gt;Use an Add Data Element&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Data_Add.png" alt="Data_Add.png"&gt;&amp;nbsp;and give it the same name.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Add+Data+Element+Configuration.png" alt="Add Data Element Configuration.png"&gt;&lt;/p&gt;
+&lt;p&gt;You can then use this Status Code for logging etc&lt;/p&gt;
+&lt;p&gt;Previous Articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I'm going to show you how to use HEADERS in the REST Component.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-get-in-workflow-7.6-with-mobility-suite</id>
+		<title>Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-get-in-workflow-7.6-with-mobility-suite" />
+		<updated>2015-05-06T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I will explain how to use the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This builds upon a past &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;article&lt;/a&gt; but shows using Parameters to make the component more flexible.&lt;/p&gt;
+&lt;p&gt;Follow up articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'm going to be using the RESTful APIs available in to us in the &lt;a href="http://www.symantec.com/mobility/"&gt;Mobility Suite&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To Test an APIs you could use a Chrome Plugin called &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_PostmanLogo.png" alt="PostmanLogo.png"&gt;Postman [&lt;a href="http://www.getpostman.com/"&gt;http://www.getpostman.com/&lt;/a&gt;] or on a Mac there is an App you can get called Cocoa Rest Client [&lt;a href="http://mmattozzi.github.io/cocoa-rest-client/"&gt;http://mmattozzi.github.io/cocoa-rest-client/&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;Most APIs will require a Key to use them, make sure you have this to hand but don't share it.&lt;/p&gt;
+&lt;p&gt;We shall work with the Mobility API.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.symantec.com/business/support/index?page=content&amp;amp;id=DOC8151"&gt;v5.2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.symantec.com/business/support/index?page=content&amp;amp;id=DOC7685"&gt;v5.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.symantec.com/business/support/index?page=content&amp;amp;id=DOC7372"&gt;v4.4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Login to your Tennant [&lt;a href="https://alexhedley.github.io/symantec-connect-articles/#.appcenterhq.com/"&gt;#.appcenterhq.com/&lt;/a&gt;]&amp;nbsp;[&lt;a href="https://myappcenterh.appcenterhq.com/admin/landing"&gt;https://myappcenterh.appcenterhq.com/admin/landing&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;Go to Admin Console. If you are in the App Store click on the top right hand link [Admin Console].&lt;/p&gt;
+&lt;p&gt;v5.2 -&amp;nbsp;&lt;strong&gt;Settings&lt;/strong&gt; | &lt;span&gt;&lt;strong&gt;Mobility Manager configuration&lt;/strong&gt; | &lt;strong&gt;APIs&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt; (&lt;/span&gt;v5.1 Admin | Settings | APIs)&lt;/p&gt;
+&lt;p&gt;Click on the "Create New Access Key"&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;![Data API.png](&lt;a href="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data"&gt;https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data&lt;/a&gt; API.png)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Copy this Key as we will be using it soon.&lt;/p&gt;
+&lt;p&gt;Now&amp;nbsp;go to your Workflow Server.&lt;/p&gt;
+&lt;p&gt;Open &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;&lt;strong&gt;Workflow Manager&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New Project&lt;/strong&gt; and create a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Forms%20%28Web%29.png" alt="Forms (Web).png"&gt;&amp;nbsp;&lt;strong&gt;Forms (Web)&lt;/strong&gt; Project.&lt;/p&gt;
+&lt;p&gt;Give this a name (&lt;em&gt;POC_AppCenter_WEB&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/New%20Project%20-%20Forms%20%28Web%29.png" alt="New Project - Forms (Web).png"&gt;&lt;/p&gt;
+&lt;p&gt;In the Project Pane click on the top level Project &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project.png" alt="Project.png"&gt;&amp;nbsp;POC_AppCenter_WEB&lt;/p&gt;
+&lt;p&gt;Go to the &lt;strong&gt;Properties&lt;/strong&gt; tab and click &lt;strong&gt;Add Property&lt;/strong&gt;, give it a 'name' of &lt;em&gt;API_KEY&lt;/em&gt; with the 'value' of the &lt;em&gt;key&lt;/em&gt; you copied before.&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;API_KEY&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;&lt;your api="" key=""&gt;&lt;/your&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Encode this using either &lt;a href="http://meyerweb.com/eric/tools/dencoder/"&gt;http://meyerweb.com/eric/tools/dencoder/&lt;/a&gt; or in Fiddler [&lt;a href="http://www.telerik.com/fiddler"&gt;http://www.telerik.com/fiddler&lt;/a&gt;] Tools | Text Wizard... (Ctrl+E)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project%20-%20Properties%20-%20Add%20Property.png" alt="Project - Properties - Add Property.png"&gt;&lt;/p&gt;
+&lt;p&gt;This will now be available to you in your Project.&lt;/p&gt;
+&lt;p&gt;(I like to make these as Profile Properties in Process Manager so they can be shared across Projects)&lt;/p&gt;
+&lt;p&gt;Choose an API you'd like to use. We shall get a list of Apps.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://%3Ctenant%3E.appcenterhq.com/api1/apps"&gt;https://&lt;tenant&gt;.appcenterhq.com/api1/apps&lt;/tenant&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now that the Project is set up we can create the Generator.&lt;/p&gt;
+&lt;p&gt;Back in the main Workflow Manager window click on&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New Project&lt;/strong&gt; and create a new &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Int.png" alt="Int.png"&gt;&amp;nbsp;&lt;strong&gt;Integration&lt;/strong&gt; Project.&lt;/p&gt;
+&lt;p&gt;Give this a name (&lt;em&gt;POC_REST_INT&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_New%20Project%20-%20Integration.png" alt="New Project - Integration.png"&gt;&lt;/p&gt;
+&lt;p&gt;Scroll down to &lt;strong&gt;Enterprise Resources&lt;/strong&gt; and choose the new &lt;strong&gt;REST Generator&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Give the Generator a name (&lt;em&gt;AppCenter&lt;/em&gt;) and click OK.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Create%20Generator_0.png" alt="Create Generator_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;Put in your variables:&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Base URL:&lt;/td&gt;
+&lt;td&gt;https://**#**.appcenterhq.com/&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Namespace:&lt;/td&gt;
+&lt;td&gt;AppCenter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Replace &lt;strong&gt;#&lt;/strong&gt; with your Tenant name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_1.%20REST%20Service%20URL_0.png" alt="1. REST Service URL_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;Click &lt;strong&gt;Next&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Now if we choose the API.&lt;/p&gt;
+&lt;p&gt;Add a NAME, choose your METHOD, and add the API.&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Name&lt;/td&gt;
+&lt;td&gt;Apps&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Method&lt;/td&gt;
+&lt;td&gt;GET&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;URL&lt;/td&gt;
+&lt;td&gt;api1/apps?[urlparams]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You need to Save or click Next then Back to make the Properties available.&lt;/p&gt;
+&lt;p&gt;Click on Properties (along the Top)&lt;/p&gt;
+&lt;p&gt;Your &lt;strong&gt;urlparams&lt;/strong&gt; will show. give it a Type and be sure to uncheck the &lt;strong&gt;URL Encode&lt;/strong&gt; option.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_2.%20Components.png" alt="2. Components.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now we want to configure the Response Content.&lt;/p&gt;
+&lt;p&gt;Click on the ellipse (...)&lt;/p&gt;
+&lt;p&gt;Choose JSON as the Format and click on 'Create' the 'Create From Request'&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%281%29_0.png" alt="2. Components (1)_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;Put in your params&lt;/p&gt;
+&lt;pre&gt;start=0&amp;amp;limit=100&amp;amp;api_key=##&lt;/pre&gt;
+&lt;p&gt;*paste in your encoded api_key (we will use the Property later in the WF)&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;p&gt;&lt;strong&gt;Warning!&lt;/strong&gt; Passing the API key as a query parameter is not recommended and is deprecated.&lt;/p&gt;
+&lt;p&gt;Support for passing the key via URL parameters will be removed in the near future.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Click Next.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Request%20%281%29.png" alt="Request (1).png"&gt;&lt;/p&gt;
+&lt;p&gt;It will then show the return.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Request%20%282%29.png" alt="Request (2).png"&gt;&lt;/p&gt;
+&lt;p&gt;It will then be selected as your Data Type.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Response%20Content.png" alt="Response Content.png"&gt;&lt;/p&gt;
+&lt;p&gt;Click on the 'Edit' to see the Data Types that have been created.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data%20Types.png" alt="Data Types.png"&gt;&lt;/p&gt;
+&lt;p&gt;Finally click &lt;strong&gt;Finish&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;OK the next screen then &lt;strong&gt;Recompile and Close&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;(Add an Icon and any Description etc.)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Help%20Editor.png" alt="Help Editor.png"&gt;&lt;/p&gt;
+&lt;p&gt;Back to the sample Project.&lt;/p&gt;
+&lt;p&gt;Add this newly created Library.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project.png" alt="Project.png"&gt;&amp;nbsp;Project | Libraries | Add...&lt;/p&gt;
+&lt;p&gt;Select the dll, double click or click &lt;strong&gt;Add&lt;/strong&gt; then click &lt;strong&gt;OK&lt;/strong&gt;. (Untick Publish)&lt;/p&gt;
+&lt;p&gt;Find the Component and add it into your Workflow.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Workflow%20%281%29.png" alt="Workflow (1).png"&gt;&lt;/p&gt;
+&lt;p&gt;Double Click and add in your Parameters.&lt;/p&gt;
+&lt;pre&gt;start=0&amp;amp;limit=100&amp;amp;api_key=[[ProjectProperties].api_key]&lt;/pre&gt;
+&lt;p&gt;Add a Web Form and display the data.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Workflow%20%282%29.png" alt="Workflow (2).png"&gt;&lt;/p&gt;
+&lt;p&gt;Run the Form.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Workflow%20%283%29.png" alt="Workflow (3).png"&gt;&lt;/p&gt;
+&lt;p&gt;Follow up articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I will explain how to use the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt;.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-profile-definition-error</id>
+		<title>Workflow Profile Definition Error</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-profile-definition-error" />
+		<updated>2015-04-22T00:00:00Z</updated>
+		<content>&lt;p&gt;Have you ever tried to add a Profile and got an error:&lt;/p&gt;
+&lt;p&gt;"Value cannot be null. Parameter name: value"&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3401451-files_Add%20Profile%20Definition.png" alt="Add Profile Definition.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;You can't have a &lt;span style="font-family: &amp;quot;Arial&amp;quot;, sans-serif; font-size: 10pt"&gt;uniqueidentifier as a datatype for your Foreign Key or include this another in your Profile.&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;You can't have your Foreign Key Field (usually SessionID) as the &lt;u&gt;first&lt;/u&gt; Field in your Table/View.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span style="font-family: &amp;quot;Arial&amp;quot;, sans-serif; font-size: 10pt"&gt;Check&amp;nbsp;the data types on the fields you are selecting. If you see any "&lt;em&gt;nchar&lt;/em&gt;" change them to &lt;em&gt;nvarchar&lt;/em&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This shouldn't be a problem with respect to the data, anything you can fit in an nchar will also fit in nvarchar of the same size.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you look in the Logs&lt;/p&gt;
+&lt;p&gt;&amp;nbsp; &lt;install folder=""&gt;:\Program Files\Symantec\Workflow\Logs*&lt;em&gt;processmanager.log&lt;/em&gt;*&lt;/install&gt;&lt;/p&gt;
+&lt;p&gt;you should see a similar error:&lt;/p&gt;
+&lt;pre&gt;Error,20 April 2015 08:11:43,[global] Application 'LogicBase.Ensemble' error [global] Client Host Information: [global] IP: ::1 [global] HostName: ::1 [global] -- error.ToString() -- [global] System.Web.HttpCompileException: e:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices\**&lt;profile name=""&gt;**Service.asmx(76): error CS1001: Identifier expected [global] at System.Web.Compilation.AssemblyBuilder.Compile() [global] at System.Web.Compilation.BuildProvidersCompiler.PerformBuild() [global] at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath) [global] at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile) [global] at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile) [global] at System.Web.UI.WebServiceParser.GetCompiledType(String inputFile, HttpContext context) [global] at System.Web.Services.Protocols.WebServiceHandlerFactory.GetHandler(HttpContext context, String verb, String url, String filePath) [global] at System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) [global] at System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig) [global] at System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() [global] at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp;amp; completedSynchronously)&lt;/profile&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;When a Profile is created an .asmx file is created in the following folder:&lt;/p&gt;
+&lt;p&gt;&amp;nbsp; &lt;install drive=""&gt;:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices**&lt;profile name=""&gt;**Service.asmx&lt;/profile&gt;&lt;/install&gt;&lt;/p&gt;
+&lt;p&gt;There is also a record added to&lt;/p&gt;
+&lt;p&gt;&amp;nbsp; [ProcessManager].[dbo].[ProfileDefinition]&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;To add a new Profile&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Process Manager&lt;/strong&gt; | &lt;strong&gt;Admin&lt;/strong&gt; | &lt;strong&gt;Data&lt;/strong&gt; | &lt;strong&gt;Lists and Profiles&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Add Profile Definition (Existing Table)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Add%20Profile%20Definition%20%28Existing%20Table%29.png" alt="Add Profile Definition (Existing Table).png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3401451-files_Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Have you ever tried to add a Profile and got an error:&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-in-workflow-7.6</id>
+		<title>Using the REST Generator in Workflow 7.6</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-in-workflow-7.6" />
+		<updated>2015-03-06T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I will explain how to use the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt; 7.6.&lt;/p&gt;
+&lt;p&gt;Follow up articles&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;​&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'm going to be using the RESTful APIs available in to us from &lt;a href="http://swapi.co/"&gt;http://swapi.co/&lt;/a&gt;. The Star Wars API.&lt;/p&gt;
+&lt;p&gt;A little background:&lt;/p&gt;
+&lt;p&gt;REST or Representational State Transfer is an architecture style or design pattern used as a set of guidelines for creating web services which allow anything connected to a network (web servers, private intranets, smartphones, fitness bands, banking systems, traffic cameras, televisions etc.) to communicate with one another via a shared common communications protocol known as Hypertext Transfer Protocol (HTTP). The same HTTP verbs (GET, POST, PUT, DELETE etc.) used by web browsers to retrieve and display web pages, audio/video files, images etc. from remote servers and post data back to them when performing actions like filling out and submitting forms are used by all of the aforementioned devices/services to communicate with one another.&lt;/p&gt;
+&lt;p&gt;Link: &lt;a href="http://en.wikipedia.org/wiki/Representational_state_transfer"&gt;http://en.wikipedia.org/wiki/Representational_state_transfer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To Test an APIs you could use a Chrome Plugin called &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_PostmanLogo.png" alt="PostmanLogo.png"&gt;Postman [&lt;a href="http://www.getpostman.com/"&gt;http://www.getpostman.com/&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;Or on a Mac there is an App you can get called Cocoa Rest Client [&lt;a href="http://mmattozzi.github.io/cocoa-rest-client/"&gt;http://mmattozzi.github.io/cocoa-rest-client/&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;Most APIs will require a Key to use them, but don't share it, luckily the Star Wars&amp;nbsp;API doesn't need one.&lt;/p&gt;
+&lt;p&gt;Now&amp;nbsp;go to your Workflow Server.&lt;/p&gt;
+&lt;p&gt;Open &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;&lt;strong&gt;Workflow Manager&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New Project&lt;/strong&gt; and create a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Forms%20%28Web%29.png" alt="Forms (Web).png"&gt;&amp;nbsp;&lt;strong&gt;Forms (Web)&lt;/strong&gt; Project.&lt;/p&gt;
+&lt;p&gt;Give this a name (&lt;em&gt;POC_JSON_WEB&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;We will be using this later to display our results.&lt;/p&gt;
+&lt;p&gt;Now back in the main Workflow Manager window click on&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New Project&lt;/strong&gt; and create a new &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Int.png" alt="Int.png"&gt;&amp;nbsp;&lt;strong&gt;Integration&lt;/strong&gt; Project.&lt;/p&gt;
+&lt;p&gt;Give this a name (&lt;em&gt;POC_JSON_SW_INT&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_New%20Project%20-%20Integration_0.png" alt="New Project - Integration_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;Scroll down to &lt;strong&gt;Enterprise Resources&lt;/strong&gt; and choose ‘REST Generator’ and give it a name: "StarWars"&lt;/p&gt;
+&lt;p&gt;![Create Generator.png](&lt;a href="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create"&gt;https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create&lt;/a&gt; Generator.png)&lt;/p&gt;
+&lt;p&gt;Put in your&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Base URL: &lt;a href="http://swapi.co/api/"&gt;http://swapi.co/api/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Namespace: StarWars&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;then click Next.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/1.%20REST%20Service%20URL%20%28Star%20Wars%29.png" alt="1. REST Service URL (Star Wars).png"&gt;&lt;/p&gt;
+&lt;p&gt;Click Add.&lt;/p&gt;
+&lt;p&gt;Give it a name: "Planets"&lt;/p&gt;
+&lt;p&gt;You can change the Method to any of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GET&lt;/li&gt;
+&lt;li&gt;PUT&lt;/li&gt;
+&lt;li&gt;POST&lt;/li&gt;
+&lt;li&gt;DELETE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%281%29%20%28Star%20Wars%29.png" alt="2. Components (1) (Star Wars).png"&gt;&lt;/p&gt;
+&lt;p&gt;Click on the ellipse (…) below ‘Response Content’.&lt;/p&gt;
+&lt;p&gt;Choose "JSON"&lt;/p&gt;
+&lt;p&gt;Then in Create choose "Create From Request"&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%283%29.png" alt="2. Components (3).png"&gt;&lt;/p&gt;
+&lt;p&gt;Click Next&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create%20From%20Request.png" alt="Create From Request.png"&gt;&lt;/p&gt;
+&lt;p&gt;The response is then shown, click Next.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create%20From%20Request%20-%20JSON.png" alt="Create From Request - JSON.png"&gt;&lt;/p&gt;
+&lt;p&gt;You will then see the Data Type that has been created, you edit this if necessary. Click Finish.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create%20From%20Request%20-%20DataType.png" alt="Create From Request - DataType.png"&gt;&lt;/p&gt;
+&lt;p&gt;You will see the chosen Data Type, click OK.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%284%29.png" alt="2. Components (4).png"&gt;&lt;/p&gt;
+&lt;p&gt;Now you can click Finish and save your new Integration Project.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%287%29.png" alt="2. Components (7).png"&gt;&lt;/p&gt;
+&lt;p&gt;You can see what was generated for you.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Generators%20Management.png" alt="Generators Management.png"&gt;&lt;/p&gt;
+&lt;p&gt;Back to your Web Forms Project.&lt;/p&gt;
+&lt;p&gt;Add the Library to this.&lt;/p&gt;
+&lt;p&gt;You can now call the INT and display the results in a Web Form.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/POC_JSON_WEB%20%282%29.png" alt="POC_JSON_WEB (2).png"&gt;&lt;/p&gt;
+&lt;p&gt;And your Web Page&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/POC_JSON_WEB%20%283%29.png" alt="POC_JSON_WEB (3).png"&gt;&lt;/p&gt;
+&lt;p&gt;And there you have a way of retrieving data from an API and displaying it in a Web Form.&lt;/p&gt;
+&lt;p&gt;Follow up articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I will explain how to use the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt; 7.6.&lt;/p&gt;</summary>
+	</entry>
+</feed>

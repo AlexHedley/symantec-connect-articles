@@ -5,11 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to my Symantec Connect Articles!">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley</title>
+  <title>Alex Hedley - String with name &#x27;XXX&#x27; has already been added - Workflow Integration Library</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library'>
 
       <link type="application/rss+xml" rel="alternate" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" href="/symantec-connect-articles/feed.atom" />
@@ -18,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley' />
+  <meta property="og:title" content='Alex Hedley - String with name &#x27;XXX&#x27; has already been added - Workflow Integration Library' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -76,11 +76,15 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Alex Hedley
+            String with name &#x27;XXX&#x27; has already been added - Workflow Integration Library
           </h1>
-            <span class="subheading">Welcome to my Symantec Connect Articles!</span>
+            <div class="meta">Published on Wednesday, 13 May 2015</div>
+              <div class="mt-3">
+                  <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow</a>
+                  <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-light"> Integration Library</a>
+              </div>
         </div>
       </div>
     </div>
@@ -92,64 +96,36 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-        <div class="container-sm-height">
-  <div class="row row-sm-height">
-    <div class="col-md-6 right-border col-sm-height">
-      
+        <p>So you've created an <img src="images/Int.png" alt="Int.png" /> Integration Component with SQL Generators etc included.</p>
+<p>You add a new Generator to the list, get to the end and after you '<strong>Recompile and close</strong>' the following warning shows:</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Integration%20Library%20-%20Error%20%281%29.png" alt="Integration Library - Error (1).png" /></p>
+<p>Open up <img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3417051-files_Workflow.png" alt="Workflow.png" /> <strong>Symantec Workflow Explorer</strong> and go to the <strong>Log Viewer</strong> tab.</p>
+<p>(<Install Drive>:\Program Files\Altiris\Workflow\Logs\logicbase.tool.generator.exe.log)</p>
+<pre>Application Name : LogicBase.Tool.Generator.exe Process ID : _##_ Date :_DD_/_MM_/_YYYY_ _HH_:_NN_:_SS_ Log Level :Error Log Category :LogicBase.Tool.Repository.OperationManager Machine Name : _<SERVERNAME>_ Message : System.ArgumentException: String with name '**XXX**' has already been added Parameter name: name at Symantec.Workflow.HelpEditor.Internal.ResxFile.AddString(String name, String value) at Symantec.Workflow.HelpEditor.Internal.FileWriter.WriteToolboxCategories(String baseCategoryPath, IEnumerable`1 categories) at Symantec.Workflow.HelpEditor.Internal.FileWriter.WriteToolbox(XmlWriter xml) at Symantec.Workflow.HelpEditor.AssemblyWriteFile.ExecuteAsync() at Symantec.Workflow.Manager.Common.Operation.BeginExecution()</pre>
+<p>The Help Editor will still open but you won't have the folder containing the component, like it would usually, given the Component name.</p>
+<p>The reason from the Logs show there is an issue with a name that is trying to be created in the Help Editor File.</p>
+<p>The component still exists it just won't be in it's own folder.</p>
+<p>You will need to manually create this.</p>
+<p>Select <strong>Components</strong> from the <strong>Type</strong> section and it will show:</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Help%20Editor%20%281%29.png" alt="Help Editor (1).png" /></p>
+<p>Under Toolbox select the top level folder <em>right-click</em> and <strong>Add</strong>:</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Help%20Editor%20%282%29.png" alt="Help Editor (2).png" /></p>
+<p>Give it a <strong>Name</strong>:</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3417051-files_Help%20Editor%20-%20Name.png" alt="Help Editor - Name.png" /></p>
+<p>Now drag the component from the Components section into this new folder:</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Help%20Editor%20%283%29.png" alt="Help Editor (3).png" /></p>
+<p>It may appear in the top level folder as well (Test_INT) so just move it from there into the sub-folder.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 500px">
+<tbody>
+<tr>
+<td>The fix will be added to the next rollup release for Workflow **7.6**.</td>
+</tr>
+</tbody>
+</table>
+<div>
+<hr />
+<p><img src="images/Protirus.png" alt="Protirus" /></p>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library">String with name &#x27;XXX&#x27; has already been added - Workflow Integration Library</a></h2>
-  <p class="post-meta">Published on Wednesday, 13 May 2015</p>
-<p>So you've created an <img src="images/Int.png" alt="Int.png"> Integration Component with SQL Generators etc included.</p>    <p class="small"><a href="/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/using-the-rest-generator-headers-in-workflow-7.6-with-mobility-suite">Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite</a></h2>
-  <p class="post-meta">Published on Wednesday, 6 May 2015</p>
-<p>In this Article I'm going to show you how to use HEADERS in the REST Component.</p>    <p class="small"><a href="/symantec-connect-articles/posts/using-the-rest-generator-headers-in-workflow-7.6-with-mobility-suite">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/using-the-rest-generator-get-in-workflow-7.6-with-mobility-suite">Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite</a></h2>
-  <p class="post-meta">Published on Wednesday, 6 May 2015</p>
-<p>In this Article I will explain how to use the REST Generator within <a href="http://www.symantec.com/connect/workflow-servicedesk">Workflow</a>.</p>    <p class="small"><a href="/symantec-connect-articles/posts/using-the-rest-generator-get-in-workflow-7.6-with-mobility-suite">Read more...</a></p>
-</div>
-
-  <div>
-    <div class="float-sm-start">
-    </div>
-    <div class="float-sm-end">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/2" role="button">Older <i class="fas fa-angle-double-right"></i></a>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-
-    </div>
-    <div class="col-md-4 mt-4 mt-md-0 col-sm-height sidebar">
-          <div>
-            <h5>Tags</h5>
-              <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (4)</a>
-              <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-              <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-              <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-light"> Integration Library (1)</a>
-              <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-              <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> error (1)</a>
-            <div class="mt-3">
-              <div class="float-sm-end">
-                <a class="btn btn-sm btn-primary" href='/symantec-connect-articles/tags' role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-
-      
-
-    </div>
-  </div>
-</div>
 
         
 

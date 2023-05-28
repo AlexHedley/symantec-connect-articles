@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-get-in-workflow-7.6-with-mobility-suite'>
+
+      <link type="application/rss+xml" rel="alternate" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-get-in-workflow-7.6-with-mobility-suite' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite
+          </h1>
+            <div class="meta">Published on Wednesday, 6 May 2015</div>
+              <div class="mt-3">
+                  <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow</a>
+                  <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite</a>
+                  <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST</a>
+                  <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6</a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I will explain how to use the REST Generator within <a href="http://www.symantec.com/connect/workflow-servicedesk">Workflow</a>.</p>
+<p>This builds upon a past <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">article</a> but shows using Parameters to make the component more flexible.</p>
+<p>Follow up articles</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - REST Generator</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator in Workflow 7.6</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (Response Content) in Workflow 7.6</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (PATHs) in Workflow 7.6</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - Read Write JSON</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - REST - Response Header</a></li>
+</ul>
+<p>I'm going to be using the RESTful APIs available in to us in the <a href="http://www.symantec.com/mobility/">Mobility Suite</a>.</p>
+<p>To Test an APIs you could use a Chrome Plugin called <img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_PostmanLogo.png" alt="PostmanLogo.png" />Postman [<a href="http://www.getpostman.com/">http://www.getpostman.com/</a>] or on a Mac there is an App you can get called Cocoa Rest Client [<a href="http://mmattozzi.github.io/cocoa-rest-client/">http://mmattozzi.github.io/cocoa-rest-client/</a>]</p>
+<p>Most APIs will require a Key to use them, make sure you have this to hand but don't share it.</p>
+<p>We shall work with the Mobility API.</p>
+<ul>
+<li><a href="http://www.symantec.com/business/support/index?page=content&amp;id=DOC8151">v5.2</a></li>
+<li><a href="http://www.symantec.com/business/support/index?page=content&amp;id=DOC7685">v5.1</a></li>
+<li><a href="http://www.symantec.com/business/support/index?page=content&amp;id=DOC7372">v4.4</a></li>
+</ul>
+<p>Login to your Tennant [<a href="#.appcenterhq.com/">#.appcenterhq.com/</a>] [<a href="https://myappcenterh.appcenterhq.com/admin/landing">https://myappcenterh.appcenterhq.com/admin/landing</a>]</p>
+<p>Go to Admin Console. If you are in the App Store click on the top right hand link [Admin Console].</p>
+<p>v5.2 - <strong>Settings</strong> | <span><strong>Mobility Manager configuration</strong> | <strong>APIs</strong></span></p>
+<p><span> (</span>v5.1 Admin | Settings | APIs)</p>
+<p>Click on the &quot;Create New Access Key&quot;</p>
+<p><strong>![Data API.png](<a href="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data">https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data</a> API.png)</strong></p>
+<p>Copy this Key as we will be using it soon.</p>
+<p>Now go to your Workflow Server.</p>
+<p>Open <img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Workflow.png" alt="Workflow.png" /> <strong>Workflow Manager</strong>.</p>
+<p><strong>File</strong> | <strong>New Project</strong> and create a new <img src="/connect/sites/default/files/users/user-2946791/Forms%20%28Web%29.png" alt="Forms (Web).png" /> <strong>Forms (Web)</strong> Project.</p>
+<p>Give this a name (<em>POC_AppCenter_WEB</em>).</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/New%20Project%20-%20Forms%20%28Web%29.png" alt="New Project - Forms (Web).png" /></p>
+<p>In the Project Pane click on the top level Project <img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project.png" alt="Project.png" /> POC_AppCenter_WEB</p>
+<p>Go to the <strong>Properties</strong> tab and click <strong>Add Property</strong>, give it a 'name' of <em>API_KEY</em> with the 'value' of the <em>key</em> you copied before.</p>
+<table>
+<tbody>
+<tr>
+<td>name</td>
+<td>API_KEY</td>
+</tr>
+<tr>
+<td>value</td>
+<td><your api key></td>
+</tr>
+</tbody>
+</table>
+<p>Encode this using either <a href="http://meyerweb.com/eric/tools/dencoder/">http://meyerweb.com/eric/tools/dencoder/</a> or in Fiddler [<a href="http://www.telerik.com/fiddler">http://www.telerik.com/fiddler</a>] Tools | Text Wizard... (Ctrl+E)</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project%20-%20Properties%20-%20Add%20Property.png" alt="Project - Properties - Add Property.png" /></p>
+<p>This will now be available to you in your Project.</p>
+<p>(I like to make these as Profile Properties in Process Manager so they can be shared across Projects)</p>
+<p>Choose an API you'd like to use. We shall get a list of Apps.</p>
+<p><a href="https://%3Ctenant%3E.appcenterhq.com/api1/apps">https://<tenant>.appcenterhq.com/api1/apps</a></p>
+<p>Now that the Project is set up we can create the Generator.</p>
+<p>Back in the main Workflow Manager window click on</p>
+<p><strong>File</strong> | <strong>New Project</strong> and create a new <img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Int.png" alt="Int.png" /> <strong>Integration</strong> Project.</p>
+<p>Give this a name (<em>POC_REST_INT</em>).</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_New%20Project%20-%20Integration.png" alt="New Project - Integration.png" /></p>
+<p>Scroll down to <strong>Enterprise Resources</strong> and choose the new <strong>REST Generator</strong>.</p>
+<p>Give the Generator a name (<em>AppCenter</em>) and click OK.</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Create%20Generator_0.png" alt="Create Generator_0.png" /></p>
+<p>Put in your variables:</p>
+<table>
+<tbody>
+<tr>
+<td>Base URL:</td>
+<td>https://**#**.appcenterhq.com/</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>AppCenter</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Replace <strong>#</strong> with your Tenant name</li>
+</ul>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_1.%20REST%20Service%20URL_0.png" alt="1. REST Service URL_0.png" /></p>
+<p>Click <strong>Next</strong>.</p>
+<p>Now if we choose the API.</p>
+<p>Add a NAME, choose your METHOD, and add the API.</p>
+<table>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Apps</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>api1/apps?[urlparams]</td>
+</tr>
+</tbody>
+</table>
+<p>You need to Save or click Next then Back to make the Properties available.</p>
+<p>Click on Properties (along the Top)</p>
+<p>Your <strong>urlparams</strong> will show. give it a Type and be sure to uncheck the <strong>URL Encode</strong> option.</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_2.%20Components.png" alt="2. Components.png" /></p>
+<p>Now we want to configure the Response Content.</p>
+<p>Click on the ellipse (...)</p>
+<p>Choose JSON as the Format and click on 'Create' the 'Create From Request'</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/2.%20Components%20%281%29_0.png" alt="2. Components (1)_0.png" /></p>
+<p>Put in your params</p>
+<pre>start=0&limit=100&api_key=##</pre>
+<p>*paste in your encoded api_key (we will use the Property later in the WF)</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Warning!</strong> Passing the API key as a query parameter is not recommended and is deprecated.</p>
+<p>Support for passing the key via URL parameters will be removed in the near future.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Click Next.</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Request%20%281%29.png" alt="Request (1).png" /></p>
+<p>It will then show the return.</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Request%20%282%29.png" alt="Request (2).png" /></p>
+<p>It will then be selected as your Data Type.</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Response%20Content.png" alt="Response Content.png" /></p>
+<p>Click on the 'Edit' to see the Data Types that have been created.</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data%20Types.png" alt="Data Types.png" /></p>
+<p>Finally click <strong>Finish</strong>.</p>
+<p>OK the next screen then <strong>Recompile and Close</strong>.</p>
+<p>(Add an Icon and any Description etc.)</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Help%20Editor.png" alt="Help Editor.png" /></p>
+<p>Back to the sample Project.</p>
+<p>Add this newly created Library.</p>
+<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project.png" alt="Project.png" /> Project | Libraries | Add...</p>
+<p>Select the dll, double click or click <strong>Add</strong> then click <strong>OK</strong>. (Untick Publish)</p>
+<p>Find the Component and add it into your Workflow.</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Workflow%20%281%29.png" alt="Workflow (1).png" /></p>
+<p>Double Click and add in your Parameters.</p>
+<pre>start=0&limit=100&api_key=[[ProjectProperties].api_key]</pre>
+<p>Add a Web Form and display the data.</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Workflow%20%282%29.png" alt="Workflow (2).png" /></p>
+<p>Run the Form.</p>
+<p><img src="/connect/sites/default/files/users/user-2946791/Workflow%20%283%29.png" alt="Workflow (3).png" /></p>
+<p>Follow up articles</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite</a></li>
+</ul>
+<p><a href="http://protirus.com/"><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Protirus.png" alt="Protirus.png" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
