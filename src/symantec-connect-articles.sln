@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{a421e6f9-0a5f-4f9d-0ba5-a6403760e224}") = "symantec-connect-articles", "symantec-connect-articles.csproj", "{c1c68270-bc91-4b1a-636a-d2585e787d1f}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{c1c68270-bc91-4b1a-636a-d2585e787d1f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c1c68270-bc91-4b1a-636a-d2585e787d1f}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c1c68270-bc91-4b1a-636a-d2585e787d1f}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{c1c68270-bc91-4b1a-636a-d2585e787d1f}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {d3d7452d-5300-4e39-9eb1-031740b56546}
+	EndGlobalSection
+EndGlobal
