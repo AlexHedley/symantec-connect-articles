@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - Cookie (using code) - Web App</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-cookie-using-code-web-app'>
+
+      <link type="application/rss+xml" rel="alternate" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - Cookie (using code) - Web App' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-cookie-using-code-web-app' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Cookie (using code) - Web App
+          </h1>
+            <div class="meta">Published on Friday, 5 June 2015</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this article I will show you how to create and retrieve Cookies in the <img src="images/App.png" alt="App.png" />Web App Project Type</p>
+<p>The Cookie components aren't available in the Web App Project type.</p>
+<p>In a Forms (Web) Project they are under</p>
+<p><img src="images/Components.png" alt="Components.png" /> Input Output</p>
+<p><img src="images/Components.png" alt="Components.png" /> Web Cookies</p>
+<p><img src="images/ClearCookie.png" alt="Clear Cookie.png" /> Clear Cookie</p>
+<p><img src="images/GetFromCookie.png" alt="Get From Cookie.png" /> Get From Cookie</p>
+<p><img src="images/SaveToCookie.png" alt="Save To Cookie.png" /> Save To Cookie</p>
+<p><strong>Class:</strong> LogicBase.Components.Default.IO.ClearCookie<br />
+<strong>Library:</strong> LogicBase.Components.Default.dll<br />
+<strong>Publisher:</strong> Symantec Corporation</p>
+<p>Some of the Default.IO is available but not these.</p>
+<p>The Dialog Model type is not the same as the <img src="images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png" /> Forms (Web) Project Type in a Web Application Project.</p>
+<p>Since we can't use the components we will have to use another method.</p>
+<p>Let's go to the trusty Scripting Component.</p>
+<p>Add in the Library (<strong>LogicBase.Components.Scripting.dll</strong>) to your Project</p>
+<p>Find the <img src="images/Code%2520%2528Script%2529%2520Component.png" alt="Code (Script) Component.png" /> Code (Script) Component</p>
+<p><u>Set Cookie</u></p>
+<p>We will create the 'Set' Component first, this will have 3 parameters:</p>
+<p>CookieName - Text</p>
+<p>CookieValue - Text</p>
+<p>ExpiresMinutes - Number (integer)</p>
+<p>No <strong>return</strong> type</p>
+<p>In the namespaces add</p>
+<pre><code>System.Web
+</code></pre>
+<p><font color="#008000"><font><span class="sc0"><span class="ms-rteThemeFontFace-1">//Cookie Class</span><br class="ms-rteThemeFontFace-1"><span class="ms-rteThemeFontFace-1">//</span></span></font></font><a href="https://msdn.microsoft.com/en-us/library/system.web.httpcookie%28v=vs.71%29.aspx">https://msdn.microsoft.com/en-us/library/system.web.httpcookie(v=vs.71).aspx</a></p>
+<p>System.Object<br />
+   System.Web.HttpCookie<br />
+Namespace: System.Web</p>
+<p>C# code:</p>
+<pre><code class="language-csharp">    HttpCookie myCookie = new HttpCookie(CookieName);
+    DateTime now = DateTime.Now;
+    
+    // Set the cookie value.
+    myCookie.Value = CookieValue;
+    // Set the cookie expiration date.
+    myCookie.Expires = now.AddMinutes(ExpiresMinutes);
+    
+    // Add the cookie.
+    HttpContext.Current.Response.Cookies.Add(myCookie);
+</code></pre>
+<p>If you read the MS Articles below you won't see <strong>HttpContext.Current.</strong></p>
+<p>This is needed for it to work in Workflow.</p>
+<p><u>Get Cookie</u></p>
+<p>For the Get Cookie we need an input of</p>
+<p>CookieName - Text</p>
+<ul>
+<li>'Result variable type' of <strong>Text</strong></li>
+<li>'Result variable name' of <strong>Cookie</strong></li>
+</ul>
+<p>Again add the namespace of <strong>System.Web</strong></p>
+<p>Then the following C# code:</p>
+<pre><code>HttpCookie myCookie = new HttpCookie(CookieName);
+myCookie = HttpContext.Current.Request.Cookies[CookieName];
+
+return myCookie.Value;
+</code></pre>
+<p>And now you can use this throughout your project.</p>
+<hr />
+<p>To view the Cookies in IE.</p>
+<p>F12 - Cache | View Cookie Information</p>
+<hr />
+<p><u>Links</u></p>
+<p><strong>Connect Forum</strong></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=7b7bd87c-0355-4c18-9553-87cbb6e7ee99&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=digestviewer#bm7b7bd87c-0355-4c18-9553-87cbb6e7ee99">https://www-secure.symantec.com/connect/forums/need-tutorial-save-cookie-component-usage</a></p>
+<p><strong>MS</strong></p>
+<p><font class="ms-rteThemeFontFace-1"><span class="sc2 ms-rteThemeFontFace-1"><font color="#008000">// Code: Writing a Cookie (Visual C#)</font></span></font><br />
+<a href="https://msdn.microsoft.com/en-us/library/aa287547%28v=vs.71%29.aspx">https://msdn.microsoft.com/en-us/library/aa287547%28v=vs.71%29.aspx</a></p>
+<p><font class="ms-rteThemeFontFace-1"><span class="sc2 ms-rteThemeFontFace-1"><font color="#008000">// Code: Reading a Cookie (Visual C#)</font></span></font><br />
+<a href="https://msdn.microsoft.com/en-us/library/aa287533%28v=vs.71%29.aspx">https://msdn.microsoft.com/en-us/library/aa287533(v=vs.71).aspx</a></p>
+<p>// HttpCookie Properties<br />
+<a href="https://msdn.microsoft.com/en-us/library/System.Web.HttpCookie_properties%28v=vs.110%29.aspx">https://msdn.microsoft.com/en-us/library/System.Web.HttpCookie_properties(v=vs.110).aspx</a></p>
+<hr />
+<p><a href="http://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus.png" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

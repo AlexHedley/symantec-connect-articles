@@ -5,10 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley - Integration Library</title>
+  <title>Alex Hedley - Workflow - Tokens from Listbox</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/tags/integration-library'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox'>
 
       <link type="application/rss+xml" rel="alternate" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" href="/symantec-connect-articles/feed.atom" />
@@ -17,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley - Integration Library' />
+  <meta property="og:title" content='Alex Hedley - Workflow - Tokens from Listbox' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/tags/integration-library' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -75,10 +76,11 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Integration Library
+            Workflow - Tokens from Listbox
           </h1>
+            <div class="meta">Published on Wednesday, 10 June 2015</div>
         </div>
       </div>
     </div>
@@ -90,30 +92,38 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-          <div class="container-sm-height">
-    <div class="row row-sm-height">
-      <div class="col-md-6 right-border col-sm-height">
-        
+        <p>In this article I will show you how to use Javascript in the <img src="images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png" /> Forms (Web) Project Type to pass values from a Listbox to a Textarea.</p>
+<p>This is similar to how the Email Templates work in ServiceDesk.</p>
+<p>Add a Form Builder component to the Workflow.</p>
+<p>Add a Multiline Textbox to your Form. Name it “Email_HTML”<br />
+Add a Listbox to your Form, give it an Ouput of “Token_SEL”</p>
+<p><img src="images/Web%2520Form%2520Editor%2520%2528js%2529.png" alt="Web Form Editor (js).png" /></p>
+<p><img src="images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component - Functionality (js).png" /></p>
+<p>Add some Tokens to the Listbox Items.</p>
+<ul>
+<li>Token1</li>
+<li>Token2</li>
+<li>Token3</li>
+</ul>
+<p>Then add a “Custom Event” using the “AttributesKeyValuePair”.</p>
+<p><img src="images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality (js).png" /></p>
+<p>Choose “onclick”</p>
+<p><img src="images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520-%2520onclick%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality - onclick (js).png" /></p>
+<p>Add the following code:</p>
+<pre><code>var Email_HTML = document.getElementById(&quot;Email_HTML&quot;);
+var Tokens = document.getElementById(&quot;Tokens&quot;);
+var selectedValue = Tokens.options[Tokens.selectedIndex].text; //.value;
+Email_HTML.value = Email_HTML.value + ' ${' + selectedValue + '}';
+</code></pre>
+<p><img src="images/Web%2520Form%2520Editor%2520-%2520Script%2520%2528js%2529.png" alt="Web Form Editor - Script (js).png" /></p>
+<p>Open the Form.</p>
+<p>Now click on a Token and it will add it to your textbox.</p>
+<p><img src="images/Form%2520%2528js%2529.png" alt="Form (js).png" /></p>
+<p>In your code you can now parse the Tokens  and replace them with any other info.</p>
+<p>You could use “<a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=59d4c016-dd91-49c5-b4e2-09ce3e01765a&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - Tag Finder</a> (Extract Text By Pattern)”</p>
+<hr />
+<p><a href="http://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus.png" /></a></p>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library">String with name &#x27;XXX&#x27; has already been added - Workflow Integration Library</a></h2>
-  <p class="post-meta">Published on Wednesday, 13 May 2015</p>
-<p>So you've created an <img src="images/Int.png" alt="Int.png"> Integration Component with SQL Generators etc included.</p>    <p class="small"><a href="/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library">Read more...</a></p>
-</div>
-
-
-      </div>
-      <div class="col-md-4 mt-4 mt-md-0 col-sm-height">
-          <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (6)</a>
-          <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> Error (2)</a>
-          <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-          <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-          <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-dark"> Integration Library (1)</a>
-          <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-      </div>
-    </div>
-  </div>
 
         
 

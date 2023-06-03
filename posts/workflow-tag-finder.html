@@ -5,10 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley - Integration Library</title>
+  <title>Alex Hedley - Workflow - Tag Finder</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/tags/integration-library'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tag-finder'>
 
       <link type="application/rss+xml" rel="alternate" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" href="/symantec-connect-articles/feed.atom" />
@@ -17,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley - Integration Library' />
+  <meta property="og:title" content='Alex Hedley - Workflow - Tag Finder' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/tags/integration-library' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tag-finder' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -75,10 +76,11 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Integration Library
+            Workflow - Tag Finder
           </h1>
+            <div class="meta">Published on Wednesday, 10 June 2015</div>
         </div>
       </div>
     </div>
@@ -90,30 +92,63 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-          <div class="container-sm-height">
-    <div class="row row-sm-height">
-      <div class="col-md-6 right-border col-sm-height">
-        
+        <p>In this article I will show you how to use the 'Extract Text By Pattern' component in the <img src="images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png" /> Forms (Web) Project Type</p>
+<p>If you have a need to find a value within string you can use the following:</p>
+<p><img src="images/ExtractTextByPattern.png" alt="Extract Text By Pattern.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Extract Text By Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class: LogicBase.Components.Default.Process.RegEx.ExtractTextByPattern</td>
+</tr>
+<tr>
+<td>Library: LogicBase.Components.Default.dll</td>
+</tr>
+<tr>
+<td>Publisher: Symantec Corporation</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2a1808cb-0dfe-4bc9-9a63-6d5aeb71642e&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">https://www-secure.symantec.com/connect/articles/extract-text-pattern</a></p>
+<p>Example:</p>
+<p>{{##_Retry_Tag:25}}</p>
+<table>
+<thead>
+<tr>
+<th>BEGIN</th>
+<th>TAG</th>
+<th>END</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{##_Retry_Tag:</td>
+<td>25</td>
+<td>}}</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/TagFinderWorkflow.png" alt="Tag Finder Workflow.png" /></p>
+<p>This will find the first occurrence.</p>
+<p><img src="images/Tag%2520Finder%2520Web%2520%25281%2529.png" alt="Tag Finder Web (1).png" /> <img src="images/Tag%2520Finder%2520Web%2520%25282%2529.png" alt="Tag Finder Web (2).png" /></p>
+<p>I created a variable for the Start and End Tag and passed it the data I needed to search in.</p>
+<p><img src="images/Extract%2520Text%2520By%2520Pattern%2520-%2520Configuration%2520%25281%2529.png" alt="Extract Text By Pattern - Configuration (1).png" /></p>
+<p>If you know the length of the tag, say it’s a GUID you could untick ‘Use Pattern For End’ and hardcode the length. This is similar to how the Email Monitor searches for {IID=} updates in Tickets.</p>
+<p><img src="images/Extract%2520Text%2520By%2520Pattern%2520-%2520Configuration%2520%25282%2529.png" alt="Extract Text By Pattern - Configuration (2).png" /></p>
+<p>If it doesn’t find a match it continues.</p>
+<p>You could then use a ‘Get Number from String’ to check it is a Number or do a Length check to be sure.</p>
+<hr />
+<p><u><strong>Forum</strong></u></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=9ca4fc07-c285-4dbe-90fd-be7f1938e673&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=digestviewer#bm9ca4fc07-c285-4dbe-90fd-be7f1938e673">https://www-secure.symantec.com/connect/forums/extracting-text-different-variable-email-body</a></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=1346a873-3853-4d9c-a70a-8580b7dc813a&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=digestviewer#bm1346a873-3853-4d9c-a70a-8580b7dc813a">https://www-secure.symantec.com/connect/forums/string-parsing</a></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=6aa0b251-3b25-4107-a0cb-1de26466791f&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=digestviewer#bm6aa0b251-3b25-4107-a0cb-1de26466791f">https://www-secure.symantec.com/connect/forums/parsing-text-email</a></p>
+<hr />
+<p><a href="http://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library">String with name &#x27;XXX&#x27; has already been added - Workflow Integration Library</a></h2>
-  <p class="post-meta">Published on Wednesday, 13 May 2015</p>
-<p>So you've created an <img src="images/Int.png" alt="Int.png"> Integration Component with SQL Generators etc included.</p>    <p class="small"><a href="/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library">Read more...</a></p>
-</div>
-
-
-      </div>
-      <div class="col-md-4 mt-4 mt-md-0 col-sm-height">
-          <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (6)</a>
-          <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> Error (2)</a>
-          <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-          <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-          <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-dark"> Integration Library (1)</a>
-          <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-      </div>
-    </div>
-  </div>
 
         
 

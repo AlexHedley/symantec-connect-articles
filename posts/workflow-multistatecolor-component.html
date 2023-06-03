@@ -5,10 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley - Integration Library</title>
+  <title>Alex Hedley - Workflow - MultiStateColor Component</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/tags/integration-library'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-multistatecolor-component'>
 
       <link type="application/rss+xml" rel="alternate" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" href="/symantec-connect-articles/feed.atom" />
@@ -17,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley - Integration Library' />
+  <meta property="og:title" content='Alex Hedley - Workflow - MultiStateColor Component' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/tags/integration-library' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-multistatecolor-component' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -75,10 +76,11 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Integration Library
+            Workflow - MultiStateColor Component
           </h1>
+            <div class="meta">Published on Thursday, 25 June 2015</div>
         </div>
       </div>
     </div>
@@ -90,30 +92,53 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-          <div class="container-sm-height">
-    <div class="row row-sm-height">
-      <div class="col-md-6 right-border col-sm-height">
-        
+        <p>In this article I will show you how to use the 'MultiStateColor' component in the <img src="images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png" /> Forms (Web) Project Type</p>
+<p>This allows you to change a panel on a Web Form to a specific colour.</p>
+<p>This can be handy for a RAG Status or Traffic light system.</p>
+<p>In a Form under <img src="images/Components.png" alt="Components.png" />Dashboard Components there is:</p>
+<h3 id="multistatecolor.pngmultistatecolor"><img src="images/MultiStateColor.png" alt="MultiStateColor.png" /> <strong>MultiStateColor</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Class:</th>
+<th>LogicBase.Components.FormBuilder.Components.MultiStateColor.MultiStateColorComponent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Library:</td>
+<td>LogicBase.Components.FormBuilder.dll</td>
+</tr>
+<tr>
+<td>Publisher:</td>
+<td>Symantec Corporation</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/FormMSC.gif" alt="Form MSC.gif" /></p>
+<p>Drag this onto your Form.</p>
+<p>The Theme Style will be set to Panel.</p>
+<p><img src="images/EditComponent-AppearanceMSC.png" alt="Edit Component - Appearance MSC.png" /></p>
+<p>Add in your 'Color States'</p>
+<p>You can use the Color Picker here to choose a more accurate one.</p>
+<p><img src="images/EditComponent-ConfigurationMSC.png" alt="Edit Component - Configuration MSC.png" /></p>
+<p>Click on the &quot;...&quot; next to the 'Color Selection Model':</p>
+<p>Add in a Matches rule that uses your variable to check - here being color:</p>
+<p><img src="images/EditEmbeddedDecisionModelMSC.png" alt="Edit Embedded Decision Model MSC.png" /></p>
+<p>Add you manual comparisons:</p>
+<p><img src="images/MatchesRuleEditorMSC.png" alt="Matches Rule Editor MSC.png" /></p>
+<p>Duplicate your <img src="images/ColorStateSelectionEndComponent.png" alt="ColorStateSelectionEndComponent.png" /> 'ColorStateSelectionEndComponent' and chose a <strong>Selected Output</strong> from the previously configured list.</p>
+<p><img src="images/ColorStateSelectionEndComponentEditorMSC.png" alt="ColorStateSelectionEndComponent Editor MSC.png" /></p>
+<p>Now you can run your Form and see the colour change accordingly.</p>
+<p><img src="images/WorkflowMSC.png" alt="Workflow MSC.png" /></p>
+<p><img src="images/FormMSC.gif" alt="Form MSC.gif" /></p>
+<p>Watch out when using a Theme</p>
+<p>Change the Background to nothing or it doesn't work.</p>
+<p><img src="images/ThemeEditorMSC.png" alt="Theme Editor MSC.png" /></p>
+<p>Original I tried 3 panels, one of each colour, with visibility rules given the matching value but this way gives more flexibility for more colour choices too.</p>
+<hr />
+<p><a href="http://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library">String with name &#x27;XXX&#x27; has already been added - Workflow Integration Library</a></h2>
-  <p class="post-meta">Published on Wednesday, 13 May 2015</p>
-<p>So you've created an <img src="images/Int.png" alt="Int.png"> Integration Component with SQL Generators etc included.</p>    <p class="small"><a href="/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library">Read more...</a></p>
-</div>
-
-
-      </div>
-      <div class="col-md-4 mt-4 mt-md-0 col-sm-height">
-          <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (6)</a>
-          <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> Error (2)</a>
-          <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-          <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-          <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-dark"> Integration Library (1)</a>
-          <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-      </div>
-    </div>
-  </div>
 
         
 

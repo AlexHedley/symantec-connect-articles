@@ -4,7 +4,600 @@
 	<title />
 	<link rel="self" href="https://alexhedley.github.io/symantec-connect-articles" />
 	<rights>Copyright © 2023</rights>
-	<updated>2023-05-28T13:32:32Z</updated>
+	<updated>2023-06-03T08:14:42Z</updated>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tips-and-tricks</id>
+		<title>Workflow - Tips and Tricks</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tips-and-tricks" />
+		<updated>2015-09-22T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I'm going to share some Workflow Tips and Tricks,&lt;/p&gt;
+&lt;p&gt;Go to the Workflow Task Tray&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;"&amp;lt;Install Folder&amp;gt;:\Program Files\Symantec\Workflow\Tools\LogicBase.Local.TaskTray.exe"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Down to the Task Tray and Right Click on the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow Icon.&lt;/p&gt;
+&lt;p&gt;Select &lt;strong&gt;Settings&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-Settings.png" alt="Task Tray Settings - Settings"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;Application Properties&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;Select the &lt;strong&gt;Workflow Server&lt;/strong&gt; in the Local Machine Info tree.&lt;/p&gt;
+&lt;p&gt;Here you can change the &lt;strong&gt;Application Properties Refresh Interval&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-WorkflowServer.png" alt="Task Tray Settings - Workflow Server"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;There are more Preferences you can edit.&lt;/p&gt;
+&lt;p&gt;Right Click | Shortcuts | Edit Tool Preferences&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-RightClick.png" alt="Task Tray Settings - Right Click"&gt;&lt;/p&gt;
+&lt;p&gt;I spend quite a bit of time dragging property labels&amp;nbsp;onto forms then removing the "Not Found". I'd prefer it to be blank if there isn't one.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AdvancedTextCreator-StringFormatter-Configurator.png" alt="Advanced Text Creator - String Formatter - Configurator"&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes when you close this Form then reopen it later the option for the Label has gone.&lt;/p&gt;
+&lt;p&gt;You can Right Click on the Label, Convert To - String Formatter&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ConvertTo-StringFormatter.png" alt="Convert To - String Formatter"&gt;&lt;/p&gt;
+&lt;p&gt;Or just Right Click - Edit, click on the ellipse (...) and edit it there.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditObject.png" alt="Edit Object"&gt;&lt;/p&gt;
+&lt;p&gt;There is another option.&lt;/p&gt;
+&lt;p&gt;Task Tray | Edit Tool Preferences | Designer | Designer Configuration&lt;/p&gt;
+&lt;p&gt;Default Variable Not Found Text&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-EditToolPreferences-Designer-DesignerConfiguration.png" alt="Task Tray Settings - Edit Tool Preferences - Designer - Designer Configuration"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;Sort Models Alphabetically&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;Edit Tool Preferences&lt;/p&gt;
+&lt;p&gt;Studio Configuration | Project Configuration&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-EditToolPreferences-StudioConfiguration-ProjectConfiguration.png" alt="Task Tray Settings - Edit Tool Preferences - Studio Configuration - Project Configuration"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Please do add any of your own :)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;There's a great one from&amp;nbsp;&lt;a href="https://www-secure.symantec.com/connect/user/africo"&gt;africo&lt;/a&gt;&amp;nbsp;about changing the Debug Browser&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://atmaworkflow.com/2014/12/23/workflow-short-adjust-default-debugger-browser/"&gt;http://atmaworkflow.com/2014/12/23/workflow-short-adjust-default-debugger-browser/&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I'm going to share some Workflow Tips and Tricks,&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/utility-app</id>
+		<title>Utility App</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/utility-app" />
+		<updated>2015-07-31T00:00:00Z</updated>
+		<content>&lt;p&gt;Hi All,&lt;/p&gt;
+&lt;p&gt;I've created a mini Utility App with a couple of functions to aid in your day to day work.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML Encode/Decode
+&lt;ul&gt;
+&lt;li&gt;Sometimes when you log a Table in workflow it swaps the &amp;lt; to &amp;lt;, this converts it back and displays it in a webbrowser view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;URL Encode&lt;/li&gt;
+&lt;li&gt;HEX to RGB&lt;/li&gt;
+&lt;li&gt;SQL Builder (IN Clause)&lt;/li&gt;
+&lt;li&gt;Guid
+&lt;ul&gt;
+&lt;li&gt;Zero Guid&lt;/li&gt;
+&lt;li&gt;New Guid Generator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;XML Pretty Print&lt;/li&gt;
+&lt;li&gt;JSON Pretty Print&lt;/li&gt;
+&lt;li&gt;SQL Formatter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Utility.png" alt="Utility.png"&gt;&lt;/p&gt;
+&lt;p&gt;Link:&amp;nbsp;&lt;a href="http://alexhedley.com/apps/vb/utility/"&gt;http://alexhedley.com/apps/vb/utility/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is still in development&amp;nbsp;so please let me know if anything needs updating or if you can think of anything else I can add to make it more useful.&lt;/p&gt;
+&lt;p&gt;There is a chm Help file that comes with it, likely to be blocked, just with a little explanation and links to code used within the app.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mac&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mac app has been added - still need to add a couple of tabs for the SQL functions. (9th Aug)&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Hi All,&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-theme-editor-control-style-rename-error</id>
+		<title>Workflow - Theme Editor - Control Style Rename *Error*</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-theme-editor-control-style-rename-error" />
+		<updated>2015-07-17T00:00:00Z</updated>
+		<content>&lt;p&gt;I was recently working with the Theme Editor and got the following error.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;"A style with this name already exists"&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ThemeEditorRenameError.png" alt="Theme Editor Rename Error"&gt;&lt;/p&gt;
+&lt;p&gt;I'd created a style for a button and named it "&lt;strong&gt;.but Green&lt;/strong&gt;".&lt;/p&gt;
+&lt;p&gt;I then tried to change the name to "&lt;strong&gt;.but green&lt;/strong&gt;".&lt;/p&gt;
+&lt;p&gt;To rename it successfully change it&amp;nbsp;to anything else i.e. "&lt;strong&gt;test&lt;/strong&gt;"&amp;nbsp;then rename it again back to "&lt;strong&gt;.but green&lt;/strong&gt;"&lt;/p&gt;
+&lt;p&gt;This is as designed and has been raised as an Enhancement request.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\Programs\Symantec\Workflow Designer\Composer Theme Editor&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;"INSTALL DRIVE:\Program Files\Symantec\Workflow\Designer\bin\LogicBase.Composer.ThemeEditor.exe"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Links&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;Want to know how to build a theme? Check out this great article&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=186a54b9-ab4d-4144-9098-001c95734781&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=librarydocuments"&gt;https://www-secure.symantec.com/connect/articles/creating-workflow-themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Convert a CSS file to an xTheme&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=7709f909-9a40-47c5-bc26-4c5b693d8878&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm7709f909-9a40-47c5-bc26-4c5b693d8878"&gt;http://www.symantec.com/connect/forums/include-css-web-form-workflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;I was recently working with the Theme Editor and got the following error.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-grid-view-column-cell-colouring</id>
+		<title>Workflow - Grid View Column Cell Colouring</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-grid-view-column-cell-colouring" />
+		<updated>2015-07-15T00:00:00Z</updated>
+		<content>&lt;p&gt;In this article I will show you how to&amp;nbsp;change the colour of a cell (in a given column) in a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Grid.png" alt="Grid"&gt;&amp;nbsp;Grid Component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type.&lt;/p&gt;
+&lt;p&gt;This can be handy for a RAG Status or Traffic light system.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Linked Article&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0f43883e-d4dd-4c00-8da0-ccfffeb3a12c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www-secure.symantec.com/connect/articles/workflow-multistatecolor-component&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Add a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Grid.png" alt="Grid"&gt;&amp;nbsp;Grid to your &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/FormBuilder.png" alt="Form Builder.png"&gt;&amp;nbsp;Web Form.&lt;/p&gt;
+&lt;p&gt;Give the Grid a name&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Functionality tab&lt;/u&gt;&lt;br&gt;
+Control ID: ProdTable&lt;/p&gt;
+&lt;p&gt;This assumes the data set you are returning includes a column that lists the colour you want to show.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Data&lt;/th&gt;
+&lt;th&gt;Colour&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;John&lt;/td&gt;
+&lt;td&gt;Red&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fred&lt;/td&gt;
+&lt;td&gt;Amber&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lucy&lt;/td&gt;
+&lt;td&gt;Green&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Make this the LAST column of your Table.&lt;/p&gt;
+&lt;p&gt;You want it to change to&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TableColour.png" alt="Table Colour.png"&gt;&lt;/p&gt;
+&lt;p&gt;Add the following to the &lt;strong&gt;onload&lt;/strong&gt; event of the Form.&lt;/p&gt;
+&lt;p&gt;Double click on the Form, go to the &lt;strong&gt;Behavior&lt;/strong&gt; Tab.&lt;/p&gt;
+&lt;p&gt;In the 'Body Custom Events' click on &lt;strong&gt;Add&lt;/strong&gt; -&amp;gt; &lt;strong&gt;AttributesKeyValuePair&lt;/strong&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Event&lt;/th&gt;
+&lt;th&gt;onload&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Event Handler&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;#below code#&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;$(function () {
+    $('#ProdTable tr').each(function (index, value) {
+        var lastTr = $('td', value).last();
+        var colour = lastTr.text();
+        if( colour == 'Amber' )
+            colour = 'Orange';
+            lastTr.text('');
+            lastTr.css("background-color", colour);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;*There are certain colours in CSS instead of using the HEX code, Amber is not one of them so we need to change it to Orange.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/"&gt;https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There's an interesting &lt;a href="http://stackoverflow.com/questions/8318911/why-does-html-think-chucknorris-is-a-color"&gt;read&lt;/a&gt; on why "ChuckNorris" is a colour.&lt;/p&gt;
+&lt;p&gt;If you wish to have it update a different column you will need to change the following line&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var lastTr = $('td', value).last();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and get the column you need instead.&lt;/p&gt;
+&lt;p&gt;This works fine for the first page of a Grid but the Paging is performed using&amp;nbsp;AJAX so if you change to Page 2 the colours aren't updated.&lt;/p&gt;
+&lt;p&gt;To combat this&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(function() {
+    var previous = $("#ProdTable").text();
+    $check = function() {
+        if ($("#ProdTable").text() != previous) { 
+          updateColor();
+        }
+        previous = $("#ProdTable").text();        
+    }
+    updateColor();
+    setInterval(function() { $check(); }, 1000);
+});
+
+function updateColor() {
+    $('#ProdTable tr').each(function (index, value) {
+      var colour =  $(':nth-child(11)', $(this)).text();      
+      var lastTr = $('td', value).last();   
+    
+      if( colour == 'Amber' )
+          colour = 'Orange';
+   
+      lastTr.text('');
+      lastTr.css("background-color", colour);
+    });
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This uses a Timer to keep checking the Grid so it's the best performance wise solution but it works.&lt;/p&gt;
+&lt;p&gt;In Workflow 7.5 you could just map a value into a Column of&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style="background-color:blue"&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You could map across the colour from the DataType using the Merge component.&lt;/p&gt;
+&lt;p&gt;This is now encoded in the Grid in 7.6,&amp;nbsp;the "&amp;lt;" is converted to "&amp;lt;" etc so therefore doesn't work anymore.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this article I will show you how to&amp;nbsp;change the colour of a cell (in a given column) in a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Grid.png" alt="Grid"&gt;&amp;nbsp;Grid Component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-multistatecolor-component</id>
+		<title>Workflow - MultiStateColor Component</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-multistatecolor-component" />
+		<updated>2015-06-25T00:00:00Z</updated>
+		<content>&lt;p&gt;In this article I will show you how to use the 'MultiStateColor' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;
+&lt;p&gt;This allows you to change a panel on a Web Form to a specific colour.&lt;/p&gt;
+&lt;p&gt;This can be handy for a RAG Status or Traffic light system.&lt;/p&gt;
+&lt;p&gt;In a Form under &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components.png" alt="Components.png"&gt;Dashboard Components there is:&lt;/p&gt;
+&lt;h3 id="multistatecolor.pngmultistatecolor"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MultiStateColor.png" alt="MultiStateColor.png"&gt;&amp;nbsp;&lt;strong&gt;MultiStateColor&lt;/strong&gt;&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Class:&lt;/th&gt;
+&lt;th&gt;LogicBase.Components.FormBuilder.Components.MultiStateColor.MultiStateColorComponent&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Library:&lt;/td&gt;
+&lt;td&gt;LogicBase.Components.FormBuilder.dll&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Publisher:&lt;/td&gt;
+&lt;td&gt;Symantec Corporation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/FormMSC.gif" alt="Form MSC.gif"&gt;&lt;/p&gt;
+&lt;p&gt;Drag this onto your Form.&lt;/p&gt;
+&lt;p&gt;The Theme Style will be set to Panel.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditComponent-AppearanceMSC.png" alt="Edit Component - Appearance MSC.png"&gt;&lt;/p&gt;
+&lt;p&gt;Add in your 'Color States'&lt;/p&gt;
+&lt;p&gt;You can use the Color Picker here to choose a more accurate one.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditComponent-ConfigurationMSC.png" alt="Edit Component - Configuration MSC.png"&gt;&lt;/p&gt;
+&lt;p&gt;Click on the "..." next to the 'Color Selection Model':&lt;/p&gt;
+&lt;p&gt;Add in a Matches rule that uses your variable to check - here being color:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditEmbeddedDecisionModelMSC.png" alt="Edit Embedded Decision Model MSC.png"&gt;&lt;/p&gt;
+&lt;p&gt;Add you manual comparisons:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MatchesRuleEditorMSC.png" alt="Matches Rule Editor MSC.png"&gt;&lt;/p&gt;
+&lt;p&gt;Duplicate your &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ColorStateSelectionEndComponent.png" alt="ColorStateSelectionEndComponent.png"&gt;&amp;nbsp;'ColorStateSelectionEndComponent' and chose a &lt;strong&gt;Selected Output&lt;/strong&gt; from the previously configured list.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ColorStateSelectionEndComponentEditorMSC.png" alt="ColorStateSelectionEndComponent Editor MSC.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now you can run your Form and see the colour change accordingly.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/WorkflowMSC.png" alt="Workflow MSC.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/FormMSC.gif" alt="Form MSC.gif"&gt;&lt;/p&gt;
+&lt;p&gt;Watch out when using a Theme&lt;/p&gt;
+&lt;p&gt;Change the Background to nothing or it doesn't work.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ThemeEditorMSC.png" alt="Theme Editor MSC.png"&gt;&lt;/p&gt;
+&lt;p&gt;Original I tried 3 panels, one of each colour, with visibility rules given the matching value but this way gives more flexibility for more colour choices too.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this article I will show you how to use the 'MultiStateColor' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox</id>
+		<title>Workflow - Tokens from Listbox</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox" />
+		<updated>2015-06-10T00:00:00Z</updated>
+		<content>&lt;p&gt;In this article I will show you how to use Javascript in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type to pass values from a Listbox to a Textarea.&lt;/p&gt;
+&lt;p&gt;This is similar to how the Email Templates work in ServiceDesk.&lt;/p&gt;
+&lt;p&gt;Add a Form Builder component to the Workflow.&lt;/p&gt;
+&lt;p&gt;Add a Multiline Textbox to your Form. Name it “Email_HTML”&lt;br&gt;
+Add a Listbox to your Form, give it an Ouput of “Token_SEL”&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520%2528js%2529.png" alt="Web Form Editor (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component - Functionality (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;Add some Tokens to the Listbox Items.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Token1&lt;/li&gt;
+&lt;li&gt;Token2&lt;/li&gt;
+&lt;li&gt;Token3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then add a “Custom Event” using the “AttributesKeyValuePair”.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;Choose “onclick”&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520-%2520onclick%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality - onclick (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;Add the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var Email_HTML = document.getElementById("Email_HTML");
+var Tokens = document.getElementById("Tokens");
+var selectedValue = Tokens.options[Tokens.selectedIndex].text; //.value;
+Email_HTML.value = Email_HTML.value + ' ${' + selectedValue + '}';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Script%2520%2528js%2529.png" alt="Web Form Editor - Script (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;Open the Form.&lt;/p&gt;
+&lt;p&gt;Now click on a Token and it will add it to your textbox.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Form%2520%2528js%2529.png" alt="Form (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;In your code you can now parse the Tokens  and replace them with any other info.&lt;/p&gt;
+&lt;p&gt;You could use “&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=59d4c016-dd91-49c5-b4e2-09ce3e01765a&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Tag Finder&lt;/a&gt; (Extract Text By Pattern)”&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this article I will show you how to use Javascript in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type to pass values from a Listbox to a Textarea.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tag-finder</id>
+		<title>Workflow - Tag Finder</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tag-finder" />
+		<updated>2015-06-10T00:00:00Z</updated>
+		<content>&lt;p&gt;In this article I will show you how to use the 'Extract Text By Pattern' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;
+&lt;p&gt;If you have a need to find a value within string you can use the following:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ExtractTextByPattern.png" alt="Extract Text By Pattern.png"&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Extract Text By Pattern&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Class: LogicBase.Components.Default.Process.RegEx.ExtractTextByPattern&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Library: LogicBase.Components.Default.dll&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Publisher: Symantec Corporation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2a1808cb-0dfe-4bc9-9a63-6d5aeb71642e&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www-secure.symantec.com/connect/articles/extract-text-pattern&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;{{##_Retry_Tag:25}}&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;BEGIN&lt;/th&gt;
+&lt;th&gt;TAG&lt;/th&gt;
+&lt;th&gt;END&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;{{##_Retry_Tag:&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;}}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TagFinderWorkflow.png" alt="Tag Finder Workflow.png"&gt;&lt;/p&gt;
+&lt;p&gt;This will find the first occurrence.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Tag%2520Finder%2520Web%2520%25281%2529.png" alt="Tag Finder Web (1).png"&gt;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Tag%2520Finder%2520Web%2520%25282%2529.png" alt="Tag Finder Web (2).png"&gt;&lt;/p&gt;
+&lt;p&gt;I created a variable for the Start and End Tag and passed it the data I needed to search in.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Extract%2520Text%2520By%2520Pattern%2520-%2520Configuration%2520%25281%2529.png" alt="Extract Text By Pattern - Configuration (1).png"&gt;&lt;/p&gt;
+&lt;p&gt;If you know the length of the tag, say it’s a GUID you could untick ‘Use Pattern For End’ and hardcode the length. This is similar to how the Email Monitor searches for {IID=} updates in Tickets.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Extract%2520Text%2520By%2520Pattern%2520-%2520Configuration%2520%25282%2529.png" alt="Extract Text By Pattern - Configuration (2).png"&gt;&lt;/p&gt;
+&lt;p&gt;If it doesn’t find a match it continues.&lt;/p&gt;
+&lt;p&gt;You could then use a ‘Get Number from String’ to check it is a Number or do a Length check to be sure.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Forum&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=9ca4fc07-c285-4dbe-90fd-be7f1938e673&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=digestviewer#bm9ca4fc07-c285-4dbe-90fd-be7f1938e673"&gt;https://www-secure.symantec.com/connect/forums/extracting-text-different-variable-email-body&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=1346a873-3853-4d9c-a70a-8580b7dc813a&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm1346a873-3853-4d9c-a70a-8580b7dc813a"&gt;https://www-secure.symantec.com/connect/forums/string-parsing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=6aa0b251-3b25-4107-a0cb-1de26466791f&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm6aa0b251-3b25-4107-a0cb-1de26466791f"&gt;https://www-secure.symantec.com/connect/forums/parsing-text-email&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this article I will show you how to use the 'Extract Text By Pattern' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-cookie-using-code-web-app</id>
+		<title>Workflow - Cookie (using code) - Web App</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-cookie-using-code-web-app" />
+		<updated>2015-06-05T00:00:00Z</updated>
+		<content>&lt;p&gt;In this article I will show you how to create and retrieve Cookies in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/App.png" alt="App.png"&gt;Web App Project Type&lt;/p&gt;
+&lt;p&gt;The Cookie components&amp;nbsp;aren't available in the Web App Project type.&lt;/p&gt;
+&lt;p&gt;In a Forms (Web) Project they are under&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components.png" alt="Components.png"&gt;&amp;nbsp;Input Output&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components.png" alt="Components.png"&gt;&amp;nbsp;Web Cookies&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ClearCookie.png" alt="Clear Cookie.png"&gt;&amp;nbsp;Clear Cookie&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/GetFromCookie.png" alt="Get From Cookie.png"&gt;&amp;nbsp;Get From Cookie&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SaveToCookie.png" alt="Save To Cookie.png"&gt;&amp;nbsp;Save To Cookie&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Class:&lt;/strong&gt; LogicBase.Components.Default.IO.ClearCookie&lt;br&gt;
+&lt;strong&gt;Library:&lt;/strong&gt; LogicBase.Components.Default.dll&lt;br&gt;
+&lt;strong&gt;Publisher:&lt;/strong&gt; Symantec Corporation&lt;/p&gt;
+&lt;p&gt;Some of the Default.IO is available but not these.&lt;/p&gt;
+&lt;p&gt;The Dialog Model type is not the same as the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type in a Web Application Project.&lt;/p&gt;
+&lt;p&gt;Since we can't use the components we will have to use another method.&lt;/p&gt;
+&lt;p&gt;Let's go to the trusty Scripting Component.&lt;/p&gt;
+&lt;p&gt;Add in the Library (&lt;strong&gt;LogicBase.Components.Scripting.dll&lt;/strong&gt;) to your Project&lt;/p&gt;
+&lt;p&gt;Find the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Code%2520%2528Script%2529%2520Component.png" alt="Code (Script) Component.png"&gt;&amp;nbsp;Code (Script) Component&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Set Cookie&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;We will create the 'Set' Component first, this will have 3 parameters:&lt;/p&gt;
+&lt;p&gt;CookieName - Text&lt;/p&gt;
+&lt;p&gt;CookieValue - Text&lt;/p&gt;
+&lt;p&gt;ExpiresMinutes - Number (integer)&lt;/p&gt;
+&lt;p&gt;No &lt;strong&gt;return&lt;/strong&gt; type&lt;/p&gt;
+&lt;p&gt;In the namespaces add&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;System.Web
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;font color="#008000"&gt;&lt;font&gt;&lt;span class="sc0"&gt;&lt;span class="ms-rteThemeFontFace-1"&gt;//Cookie Class&lt;/span&gt;&lt;br class="ms-rteThemeFontFace-1"&gt;&lt;span class="ms-rteThemeFontFace-1"&gt;//&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;a href="https://msdn.microsoft.com/en-us/library/system.web.httpcookie%28v=vs.71%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/system.web.httpcookie(v=vs.71).aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;System.Object&lt;br&gt;
+&amp;nbsp;&amp;nbsp; System.Web.HttpCookie&lt;br&gt;
+Namespace: System.Web&lt;/p&gt;
+&lt;p&gt;C# code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;    HttpCookie myCookie = new HttpCookie(CookieName);
+    DateTime now = DateTime.Now;
+    
+    // Set the cookie value.
+    myCookie.Value = CookieValue;
+    // Set the cookie expiration date.
+    myCookie.Expires = now.AddMinutes(ExpiresMinutes);
+    
+    // Add the cookie.
+    HttpContext.Current.Response.Cookies.Add(myCookie);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you read the MS Articles below you won't see&amp;nbsp;&lt;strong&gt;HttpContext.Current.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is needed for it to work in Workflow.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Get Cookie&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;For the Get Cookie we need an input of&lt;/p&gt;
+&lt;p&gt;CookieName - Text&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;'Result variable type' of &lt;strong&gt;Text&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;'Result variable name' of &lt;strong&gt;Cookie&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Again add the namespace of&amp;nbsp;&lt;strong&gt;System.Web&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Then the following C# code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;HttpCookie myCookie = new HttpCookie(CookieName);
+myCookie = HttpContext.Current.Request.Cookies[CookieName];
+
+return myCookie.Value;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And now you can use this throughout your project.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;To view the Cookies in IE.&lt;/p&gt;
+&lt;p&gt;F12 - Cache | View Cookie Information&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;Links&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Connect Forum&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=7b7bd87c-0355-4c18-9553-87cbb6e7ee99&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm7b7bd87c-0355-4c18-9553-87cbb6e7ee99"&gt;https://www-secure.symantec.com/connect/forums/need-tutorial-save-cookie-component-usage&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font class="ms-rteThemeFontFace-1"&gt;&lt;span class="sc2 ms-rteThemeFontFace-1"&gt;&lt;font color="#008000"&gt;// Code: Writing a Cookie (Visual C#)&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;br&gt;
+&lt;a href="https://msdn.microsoft.com/en-us/library/aa287547%28v=vs.71%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/aa287547%28v=vs.71%29.aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font class="ms-rteThemeFontFace-1"&gt;&lt;span class="sc2 ms-rteThemeFontFace-1"&gt;&lt;font color="#008000"&gt;// Code: Reading a Cookie (Visual C#)&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;br&gt;
+&lt;a href="https://msdn.microsoft.com/en-us/library/aa287533%28v=vs.71%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/aa287533(v=vs.71).aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;// HttpCookie Properties&lt;br&gt;
+&lt;a href="https://msdn.microsoft.com/en-us/library/System.Web.HttpCookie_properties%28v=vs.110%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/System.Web.HttpCookie_properties(v=vs.110).aspx&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this article I will show you how to create and retrieve Cookies in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/App.png" alt="App.png"&gt;Web App Project Type&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-a-user-defined-type-with-the-script-component-workflow</id>
+		<title>Using a User Defined Type with the Script Component - Workflow</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-a-user-defined-type-with-the-script-component-workflow" />
+		<updated>2015-05-21T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I will show you how to use a custom data type within the Script Component.&lt;/p&gt;
+&lt;p&gt;So you've created a "User Defined Type" from the &lt;strong&gt;Authoring&lt;/strong&gt; section in a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Int.png" alt="Int.png"&gt;&amp;nbsp;Workflow Integration Component&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Create%2520Generator%2520%2528UDT%2529.png" alt="Create Generator (UDT).png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Property.png" alt="Property.png"&gt;&amp;nbsp;UserDefinedType&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property%2520%25282%2529.png" alt="Property (2).png"&gt;&amp;nbsp;TextProperty (Text)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property%2520%25282%2529.png" alt="Property (2).png"&gt;&amp;nbsp;IntegerProperty&amp;nbsp;(Number (integer))&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_1.+Type+Designer.png" alt="1. Type Designer.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_2.+Settings.png" alt="2. Settings.png"&gt;&lt;/p&gt;
+&lt;p&gt;Make sure to note the Namespace:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Generated.POC_Scripting_INT&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/C%2523%2520Generators.png" alt="C# Generators.png"&gt;&amp;nbsp;Generators&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/C%2523.png" alt="C#.png"&gt;&amp;nbsp;UserDefinedType&lt;br&gt;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Property.png" alt="Property.png"&gt;&amp;nbsp;UserDefinedType&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Generators%2520Management%2520%2528UDT%2529%2520%25282%2529.png" alt="Generators Management (UDT) (2).png"&gt;&lt;/p&gt;
+&lt;p&gt;Now create a Workflow.&lt;/p&gt;
+&lt;p&gt;Use an &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Data_Add.png" alt="Data_Add.png"&gt;&amp;nbsp;Add Data Element and create a element of your new Data Type.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;DataType&lt;/th&gt;
+&lt;th&gt;UserDefinedType&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Variable Name&lt;/td&gt;
+&lt;td&gt;UserDefinedType&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Add some values&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Integer Property&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Text Property&lt;/td&gt;
+&lt;td&gt;Alex Hedley&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Search for a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Code%2520%2528Script%2529%2520Component.png" alt="Code (Script) Component.png"&gt;&amp;nbsp;Script Component. The Library may not have been added so should show in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Search.png" alt="Search.png"&gt;&amp;nbsp;Unloaded Libraries section.&lt;/p&gt;
+&lt;p&gt;You could also add "LogicBase.Components.Scripting.dll" in the Libraries tab of the Project section.&lt;/p&gt;
+&lt;p&gt;Join this to your previous component.&lt;/p&gt;
+&lt;p&gt;Double click on this to start up the Wizard.&lt;/p&gt;
+&lt;p&gt;Add your variable name and choose it's Type:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Scripted+Component+Wizard+-+1.+Input+Parameters.png" alt="Scripted Component Wizard - 1. Input Parameters.png"&gt;&lt;/p&gt;
+&lt;p&gt;Click on &lt;strong&gt;&lt;u&gt;E&lt;/u&gt;dit Parameter Mappings&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Select the Parameter then choose the Data Source:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_End+Component+Mapping.png" alt="End Component Mapping.png"&gt;&lt;/p&gt;
+&lt;p&gt;Click OK then Next.&lt;/p&gt;
+&lt;p&gt;Choose your "Result &lt;u&gt;v&lt;/u&gt;ariable type" and "&lt;u&gt;R&lt;/u&gt;esult variable name":&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Scripted+Component+Wizard+-+2.+Result+Variable.png" alt="Scripted Component Wizard - 2. Result Variable.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now to the Source Code.&lt;/p&gt;
+&lt;p&gt;You can choose which one you prefer. (C#, VB.NET, JScript)&lt;/p&gt;
+&lt;p&gt;Here is where you need to add your previous namespace.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Using namespaces (one per line):&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;System  &lt;br&gt;			Generated.Generated.POC_Scripting_INT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Now you can use your Type in the code:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;return UserDefinedType[0].TextProperty;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Scripted+Component+Wizard+-+3.+Source+Code.png" alt="Scripted Component Wizard - 3. Source Code.png"&gt;&lt;/p&gt;
+&lt;p&gt;There is a handy test you can perform at the end to check it is working.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Scripted+Component+Wizard+-+4.+Test+Page.png" alt="Scripted Component Wizard - 4. Test Page.png"&gt;&lt;/p&gt;
+&lt;p&gt;Obviously you can do more complex things than just getting a single Property but this explains the initial set up.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Protirus.png" alt="Protirus.png"&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I will show you how to use a custom data type within the Script Component.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<id>https://alexhedley.github.io/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library</id>
 		<title>String with name 'XXX' has already been added - Workflow Integration Library</title>
@@ -44,359 +637,5 @@
 &lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/p&gt;
 &lt;/div&gt;</content>
 		<summary>&lt;p&gt;So you've created an &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int.png"&gt;&amp;nbsp;Integration Component with SQL Generators etc included.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-headers-in-workflow-7.6-with-mobility-suite</id>
-		<title>Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-headers-in-workflow-7.6-with-mobility-suite" />
-		<updated>2015-05-06T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article I'm going to show you how to use HEADERS in the REST Component.&lt;/p&gt;
-&lt;p&gt;This builds upon a past &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;article&lt;/a&gt; but shows using Parameters in Headers.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I noted before that&lt;/p&gt;
-&lt;p&gt;| **Warning!**Passing the API key as a query parameter is not recommended and is deprecated.&lt;br&gt;
-&lt;br&gt;Support for passing the key via URL parameters will be removed in the near future. |
-| --- |&lt;/p&gt;
-&lt;p&gt;So to rectify this we can pass it in the Header.&lt;/p&gt;
-&lt;p&gt;When you're creating the REST Generator there is a "&lt;strong&gt;Headers...&lt;/strong&gt;" button, click this.&lt;/p&gt;
-&lt;p&gt;Now add the requried values.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Content-Type&lt;/th&gt;
-&lt;th&gt;application/json&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;X-Nukona-API-Key-v1&lt;/td&gt;
-&lt;td&gt;[lockapikey]&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Here [lockapikey] is a parameter denoted by the square brackets [ ].&lt;/p&gt;
-&lt;p&gt;If you have multiple methods make sure to name this apikey differently each time or you will get an error.&lt;/p&gt;
-&lt;p&gt;This will then be available within the Workflow.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Request+Headers.png" alt="Request Headers.png"&gt;&lt;/p&gt;
-&lt;p&gt;Once completed you can then set the Properties on your variable.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Component+Properties.png" alt="Component Properties.png"&gt;&lt;/p&gt;
-&lt;p&gt;Now in your Workflow you can set the API Key&amp;nbsp;dynamically.&lt;/p&gt;
-&lt;p&gt;I like to use Profile Properties within Process Manager, so there is one place to maintain/administer it.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_REST+Generator+General.png" alt="REST Generator General.png"&gt;&lt;/p&gt;
-&lt;p&gt;There is also a StatusCode you can get returned from the REST Generator, give this a name, but to use it you will need to declare it before.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_REST+Generator+HTTP.png" alt="REST Generator HTTP.png"&gt;&lt;/p&gt;
-&lt;p&gt;Use an Add Data Element&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Data_Add.png" alt="Data_Add.png"&gt;&amp;nbsp;and give it the same name.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Add+Data+Element+Configuration.png" alt="Add Data Element Configuration.png"&gt;&lt;/p&gt;
-&lt;p&gt;You can then use this Status Code for logging etc&lt;/p&gt;
-&lt;p&gt;Previous Articles&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3412071-files_Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I'm going to show you how to use HEADERS in the REST Component.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-get-in-workflow-7.6-with-mobility-suite</id>
-		<title>Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-get-in-workflow-7.6-with-mobility-suite" />
-		<updated>2015-05-06T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article I will explain how to use the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This builds upon a past &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;article&lt;/a&gt; but shows using Parameters to make the component more flexible.&lt;/p&gt;
-&lt;p&gt;Follow up articles&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I'm going to be using the RESTful APIs available in to us in the &lt;a href="http://www.symantec.com/mobility/"&gt;Mobility Suite&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To Test an APIs you could use a Chrome Plugin called &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_PostmanLogo.png" alt="PostmanLogo.png"&gt;Postman [&lt;a href="http://www.getpostman.com/"&gt;http://www.getpostman.com/&lt;/a&gt;] or on a Mac there is an App you can get called Cocoa Rest Client [&lt;a href="http://mmattozzi.github.io/cocoa-rest-client/"&gt;http://mmattozzi.github.io/cocoa-rest-client/&lt;/a&gt;]&lt;/p&gt;
-&lt;p&gt;Most APIs will require a Key to use them, make sure you have this to hand but don't share it.&lt;/p&gt;
-&lt;p&gt;We shall work with the Mobility API.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.symantec.com/business/support/index?page=content&amp;amp;id=DOC8151"&gt;v5.2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.symantec.com/business/support/index?page=content&amp;amp;id=DOC7685"&gt;v5.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.symantec.com/business/support/index?page=content&amp;amp;id=DOC7372"&gt;v4.4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Login to your Tennant [&lt;a href="https://alexhedley.github.io/symantec-connect-articles/#.appcenterhq.com/"&gt;#.appcenterhq.com/&lt;/a&gt;]&amp;nbsp;[&lt;a href="https://myappcenterh.appcenterhq.com/admin/landing"&gt;https://myappcenterh.appcenterhq.com/admin/landing&lt;/a&gt;]&lt;/p&gt;
-&lt;p&gt;Go to Admin Console. If you are in the App Store click on the top right hand link [Admin Console].&lt;/p&gt;
-&lt;p&gt;v5.2 -&amp;nbsp;&lt;strong&gt;Settings&lt;/strong&gt; | &lt;span&gt;&lt;strong&gt;Mobility Manager configuration&lt;/strong&gt; | &lt;strong&gt;APIs&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt; (&lt;/span&gt;v5.1 Admin | Settings | APIs)&lt;/p&gt;
-&lt;p&gt;Click on the "Create New Access Key"&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;![Data API.png](&lt;a href="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data"&gt;https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data&lt;/a&gt; API.png)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Copy this Key as we will be using it soon.&lt;/p&gt;
-&lt;p&gt;Now&amp;nbsp;go to your Workflow Server.&lt;/p&gt;
-&lt;p&gt;Open &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;&lt;strong&gt;Workflow Manager&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New Project&lt;/strong&gt; and create a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Forms%20%28Web%29.png" alt="Forms (Web).png"&gt;&amp;nbsp;&lt;strong&gt;Forms (Web)&lt;/strong&gt; Project.&lt;/p&gt;
-&lt;p&gt;Give this a name (&lt;em&gt;POC_AppCenter_WEB&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/New%20Project%20-%20Forms%20%28Web%29.png" alt="New Project - Forms (Web).png"&gt;&lt;/p&gt;
-&lt;p&gt;In the Project Pane click on the top level Project &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project.png" alt="Project.png"&gt;&amp;nbsp;POC_AppCenter_WEB&lt;/p&gt;
-&lt;p&gt;Go to the &lt;strong&gt;Properties&lt;/strong&gt; tab and click &lt;strong&gt;Add Property&lt;/strong&gt;, give it a 'name' of &lt;em&gt;API_KEY&lt;/em&gt; with the 'value' of the &lt;em&gt;key&lt;/em&gt; you copied before.&lt;/p&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;name&lt;/td&gt;
-&lt;td&gt;API_KEY&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;value&lt;/td&gt;
-&lt;td&gt;&lt;your api="" key=""&gt;&lt;/your&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Encode this using either &lt;a href="http://meyerweb.com/eric/tools/dencoder/"&gt;http://meyerweb.com/eric/tools/dencoder/&lt;/a&gt; or in Fiddler [&lt;a href="http://www.telerik.com/fiddler"&gt;http://www.telerik.com/fiddler&lt;/a&gt;] Tools | Text Wizard... (Ctrl+E)&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project%20-%20Properties%20-%20Add%20Property.png" alt="Project - Properties - Add Property.png"&gt;&lt;/p&gt;
-&lt;p&gt;This will now be available to you in your Project.&lt;/p&gt;
-&lt;p&gt;(I like to make these as Profile Properties in Process Manager so they can be shared across Projects)&lt;/p&gt;
-&lt;p&gt;Choose an API you'd like to use. We shall get a list of Apps.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://%3Ctenant%3E.appcenterhq.com/api1/apps"&gt;https://&lt;tenant&gt;.appcenterhq.com/api1/apps&lt;/tenant&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Now that the Project is set up we can create the Generator.&lt;/p&gt;
-&lt;p&gt;Back in the main Workflow Manager window click on&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New Project&lt;/strong&gt; and create a new &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Int.png" alt="Int.png"&gt;&amp;nbsp;&lt;strong&gt;Integration&lt;/strong&gt; Project.&lt;/p&gt;
-&lt;p&gt;Give this a name (&lt;em&gt;POC_REST_INT&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_New%20Project%20-%20Integration.png" alt="New Project - Integration.png"&gt;&lt;/p&gt;
-&lt;p&gt;Scroll down to &lt;strong&gt;Enterprise Resources&lt;/strong&gt; and choose the new &lt;strong&gt;REST Generator&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Give the Generator a name (&lt;em&gt;AppCenter&lt;/em&gt;) and click OK.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Create%20Generator_0.png" alt="Create Generator_0.png"&gt;&lt;/p&gt;
-&lt;p&gt;Put in your variables:&lt;/p&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Base URL:&lt;/td&gt;
-&lt;td&gt;https://**#**.appcenterhq.com/&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Namespace:&lt;/td&gt;
-&lt;td&gt;AppCenter&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;Replace &lt;strong&gt;#&lt;/strong&gt; with your Tenant name&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_1.%20REST%20Service%20URL_0.png" alt="1. REST Service URL_0.png"&gt;&lt;/p&gt;
-&lt;p&gt;Click &lt;strong&gt;Next&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Now if we choose the API.&lt;/p&gt;
-&lt;p&gt;Add a NAME, choose your METHOD, and add the API.&lt;/p&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Name&lt;/td&gt;
-&lt;td&gt;Apps&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Method&lt;/td&gt;
-&lt;td&gt;GET&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;URL&lt;/td&gt;
-&lt;td&gt;api1/apps?[urlparams]&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;You need to Save or click Next then Back to make the Properties available.&lt;/p&gt;
-&lt;p&gt;Click on Properties (along the Top)&lt;/p&gt;
-&lt;p&gt;Your &lt;strong&gt;urlparams&lt;/strong&gt; will show. give it a Type and be sure to uncheck the &lt;strong&gt;URL Encode&lt;/strong&gt; option.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_2.%20Components.png" alt="2. Components.png"&gt;&lt;/p&gt;
-&lt;p&gt;Now we want to configure the Response Content.&lt;/p&gt;
-&lt;p&gt;Click on the ellipse (...)&lt;/p&gt;
-&lt;p&gt;Choose JSON as the Format and click on 'Create' the 'Create From Request'&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%281%29_0.png" alt="2. Components (1)_0.png"&gt;&lt;/p&gt;
-&lt;p&gt;Put in your params&lt;/p&gt;
-&lt;pre&gt;start=0&amp;amp;limit=100&amp;amp;api_key=##&lt;/pre&gt;
-&lt;p&gt;*paste in your encoded api_key (we will use the Property later in the WF)&lt;/p&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;
-&lt;p&gt;&lt;strong&gt;Warning!&lt;/strong&gt; Passing the API key as a query parameter is not recommended and is deprecated.&lt;/p&gt;
-&lt;p&gt;Support for passing the key via URL parameters will be removed in the near future.&lt;/p&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Click Next.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Request%20%281%29.png" alt="Request (1).png"&gt;&lt;/p&gt;
-&lt;p&gt;It will then show the return.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Request%20%282%29.png" alt="Request (2).png"&gt;&lt;/p&gt;
-&lt;p&gt;It will then be selected as your Data Type.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Response%20Content.png" alt="Response Content.png"&gt;&lt;/p&gt;
-&lt;p&gt;Click on the 'Edit' to see the Data Types that have been created.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Data%20Types.png" alt="Data Types.png"&gt;&lt;/p&gt;
-&lt;p&gt;Finally click &lt;strong&gt;Finish&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;OK the next screen then &lt;strong&gt;Recompile and Close&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;(Add an Icon and any Description etc.)&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Help%20Editor.png" alt="Help Editor.png"&gt;&lt;/p&gt;
-&lt;p&gt;Back to the sample Project.&lt;/p&gt;
-&lt;p&gt;Add this newly created Library.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Project.png" alt="Project.png"&gt;&amp;nbsp;Project | Libraries | Add...&lt;/p&gt;
-&lt;p&gt;Select the dll, double click or click &lt;strong&gt;Add&lt;/strong&gt; then click &lt;strong&gt;OK&lt;/strong&gt;. (Untick Publish)&lt;/p&gt;
-&lt;p&gt;Find the Component and add it into your Workflow.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Workflow%20%281%29.png" alt="Workflow (1).png"&gt;&lt;/p&gt;
-&lt;p&gt;Double Click and add in your Parameters.&lt;/p&gt;
-&lt;pre&gt;start=0&amp;amp;limit=100&amp;amp;api_key=[[ProjectProperties].api_key]&lt;/pre&gt;
-&lt;p&gt;Add a Web Form and display the data.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Workflow%20%282%29.png" alt="Workflow (2).png"&gt;&lt;/p&gt;
-&lt;p&gt;Run the Form.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Workflow%20%283%29.png" alt="Workflow (3).png"&gt;&lt;/p&gt;
-&lt;p&gt;Follow up articles&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3366661-files_Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I will explain how to use the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt;.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-profile-definition-error</id>
-		<title>Workflow Profile Definition Error</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-profile-definition-error" />
-		<updated>2015-04-22T00:00:00Z</updated>
-		<content>&lt;p&gt;Have you ever tried to add a Profile and got an error:&lt;/p&gt;
-&lt;p&gt;"Value cannot be null. Parameter name: value"&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3401451-files_Add%20Profile%20Definition.png" alt="Add Profile Definition.png"&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;You can't have a &lt;span style="font-family: &amp;quot;Arial&amp;quot;, sans-serif; font-size: 10pt"&gt;uniqueidentifier as a datatype for your Foreign Key or include this another in your Profile.&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;You can't have your Foreign Key Field (usually SessionID) as the &lt;u&gt;first&lt;/u&gt; Field in your Table/View.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;span style="font-family: &amp;quot;Arial&amp;quot;, sans-serif; font-size: 10pt"&gt;Check&amp;nbsp;the data types on the fields you are selecting. If you see any "&lt;em&gt;nchar&lt;/em&gt;" change them to &lt;em&gt;nvarchar&lt;/em&gt;.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;This shouldn't be a problem with respect to the data, anything you can fit in an nchar will also fit in nvarchar of the same size.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you look in the Logs&lt;/p&gt;
-&lt;p&gt;&amp;nbsp; &lt;install folder=""&gt;:\Program Files\Symantec\Workflow\Logs*&lt;em&gt;processmanager.log&lt;/em&gt;*&lt;/install&gt;&lt;/p&gt;
-&lt;p&gt;you should see a similar error:&lt;/p&gt;
-&lt;pre&gt;Error,20 April 2015 08:11:43,[global] Application 'LogicBase.Ensemble' error [global] Client Host Information: [global] IP: ::1 [global] HostName: ::1 [global] -- error.ToString() -- [global] System.Web.HttpCompileException: e:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices\**&lt;profile name=""&gt;**Service.asmx(76): error CS1001: Identifier expected [global] at System.Web.Compilation.AssemblyBuilder.Compile() [global] at System.Web.Compilation.BuildProvidersCompiler.PerformBuild() [global] at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath) [global] at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile) [global] at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile) [global] at System.Web.UI.WebServiceParser.GetCompiledType(String inputFile, HttpContext context) [global] at System.Web.Services.Protocols.WebServiceHandlerFactory.GetHandler(HttpContext context, String verb, String url, String filePath) [global] at System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) [global] at System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig) [global] at System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() [global] at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp;amp; completedSynchronously)&lt;/profile&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;p&gt;When a Profile is created an .asmx file is created in the following folder:&lt;/p&gt;
-&lt;p&gt;&amp;nbsp; &lt;install drive=""&gt;:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices**&lt;profile name=""&gt;**Service.asmx&lt;/profile&gt;&lt;/install&gt;&lt;/p&gt;
-&lt;p&gt;There is also a record added to&lt;/p&gt;
-&lt;p&gt;&amp;nbsp; [ProcessManager].[dbo].[ProfileDefinition]&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;To add a new Profile&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Process Manager&lt;/strong&gt; | &lt;strong&gt;Admin&lt;/strong&gt; | &lt;strong&gt;Data&lt;/strong&gt; | &lt;strong&gt;Lists and Profiles&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Add Profile Definition (Existing Table)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Add%20Profile%20Definition%20%28Existing%20Table%29.png" alt="Add Profile Definition (Existing Table).png"&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3401451-files_Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;Have you ever tried to add a Profile and got an error:&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-in-workflow-7.6</id>
-		<title>Using the REST Generator in Workflow 7.6</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-in-workflow-7.6" />
-		<updated>2015-03-06T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article I will explain how to use the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt; 7.6.&lt;/p&gt;
-&lt;p&gt;Follow up articles&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;​&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I'm going to be using the RESTful APIs available in to us from &lt;a href="http://swapi.co/"&gt;http://swapi.co/&lt;/a&gt;. The Star Wars API.&lt;/p&gt;
-&lt;p&gt;A little background:&lt;/p&gt;
-&lt;p&gt;REST or Representational State Transfer is an architecture style or design pattern used as a set of guidelines for creating web services which allow anything connected to a network (web servers, private intranets, smartphones, fitness bands, banking systems, traffic cameras, televisions etc.) to communicate with one another via a shared common communications protocol known as Hypertext Transfer Protocol (HTTP). The same HTTP verbs (GET, POST, PUT, DELETE etc.) used by web browsers to retrieve and display web pages, audio/video files, images etc. from remote servers and post data back to them when performing actions like filling out and submitting forms are used by all of the aforementioned devices/services to communicate with one another.&lt;/p&gt;
-&lt;p&gt;Link: &lt;a href="http://en.wikipedia.org/wiki/Representational_state_transfer"&gt;http://en.wikipedia.org/wiki/Representational_state_transfer&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;To Test an APIs you could use a Chrome Plugin called &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_PostmanLogo.png" alt="PostmanLogo.png"&gt;Postman [&lt;a href="http://www.getpostman.com/"&gt;http://www.getpostman.com/&lt;/a&gt;]&lt;/p&gt;
-&lt;p&gt;Or on a Mac there is an App you can get called Cocoa Rest Client [&lt;a href="http://mmattozzi.github.io/cocoa-rest-client/"&gt;http://mmattozzi.github.io/cocoa-rest-client/&lt;/a&gt;]&lt;/p&gt;
-&lt;p&gt;Most APIs will require a Key to use them, but don't share it, luckily the Star Wars&amp;nbsp;API doesn't need one.&lt;/p&gt;
-&lt;p&gt;Now&amp;nbsp;go to your Workflow Server.&lt;/p&gt;
-&lt;p&gt;Open &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;&lt;strong&gt;Workflow Manager&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New Project&lt;/strong&gt; and create a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Forms%20%28Web%29.png" alt="Forms (Web).png"&gt;&amp;nbsp;&lt;strong&gt;Forms (Web)&lt;/strong&gt; Project.&lt;/p&gt;
-&lt;p&gt;Give this a name (&lt;em&gt;POC_JSON_WEB&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;We will be using this later to display our results.&lt;/p&gt;
-&lt;p&gt;Now back in the main Workflow Manager window click on&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New Project&lt;/strong&gt; and create a new &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Int.png" alt="Int.png"&gt;&amp;nbsp;&lt;strong&gt;Integration&lt;/strong&gt; Project.&lt;/p&gt;
-&lt;p&gt;Give this a name (&lt;em&gt;POC_JSON_SW_INT&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_New%20Project%20-%20Integration_0.png" alt="New Project - Integration_0.png"&gt;&lt;/p&gt;
-&lt;p&gt;Scroll down to &lt;strong&gt;Enterprise Resources&lt;/strong&gt; and choose ‘REST Generator’ and give it a name: "StarWars"&lt;/p&gt;
-&lt;p&gt;![Create Generator.png](&lt;a href="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create"&gt;https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create&lt;/a&gt; Generator.png)&lt;/p&gt;
-&lt;p&gt;Put in your&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Base URL: &lt;a href="http://swapi.co/api/"&gt;http://swapi.co/api/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Namespace: StarWars&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;then click Next.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/1.%20REST%20Service%20URL%20%28Star%20Wars%29.png" alt="1. REST Service URL (Star Wars).png"&gt;&lt;/p&gt;
-&lt;p&gt;Click Add.&lt;/p&gt;
-&lt;p&gt;Give it a name: "Planets"&lt;/p&gt;
-&lt;p&gt;You can change the Method to any of the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;GET&lt;/li&gt;
-&lt;li&gt;PUT&lt;/li&gt;
-&lt;li&gt;POST&lt;/li&gt;
-&lt;li&gt;DELETE&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%281%29%20%28Star%20Wars%29.png" alt="2. Components (1) (Star Wars).png"&gt;&lt;/p&gt;
-&lt;p&gt;Click on the ellipse (…) below ‘Response Content’.&lt;/p&gt;
-&lt;p&gt;Choose "JSON"&lt;/p&gt;
-&lt;p&gt;Then in Create choose "Create From Request"&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%283%29.png" alt="2. Components (3).png"&gt;&lt;/p&gt;
-&lt;p&gt;Click Next&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create%20From%20Request.png" alt="Create From Request.png"&gt;&lt;/p&gt;
-&lt;p&gt;The response is then shown, click Next.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create%20From%20Request%20-%20JSON.png" alt="Create From Request - JSON.png"&gt;&lt;/p&gt;
-&lt;p&gt;You will then see the Data Type that has been created, you edit this if necessary. Click Finish.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Create%20From%20Request%20-%20DataType.png" alt="Create From Request - DataType.png"&gt;&lt;/p&gt;
-&lt;p&gt;You will see the chosen Data Type, click OK.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%284%29.png" alt="2. Components (4).png"&gt;&lt;/p&gt;
-&lt;p&gt;Now you can click Finish and save your new Integration Project.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/2.%20Components%20%287%29.png" alt="2. Components (7).png"&gt;&lt;/p&gt;
-&lt;p&gt;You can see what was generated for you.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Generators%20Management.png" alt="Generators Management.png"&gt;&lt;/p&gt;
-&lt;p&gt;Back to your Web Forms Project.&lt;/p&gt;
-&lt;p&gt;Add the Library to this.&lt;/p&gt;
-&lt;p&gt;You can now call the INT and display the results in a Web Form.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/POC_JSON_WEB%20%282%29.png" alt="POC_JSON_WEB (2).png"&gt;&lt;/p&gt;
-&lt;p&gt;And your Web Page&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/POC_JSON_WEB%20%283%29.png" alt="POC_JSON_WEB (3).png"&gt;&lt;/p&gt;
-&lt;p&gt;And there you have a way of retrieving data from an API and displaying it in a Web Form.&lt;/p&gt;
-&lt;p&gt;Follow up articles&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3359911-files_Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I will explain how to use the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt; 7.6.&lt;/p&gt;</summary>
 	</entry>
 </feed>

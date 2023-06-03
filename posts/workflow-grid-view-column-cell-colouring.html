@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - Grid View Column Cell Colouring</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-grid-view-column-cell-colouring'>
+
+      <link type="application/rss+xml" rel="alternate" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - Grid View Column Cell Colouring' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-grid-view-column-cell-colouring' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Grid View Column Cell Colouring
+          </h1>
+            <div class="meta">Published on Wednesday, 15 July 2015</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this article I will show you how to change the colour of a cell (in a given column) in a <img src="images/Grid.png" alt="Grid" /> Grid Component in the <img src="images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png" /> Forms (Web) Project Type.</p>
+<p>This can be handy for a RAG Status or Traffic light system.</p>
+<p><em>Linked Article</em></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0f43883e-d4dd-4c00-8da0-ccfffeb3a12c&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">https://www-secure.symantec.com/connect/articles/workflow-multistatecolor-component</a></p>
+<p>Add a <img src="images/Grid.png" alt="Grid" /> Grid to your <img src="images/FormBuilder.png" alt="Form Builder.png" /> Web Form.</p>
+<p>Give the Grid a name</p>
+<p><u>Functionality tab</u><br />
+Control ID: ProdTable</p>
+<p>This assumes the data set you are returning includes a column that lists the colour you want to show.</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Colour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>Fred</td>
+<td>Amber</td>
+</tr>
+<tr>
+<td>Lucy</td>
+<td>Green</td>
+</tr>
+</tbody>
+</table>
+<p>Make this the LAST column of your Table.</p>
+<p>You want it to change to</p>
+<p><img src="images/TableColour.png" alt="Table Colour.png" /></p>
+<p>Add the following to the <strong>onload</strong> event of the Form.</p>
+<p>Double click on the Form, go to the <strong>Behavior</strong> Tab.</p>
+<p>In the 'Body Custom Events' click on <strong>Add</strong> -&gt; <strong>AttributesKeyValuePair</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>onload</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event Handler</td>
+<td><em>#below code#</em></td>
+</tr>
+</tbody>
+</table>
+<pre><code>$(function () {
+    $('#ProdTable tr').each(function (index, value) {
+        var lastTr = $('td', value).last();
+        var colour = lastTr.text();
+        if( colour == 'Amber' )
+            colour = 'Orange';
+            lastTr.text('');
+            lastTr.css(&quot;background-color&quot;, colour);
+    });
+});
+</code></pre>
+<p>*There are certain colours in CSS instead of using the HEX code, Amber is not one of them so we need to change it to Orange.</p>
+<p><a href="https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/">https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/</a></p>
+<p>There's an interesting <a href="http://stackoverflow.com/questions/8318911/why-does-html-think-chucknorris-is-a-color">read</a> on why &quot;ChuckNorris&quot; is a colour.</p>
+<p>If you wish to have it update a different column you will need to change the following line</p>
+<pre><code>var lastTr = $('td', value).last();
+</code></pre>
+<p>and get the column you need instead.</p>
+<p>This works fine for the first page of a Grid but the Paging is performed using AJAX so if you change to Page 2 the colours aren't updated.</p>
+<p>To combat this</p>
+<pre><code>$(function() {
+    var previous = $(&quot;#ProdTable&quot;).text();
+    $check = function() {
+        if ($(&quot;#ProdTable&quot;).text() != previous) { 
+          updateColor();
+        }
+        previous = $(&quot;#ProdTable&quot;).text();        
+    }
+    updateColor();
+    setInterval(function() { $check(); }, 1000);
+});
+
+function updateColor() {
+    $('#ProdTable tr').each(function (index, value) {
+      var colour =  $(':nth-child(11)', $(this)).text();      
+      var lastTr = $('td', value).last();   
+    
+      if( colour == 'Amber' )
+          colour = 'Orange';
+   
+      lastTr.text('');
+      lastTr.css(&quot;background-color&quot;, colour);
+    });
+}
+</code></pre>
+<p>This uses a Timer to keep checking the Grid so it's the best performance wise solution but it works.</p>
+<p>In Workflow 7.5 you could just map a value into a Column of</p>
+<pre><code>&lt;span style=&quot;background-color:blue&quot;&gt;&lt;/span&gt;
+</code></pre>
+<p>You could map across the colour from the DataType using the Merge component.</p>
+<p>This is now encoded in the Grid in 7.6, the &quot;&lt;&quot; is converted to &quot;&lt;&quot; etc so therefore doesn't work anymore.</p>
+<hr />
+<p><a href="http://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
