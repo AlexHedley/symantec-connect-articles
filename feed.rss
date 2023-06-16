@@ -5,8 +5,747 @@
 		<link>https://alexhedley.github.io/symantec-connect-articles</link>
 		<description>Welcome to my Symantec Connect Articles!</description>
 		<copyright>Copyright © 2023</copyright>
-		<pubDate>Fri, 16 Jun 2023 21:30:39 GMT</pubDate>
-		<lastBuildDate>Fri, 16 Jun 2023 21:30:39 GMT</lastBuildDate>
+		<pubDate>Fri, 16 Jun 2023 22:20:33 GMT</pubDate>
+		<lastBuildDate>Fri, 16 Jun 2023 22:20:33 GMT</lastBuildDate>
+		<item>
+			<title>Workflow - Repository</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-repository</link>
+			<description>&lt;p&gt;In this Article I'm going to show you how to use the Repository in &lt;a href="https://support.symantec.com/en_US/defaultProductLanding.56410.html"&gt;Workflow&lt;/a&gt;.&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-repository</guid>
+			<pubDate>Mon, 14 Dec 2015 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;In this Article I'm going to show you how to use the Repository in &lt;a href="https://support.symantec.com/en_US/defaultProductLanding.56410.html"&gt;Workflow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Repository is a great place to store your workflows, keep a backup and see the changes throughout the process.&lt;/p&gt;
+&lt;p&gt;When you install Workflow you have an option to configure the SMP. This can be done at a later stage too.&lt;/p&gt;
+&lt;p&gt;Open Symantec Workflow Explorer&lt;/p&gt;
+&lt;p&gt;"[Install Drive]:\Program Files\Symantec\Workflow\Tools\Symantec.Explorer.exe" or&lt;/p&gt;
+&lt;p&gt;"[Install Drive]:\Program Files\Symantec\Workflow\Tools\Symantec.Explorer.exe" -page CredentialManager&lt;/p&gt;
+&lt;p&gt;Set up SMP in the Explorer app, click on the Symantec Management Platform on the left hand side&lt;/p&gt;
+&lt;p&gt;Click Add&lt;/p&gt;
+&lt;p&gt;Fill in your details&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SymantecWorkflowExplorer-Credentials-Add.png" alt="Symantec Workflow Explorer - Credentials - Add"&gt;&lt;/p&gt;
+&lt;p&gt;You can then highlight and click &lt;strong&gt;Test&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SymantecWorkflowExplorer-Credentials-Test-Succeeded.png" alt="Symantec Workflow Explorer - Credentials - Test - Succeeded"&gt;&lt;/p&gt;
+&lt;p&gt;This will now be available in Workflow Manager.&lt;/p&gt;
+&lt;p&gt;Open Workflow&lt;/p&gt;
+&lt;p&gt;"[Install Drive]:\Program Files\Symantec\Workflow\Designer\bin\WorkflowManager.exe"&lt;/p&gt;
+&lt;p&gt;Expand the Repo(s)&lt;/p&gt;
+&lt;p&gt;There should be a Projects folder but it'll likely be empty.&lt;/p&gt;
+&lt;p&gt;Click back onto the Local folder&lt;/p&gt;
+&lt;p&gt;New - Forms (Web)&lt;/p&gt;
+&lt;p&gt;Give it a name "&lt;strong&gt;POC_Repo_WEB&lt;/strong&gt;"&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SymantecWorkflowManager-NewFormsProject.png" alt="Symantec Workflow Manager - New Forms Project"&gt;&lt;/p&gt;
+&lt;p&gt;Complete your Workflow...&lt;/p&gt;
+&lt;p&gt;Click the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CheckIn.png" alt="Check In"&gt;&amp;nbsp;&lt;strong&gt;Check In&lt;/strong&gt; button in the toolbar or File | Check In Project (Ctrl+Shift+S)&lt;/p&gt;
+&lt;p&gt;You will received a message&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CheckInProject.png" alt="Check In Project.png"&gt;&lt;/p&gt;
+&lt;p&gt;Then choose a location&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CreateRepositoryProject.png" alt="Create Repository Project.png"&gt;&lt;/p&gt;
+&lt;p&gt;You have the option to create a new Folder and you can Delete the local copy. This can help with not getting your projects out of sync.&lt;/p&gt;
+&lt;p&gt;I usually keep this unchecked then move the original into an archive folder locally.&lt;/p&gt;
+&lt;p&gt;The Project is then closed and the new newly created project is opened.&lt;/p&gt;
+&lt;p&gt;If you right click on the local Project and select Open Location&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SymantecWorkflowManager-localProject-RightClick.png" alt="Symantec Workflow Manager - local Project - Right Click"&gt;&lt;/p&gt;
+&lt;p&gt;You will be taken to&lt;/p&gt;
+&lt;p&gt;"[Install Drive]:**\Program Files\Symantec\Workflow\WorkflowProjects**POC_Repo_WEB"&lt;/p&gt;
+&lt;p&gt;If you do the same with Repo version&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SymantecWorkflowManager-repoProject-RightClick.png" alt="Symantec Workflow Manager - repo Project - Right Click"&gt;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SymantecWorkflowManager-RightClick.png" alt="Symantec Workflow Manager - Right Click"&gt;&lt;/p&gt;
+&lt;p&gt;You will see a different folder location&lt;/p&gt;
+&lt;p&gt;"C:\Users\alex.hedley\AppData\Local\Symantec\Workflow\Repository\e8951e09da7f46158b58176da73fa647"&lt;/p&gt;
+&lt;p&gt;In Workflow Manager you will see two columns, Local Version and Latest Version&lt;/p&gt;
+&lt;p&gt;These inform you what version you have copied to your machine and which is the latest in the Repo.&lt;/p&gt;
+&lt;p&gt;It's always best practice to click on the Refresh before you check out a version.&lt;/p&gt;
+&lt;p&gt;I tend to double click on a Project to open it but you can click &lt;strong&gt;Check Out&lt;/strong&gt;&amp;nbsp;then &lt;strong&gt;Open&lt;/strong&gt; if you want to make sure**.**&lt;/p&gt;
+&lt;p&gt;If you are working on a copy and don't wish to use it anymore and want to revert to the last know good copy, open&amp;nbsp;the location, then delete or move this folder elsewhere. Click on Refresh and the Local Version column will not contain a number any more, now when you Check Out and Open you will be back to the latest version you can begin to work on again.&lt;/p&gt;
+&lt;p&gt;Updating a Workflow.&lt;/p&gt;
+&lt;p&gt;Make your changes then click on &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CheckIn.png" alt="Check In"&gt;&amp;nbsp;&lt;strong&gt;Check In&lt;/strong&gt; again.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CheckInNotes.png" alt="Check In (Notes)"&gt;&lt;/p&gt;
+&lt;p&gt;Refresh the Manager and your version number will have increased&lt;/p&gt;
+&lt;p&gt;Now if you Right Click on a Project and click View Versions&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SymantecWorkflowManager-RightClick-ViewVersions.png" alt="Symantec Workflow Manager - Right Click - View Versions"&gt;&lt;/p&gt;
+&lt;p&gt;You will see a nice list of all the notes you've made against versions you've Checked In.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ProjectVersions.png" alt="Project Versions"&gt;&lt;/p&gt;
+&lt;p&gt;There may come a time when you make changes, check them in then realise they weren't necessary, instead of deleting the components you can roll back to a previous known version.&lt;/p&gt;
+&lt;p&gt;Close the Project first.&lt;/p&gt;
+&lt;p&gt;Highlight the version row and click &lt;strong&gt;Rollback&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Rollbackmessage.png" alt="Rollback message"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Uploading DLLs.&lt;/p&gt;
+&lt;p&gt;You may have created a DLL, Integration Component, that you wish to store in the Repo.&lt;/p&gt;
+&lt;p&gt;Open the Location and check there is a .SymWorkflow file&lt;/p&gt;
+&lt;p&gt;Now back in WF Manager go to the folder, where the project is, you wish to upload, click on &lt;strong&gt;Import&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Find the file, click Open&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/UploadINT-SymWorkflow.png" alt="Upload INT - SymWorkflow"&gt;&lt;/p&gt;
+&lt;p&gt;Then wait for it to upload.&lt;/p&gt;
+&lt;p&gt;You will then see it available in the main screen, if not click &lt;strong&gt;Refresh&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Make sure if you create a new Repo Project that you check this, it isn't by default so it will show as version 0 then others can't open it&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Backup&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Each time you Check In a project a version is created in a Backup Folder&lt;/p&gt;
+&lt;p&gt;"[Install Drive]:\Program Files\Symantec\Workflow\WorkflowProjects\Backup"&lt;/p&gt;
+&lt;p&gt;Task Tray&amp;nbsp;Tool&lt;/p&gt;
+&lt;p&gt;"[Install Drive]:\Program Files\Symantec\Workflow\Tools\LogicBase.Local.TaskTray.exe"&lt;/p&gt;
+&lt;p&gt;Right Click - Shortcuts - Edit Tool Preferences&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskToolTray-Shortcuts-EditToolPreferences.png" alt="Task Tool Tray - Shortcuts - Edit Tool Preferences"&gt;&lt;/p&gt;
+&lt;p&gt;Under Studio Configuration&lt;/p&gt;
+&lt;p&gt;Backup&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditToolPreferences-Backup.png" alt="Edit Tool Preferences - Backup"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;About the Workflow Repository&lt;br&gt;
+&lt;a href="http://www.symantec.com/docs/HOWTO62234"&gt;http://www.symantec.com/docs/HOWTO62234&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-post-in-workflow-7.6-with-mobility-suite</link>
+			<description>&lt;p&gt;In this Article I will explain how to use POST requests in the REST Generator within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt; and &lt;a href="http://www.symantec.com/mobility/"&gt;Mobility Suite&lt;/a&gt;.&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-post-in-workflow-7.6-with-mobility-suite</guid>
+			<pubDate>Tue, 01 Dec 2015 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;In this Article I will explain how to use POST requests in the REST Generator within&amp;nbsp;&lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt;&amp;nbsp;and &lt;a href="http://www.symantec.com/mobility/"&gt;Mobility Suite&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This will assume knowledge of Workflow and REST APIs and it would be helpful to read through the previous articles.&lt;/p&gt;
+&lt;p&gt;Previous Articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is an example of a POST Request using the Login API of App Center&lt;/p&gt;
+&lt;p&gt;From the Documentation:&lt;/p&gt;
+&lt;p&gt;Symantec Mobility Manager 5.4 API Reference Guide&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://support.symantec.com/en_US/article.DOC9124.html"&gt;https://support.symantec.com/en_US/article.DOC9124.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;User Authentication&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+The API also supports converting username/password credentials into a limited-lifetime API key (token) via a login method.&lt;br&gt;
+NOTE: API keys created using the login method will not work with the on_behalf_of parameter.&lt;br&gt;
+&lt;strong&gt;Login&lt;/strong&gt;&lt;br&gt;
+URL: &lt;strong&gt;/api1/login&lt;/strong&gt;&lt;br&gt;
+Methods:&lt;br&gt;
+• GET&lt;br&gt;
+o None&lt;br&gt;
+• POST&lt;br&gt;
+o Description: Login to receive an API key for subsequent requests.&lt;br&gt;
+o Encoding: application/x-www-form-urlencoded&lt;br&gt;
+o POST parameters:&lt;br&gt;
+ username: The Mobility Suite username&lt;br&gt;
+ password: The user’s password&lt;/p&gt;
+&lt;p&gt;• Returns: On success:&lt;br&gt;
+• status: the status “okay”&lt;br&gt;
+• api-key: the temporary API Key (not URL encoded!)&lt;br&gt;
+• expiry: The expiration time as a unit timestamp.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;HTTPResponse: 200
+{
+  "status": "okay",
+  "api-key": "&amp;lt;the api key&amp;gt;",
+  "expiry": 1412046458
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;• Return-type: application/json&lt;/p&gt;
+&lt;p&gt;•&amp;nbsp;Errors&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;HTTPResponse: 401
+{
+  "status": "error",
+  "message": "User name or password not valid",
+  "code": 105
+}
+
+HTTPResponse: 403
+{
+  "status": "error",
+  "message": "User does not have permission",
+  "code": 0
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let's build the REST Generator first:&lt;/p&gt;
+&lt;p&gt;Add&lt;/p&gt;
+&lt;p&gt;Change the Method to "POST"&lt;/p&gt;
+&lt;p&gt;Add your further URL "api1/login"&lt;/p&gt;
+&lt;p&gt;Give it a name - "Login"&lt;/p&gt;
+&lt;p&gt;Set the 'Request Content' to "Text"&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTIntegrationLibrary-2Components.png" alt="REST Integration Library - 2 Components"&gt;&lt;/p&gt;
+&lt;p&gt;Now for the Respone Content choose the Format (JSON)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTIntegrationLibrary-ResponseContent.png" alt="REST Integration Library - Response Content"&gt;&lt;/p&gt;
+&lt;p&gt;You may need to create the Response Content "Manually" instead of "Create From Request", it doesn't handle POSTs too well.&lt;/p&gt;
+&lt;p&gt;Documentation from the API provider comes in handy, just create a Data Type how you would with the INT components and DBDT or DTs.&lt;/p&gt;
+&lt;p&gt;Give it a name - LoginResponse&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTIntegrationLibrary-2Components-DataTyoes-EditType.png" alt="REST Integration Library - 2 Components - Data Tyoes - Edit Type"&gt;&lt;/p&gt;
+&lt;p&gt;Then 3 Properties&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;status&lt;/li&gt;
+&lt;li&gt;api-key&lt;/li&gt;
+&lt;li&gt;expiry&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTIntegrationLibrary-2Components-DataTyoes-EditProperty.png" alt="REST Integration Library - 2 Components - Data Tyoes - Edit Property"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTIntegrationLibrary-2Components-DataTyoes-EditProperty-JSONOptions.png" alt="REST Integration Library - 2 Components - Data Tyoes - Edit Property - JSON Options"&gt;&lt;/p&gt;
+&lt;p&gt;Back in Workflow&lt;/p&gt;
+&lt;p&gt;Add a&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CodeScriptComponent.png" alt="Code (Script) Component"&gt;&amp;nbsp;Code (Script) Component&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ScriptedComponentWizard-1InputParameters.png" alt="Scripted Component Wizard - 1 Input Parameters"&gt;&lt;/p&gt;
+&lt;p&gt;Map the values from your process&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ScriptedComponenWizard-1InputParametersEditParameterMappings.png" alt="Scripted Component Wizard - 1 Input Parameters (Edit Parameter Mappings)"&gt;&lt;/p&gt;
+&lt;p&gt;Set the output to &lt;strong&gt;Text&lt;/strong&gt; and give it an output of &lt;strong&gt;RequestContent&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ScriptedComponentWizard-2Resultvariable.png" alt="Scripted Component Wizard - 2 Result variable"&gt;&lt;/p&gt;
+&lt;p&gt;Choose your Language, I've picked VB.NET this time but you could use C#.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ScriptedComponentWizard-3SourceCode.png" alt="Scripted Component Wizard - 3 Source Code"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Dim escapedUsername As String
+Dim escapedPassword As String
+
+escapedUsername = Uri.EscapeDataString(username)
+escapedPassword = Uri.EscapeDataString(password)
+
+'return "username=" &amp;amp; username &amp;amp; "&amp;amp;password=" &amp;amp; password
+return "username=" &amp;amp; escapedUsername &amp;amp; "&amp;amp;password=" &amp;amp; escapedPassword
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Run a test to see the output.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ScriptedComponentWizard-4TestPage.png" alt="Scripted Component Wizard - 4 Test Page"&gt;&lt;/p&gt;
+&lt;p&gt;Now add the Login component that you created from the REST Generator.&lt;/p&gt;
+&lt;p&gt;Pass in your RequestContent&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/LoginEditor.png" alt="Login Editor.png"&gt;&lt;/p&gt;
+&lt;p&gt;Set the StatusCode etc.&lt;/p&gt;
+&lt;p&gt;Now you can login and get an API key to work with throughout the rest of your Workflow.&lt;/p&gt;
+&lt;p&gt;Previous Articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Workflow - SendCompleteWorkflowMessage - Event Listeners</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sendcompleteworkflowmessage-event-listeners</link>
+			<description>&lt;p&gt;In this Article I will explain how to use the 'SendCompleteWorkflowMessage' to hook into a Dialog Workflow via the Event Listeners.&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sendcompleteworkflowmessage-event-listeners</guid>
+			<pubDate>Mon, 30 Nov 2015 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;In this Article I will explain how to use the 'SendCompleteWorkflowMessage' to hook into a Dialog Workflow via the Event Listeners.&lt;/p&gt;
+&lt;p&gt;I'm assuming that you already have a Workflow written that is creating&amp;nbsp;Tasks via the 'Dialog Workflow' component.&lt;/p&gt;
+&lt;p&gt;You could then have another Project (Web Forms) that get's a list of User's Tasks and displays them for actioning, or set up an automated method of send these messages, it's your choice.&lt;/p&gt;
+&lt;p&gt;As a very simple example we have a Workflow with a Task, once we set up an Event Listener that path will then be available to us for actioning, with the Message data for use.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/POC_WorkflowComplete_WF.png" alt="POC_WorkflowComplete_WF"&gt;&lt;/p&gt;
+&lt;p&gt;Double click on your Dialog Workflow and click on the 'Message Listeners' tab,&lt;/p&gt;
+&lt;p&gt;Tick the "Allow Exit Via Message Monitoring"&lt;/p&gt;
+&lt;p&gt;Next click on &lt;strong&gt;Add&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DialogWorkflowEditor-MessageListeners.png" alt="Dialog Workflow Editor - Message Listeners"&gt;&lt;/p&gt;
+&lt;p&gt;Give your Path a name. I've called mine the very inventive "MyPath"&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DialogWorkflowEditor-MessageResponses-Path.png" alt="Dialog Workflow Editor - Message Responses - Path"&gt;&lt;/p&gt;
+&lt;p&gt;We need some Path Data to work with so click on that tab.&lt;/p&gt;
+&lt;p&gt;Untick "Empty Message"&lt;/p&gt;
+&lt;p&gt;I'm just using 'Text' here but yours could be a newly defined type or one from your Workflow Process.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DialogWorkflowEditor-Message+Responses-PathData.png" alt="Dialog Workflow Editor - Message Responses - Path Data"&gt;&lt;/p&gt;
+&lt;p&gt;Now if you close the Dialog Workflow you will now have a new Path coming out of the DW and if you browse the data your 'Message' variable will be available to you. You might want to add a Process Message to your Process or use the data passed to determine an outcome.&lt;/p&gt;
+&lt;p&gt;Now how do we send this information?&lt;/p&gt;
+&lt;p&gt;In your other Workflow you add the 'Send Complete Workflow Message'&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/POC_WorkflowComplete_WEB.png" alt="POC_WorkflowComplete_WEB"&gt;&lt;/p&gt;
+&lt;p&gt;You will need a Task ID that the Process is currently at.&lt;br&gt;
+You then chose the Data Type the Message is expecting, see the Message Listener of the Task.&lt;br&gt;
+Then the Message Data that is used in your Process.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SendWorkflowCompleteMessageEditor.png" alt="SendWorkflowCompleteMessage Editor"&gt;&lt;/p&gt;
+&lt;p&gt;You could change the Server and/or pick the Path you wish to take, you could set the "MyPath". Workflow should know which path based on the message you are sending.&lt;/p&gt;
+&lt;p&gt;You may find yourself wondering where is this data?&lt;/p&gt;
+&lt;p&gt;You can obtain it from two places.&lt;/p&gt;
+&lt;p&gt;Open &lt;strong&gt;Symantec Workflow Explorer&lt;/strong&gt;&amp;nbsp;&lt;br&gt;
+(Start Menu\Programs\Symantec\Workflow Designer\Tools\ Symantec.Explorer.exe)&lt;/p&gt;
+&lt;p&gt;SymQ Explorer&amp;nbsp;&lt;br&gt;
+AliasExchangeImpl&amp;nbsp;&lt;br&gt;
+Lbme.workflowresponsequeue&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SymantecWorkflowExplorer-SymQExplorer-LBME.WorkflowResponseQueue.png" alt="Symantec Workflow Explorer - SymQ Explorer - LBME.WorkflowResponseQueue"&gt;&lt;/p&gt;
+&lt;p&gt;You can see the TaskID, the Path, the Message, a view useful and easy way to view.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Files on the Server&lt;/strong&gt;&lt;br&gt;
+[Install Drive]:\program files\Symantec\Workflow\Data\MQWorkflowFileStorage\localworkflowfilestorage-workflowresponsequeue&lt;/p&gt;
+&lt;p&gt;This will be named after the TaskID.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/localworkflowfilestorage-workflowresponsequeue_0.png" alt="localworkflowfilestorage-workflowresponsequeue_0"&gt;&lt;/p&gt;
+&lt;p&gt;It's not that easy to read but you can pick out the important info.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/lbemsg2.png" alt="lbemsg2"&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes Messages aren't consumed, they can become corrupt, if you notice this become backlogged you can move these files to a back up folder and add a few back in a couple at time until you find the corrupt one.&lt;/p&gt;
+&lt;p&gt;Now you're ready to send any message you want to your processes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;Summary Explanation&lt;/u&gt;&lt;br&gt;
+You’ve create a Workflow with many Tasks.&lt;br&gt;
+You wish to action these Tasks from another Workflow.&lt;br&gt;
+You expose the Task (Dialog Workflow) with Message Listeners.&lt;br&gt;
+‘Message Listeners’ tab&lt;br&gt;
+Allow Exit Via Message Monitoring&amp;nbsp;☑&lt;br&gt;
+Message Responses&amp;nbsp;&amp;nbsp; &amp;nbsp;LogicBase.Core.MessageExchangeResponse&lt;/p&gt;
+&lt;p&gt;Add/Edit the Object&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Path Name&lt;/td&gt;
+&lt;td&gt;&amp;lt;&lt;em&gt;Name&lt;/em&gt;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Path Data&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Payload Data Type&lt;/td&gt;
+&lt;td&gt;Text&amp;nbsp;&amp;lt;Data Type&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Variable Name&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;&amp;lt;variable&amp;gt;&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Components&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DialogWorkflowComponent.png" alt="Dialog Workflow Component"&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Dialog Workflow&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Class:&lt;/strong&gt;&amp;nbsp;LogicBase.Components.Default.Workflow.DialogWorkflowComponent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Library:&lt;/strong&gt;&amp;nbsp;LogicBase.Components.Default.dll&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Publisher:&lt;/strong&gt;&amp;nbsp;Symantec Corporation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SendWorkflowCompleteMessageComponent.png" alt="SendWorkflowCompleteMessage Component"&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Send Complete Workflow Message&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Class:&lt;/strong&gt;&amp;nbsp;LogicBase.Components.Default.Workflow.SendCompleteWorkflowMessage&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Library:&lt;/strong&gt;&amp;nbsp;LogicBase.Components.Default.dll&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Publisher:&lt;/strong&gt;&amp;nbsp;Symantec Corporation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Component Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=deaa687f-b521-4b81-bc11-5d50570157de&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www-secure.symantec.com/connect/articles/send-complete-workflow-message&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=83135cdc-002c-4a75-8943-bcbad89b2e24&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www-secure.symantec.com/connect/articles/dialog-workflow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Forum&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=bcf85e71-373d-4344-a098-f9e46fcbe5e9&amp;amp;CommunityKey=a067504a-9710-492c-bbef-18d2ed6b44af&amp;amp;tab=digestviewer#bmbcf85e71-373d-4344-a098-f9e46fcbe5e9"&gt;https://www-secure.symantec.com/connect/forums/send-complete-workflow-message-component&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=1773b3b3-3d4f-4dab-b632-e5343fad7130&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm1773b3b3-3d4f-4dab-b632-e5343fad7130"&gt;https://www-secure.symantec.com/connect/forums/dialog-workflow-component&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How To&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://support.symantec.com/en_US/article.HOWTO62158.html"&gt;https://support.symantec.com/en_US/article.HOWTO62158.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://support.symantec.com/en_US/article.HOWTO61624.html"&gt;https://support.symantec.com/en_US/article.HOWTO61624.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://support.symantec.com/en_US/article.HOWTO61707.html#v23056327"&gt;https://support.symantec.com/en_US/article.HOWTO61707.html#v23056327&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Workflow - SMP - ASDK - Asset Ownership</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-smp-asdk-asset-ownership</link>
+			<description>&lt;p&gt;In this Article I'm going to explain how Asset Ownership is controlled in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="smp"&gt;&amp;nbsp;SMP and how to maintain it using &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow and the ASDK.&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-smp-asdk-asset-ownership</guid>
+			<pubDate>Fri, 09 Oct 2015 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;In this Article I'm going to explain how Asset Ownership is controlled in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="smp"&gt;&amp;nbsp;SMP and how to maintain it using &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow and the ASDK.&lt;/p&gt;
+&lt;p&gt;Let's look at it in the SMP first.&lt;/p&gt;
+&lt;p&gt;Home | Service and Asset Management |&amp;nbsp;Manage Configuration Items&lt;/p&gt;
+&lt;p&gt;Let's find a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Computer.png" alt="Computer"&gt;&amp;nbsp;Computer&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder-.png" alt="Folder (-)"&gt;&amp;nbsp;CI Management |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Computers and Peripherals&amp;nbsp;|&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Computer.png" alt="Computer"&gt;&amp;nbsp;Computer&lt;/p&gt;
+&lt;p&gt;Search for one and Right-Click |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Edit.png" alt="Edit ()"&gt;&amp;nbsp;Edit&lt;/p&gt;
+&lt;p&gt;Scroll down to &lt;strong&gt;Asset Owners&lt;/strong&gt; and "Click to select..." or click the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Edit.png" alt="Edit"&gt;Edit button&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images_Edit-Computer-AssetOwners.png" alt="Edit - Computer - Asset Owners"&gt;&lt;/p&gt;
+&lt;p&gt;This can either be a User or a Department.&lt;/p&gt;
+&lt;p&gt;Search for the User, select and click OK.&lt;/p&gt;
+&lt;p&gt;This is configured using a Resource Association.&lt;/p&gt;
+&lt;p&gt;There are two, one for User and one for Department.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource and Data Class Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource Associations | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;CMDB Association Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset User Owner&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​GUID&lt;/th&gt;
+&lt;th&gt;'ed35a8d1-bf60-4771-9dde-092c146c485a'&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource and Data Class Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource Associations | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;CMDB Association Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;&amp;nbsp;Asset Department Owner&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​GUID&lt;/th&gt;
+&lt;th&gt;'1466e770-4413-4517-a89d-6599b8a7f144'&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;You can see who is associated to what with the following SQL:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT * 
+FROM ResourceAssociation ra
+WHERE ra.ResourceAssociationTypeGuid = 'ed35a8d1-bf60-4771-9dde-092c146c485a'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So we need to create an Association, let's look to the SDK.&lt;/p&gt;
+&lt;p&gt;There's a "Create Resource Association​" we can use.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/asdk.ns/ResourceManagementService.asmx?op=CreateResourceAssociation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Inputs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;resourceAssociationTypeGuid&lt;/li&gt;
+&lt;li&gt;parentResourceGuid (&lt;em&gt;Asset&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;childResourceGuid (&lt;em&gt;User&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Create a&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int"&gt;&amp;nbsp;Web Service Generator (&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=7d413f83-dd96-4e73-9f5e-b4e0d7c21bab&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=librarydocuments"&gt;Video&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;We can now call this in our &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;WF.&lt;/p&gt;
+&lt;p&gt;Try this then check the SQL and the RA Table should reflect this but if you then check&amp;nbsp;in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="smp"&gt;&amp;nbsp;SMP the &lt;strong&gt;Asset Owners&lt;/strong&gt; section won't, what's going on?&lt;/p&gt;
+&lt;p&gt;(Other Associations work just fine)&lt;/p&gt;
+&lt;p&gt;Let's do some investigation, I like to use both a SQL Profiler and the Altiris Profiler.&lt;/p&gt;
+&lt;p&gt;We have a call to 'spResourceAssociationsInsert', this makes sense.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;EXECUTE spResourceAssociationsInsert 
+   @ResourceAssociationTypeGuid=N'ed35a8d1-bf60-4771-9dde-092c146c485a', 
+  @ParentResourceGuid=N'e4fc9fc1-a75a-4532-8a82-159d2477d0fa', 
+  @ChildResourceGuid=N'f90f37c8-4562-48be-b8f3-3b0b4123086b', 
+  @HistoryEnabled=1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But there is also another call to insert values into another&amp;nbsp;Table (Inv_Ownership_Details).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;INSERT INTO 
+  dbo.[Inv_Ownership_Details] ([_ResourceGuid], [Owner], [Ownership Percentage]) 
+VALUES 
+  ('e4fc9fc1-a75a-4532-8a82-159d2477d0fa', 'f90f37c8-4562-48be-b8f3-3b0b4123086b', 100)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we could just create a SQL Generator but I don't like to use these for any ALTER commands.&lt;/p&gt;
+&lt;p&gt;There must be a better way.&lt;/p&gt;
+&lt;p&gt;Let's have another look at those Web Services:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Save Data Class&lt;/strong&gt; from &lt;strong&gt;Resource Model&lt;/strong&gt;looks like it should work&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/nswebservice/resourcemodel.asmx?op=SaveDataClass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Add that to our previous &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int"&gt;&amp;nbsp;Integration component and try it out in &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;WF.&lt;/p&gt;
+&lt;p&gt;This just doesn't work, there is no way to pass in any dynamic data so this can't be a viable solution.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www-secure.symantec.com/connect/user/toomas"&gt;Toomas&lt;/a&gt; was a great help and got us some sample code from the Asset Team.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;using System;
+using Client.ProxyClass;
+
+namespace client
+{class Program{	static readonly Guid OwnershipDetailsDataclassGuid = new Guid("0cd0318b-ad51-4d38-8ea3-2612d12189de");	private const string UserId = "put here user name";	private const string Password = "put here user password";
+	static void Main(string[] args)	{
+		var comp = new Guid("927a7afe-ab4d-40d1-b11f-72111e6d540d"); //&amp;lt;-set up computer guid		var user = new Guid("e0b8a57b-9b2b-4f07-8b9e-d66a3d65d678"); //&amp;lt;-set up user guid
+		var field0 = new DataClassFieldData { FieldName = "Owner", Value = user };		var field1 = new DataClassFieldData { FieldName = "Ownership Percentage", Value = 100.0 };		var row = new DataClassRowData { DataElements = new[] { field0, field1 } };		var dcd = new DataClassData		{			DataClassGUID = OwnershipDetailsDataclassGuid,			DataRows = new[] { row }		};
+		var client = new ResourceModelService {Credentials = new System.Net.NetworkCredential(UserId, Password)};		client.SaveDataClass(comp, new[] { dcd });	}}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We tested this and got the&amp;nbsp;&lt;strong&gt;Inv_Ownership_Details&lt;/strong&gt; Table&amp;nbsp;updating but how do we translate this into&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;WF?&lt;/p&gt;
+&lt;p&gt;Maybe the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CodeScriptComponent.png" alt="Code (Script) Component"&gt;&amp;nbsp;Script Generator? Or why don't we build a Component?&lt;/p&gt;
+&lt;p&gt;Where do we start?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Symantec™ Workflow 7.5 Component Developer Guide
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://support.symantec.com/en_US/article.DOC5940.html"&gt;https://support.symantec.com/en_US/article.DOC5940.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Symantec™ Workflow 7.6 Component Developer Guide
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://support.symantec.com/en_US/article.DOC8166.html"&gt;https://support.symantec.com/en_US/article.DOC8166.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That's a lengthy process in itself so that can be discussed in a future Article.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.symantec.com/connect/user/christophermcewen"&gt;Chris&lt;/a&gt;, a fellow Protirus C# Dev, got to work and created a Component we could use.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/dll.png" alt="dll"&gt;&amp;nbsp;Protirus.AssetOwner.Service.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you'd like a copy of this do get in touch &lt;a href="mailto:info@Protirus.com?subject=Protirus.AssetOwner.Service.dll&amp;amp;body=Workflow%20Asset%20Owner%20Component"&gt;info@protirus.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One last thing we need to do in our Workflow is to check if there is already an Owner Association before creating one, we can use the&amp;nbsp;&lt;strong&gt;Break Association&lt;/strong&gt;&amp;nbsp;Web Service from &lt;strong&gt;Resource Model&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/nswebservice/resourcemodel.asmx?op=BreakAssociation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now with a combination of the Break Association, Create Association and our new dll any Asset Ownership changes will now be reflected in the SMP.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;Useful Documents&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;"&amp;lt;Install Drive&amp;gt;:\Program Files\Altiris\Altiris ASDK\Help\ASDK7.6.chm"&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;Web Services&lt;/u&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Resource Model&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/nswebservice/resourcemodel.asmx
+&lt;ul&gt;
+&lt;li&gt;Break Association
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/nswebservice/resourcemodel.asmx?op=BreakAssociation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Remove Data Class From Resource
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/nswebservice/resourcemodel.asmx?op=RemoveDataClassFromResource&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Save Data Class
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/nswebservice/resourcemodel.asmx?op=SaveDataClass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Resource Management Service&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/asdk.ns/ResourceManagementService.asmx​
+&lt;ul&gt;
+&lt;li&gt;Create Resource Association​
+&lt;ul&gt;
+&lt;li&gt;http://localhost/altiris/asdk.ns/ResourceManagementService.asmx?op=CreateResourceAssociation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;Symantec Case Info&lt;/u&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Case Number&lt;/th&gt;
+&lt;th&gt;08713954&lt;/th&gt;
+&lt;th&gt;ETrack&lt;/th&gt;
+&lt;th&gt;ET3830607&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>SMP - Map AD Status from AD Import</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/smp-map-ad-status-from-ad-import</link>
+			<description>&lt;p&gt;In this Article I'm going to show you how to extend the User Resource to include extra properties you can retrieve from the AD Import to gain extra information about your user base. We are going to map the AD Status value (aka UserAccountControl)&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/smp-map-ad-status-from-ad-import</guid>
+			<pubDate>Thu, 08 Oct 2015 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;In this Article I'm going to show you how to extend the User Resource to include extra properties you can retrieve from the AD Import to gain extra information about your user base. We are going to map the AD Status value (aka&amp;nbsp;UserAccountControl)&lt;/p&gt;
+&lt;p&gt;First lets create a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DataClasses.png" alt="Data Classes"&gt;&amp;nbsp;Data Class to store this information.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource and Data Class Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Data Classes&lt;/p&gt;
+&lt;p&gt;Right-Click | New | Editable Data Class&lt;/p&gt;
+&lt;p&gt;Call it &lt;strong&gt;AD User Details&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Add some Fields&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ADStatus (Static List)&lt;/li&gt;
+&lt;li&gt;UserAccountControl (String/Integer)&lt;/li&gt;
+&lt;li&gt;LastUpdated (Date)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For the Static List add the following values&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Active&lt;/li&gt;
+&lt;li&gt;Disabled&lt;/li&gt;
+&lt;li&gt;Deleted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If we take a look at an AD User to see what value this is:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AD-AccountDisabled.png" alt="AD - Account (Disabled)"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AD-AttributeEditor.png" alt="AD - Attribute Editor"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/userAccountControl.png" alt="userAccountControl"&gt;&lt;/p&gt;
+&lt;p&gt;What does 512 equate to?&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.netvision.com/ad_useraccountcontrol.php"&gt;http://www.netvision.com/ad_useraccountcontrol.php&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Value&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;512&lt;/td&gt;
+&lt;td&gt;Enabled Account&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;514&lt;/td&gt;
+&lt;td&gt;Disabled Account&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;544&lt;/td&gt;
+&lt;td&gt;Enabled, Password Not Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;546&lt;/td&gt;
+&lt;td&gt;Disabled, Password Not Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;66048&lt;/td&gt;
+&lt;td&gt;Enabled, Password Doesn't Expire&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;66050&lt;/td&gt;
+&lt;td&gt;Disabled, Password Doesn't Expire&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;66080&lt;/td&gt;
+&lt;td&gt;Enabled, Password Doesn't Expire &amp;amp; Not Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;66082&lt;/td&gt;
+&lt;td&gt;Disabled, Password Doesn't Expire &amp;amp; Not Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;262656&lt;/td&gt;
+&lt;td&gt;Enabled, Smartcard Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;262658&lt;/td&gt;
+&lt;td&gt;Disabled, Smartcard Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;262688&lt;/td&gt;
+&lt;td&gt;Enabled, Smartcard Required, Password Not Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;262690&lt;/td&gt;
+&lt;td&gt;Disabled, Smartcard Required, Password Not Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;328192&lt;/td&gt;
+&lt;td&gt;Enabled, Smartcard Required, Password Doesn't Expire&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;328194&lt;/td&gt;
+&lt;td&gt;Disabled, Smartcard Required, Password Doesn't Expire&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;328224&lt;/td&gt;
+&lt;td&gt;Enabled, Smartcard Required, Password Doesn't Expire &amp;amp; Not Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;328226&lt;/td&gt;
+&lt;td&gt;Disabled, Smartcard Required, Password Doesn't Expire &amp;amp; Not Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Let's map this value into the new Data Class with the AD Import.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MicrosoftActiveDirectoryImport.png" alt="Microsoft Active Directory Import"&gt;&amp;nbsp;Microsoft Active Directory Import&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MicrosoftActiveDirectoryImport-Config.png" alt="Microsoft Active Directory Import - Config"&gt;&lt;/p&gt;
+&lt;p&gt;Under&amp;nbsp;"User" click on "specified column mappings"&lt;/p&gt;
+&lt;p&gt;Select the newly created Data Class&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ADImport-CoumnMappingsforUser.png" alt="AD Import - Coumn Mappings for User"&gt;&lt;/p&gt;
+&lt;p&gt;Then click on UserAccountControl "(null)" to select a Field&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ADImport-Directoryentryattribute.png" alt="AD Import - Directory entry attribute"&gt;&lt;/p&gt;
+&lt;p&gt;OK | OK&lt;/p&gt;
+&lt;p&gt;Run the Import Rule&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RunImportRule.png" alt="Run Import Rule"&gt;&lt;/p&gt;
+&lt;p&gt;Now let's create a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CMDBRule.png" alt="CMDB Rule"&gt;&amp;nbsp;CMDB Rule to map this number to some text.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Connector | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;CMDB Rules&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CMDBRule-SetADStatus.png" alt="CMDB Rule - Set AD Status"&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Resource Type&lt;/th&gt;
+&lt;th&gt;User&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Target using&lt;/td&gt;
+&lt;td&gt;Sql Query&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SQL query&lt;/td&gt;
+&lt;td&gt;&amp;lt;below&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;SELECT 
+    rru.[Guid],
+    rru.Name,
+    iaud.UserAccountControl,
+    GetDate() AS CurrentDateTime
+FROM 
+    [RM_ResourceUser] rru
+INNER JOIN 
+    Inv_AD_User_Details iaud 
+    ON iaud._ResourceGuid = rru.Guid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Choose the data class of the one you've just created:&lt;/p&gt;
+&lt;p&gt;I'm getting the current date from SQL.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;LastUpdated&lt;/th&gt;
+&lt;th&gt;CurrentDateTime&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;Anybody know how to get the current DateTime in an Expression?&lt;/p&gt;
+&lt;p&gt;I've tried the following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now()&lt;/li&gt;
+&lt;li&gt;Today()&lt;/li&gt;
+&lt;li&gt;DateTime.Today&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With and without equals...&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=a98001a0-57f5-4d71-851c-cff888119198&amp;amp;CommunityKey=63b01f30-d5eb-43c7-9232-72362b508207&amp;amp;tab=digestviewer#bma98001a0-57f5-4d71-851c-cff888119198"&gt;https://www-secure.symantec.com/connect/forums/cmdb-rule-help&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;In the 'AD Status' column choose "&amp;lt;Expression&amp;gt;" from the dropdown&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Articles&lt;/u&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Scriptable fields for modifying Resource Import Export and CMDB rules&amp;nbsp;&lt;a href="https://support.symantec.com/en_US/article.HOWTO45608.html#v19412924"&gt;https://support.symantec.com/en_US/article.HOWTO45608.html#v19412924&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Expression Functions&amp;nbsp;&lt;a href="https://support.symantec.com/en_US/article.HOWTO45613.html#v19412948"&gt;https://support.symantec.com/en_US/article.HOWTO45613.html#v19412948&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IIF&lt;/strong&gt;&amp;nbsp;&lt;a href="https://support.symantec.com/en_US/article.HOWTO45647.html#v22897377"&gt;https://support.symantec.com/en_US/article.HOWTO45647.html#v22897377&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now we can use a bunch of nested IIFs, it's not eloquent but it works.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;IIF([AD User Details.UserAccountControl]='512','Active',
+ IIF([AD User Details.UserAccountControl]='514','Disabled',
+  IIF([AD User Details.UserAccountControl]='544','Active',
+   IIF([AD User Details.UserAccountControl]='546','Disabled',
+    IIF([AD User Details.UserAccountControl]='66048','Active',
+     IIF([AD User Details.UserAccountControl]='66050','Disabled',
+      IIF([AD User Details.UserAccountControl]='66080','Active',
+       IIF([AD User Details.UserAccountControl]='66082','Disabled',
+        IIF([AD User Details.UserAccountControl]='262656','Active',
+         IIF([AD User Details.UserAccountControl]='262658','Disabled',
+          IIF([AD User Details.UserAccountControl]='262688','Active',
+           IIF([AD User Details.UserAccountControl]='262690','Disabled',
+            IIF([AD User Details.UserAccountControl]='328192','Active',
+             IIF([AD User Details.UserAccountControl]='328194','Disabled',
+              IIF([AD User Details.UserAccountControl]='328224','Active',
+               IIF([AD User Details.UserAccountControl]='328226','Disabled','Deleted'
+                ))))))))))))))))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I tried a CASE statement but it couldn't get it to verify.&lt;/p&gt;
+&lt;p&gt;Set a Schedule - a Shared one makes sense, match it to the AD Import.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
 		<item>
 			<title>Workflow - Tips and Tricks</title>
 			<link>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tips-and-tricks</link>
@@ -295,339 +1034,6 @@ function updateColor() {
 &lt;hr&gt;
 &lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
 </content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Workflow - Tag Finder</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tag-finder</link>
-			<description>&lt;p&gt;In this article I will show you how to use the 'Extract Text By Pattern' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tag-finder</guid>
-			<pubDate>Wed, 10 Jun 2015 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;In this article I will show you how to use the 'Extract Text By Pattern' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;
-&lt;p&gt;If you have a need to find a value within string you can use the following:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ExtractTextByPattern.png" alt="Extract Text By Pattern.png"&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Extract Text By Pattern&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Class: LogicBase.Components.Default.Process.RegEx.ExtractTextByPattern&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Library: LogicBase.Components.Default.dll&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Publisher: Symantec Corporation&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2a1808cb-0dfe-4bc9-9a63-6d5aeb71642e&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www-secure.symantec.com/connect/articles/extract-text-pattern&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Example:&lt;/p&gt;
-&lt;p&gt;{{##_Retry_Tag:25}}&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;BEGIN&lt;/th&gt;
-&lt;th&gt;TAG&lt;/th&gt;
-&lt;th&gt;END&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;{{##_Retry_Tag:&lt;/td&gt;
-&lt;td&gt;25&lt;/td&gt;
-&lt;td&gt;}}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TagFinderWorkflow.png" alt="Tag Finder Workflow.png"&gt;&lt;/p&gt;
-&lt;p&gt;This will find the first occurrence.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Tag%2520Finder%2520Web%2520%25281%2529.png" alt="Tag Finder Web (1).png"&gt;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Tag%2520Finder%2520Web%2520%25282%2529.png" alt="Tag Finder Web (2).png"&gt;&lt;/p&gt;
-&lt;p&gt;I created a variable for the Start and End Tag and passed it the data I needed to search in.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Extract%2520Text%2520By%2520Pattern%2520-%2520Configuration%2520%25281%2529.png" alt="Extract Text By Pattern - Configuration (1).png"&gt;&lt;/p&gt;
-&lt;p&gt;If you know the length of the tag, say it’s a GUID you could untick ‘Use Pattern For End’ and hardcode the length. This is similar to how the Email Monitor searches for {IID=} updates in Tickets.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Extract%2520Text%2520By%2520Pattern%2520-%2520Configuration%2520%25282%2529.png" alt="Extract Text By Pattern - Configuration (2).png"&gt;&lt;/p&gt;
-&lt;p&gt;If it doesn’t find a match it continues.&lt;/p&gt;
-&lt;p&gt;You could then use a ‘Get Number from String’ to check it is a Number or do a Length check to be sure.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;u&gt;&lt;strong&gt;Forum&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=9ca4fc07-c285-4dbe-90fd-be7f1938e673&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=digestviewer#bm9ca4fc07-c285-4dbe-90fd-be7f1938e673"&gt;https://www-secure.symantec.com/connect/forums/extracting-text-different-variable-email-body&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=1346a873-3853-4d9c-a70a-8580b7dc813a&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm1346a873-3853-4d9c-a70a-8580b7dc813a"&gt;https://www-secure.symantec.com/connect/forums/string-parsing&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=6aa0b251-3b25-4107-a0cb-1de26466791f&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm6aa0b251-3b25-4107-a0cb-1de26466791f"&gt;https://www-secure.symantec.com/connect/forums/parsing-text-email&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Workflow - Tokens from Listbox</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox</link>
-			<description>&lt;p&gt;In this article I will show you how to use Javascript in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type to pass values from a Listbox to a Textarea.&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox</guid>
-			<pubDate>Wed, 10 Jun 2015 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;In this article I will show you how to use Javascript in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type to pass values from a Listbox to a Textarea.&lt;/p&gt;
-&lt;p&gt;This is similar to how the Email Templates work in ServiceDesk.&lt;/p&gt;
-&lt;p&gt;Add a Form Builder component to the Workflow.&lt;/p&gt;
-&lt;p&gt;Add a Multiline Textbox to your Form. Name it “Email_HTML”&lt;br&gt;
-Add a Listbox to your Form, give it an Ouput of “Token_SEL”&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520%2528js%2529.png" alt="Web Form Editor (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component - Functionality (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;Add some Tokens to the Listbox Items.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Token1&lt;/li&gt;
-&lt;li&gt;Token2&lt;/li&gt;
-&lt;li&gt;Token3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Then add a “Custom Event” using the “AttributesKeyValuePair”.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;Choose “onclick”&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520-%2520onclick%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality - onclick (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;Add the following code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var Email_HTML = document.getElementById("Email_HTML");
-var Tokens = document.getElementById("Tokens");
-var selectedValue = Tokens.options[Tokens.selectedIndex].text; //.value;
-Email_HTML.value = Email_HTML.value + ' ${' + selectedValue + '}';
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Script%2520%2528js%2529.png" alt="Web Form Editor - Script (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;Open the Form.&lt;/p&gt;
-&lt;p&gt;Now click on a Token and it will add it to your textbox.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Form%2520%2528js%2529.png" alt="Form (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;In your code you can now parse the Tokens  and replace them with any other info.&lt;/p&gt;
-&lt;p&gt;You could use “&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=59d4c016-dd91-49c5-b4e2-09ce3e01765a&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Tag Finder&lt;/a&gt; (Extract Text By Pattern)”&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Workflow - Cookie (using code) - Web App</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-cookie-using-code-web-app</link>
-			<description>&lt;p&gt;In this article I will show you how to create and retrieve Cookies in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/App.png" alt="App.png"&gt;Web App Project Type&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-cookie-using-code-web-app</guid>
-			<pubDate>Fri, 05 Jun 2015 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;In this article I will show you how to create and retrieve Cookies in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/App.png" alt="App.png"&gt;Web App Project Type&lt;/p&gt;
-&lt;p&gt;The Cookie components&amp;nbsp;aren't available in the Web App Project type.&lt;/p&gt;
-&lt;p&gt;In a Forms (Web) Project they are under&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components.png" alt="Components.png"&gt;&amp;nbsp;Input Output&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components.png" alt="Components.png"&gt;&amp;nbsp;Web Cookies&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ClearCookie.png" alt="Clear Cookie.png"&gt;&amp;nbsp;Clear Cookie&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/GetFromCookie.png" alt="Get From Cookie.png"&gt;&amp;nbsp;Get From Cookie&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SaveToCookie.png" alt="Save To Cookie.png"&gt;&amp;nbsp;Save To Cookie&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Class:&lt;/strong&gt; LogicBase.Components.Default.IO.ClearCookie&lt;br&gt;
-&lt;strong&gt;Library:&lt;/strong&gt; LogicBase.Components.Default.dll&lt;br&gt;
-&lt;strong&gt;Publisher:&lt;/strong&gt; Symantec Corporation&lt;/p&gt;
-&lt;p&gt;Some of the Default.IO is available but not these.&lt;/p&gt;
-&lt;p&gt;The Dialog Model type is not the same as the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type in a Web Application Project.&lt;/p&gt;
-&lt;p&gt;Since we can't use the components we will have to use another method.&lt;/p&gt;
-&lt;p&gt;Let's go to the trusty Scripting Component.&lt;/p&gt;
-&lt;p&gt;Add in the Library (&lt;strong&gt;LogicBase.Components.Scripting.dll&lt;/strong&gt;) to your Project&lt;/p&gt;
-&lt;p&gt;Find the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Code%2520%2528Script%2529%2520Component.png" alt="Code (Script) Component.png"&gt;&amp;nbsp;Code (Script) Component&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;Set Cookie&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;We will create the 'Set' Component first, this will have 3 parameters:&lt;/p&gt;
-&lt;p&gt;CookieName - Text&lt;/p&gt;
-&lt;p&gt;CookieValue - Text&lt;/p&gt;
-&lt;p&gt;ExpiresMinutes - Number (integer)&lt;/p&gt;
-&lt;p&gt;No &lt;strong&gt;return&lt;/strong&gt; type&lt;/p&gt;
-&lt;p&gt;In the namespaces add&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;System.Web
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;font color="#008000"&gt;&lt;font&gt;&lt;span class="sc0"&gt;&lt;span class="ms-rteThemeFontFace-1"&gt;//Cookie Class&lt;/span&gt;&lt;br class="ms-rteThemeFontFace-1"&gt;&lt;span class="ms-rteThemeFontFace-1"&gt;//&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;a href="https://msdn.microsoft.com/en-us/library/system.web.httpcookie%28v=vs.71%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/system.web.httpcookie(v=vs.71).aspx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;System.Object&lt;br&gt;
-System.Web.HttpCookie&lt;br&gt;
-Namespace: System.Web&lt;/p&gt;
-&lt;p&gt;C# code:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;    HttpCookie myCookie = new HttpCookie(CookieName);
-    DateTime now = DateTime.Now;
-    
-    // Set the cookie value.
-    myCookie.Value = CookieValue;
-    // Set the cookie expiration date.
-    myCookie.Expires = now.AddMinutes(ExpiresMinutes);
-    
-    // Add the cookie.
-    HttpContext.Current.Response.Cookies.Add(myCookie);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you read the MS Articles below you won't see&amp;nbsp;&lt;strong&gt;HttpContext.Current.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This is needed for it to work in Workflow.&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;Get Cookie&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;For the Get Cookie we need an input of&lt;/p&gt;
-&lt;p&gt;CookieName - Text&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;'Result variable type' of &lt;strong&gt;Text&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;'Result variable name' of &lt;strong&gt;Cookie&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Again add the namespace of&amp;nbsp;&lt;strong&gt;System.Web&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Then the following C# code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;HttpCookie myCookie = new HttpCookie(CookieName);
-myCookie = HttpContext.Current.Request.Cookies[CookieName];
-
-return myCookie.Value;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And now you can use this throughout your project.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;To view the Cookies in IE.&lt;/p&gt;
-&lt;p&gt;F12 - Cache | View Cookie Information&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;u&gt;Links&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Connect Forum&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=7b7bd87c-0355-4c18-9553-87cbb6e7ee99&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm7b7bd87c-0355-4c18-9553-87cbb6e7ee99"&gt;https://www-secure.symantec.com/connect/forums/need-tutorial-save-cookie-component-usage&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;MS&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font class="ms-rteThemeFontFace-1"&gt;&lt;span class="sc2 ms-rteThemeFontFace-1"&gt;&lt;font color="#008000"&gt;// Code: Writing a Cookie (Visual C#)&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;br&gt;
-&lt;a href="https://msdn.microsoft.com/en-us/library/aa287547%28v=vs.71%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/aa287547%28v=vs.71%29.aspx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font class="ms-rteThemeFontFace-1"&gt;&lt;span class="sc2 ms-rteThemeFontFace-1"&gt;&lt;font color="#008000"&gt;// Code: Reading a Cookie (Visual C#)&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;br&gt;
-&lt;a href="https://msdn.microsoft.com/en-us/library/aa287533%28v=vs.71%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/aa287533(v=vs.71).aspx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;// HttpCookie Properties&lt;br&gt;
-&lt;a href="https://msdn.microsoft.com/en-us/library/System.Web.HttpCookie_properties%28v=vs.110%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/System.Web.HttpCookie_properties(v=vs.110).aspx&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Using a User Defined Type with the Script Component - Workflow</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/using-a-user-defined-type-with-the-script-component-workflow</link>
-			<description>&lt;p&gt;In this Article I will show you how to use a custom data type within the Script Component.&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/using-a-user-defined-type-with-the-script-component-workflow</guid>
-			<pubDate>Thu, 21 May 2015 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;In this Article I will show you how to use a custom data type within the Script Component.&lt;/p&gt;
-&lt;p&gt;So you've created a "User Defined Type" from the &lt;strong&gt;Authoring&lt;/strong&gt; section in a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Int.png" alt="Int.png"&gt;&amp;nbsp;Workflow Integration Component&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Create%2520Generator%2520%2528UDT%2529.png" alt="Create Generator (UDT).png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Property.png" alt="Property.png"&gt;&amp;nbsp;UserDefinedType&lt;br&gt;
-&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property%2520%25282%2529.png" alt="Property (2).png"&gt;&amp;nbsp;TextProperty (Text)&lt;br&gt;
-&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property%2520%25282%2529.png" alt="Property (2).png"&gt;&amp;nbsp;IntegerProperty&amp;nbsp;(Number (integer))&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_1.+Type+Designer.png" alt="1. Type Designer.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_2.+Settings.png" alt="2. Settings.png"&gt;&lt;/p&gt;
-&lt;p&gt;Make sure to note the Namespace:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Generated.POC_Scripting_INT&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/C%2523%2520Generators.png" alt="C# Generators.png"&gt;&amp;nbsp;Generators&lt;br&gt;
-&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/C%2523.png" alt="C#.png"&gt;&amp;nbsp;UserDefinedType&lt;br&gt;
-&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Property.png" alt="Property.png"&gt;&amp;nbsp;UserDefinedType&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Generators%2520Management%2520%2528UDT%2529%2520%25282%2529.png" alt="Generators Management (UDT) (2).png"&gt;&lt;/p&gt;
-&lt;p&gt;Now create a Workflow.&lt;/p&gt;
-&lt;p&gt;Use an &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Data_Add.png" alt="Data_Add.png"&gt;&amp;nbsp;Add Data Element and create a element of your new Data Type.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;DataType&lt;/th&gt;
-&lt;th&gt;UserDefinedType&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Variable Name&lt;/td&gt;
-&lt;td&gt;UserDefinedType&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Add some values&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Integer Property&lt;/th&gt;
-&lt;th&gt;1&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Text Property&lt;/td&gt;
-&lt;td&gt;Alex Hedley&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Search for a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Code%2520%2528Script%2529%2520Component.png" alt="Code (Script) Component.png"&gt;&amp;nbsp;Script Component. The Library may not have been added so should show in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Search.png" alt="Search.png"&gt;&amp;nbsp;Unloaded Libraries section.&lt;/p&gt;
-&lt;p&gt;You could also add "LogicBase.Components.Scripting.dll" in the Libraries tab of the Project section.&lt;/p&gt;
-&lt;p&gt;Join this to your previous component.&lt;/p&gt;
-&lt;p&gt;Double click on this to start up the Wizard.&lt;/p&gt;
-&lt;p&gt;Add your variable name and choose it's Type:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Scripted+Component+Wizard+-+1.+Input+Parameters.png" alt="Scripted Component Wizard - 1. Input Parameters.png"&gt;&lt;/p&gt;
-&lt;p&gt;Click on &lt;strong&gt;&lt;u&gt;E&lt;/u&gt;dit Parameter Mappings&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Select the Parameter then choose the Data Source:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_End+Component+Mapping.png" alt="End Component Mapping.png"&gt;&lt;/p&gt;
-&lt;p&gt;Click OK then Next.&lt;/p&gt;
-&lt;p&gt;Choose your "Result &lt;u&gt;v&lt;/u&gt;ariable type" and "&lt;u&gt;R&lt;/u&gt;esult variable name":&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Scripted+Component+Wizard+-+2.+Result+Variable.png" alt="Scripted Component Wizard - 2. Result Variable.png"&gt;&lt;/p&gt;
-&lt;p&gt;Now to the Source Code.&lt;/p&gt;
-&lt;p&gt;You can choose which one you prefer. (C#, VB.NET, JScript)&lt;/p&gt;
-&lt;p&gt;Here is where you need to add your previous namespace.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Using namespaces (one per line):&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;System  &lt;br&gt;			Generated.Generated.POC_Scripting_INT&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Now you can use your Type in the code:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;return UserDefinedType[0].TextProperty;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Scripted+Component+Wizard+-+3.+Source+Code.png" alt="Scripted Component Wizard - 3. Source Code.png"&gt;&lt;/p&gt;
-&lt;p&gt;There is a handy test you can perform at the end to check it is working.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Scripted+Component+Wizard+-+4.+Test+Page.png" alt="Scripted Component Wizard - 4. Test Page.png"&gt;&lt;/p&gt;
-&lt;p&gt;Obviously you can do more complex things than just getting a single Property but this explains the initial set up.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Protirus.png" alt="Protirus.png"&gt;&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>String with name 'XXX' has already been added - Workflow Integration Library</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library</link>
-			<description>&lt;p&gt;So you've created an &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int.png"&gt;&amp;nbsp;Integration Component with SQL Generators etc included.&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/string-with-name-xxx-has-already-been-added-workflow-integration-library</guid>
-			<pubDate>Wed, 13 May 2015 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;So you've created an &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int.png"&gt;&amp;nbsp;Integration Component with SQL Generators etc included.&lt;/p&gt;
-&lt;p&gt;You add a new Generator to the list, get to the end and after you '&lt;strong&gt;Recompile and close&lt;/strong&gt;' the following warning shows:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Integration%20Library%20-%20Error%20%281%29.png" alt="Integration Library - Error (1).png"&gt;&lt;/p&gt;
-&lt;p&gt;Open up &lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3417051-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;&lt;strong&gt;Symantec Workflow Explorer&lt;/strong&gt; and go to the &lt;strong&gt;Log Viewer&lt;/strong&gt; tab.&lt;/p&gt;
-&lt;p&gt;(&lt;install drive=""&gt;:\Program Files\Altiris\Workflow\Logs\logicbase.tool.generator.exe.log)&lt;/install&gt;&lt;/p&gt;
-&lt;pre&gt;Application Name : LogicBase.Tool.Generator.exe Process ID : _##_ Date :_DD_/_MM_/_YYYY_ _HH_:_NN_:_SS_ Log Level :Error Log Category :LogicBase.Tool.Repository.OperationManager Machine Name : _&lt;servername&gt;_ Message : System.ArgumentException: String with name '**XXX**' has already been added Parameter name: name at Symantec.Workflow.HelpEditor.Internal.ResxFile.AddString(String name, String value) at Symantec.Workflow.HelpEditor.Internal.FileWriter.WriteToolboxCategories(String baseCategoryPath, IEnumerable`1 categories) at Symantec.Workflow.HelpEditor.Internal.FileWriter.WriteToolbox(XmlWriter xml) at Symantec.Workflow.HelpEditor.AssemblyWriteFile.ExecuteAsync() at Symantec.Workflow.Manager.Common.Operation.BeginExecution()&lt;/servername&gt;&lt;/pre&gt;
-&lt;p&gt;The Help Editor will still open but you won't have the folder containing the component, like it would usually, given the Component name.&lt;/p&gt;
-&lt;p&gt;The reason from the Logs show there is an issue with a name that is trying to be created in the Help Editor File.&lt;/p&gt;
-&lt;p&gt;The component still exists it just won't be in it's own folder.&lt;/p&gt;
-&lt;p&gt;You will need to manually create this.&lt;/p&gt;
-&lt;p&gt;Select &lt;strong&gt;Components&lt;/strong&gt; from the &lt;strong&gt;Type&lt;/strong&gt; section and it will show:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Help%20Editor%20%281%29.png" alt="Help Editor (1).png"&gt;&lt;/p&gt;
-&lt;p&gt;Under Toolbox select the top level folder &lt;em&gt;right-click&lt;/em&gt; and &lt;strong&gt;Add&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Help%20Editor%20%282%29.png" alt="Help Editor (2).png"&gt;&lt;/p&gt;
-&lt;p&gt;Give it a &lt;strong&gt;Name&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3417051-files_Help%20Editor%20-%20Name.png" alt="Help Editor - Name.png"&gt;&lt;/p&gt;
-&lt;p&gt;Now drag the component from the Components section into this new folder:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/connect/sites/default/files/users/user-2946791/Help%20Editor%20%283%29.png" alt="Help Editor (3).png"&gt;&lt;/p&gt;
-&lt;p&gt;It may appear in the top level folder as well (Test_INT) so just move it from there into the sub-folder.&lt;/p&gt;
-&lt;table border="0" cellpadding="0" cellspacing="0" style="width: 500px"&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;The fix will be added to the next rollup release for Workflow **7.6**.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;div&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/p&gt;
-&lt;/div&gt;</content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
 	</channel>

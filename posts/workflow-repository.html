@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - Repository</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-repository'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - Repository' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-repository' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Repository
+          </h1>
+            <div class="meta">Published on Monday, 14 December 2015</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I'm going to show you how to use the Repository in <a href="https://support.symantec.com/en_US/defaultProductLanding.56410.html">Workflow</a>.</p>
+<p>The Repository is a great place to store your workflows, keep a backup and see the changes throughout the process.</p>
+<p>When you install Workflow you have an option to configure the SMP. This can be done at a later stage too.</p>
+<p>Open Symantec Workflow Explorer</p>
+<p>&quot;[Install Drive]:\Program Files\Symantec\Workflow\Tools\Symantec.Explorer.exe&quot; or</p>
+<p>&quot;[Install Drive]:\Program Files\Symantec\Workflow\Tools\Symantec.Explorer.exe&quot; -page CredentialManager</p>
+<p>Set up SMP in the Explorer app, click on the Symantec Management Platform on the left hand side</p>
+<p>Click Add</p>
+<p>Fill in your details</p>
+<p><img src="images/SymantecWorkflowExplorer-Credentials-Add.png" alt="Symantec Workflow Explorer - Credentials - Add" /></p>
+<p>You can then highlight and click <strong>Test</strong></p>
+<p><img src="images/SymantecWorkflowExplorer-Credentials-Test-Succeeded.png" alt="Symantec Workflow Explorer - Credentials - Test - Succeeded" /></p>
+<p>This will now be available in Workflow Manager.</p>
+<p>Open Workflow</p>
+<p>&quot;[Install Drive]:\Program Files\Symantec\Workflow\Designer\bin\WorkflowManager.exe&quot;</p>
+<p>Expand the Repo(s)</p>
+<p>There should be a Projects folder but it'll likely be empty.</p>
+<p>Click back onto the Local folder</p>
+<p>New - Forms (Web)</p>
+<p>Give it a name &quot;<strong>POC_Repo_WEB</strong>&quot;</p>
+<p><img src="images/SymantecWorkflowManager-NewFormsProject.png" alt="Symantec Workflow Manager - New Forms Project" /></p>
+<p>Complete your Workflow...</p>
+<p>Click the <img src="images/CheckIn.png" alt="Check In" /> <strong>Check In</strong> button in the toolbar or File | Check In Project (Ctrl+Shift+S)</p>
+<p>You will received a message</p>
+<p><img src="images/CheckInProject.png" alt="Check In Project.png" /></p>
+<p>Then choose a location</p>
+<p><img src="images/CreateRepositoryProject.png" alt="Create Repository Project.png" /></p>
+<p>You have the option to create a new Folder and you can Delete the local copy. This can help with not getting your projects out of sync.</p>
+<p>I usually keep this unchecked then move the original into an archive folder locally.</p>
+<p>The Project is then closed and the new newly created project is opened.</p>
+<p>If you right click on the local Project and select Open Location</p>
+<p><img src="images/SymantecWorkflowManager-localProject-RightClick.png" alt="Symantec Workflow Manager - local Project - Right Click" /></p>
+<p>You will be taken to</p>
+<p>&quot;[Install Drive]:**\Program Files\Symantec\Workflow\WorkflowProjects**POC_Repo_WEB&quot;</p>
+<p>If you do the same with Repo version</p>
+<p><img src="images/SymantecWorkflowManager-repoProject-RightClick.png" alt="Symantec Workflow Manager - repo Project - Right Click" /> <img src="images/SymantecWorkflowManager-RightClick.png" alt="Symantec Workflow Manager - Right Click" /></p>
+<p>You will see a different folder location</p>
+<p>&quot;C:\Users\alex.hedley\AppData\Local\Symantec\Workflow\Repository\e8951e09da7f46158b58176da73fa647&quot;</p>
+<p>In Workflow Manager you will see two columns, Local Version and Latest Version</p>
+<p>These inform you what version you have copied to your machine and which is the latest in the Repo.</p>
+<p>It's always best practice to click on the Refresh before you check out a version.</p>
+<p>I tend to double click on a Project to open it but you can click <strong>Check Out</strong> then <strong>Open</strong> if you want to make sure**.**</p>
+<p>If you are working on a copy and don't wish to use it anymore and want to revert to the last know good copy, open the location, then delete or move this folder elsewhere. Click on Refresh and the Local Version column will not contain a number any more, now when you Check Out and Open you will be back to the latest version you can begin to work on again.</p>
+<p>Updating a Workflow.</p>
+<p>Make your changes then click on <img src="images/CheckIn.png" alt="Check In" /> <strong>Check In</strong> again.</p>
+<p><img src="images/CheckInNotes.png" alt="Check In (Notes)" /></p>
+<p>Refresh the Manager and your version number will have increased</p>
+<p>Now if you Right Click on a Project and click View Versions</p>
+<p><img src="images/SymantecWorkflowManager-RightClick-ViewVersions.png" alt="Symantec Workflow Manager - Right Click - View Versions" /></p>
+<p>You will see a nice list of all the notes you've made against versions you've Checked In.</p>
+<p><img src="images/ProjectVersions.png" alt="Project Versions" /></p>
+<p>There may come a time when you make changes, check them in then realise they weren't necessary, instead of deleting the components you can roll back to a previous known version.</p>
+<p>Close the Project first.</p>
+<p>Highlight the version row and click <strong>Rollback</strong>.</p>
+<p><img src="images/Rollbackmessage.png" alt="Rollback message" /></p>
+<hr />
+<p>Uploading DLLs.</p>
+<p>You may have created a DLL, Integration Component, that you wish to store in the Repo.</p>
+<p>Open the Location and check there is a .SymWorkflow file</p>
+<p>Now back in WF Manager go to the folder, where the project is, you wish to upload, click on <strong>Import</strong></p>
+<p>Find the file, click Open</p>
+<p><img src="images/UploadINT-SymWorkflow.png" alt="Upload INT - SymWorkflow" /></p>
+<p>Then wait for it to upload.</p>
+<p>You will then see it available in the main screen, if not click <strong>Refresh</strong>.</p>
+<hr />
+<p>Make sure if you create a new Repo Project that you check this, it isn't by default so it will show as version 0 then others can't open it</p>
+<hr />
+<p><strong>Backup</strong></p>
+<p>Each time you Check In a project a version is created in a Backup Folder</p>
+<p>&quot;[Install Drive]:\Program Files\Symantec\Workflow\WorkflowProjects\Backup&quot;</p>
+<p>Task Tray Tool</p>
+<p>&quot;[Install Drive]:\Program Files\Symantec\Workflow\Tools\LogicBase.Local.TaskTray.exe&quot;</p>
+<p>Right Click - Shortcuts - Edit Tool Preferences</p>
+<p><img src="images/TaskToolTray-Shortcuts-EditToolPreferences.png" alt="Task Tool Tray - Shortcuts - Edit Tool Preferences" /></p>
+<p>Under Studio Configuration</p>
+<p>Backup</p>
+<p><img src="images/EditToolPreferences-Backup.png" alt="Edit Tool Preferences - Backup" /></p>
+<hr />
+<p><strong>Links</strong></p>
+<p>About the Workflow Repository<br />
+<a href="http://www.symantec.com/docs/HOWTO62234">http://www.symantec.com/docs/HOWTO62234</a></p>
+<hr />
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus.png" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - SendCompleteWorkflowMessage - Event Listeners</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sendcompleteworkflowmessage-event-listeners'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - SendCompleteWorkflowMessage - Event Listeners' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sendcompleteworkflowmessage-event-listeners' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - SendCompleteWorkflowMessage - Event Listeners
+          </h1>
+            <div class="meta">Published on Monday, 30 November 2015</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I will explain how to use the 'SendCompleteWorkflowMessage' to hook into a Dialog Workflow via the Event Listeners.</p>
+<p>I'm assuming that you already have a Workflow written that is creating Tasks via the 'Dialog Workflow' component.</p>
+<p>You could then have another Project (Web Forms) that get's a list of User's Tasks and displays them for actioning, or set up an automated method of send these messages, it's your choice.</p>
+<p>As a very simple example we have a Workflow with a Task, once we set up an Event Listener that path will then be available to us for actioning, with the Message data for use.</p>
+<p><img src="images/POC_WorkflowComplete_WF.png" alt="POC_WorkflowComplete_WF" /></p>
+<p>Double click on your Dialog Workflow and click on the 'Message Listeners' tab,</p>
+<p>Tick the &quot;Allow Exit Via Message Monitoring&quot;</p>
+<p>Next click on <strong>Add</strong>.</p>
+<p><img src="images/DialogWorkflowEditor-MessageListeners.png" alt="Dialog Workflow Editor - Message Listeners" /></p>
+<p>Give your Path a name. I've called mine the very inventive &quot;MyPath&quot;</p>
+<p><img src="images/DialogWorkflowEditor-MessageResponses-Path.png" alt="Dialog Workflow Editor - Message Responses - Path" /></p>
+<p>We need some Path Data to work with so click on that tab.</p>
+<p>Untick &quot;Empty Message&quot;</p>
+<p>I'm just using 'Text' here but yours could be a newly defined type or one from your Workflow Process.</p>
+<p><img src="images/DialogWorkflowEditor-Message+Responses-PathData.png" alt="Dialog Workflow Editor - Message Responses - Path Data" /></p>
+<p>Now if you close the Dialog Workflow you will now have a new Path coming out of the DW and if you browse the data your 'Message' variable will be available to you. You might want to add a Process Message to your Process or use the data passed to determine an outcome.</p>
+<p>Now how do we send this information?</p>
+<p>In your other Workflow you add the 'Send Complete Workflow Message'</p>
+<p><img src="images/POC_WorkflowComplete_WEB.png" alt="POC_WorkflowComplete_WEB" /></p>
+<p>You will need a Task ID that the Process is currently at.<br />
+You then chose the Data Type the Message is expecting, see the Message Listener of the Task.<br />
+Then the Message Data that is used in your Process.</p>
+<p><img src="images/SendWorkflowCompleteMessageEditor.png" alt="SendWorkflowCompleteMessage Editor" /></p>
+<p>You could change the Server and/or pick the Path you wish to take, you could set the &quot;MyPath&quot;. Workflow should know which path based on the message you are sending.</p>
+<p>You may find yourself wondering where is this data?</p>
+<p>You can obtain it from two places.</p>
+<p>Open <strong>Symantec Workflow Explorer</strong> <br />
+(Start Menu\Programs\Symantec\Workflow Designer\Tools\ Symantec.Explorer.exe)</p>
+<p>SymQ Explorer <br />
+AliasExchangeImpl <br />
+Lbme.workflowresponsequeue</p>
+<p><img src="images/SymantecWorkflowExplorer-SymQExplorer-LBME.WorkflowResponseQueue.png" alt="Symantec Workflow Explorer - SymQ Explorer - LBME.WorkflowResponseQueue" /></p>
+<p>You can see the TaskID, the Path, the Message, a view useful and easy way to view.</p>
+<p><strong>Files on the Server</strong><br />
+[Install Drive]:\program files\Symantec\Workflow\Data\MQWorkflowFileStorage\localworkflowfilestorage-workflowresponsequeue</p>
+<p>This will be named after the TaskID.</p>
+<p><img src="images/localworkflowfilestorage-workflowresponsequeue_0.png" alt="localworkflowfilestorage-workflowresponsequeue_0" /></p>
+<p>It's not that easy to read but you can pick out the important info.</p>
+<p><img src="images/lbemsg2.png" alt="lbemsg2" /></p>
+<p>Sometimes Messages aren't consumed, they can become corrupt, if you notice this become backlogged you can move these files to a back up folder and add a few back in a couple at time until you find the corrupt one.</p>
+<p>Now you're ready to send any message you want to your processes.</p>
+<hr />
+<p><u>Summary Explanation</u><br />
+You’ve create a Workflow with many Tasks.<br />
+You wish to action these Tasks from another Workflow.<br />
+You expose the Task (Dialog Workflow) with Message Listeners.<br />
+‘Message Listeners’ tab<br />
+Allow Exit Via Message Monitoring ☑<br />
+Message Responses    LogicBase.Core.MessageExchangeResponse</p>
+<p>Add/Edit the Object</p>
+<table>
+<thead>
+<tr>
+<th><strong>Path</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Path Name</td>
+<td>&lt;<em>Name</em>&gt;</td>
+</tr>
+<tr>
+<td><strong>Path Data</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Payload Data Type</td>
+<td>Text &lt;Data Type&gt;</td>
+</tr>
+<tr>
+<td>Variable Name</td>
+<td><em>&lt;variable&gt;</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><u><strong>Components</strong></u></p>
+<p><img src="images/DialogWorkflowComponent.png" alt="Dialog Workflow Component" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Dialog Workflow</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Class:</strong> LogicBase.Components.Default.Workflow.DialogWorkflowComponent</td>
+</tr>
+<tr>
+<td><strong>Library:</strong> LogicBase.Components.Default.dll</td>
+</tr>
+<tr>
+<td><strong>Publisher:</strong> Symantec Corporation</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/SendWorkflowCompleteMessageComponent.png" alt="SendWorkflowCompleteMessage Component" /></p>
+<table>
+<thead>
+<tr>
+<th>Send Complete Workflow Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Class:</strong> LogicBase.Components.Default.Workflow.SendCompleteWorkflowMessage</td>
+</tr>
+<tr>
+<td><strong>Library:</strong> LogicBase.Components.Default.dll</td>
+</tr>
+<tr>
+<td><strong>Publisher:</strong> Symantec Corporation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Component Documentation</strong></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=deaa687f-b521-4b81-bc11-5d50570157de&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">https://www-secure.symantec.com/connect/articles/send-complete-workflow-message</a></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=83135cdc-002c-4a75-8943-bcbad89b2e24&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">https://www-secure.symantec.com/connect/articles/dialog-workflow</a></p>
+<p><strong>Forum</strong></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=bcf85e71-373d-4344-a098-f9e46fcbe5e9&amp;CommunityKey=a067504a-9710-492c-bbef-18d2ed6b44af&amp;tab=digestviewer#bmbcf85e71-373d-4344-a098-f9e46fcbe5e9">https://www-secure.symantec.com/connect/forums/send-complete-workflow-message-component</a></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=1773b3b3-3d4f-4dab-b632-e5343fad7130&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=digestviewer#bm1773b3b3-3d4f-4dab-b632-e5343fad7130">https://www-secure.symantec.com/connect/forums/dialog-workflow-component</a></p>
+<p><strong>How To</strong></p>
+<p><a href="https://support.symantec.com/en_US/article.HOWTO62158.html">https://support.symantec.com/en_US/article.HOWTO62158.html</a></p>
+<p><a href="https://support.symantec.com/en_US/article.HOWTO61624.html">https://support.symantec.com/en_US/article.HOWTO61624.html</a></p>
+<p><a href="https://support.symantec.com/en_US/article.HOWTO61707.html#v23056327">https://support.symantec.com/en_US/article.HOWTO61707.html#v23056327</a></p>
+<hr />
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus.png" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
