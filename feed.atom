@@ -4,8 +4,64 @@
 	<title>Alex Hedley</title>
 	<link rel="self" href="https://alexhedley.github.io/symantec-connect-articles" />
 	<rights>Copyright © 2023</rights>
-	<updated>2023-06-16T22:20:33Z</updated>
+	<updated>2023-06-16T22:30:30Z</updated>
 	<subtitle>Welcome to my Symantec Connect Articles!</subtitle>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-response-content-in-workflow-7.6</id>
+		<title>Using the REST Generator (Response Content) in Workflow 7.6</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-response-content-in-workflow-7.6" />
+		<updated>2015-12-16T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I will explain how to use the REST Generator (Response Content)&amp;nbsp;within&amp;nbsp;&lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt;&amp;nbsp;7.6.&lt;/p&gt;
+&lt;p&gt;Other articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;New to me with build&amp;nbsp;Symantec.Workflow.Setup.7.6.4383.&lt;strong&gt;504&lt;/strong&gt;&amp;nbsp;the REST Generator has been updated to generate Response Content in a third manner - "Create From Sample".&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;7.6.4383.479 was the first build to have this&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;With Response Content there were two ways to create the Data Type you need to work with.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create Manually&lt;/li&gt;
+&lt;li&gt;Create From Request&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Create Manually was a lot of work but was handy when the Generator can't authenticate against the API or you used a method that wasn't possible.&lt;/p&gt;
+&lt;p&gt;The Create From Request is the easiest as it does it all for you.&lt;/p&gt;
+&lt;p&gt;There is a new one&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create From Sample&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTGenerator-2Components-ResponseContent.png" alt="REST Generator - 2 Components - Response Content"&gt;&lt;/p&gt;
+&lt;p&gt;Grab your JSON and paste it in, most APIs have this documented or you could run it through POSTMAN and grab the output&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTGenerator-2Components-ResponseContent-CreatefromSample.png" alt="REST Generator - 2 Components - Response Content - Create from Sample"&gt;&lt;/p&gt;
+&lt;p&gt;Hit &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTGenerator-2Components-ResponseContent-CreatefromSample-DataType.png" alt="REST Generator - 2 Components - Response Content - Create from Sample - Data Type"&gt;&lt;/p&gt;
+&lt;p&gt;There you have your DataType to work with.&lt;/p&gt;
+&lt;p&gt;This should also pull in the headers and map those, I've yet to test this out.&lt;/p&gt;
+&lt;p&gt;Other articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I will explain how to use the REST Generator (Response Content) within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt; 7.6.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-repository</id>
 		<title>Workflow - Repository</title>
@@ -987,62 +1043,5 @@ function updateColor() {
 &lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;In this article I will show you how to&amp;nbsp;change the colour of a cell (in a given column) in a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Grid.png" alt="Grid"&gt;&amp;nbsp;Grid Component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-multistatecolor-component</id>
-		<title>Workflow - MultiStateColor Component</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-multistatecolor-component" />
-		<updated>2015-06-25T00:00:00Z</updated>
-		<content>&lt;p&gt;In this article I will show you how to use the 'MultiStateColor' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;
-&lt;p&gt;This allows you to change a panel on a Web Form to a specific colour.&lt;/p&gt;
-&lt;p&gt;This can be handy for a RAG Status or Traffic light system.&lt;/p&gt;
-&lt;p&gt;In a Form under &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components.png" alt="Components.png"&gt;Dashboard Components there is:&lt;/p&gt;
-&lt;h3 id="multistatecolor.png-multistatecolor"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MultiStateColor.png" alt="MultiStateColor.png"&gt;&amp;nbsp;&lt;strong&gt;MultiStateColor&lt;/strong&gt;&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Class:&lt;/th&gt;
-&lt;th&gt;LogicBase.Components.FormBuilder.Components.MultiStateColor.MultiStateColorComponent&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Library:&lt;/td&gt;
-&lt;td&gt;LogicBase.Components.FormBuilder.dll&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Publisher:&lt;/td&gt;
-&lt;td&gt;Symantec Corporation&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/FormMSC.gif" alt="Form MSC.gif"&gt;&lt;/p&gt;
-&lt;p&gt;Drag this onto your Form.&lt;/p&gt;
-&lt;p&gt;The Theme Style will be set to Panel.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditComponent-AppearanceMSC.png" alt="Edit Component - Appearance MSC.png"&gt;&lt;/p&gt;
-&lt;p&gt;Add in your 'Color States'&lt;/p&gt;
-&lt;p&gt;You can use the Color Picker here to choose a more accurate one.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditComponent-ConfigurationMSC.png" alt="Edit Component - Configuration MSC.png"&gt;&lt;/p&gt;
-&lt;p&gt;Click on the "..." next to the 'Color Selection Model':&lt;/p&gt;
-&lt;p&gt;Add in a Matches rule that uses your variable to check - here being color:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditEmbeddedDecisionModelMSC.png" alt="Edit Embedded Decision Model MSC.png"&gt;&lt;/p&gt;
-&lt;p&gt;Add you manual comparisons:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MatchesRuleEditorMSC.png" alt="Matches Rule Editor MSC.png"&gt;&lt;/p&gt;
-&lt;p&gt;Duplicate your &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ColorStateSelectionEndComponent.png" alt="ColorStateSelectionEndComponent.png"&gt;&amp;nbsp;'ColorStateSelectionEndComponent' and chose a &lt;strong&gt;Selected Output&lt;/strong&gt; from the previously configured list.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ColorStateSelectionEndComponentEditorMSC.png" alt="ColorStateSelectionEndComponent Editor MSC.png"&gt;&lt;/p&gt;
-&lt;p&gt;Now you can run your Form and see the colour change accordingly.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/WorkflowMSC.png" alt="Workflow MSC.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/FormMSC.gif" alt="Form MSC.gif"&gt;&lt;/p&gt;
-&lt;p&gt;Watch out when using a Theme&lt;/p&gt;
-&lt;p&gt;Change the Background to nothing or it doesn't work.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ThemeEditorMSC.png" alt="Theme Editor MSC.png"&gt;&lt;/p&gt;
-&lt;p&gt;Original I tried 3 panels, one of each colour, with visibility rules given the matching value but this way gives more flexibility for more colour choices too.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this article I will show you how to use the 'MultiStateColor' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;</summary>
 	</entry>
 </feed>
