@@ -4,7 +4,7 @@
 	<title />
 	<link rel="self" href="https://alexhedley.github.io/symantec-connect-articles" />
 	<rights>Copyright © 2023</rights>
-	<updated>2023-06-03T08:14:42Z</updated>
+	<updated>2023-06-16T21:29:47Z</updated>
 	<entry>
 		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tips-and-tricks</id>
 		<title>Workflow - Tips and Tricks</title>
@@ -301,48 +301,6 @@ function updateColor() {
 		<summary>&lt;p&gt;In this article I will show you how to use the 'MultiStateColor' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;</summary>
 	</entry>
 	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox</id>
-		<title>Workflow - Tokens from Listbox</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox" />
-		<updated>2015-06-10T00:00:00Z</updated>
-		<content>&lt;p&gt;In this article I will show you how to use Javascript in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type to pass values from a Listbox to a Textarea.&lt;/p&gt;
-&lt;p&gt;This is similar to how the Email Templates work in ServiceDesk.&lt;/p&gt;
-&lt;p&gt;Add a Form Builder component to the Workflow.&lt;/p&gt;
-&lt;p&gt;Add a Multiline Textbox to your Form. Name it “Email_HTML”&lt;br&gt;
-Add a Listbox to your Form, give it an Ouput of “Token_SEL”&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520%2528js%2529.png" alt="Web Form Editor (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component - Functionality (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;Add some Tokens to the Listbox Items.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Token1&lt;/li&gt;
-&lt;li&gt;Token2&lt;/li&gt;
-&lt;li&gt;Token3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Then add a “Custom Event” using the “AttributesKeyValuePair”.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;Choose “onclick”&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520-%2520onclick%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality - onclick (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;Add the following code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var Email_HTML = document.getElementById("Email_HTML");
-var Tokens = document.getElementById("Tokens");
-var selectedValue = Tokens.options[Tokens.selectedIndex].text; //.value;
-Email_HTML.value = Email_HTML.value + ' ${' + selectedValue + '}';
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Script%2520%2528js%2529.png" alt="Web Form Editor - Script (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;Open the Form.&lt;/p&gt;
-&lt;p&gt;Now click on a Token and it will add it to your textbox.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Form%2520%2528js%2529.png" alt="Form (js).png"&gt;&lt;/p&gt;
-&lt;p&gt;In your code you can now parse the Tokens  and replace them with any other info.&lt;/p&gt;
-&lt;p&gt;You could use “&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=59d4c016-dd91-49c5-b4e2-09ce3e01765a&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Tag Finder&lt;/a&gt; (Extract Text By Pattern)”&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this article I will show you how to use Javascript in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type to pass values from a Listbox to a Textarea.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
 		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tag-finder</id>
 		<title>Workflow - Tag Finder</title>
 		<author>
@@ -408,6 +366,48 @@ Email_HTML.value = Email_HTML.value + ' ${' + selectedValue + '}';
 &lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;In this article I will show you how to use the 'Extract Text By Pattern' component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox</id>
+		<title>Workflow - Tokens from Listbox</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tokens-from-listbox" />
+		<updated>2015-06-10T00:00:00Z</updated>
+		<content>&lt;p&gt;In this article I will show you how to use Javascript in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type to pass values from a Listbox to a Textarea.&lt;/p&gt;
+&lt;p&gt;This is similar to how the Email Templates work in ServiceDesk.&lt;/p&gt;
+&lt;p&gt;Add a Form Builder component to the Workflow.&lt;/p&gt;
+&lt;p&gt;Add a Multiline Textbox to your Form. Name it “Email_HTML”&lt;br&gt;
+Add a Listbox to your Form, give it an Ouput of “Token_SEL”&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520%2528js%2529.png" alt="Web Form Editor (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component - Functionality (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;Add some Tokens to the Listbox Items.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Token1&lt;/li&gt;
+&lt;li&gt;Token2&lt;/li&gt;
+&lt;li&gt;Token3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then add a “Custom Event” using the “AttributesKeyValuePair”.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;Choose “onclick”&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Edit%2520Component%2520%2528Listbox%2529%2520-%2520Functionality%2520-%2520onclick%2520%2528js%2529.png" alt="Web Form Editor - Edit Component (Listbox) - Functionality - onclick (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;Add the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var Email_HTML = document.getElementById("Email_HTML");
+var Tokens = document.getElementById("Tokens");
+var selectedValue = Tokens.options[Tokens.selectedIndex].text; //.value;
+Email_HTML.value = Email_HTML.value + ' ${' + selectedValue + '}';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Web%2520Form%2520Editor%2520-%2520Script%2520%2528js%2529.png" alt="Web Form Editor - Script (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;Open the Form.&lt;/p&gt;
+&lt;p&gt;Now click on a Token and it will add it to your textbox.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Form%2520%2528js%2529.png" alt="Form (js).png"&gt;&lt;/p&gt;
+&lt;p&gt;In your code you can now parse the Tokens  and replace them with any other info.&lt;/p&gt;
+&lt;p&gt;You could use “&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=59d4c016-dd91-49c5-b4e2-09ce3e01765a&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Tag Finder&lt;/a&gt; (Extract Text By Pattern)”&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this article I will show you how to use Javascript in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type to pass values from a Listbox to a Textarea.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
 		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-cookie-using-code-web-app</id>
