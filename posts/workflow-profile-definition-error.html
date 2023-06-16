@@ -11,8 +11,8 @@
 
   <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-profile-definition-error'>
 
-      <link type="application/rss+xml" rel="alternate" href="/symantec-connect-articles/feed.rss" />
-      <link type="application/atom+xml" rel="alternate" href="/symantec-connect-articles/feed.atom" />
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
 
   <meta name="application-name" content='Alex Hedley' />
   <meta name="msapplication-tooltip" content='Alex Hedley' />
@@ -108,14 +108,14 @@
 <p>This shouldn't be a problem with respect to the data, anything you can fit in an nchar will also fit in nvarchar of the same size.</span></p>
 <hr />
 <p>If you look in the Logs</p>
-<p>  <INSTALL FOLDER>:\Program Files\Symantec\Workflow\Logs*<em>processmanager.log</em>*</p>
+<p><INSTALL FOLDER>:\Program Files\Symantec\Workflow\Logs*<em>processmanager.log</em>*</p>
 <p>you should see a similar error:</p>
 <pre>Error,20 April 2015 08:11:43,[global] Application 'LogicBase.Ensemble' error [global] Client Host Information: [global] IP: ::1 [global] HostName: ::1 [global] -- error.ToString() -- [global] System.Web.HttpCompileException: e:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices\**<PROFILE NAME>**Service.asmx(76): error CS1001: Identifier expected [global] at System.Web.Compilation.AssemblyBuilder.Compile() [global] at System.Web.Compilation.BuildProvidersCompiler.PerformBuild() [global] at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath) [global] at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile) [global] at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile) [global] at System.Web.UI.WebServiceParser.GetCompiledType(String inputFile, HttpContext context) [global] at System.Web.Services.Protocols.WebServiceHandlerFactory.GetHandler(HttpContext context, String verb, String url, String filePath) [global] at System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) [global] at System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig) [global] at System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() [global] at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)</pre>
 <hr />
 <p>When a Profile is created an .asmx file is created in the following folder:</p>
-<p>  <INSTALL DRIVE>:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices**<PROFILE NAME>**Service.asmx</p>
+<p><INSTALL DRIVE>:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices**<PROFILE NAME>**Service.asmx</p>
 <p>There is also a record added to</p>
-<p>  [ProcessManager].[dbo].[ProfileDefinition]</p>
+<p>[ProcessManager].[dbo].[ProfileDefinition]</p>
 <hr />
 <p>To add a new Profile</p>
 <p><strong>Process Manager</strong> | <strong>Admin</strong> | <strong>Data</strong> | <strong>Lists and Profiles</strong></p>

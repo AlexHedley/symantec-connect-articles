@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>https://alexhedley.github.io/symantec-connect-articles</id>
-	<title />
+	<title>Alex Hedley</title>
 	<link rel="self" href="https://alexhedley.github.io/symantec-connect-articles" />
 	<rights>Copyright © 2023</rights>
-	<updated>2023-06-16T21:29:49Z</updated>
+	<updated>2023-06-16T21:30:22Z</updated>
+	<subtitle>Welcome to my Symantec Connect Articles!</subtitle>
 	<entry>
 		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tips-and-tricks</id>
 		<title>Workflow - Tips and Tricks</title>
@@ -255,7 +256,7 @@ function updateColor() {
 &lt;p&gt;This allows you to change a panel on a Web Form to a specific colour.&lt;/p&gt;
 &lt;p&gt;This can be handy for a RAG Status or Traffic light system.&lt;/p&gt;
 &lt;p&gt;In a Form under &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components.png" alt="Components.png"&gt;Dashboard Components there is:&lt;/p&gt;
-&lt;h3 id="multistatecolor.pngmultistatecolor"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MultiStateColor.png" alt="MultiStateColor.png"&gt;&amp;nbsp;&lt;strong&gt;MultiStateColor&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id="multistatecolor.png-multistatecolor"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MultiStateColor.png" alt="MultiStateColor.png"&gt;&amp;nbsp;&lt;strong&gt;MultiStateColor&lt;/strong&gt;&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -445,7 +446,7 @@ Email_HTML.value = Email_HTML.value + ' ${' + selectedValue + '}';
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;font color="#008000"&gt;&lt;font&gt;&lt;span class="sc0"&gt;&lt;span class="ms-rteThemeFontFace-1"&gt;//Cookie Class&lt;/span&gt;&lt;br class="ms-rteThemeFontFace-1"&gt;&lt;span class="ms-rteThemeFontFace-1"&gt;//&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;a href="https://msdn.microsoft.com/en-us/library/system.web.httpcookie%28v=vs.71%29.aspx"&gt;https://msdn.microsoft.com/en-us/library/system.web.httpcookie(v=vs.71).aspx&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;System.Object&lt;br&gt;
-&amp;nbsp;&amp;nbsp; System.Web.HttpCookie&lt;br&gt;
+System.Web.HttpCookie&lt;br&gt;
 Namespace: System.Web&lt;/p&gt;
 &lt;p&gt;C# code:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;    HttpCookie myCookie = new HttpCookie(CookieName);
@@ -507,8 +508,8 @@ return myCookie.Value;
 &lt;p&gt;So you've created a "User Defined Type" from the &lt;strong&gt;Authoring&lt;/strong&gt; section in a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Int.png" alt="Int.png"&gt;&amp;nbsp;Workflow Integration Component&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Create%2520Generator%2520%2528UDT%2529.png" alt="Create Generator (UDT).png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Property.png" alt="Property.png"&gt;&amp;nbsp;UserDefinedType&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property%2520%25282%2529.png" alt="Property (2).png"&gt;&amp;nbsp;TextProperty (Text)&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property%2520%25282%2529.png" alt="Property (2).png"&gt;&amp;nbsp;IntegerProperty&amp;nbsp;(Number (integer))&lt;/p&gt;
+&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property%2520%25282%2529.png" alt="Property (2).png"&gt;&amp;nbsp;TextProperty (Text)&lt;br&gt;
+&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property%2520%25282%2529.png" alt="Property (2).png"&gt;&amp;nbsp;IntegerProperty&amp;nbsp;(Number (integer))&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_1.+Type+Designer.png" alt="1. Type Designer.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_2.+Settings.png" alt="2. Settings.png"&gt;&lt;/p&gt;
 &lt;p&gt;Make sure to note the Namespace:&lt;/p&gt;
@@ -520,8 +521,8 @@ return myCookie.Value;
 &lt;/thead&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/C%2523%2520Generators.png" alt="C# Generators.png"&gt;&amp;nbsp;Generators&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/C%2523.png" alt="C#.png"&gt;&amp;nbsp;UserDefinedType&lt;br&gt;
-&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Property.png" alt="Property.png"&gt;&amp;nbsp;UserDefinedType&lt;/p&gt;
+&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/C%2523.png" alt="C#.png"&gt;&amp;nbsp;UserDefinedType&lt;br&gt;
+&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Property.png" alt="Property.png"&gt;&amp;nbsp;UserDefinedType&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Generators%2520Management%2520%2528UDT%2529%2520%25282%2529.png" alt="Generators Management (UDT) (2).png"&gt;&lt;/p&gt;
 &lt;p&gt;Now create a Workflow.&lt;/p&gt;
 &lt;p&gt;Use an &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3419801-files_Data_Add.png" alt="Data_Add.png"&gt;&amp;nbsp;Add Data Element and create a element of your new Data Type.&lt;/p&gt;
