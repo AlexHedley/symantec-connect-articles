@@ -5,11 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to my Symantec Connect Articles!">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley</title>
+  <title>Alex Hedley - SMP - ASDK - Web Service - Update Resource Target</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/page/4'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/smp-asdk-web-service-update-resource-target'>
 
       <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
@@ -18,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley' />
+  <meta property="og:title" content='Alex Hedley - SMP - ASDK - Web Service - Update Resource Target' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/page/4' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/smp-asdk-web-service-update-resource-target' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -76,12 +76,11 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Alex Hedley
-              <small>(Page 4)</small>
+            SMP - ASDK - Web Service - Update Resource Target
           </h1>
-            <span class="subheading">Welcome to my Symantec Connect Articles!</span>
+            <div class="meta">Published on Wednesday, 12 October 2016</div>
         </div>
       </div>
     </div>
@@ -93,65 +92,60 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-        <div class="container-sm-height">
-  <div class="row row-sm-height">
-    <div class="col-md-6 right-border col-sm-height">
-      
+        <p>I raised an <a href="https://www.symantec.com/connect/endpoint-management/ideas">Idea</a> on connect - <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=ecf4247c-6459-4fee-ae38-8528124c4c00&amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;tab=librarydocuments">SMP - ASDK - Web Service - InvalidateTargetMembership</a> asking for a way to programatically update a Target in an efficient way.</p>
+<p>There are a number of ways to do this either via SQL or using NScript but none are great.</p>
+<pre><code>exec spResourceTargetDeltaUpdate &#64;resourceTargetGuid='target guid goes here', &#64;flush=1
+</code></pre>
+<p>If you search the forums for <strong>spResourceTargetDeltaUpdate</strong> there are a number of times it's mentioned.</p>
+<p>In <a href="https://community.broadcom.com/groups/viewthread?MessageKey=c0e4f916-b302-4f6b-add0-b1f6e4b91ecf&amp;CommunityKey=36a652c6-c7e1-4701-af0f-b978f701f102&amp;tab=digestviewer#bmc0e4f916-b302-4f6b-add0-b1f6e4b91ecf">SMP 8.0 HF4</a> there were 4 new Web Services added to the Resource Model</p>
+<pre><code>URL: http://localhost/altiris/nswebservice/resourcemodel.asmx
+</code></pre>
+<p>Methods:</p>
+<ul>
+<li><p>UpdateResourceTargetMembership</p>
+<ul>
+<li>targetGuid (guid)</li>
+<li>fullUpdate (bool)</li>
+<li>updateDependencies (bool)</li>
+</ul>
+</li>
+<li><p>UpdateResourceTargets</p>
+<ul>
+<li>targetGuids (string)</li>
+<li>fullUpdate (bool)</li>
+<li>updateDependencies (bool)</li>
+</ul>
+</li>
+<li><p>UpdateResourceTargetsAsync</p>
+<ul>
+<li>targetGuids (string)</li>
+<li>fullUpdate (bool)</li>
+<li>updateDependencies (bool)</li>
+<li>urgent (bool)</li>
+</ul>
+</li>
+<li><p>UpdateResourceTargetsMembership</p>
+<ul>
+<li>targetGuid (guids [])</li>
+<li>fullUpdate (bool)</li>
+<li>updateDependencies (bool)</li>
+</ul>
+</li>
+</ul>
+<p>An update was posted on the Idea from &#64;<a href="https://www.symantec.com/connect/user/vladimir-zelenjak">Vladimir</a></p>
+<blockquote>
+<p>With several months passed since last update here, I can now officially confirm that new ASDK method: ScopingManagementLib.InvalidateTargetMembership(Guid targetGuid, bool invalidateDependencies) added recently and will be available starting 8.1 release.</p>
+</blockquote>
+<p>So take a look at the new method in 8.1</p>
+<ul>
+<li>InvalidateTargetMembership
+<ul>
+<li>targetGuid (Guid )</li>
+<li>invalidateDependencies (bool)</li>
+</ul>
+</li>
+</ul>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-sharepoint">Workflow - Sharepoint</a></h2>
-  <p class="post-meta">Published on Friday, 8 July 2016</p>
-<p>Workflow offers a couple of options when working with Sharepoint.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-sharepoint">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-read-write-json">Workflow - Read Write JSON</a></h2>
-  <p class="post-meta">Published on Monday, 16 May 2016</p>
-<p>There was a question on the Forums from &#64;<a href="https://www-secure.symantec.com/connect/user/lark">Lark</a> about Reading/Writing JSON in Workflow</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-read-write-json">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/smp-altiris-agent-send-notification-task">SMP - Altiris Agent - Send Notification Task</a></h2>
-  <p class="post-meta">Published on Tuesday, 5 April 2016</p>
-<p>In this Article I'm going to explain how to send a message to the Altiris Agent via a Task, this is possible due to a method within the Agent called <strong>DisplayBalloon</strong>.</p>    <p class="small"><a href="/symantec-connect-articles/posts/smp-altiris-agent-send-notification-task">Read more...</a></p>
-</div>
-
-  <div>
-    <div class="float-sm-start">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/3" role="button"><i class="fas fa-angle-double-left"></i> Newer</a>
-    </div>
-    <div class="float-sm-end">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/5" role="button">Older <i class="fas fa-angle-double-right"></i></a>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-
-    </div>
-    <div class="col-md-4 mt-4 mt-md-0 col-sm-height sidebar">
-          <div>
-            <h5>Tags</h5>
-              <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (6)</a>
-              <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> Error (2)</a>
-              <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-              <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-              <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-light"> Integration Library (1)</a>
-              <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-            <div class="mt-3">
-              <div class="float-sm-end">
-                <a class="btn btn-sm btn-primary" href='/symantec-connect-articles/tags' role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-
-      
-
-    </div>
-  </div>
-</div>
 
         
 

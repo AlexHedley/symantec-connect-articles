@@ -5,11 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to my Symantec Connect Articles!">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley</title>
+  <title>Alex Hedley - Workflow - List Maintenance</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/page/4'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-list-maintenance'>
 
       <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
@@ -18,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley' />
+  <meta property="og:title" content='Alex Hedley - Workflow - List Maintenance' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/page/4' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-list-maintenance' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -76,12 +76,11 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Alex Hedley
-              <small>(Page 4)</small>
+            Workflow - List Maintenance
           </h1>
-            <span class="subheading">Welcome to my Symantec Connect Articles!</span>
+            <div class="meta">Published on Friday, 19 August 2016</div>
         </div>
       </div>
     </div>
@@ -93,65 +92,84 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-        <div class="container-sm-height">
-  <div class="row row-sm-height">
-    <div class="col-md-6 right-border col-sm-height">
-      
+        <p>In this Article I will explain how to maintain a list using Workflow components.</p>
+<p>In this example I have a Resource in the SMP of Company. This has a Currency Resource associated to it.</p>
+<p>Instead of allowing the User to control this in the SMP I've written a Workflow to do the maintenance.</p>
+<p>You retrieve the list from SQL (using the <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2fe8b3ce-9df8-402a-a899-c5978fd16142&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">SQL Generator</a>) then you wish to update it to reflect any changes, additions and deletions.</p>
+<p>The user is able to add/remove values via a Web Form.</p>
+<p><img src="images/ListMaintenance-CurrencyWebForm.png" alt="List Maintenance - Currency Web Form" /></p>
+<p>There might be lots of operations you need to perform with the chosen items so you need full flexibility of the items that have been modified.</p>
+<p>The form shows this list in a grid, you allow the user to add/remove items,</p>
+<p>In this case we Originally have A, B and C in the list, we remove A and add D.</p>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Remove</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Ignore</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Ignore</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Current</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B</td>
+<td>Ignore</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Ignore</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Add</td>
+</tr>
+</tbody>
+</table>
+<p>My method is to get the Data, <strong>ListA</strong>, create a copy <strong>ListA_Copy</strong>,</p>
+<p>This gives you the Original List you can use to compare later.</p>
+<p>Now create three more empty arrays</p>
+<ul>
+<li><strong>Ignore</strong></li>
+<li><strong>Add</strong></li>
+<li><strong>Remove</strong></li>
+</ul>
+<p>The user interacts with the Form, adding and removing any necessary items.</p>
+<p>When the user clicks Save we can perform some maintenance,</p>
+<p>Loop the current list (<strong>ListA</strong>)</p>
+<p>Use an 'ItemIsInCollection' to check the current item in the loop already exists in the original (<strong>ListA_Copy</strong>).</p>
+<p>If it does add it to the <strong>Ignore</strong> array, if it doesn't add it to the <strong>Add</strong> array.</p>
+<p>Current Loop</p>
+<p><img src="images/ListMaintenance-CurrentLoop.png" alt="List Maintenance - Current Loop" /></p>
+<p>Next we want to loop the original list (<strong>ListA_Copy</strong>) and check if any items have been removed.</p>
+<p>If they have add them to a <strong>Remove</strong> array.</p>
+<p>Original Loop</p>
+<p><img src="images/ListMaintenance-OriginalLoop.png" alt="List Maintenance - Original Loop" /></p>
+<p>Both</p>
+<p><img src="images/ListMaintenance-UpdateModel.png" alt="List Maintenance - Update Model" /></p>
+<p>Now we can use these Add/Remove arrays to perform the necessary tasks, you could add/remove them from SQL, break/create associations, whatever is needed.</p>
+<p><img src="images/ListMaintenance-BreakCreate.png" alt="List Maintenance - Break Create" /></p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-sharepoint">Workflow - Sharepoint</a></h2>
-  <p class="post-meta">Published on Friday, 8 July 2016</p>
-<p>Workflow offers a couple of options when working with Sharepoint.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-sharepoint">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-read-write-json">Workflow - Read Write JSON</a></h2>
-  <p class="post-meta">Published on Monday, 16 May 2016</p>
-<p>There was a question on the Forums from &#64;<a href="https://www-secure.symantec.com/connect/user/lark">Lark</a> about Reading/Writing JSON in Workflow</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-read-write-json">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/smp-altiris-agent-send-notification-task">SMP - Altiris Agent - Send Notification Task</a></h2>
-  <p class="post-meta">Published on Tuesday, 5 April 2016</p>
-<p>In this Article I'm going to explain how to send a message to the Altiris Agent via a Task, this is possible due to a method within the Agent called <strong>DisplayBalloon</strong>.</p>    <p class="small"><a href="/symantec-connect-articles/posts/smp-altiris-agent-send-notification-task">Read more...</a></p>
-</div>
-
-  <div>
-    <div class="float-sm-start">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/3" role="button"><i class="fas fa-angle-double-left"></i> Newer</a>
-    </div>
-    <div class="float-sm-end">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/5" role="button">Older <i class="fas fa-angle-double-right"></i></a>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-
-    </div>
-    <div class="col-md-4 mt-4 mt-md-0 col-sm-height sidebar">
-          <div>
-            <h5>Tags</h5>
-              <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (6)</a>
-              <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> Error (2)</a>
-              <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-              <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-              <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-light"> Integration Library (1)</a>
-              <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-            <div class="mt-3">
-              <div class="float-sm-end">
-                <a class="btn btn-sm btn-primary" href='/symantec-connect-articles/tags' role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-
-      
-
-    </div>
-  </div>
-</div>
 
         
 

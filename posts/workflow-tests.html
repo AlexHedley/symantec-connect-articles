@@ -5,11 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to my Symantec Connect Articles!">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley</title>
+  <title>Alex Hedley - Workflow - Tests</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/page/4'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tests'>
 
       <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
@@ -18,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley' />
+  <meta property="og:title" content='Alex Hedley - Workflow - Tests' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/page/4' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tests' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -76,12 +76,11 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Alex Hedley
-              <small>(Page 4)</small>
+            Workflow - Tests
           </h1>
-            <span class="subheading">Welcome to my Symantec Connect Articles!</span>
+            <div class="meta">Published on Thursday, 14 July 2016</div>
         </div>
       </div>
     </div>
@@ -93,65 +92,58 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-        <div class="container-sm-height">
-  <div class="row row-sm-height">
-    <div class="col-md-6 right-border col-sm-height">
-      
+        <p>In this Article I will explain how to add Tests to your Workflow projects.</p>
+<p>Everyone is running tests aren't they?</p>
+<p><img src="images/TestInProduction.jpg" alt="Test In Production" /></p>
+<p>We are going to create a simple WebService Project.</p>
+<p>Create a new <img src="images/DecisionOnly.png" alt="Decision Only" /> Decision Project.</p>
+<p>Add a new <img src="images/Model2.png" alt="Model 2" /> Model called <strong>Test</strong>.</p>
+<p>Set an Input and Output</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Param</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Success</th>
+</tr>
+</thead>
+</table>
+<p>Add a simple Workflow that tests for a given param word. In this case my Name - &quot;Alex&quot;</p>
+<p><img src="images/POC_DataService_DEC.png" alt="POC_DataService_DEC" /></p>
+<p>Right-Click on the Model <strong>Test</strong> and &quot;Set Model As Invocation Target&quot;.</p>
+<p>Next Right-Click on the Project and select &quot;New Test&quot;.</p>
+<p><img src="images/RightClickProject.png" alt="RightClick Project" /></p>
+<p>Give it a <strong>Name</strong> and choose your <strong>Model</strong>.</p>
+<p><img src="images/NewTest.png" alt="New Test" /></p>
+<p>Now fill in the required fields</p>
+<p>General</p>
+<p><img src="images/Test-General.png" alt="Test - General" /></p>
+<p>Data</p>
+<p>Click on the ellipse and fill in the param(s):</p>
+<p><img src="images/Test-Data.png" alt="Test - Data" /></p>
+<p>The Params are shown from the Parameters in the Model.</p>
+<p><img src="images/TestStartData.png" alt="Test Start Data" /></p>
+<p>Now fill in your condition to check in the End Data</p>
+<p><img src="images/EndData.png" alt="End Data" /></p>
+<p>Repeat for as many tests as you need, I just need the opposite so failed via a param that isn't &quot;Alex&quot;.</p>
+<p>Click Debug. <img src="images/Debug.png" alt="Debug" /></p>
+<p>There will be a new line in under the usual options - &quot;Test&quot;</p>
+<p><img src="images/Test-DebuggingForm.png" alt="Test - Debugging Form" /></p>
+<p>Click <strong>Run</strong></p>
+<p><img src="images/Test-RunTests.png" alt="Test - Run Tests" /></p>
+<p>They will then start &quot;Running&quot; or be &quot;Pending&quot;.</p>
+<p><img src="images/Test-RunTests-RunningPending.png" alt="Test - Run Tests - Running Pending" /></p>
+<p>Then hopefully you should have them all Pass.</p>
+<p><img src="images/Test-RunTests-Passed.png" alt="Test - Run Tests - Passed" /></p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-sharepoint">Workflow - Sharepoint</a></h2>
-  <p class="post-meta">Published on Friday, 8 July 2016</p>
-<p>Workflow offers a couple of options when working with Sharepoint.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-sharepoint">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-read-write-json">Workflow - Read Write JSON</a></h2>
-  <p class="post-meta">Published on Monday, 16 May 2016</p>
-<p>There was a question on the Forums from &#64;<a href="https://www-secure.symantec.com/connect/user/lark">Lark</a> about Reading/Writing JSON in Workflow</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-read-write-json">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/smp-altiris-agent-send-notification-task">SMP - Altiris Agent - Send Notification Task</a></h2>
-  <p class="post-meta">Published on Tuesday, 5 April 2016</p>
-<p>In this Article I'm going to explain how to send a message to the Altiris Agent via a Task, this is possible due to a method within the Agent called <strong>DisplayBalloon</strong>.</p>    <p class="small"><a href="/symantec-connect-articles/posts/smp-altiris-agent-send-notification-task">Read more...</a></p>
-</div>
-
-  <div>
-    <div class="float-sm-start">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/3" role="button"><i class="fas fa-angle-double-left"></i> Newer</a>
-    </div>
-    <div class="float-sm-end">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/5" role="button">Older <i class="fas fa-angle-double-right"></i></a>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-
-    </div>
-    <div class="col-md-4 mt-4 mt-md-0 col-sm-height sidebar">
-          <div>
-            <h5>Tags</h5>
-              <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (6)</a>
-              <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> Error (2)</a>
-              <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-              <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-              <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-light"> Integration Library (1)</a>
-              <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-            <div class="mt-3">
-              <div class="float-sm-end">
-                <a class="btn btn-sm btn-primary" href='/symantec-connect-articles/tags' role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-
-      
-
-    </div>
-  </div>
-</div>
 
         
 

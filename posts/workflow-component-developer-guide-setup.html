@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - Component - Developer Guide - Setup</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-setup'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - Component - Developer Guide - Setup' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-setup' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Component - Developer Guide - Setup
+          </h1>
+            <div class="meta">Published on Wednesday, 9 November 2016</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I'm going to explain how setup your environment for creating a Component.</p>
+<p>Table of Contents</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2f07f920-0cbd-4be4-83a8-c6180eee3092&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">List</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=17aa2b9a-9092-40d0-afab-a6d8316de97d&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Setup</a> (this)</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Simple Component</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70a9fde5-0d87-4b9d-a3be-0907567ffc00&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Deploy</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80437c69-ccc3-47e6-a850-9cf3f301b340&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Help File</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=63b72a9a-53b8-4d4b-bce3-5f0732b134d5&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Logging</a></li>
+<li>Inputs
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=74c56ef7-1119-40fe-9d5f-3c7a1d808d4c&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Checkbox</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=267159ac-b8e7-45b4-abe4-f85d78e30783&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Dropdown / Combo</a></li>
+</ul>
+</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2c3b3a6f-01d7-4157-a143-ba30c9edc930&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Inspecting</a> other Components</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=cf54de06-be56-46ff-b937-148efa57eaec&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Creating Globals</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=4cfc07c5-404e-49b3-81b6-520d4ea43d5c&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Creating Project Properties</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f3cf0097-06e7-42f3-a747-d0dff319c1e5&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Working with SQL</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=26368883-708b-4432-999b-7064f2f25794&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Working with a Web Service</a></li>
+</ul>
+<p>You will need <a href="https://www.visualstudio.com/">Visual Studio</a>, download a version if you haven't already.</p>
+<p>A <img src="images/Workflow.png" alt="Workflow" /> Workflow Server to get the necessary DLLs.</p>
+<p>Go to this server.</p>
+<p>We need to get the necessary DLLs from the GAC (Global Assembly Cache)</p>
+<pre><code>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\
+</code></pre>
+<p>This may not show a list of DLLs as the viewer is configured using a RegKey.</p>
+<p>*Warning modifying the Registry can be dangerous, make sure you know what you're doing before you edit these. Take a copy first as a backup.</p>
+<ol>
+<li>Launch RegEdit.</li>
+<li>Navigate to <strong>HKLM\Software\Microsoft\Fusion</strong></li>
+<li>Add a <strong>DWORD</strong> called <strong>DisableCacheViewer</strong> and set the value to <strong>1</strong>.</li>
+</ol>
+<p>Now search for 3 Libraries:</p>
+<ul>
+<li>LogicBase.Components.Default.dll</li>
+<li>LogicBase.Core.dll</li>
+<li>LogicBase.Framework.dll</li>
+</ul>
+<p>Now we have the libs, we can create the VS project.</p>
+<p>Start by creating a new <img src="images/Project-ClassLibrary.png" alt="Project - Class Library" /> Class Library.</p>
+<p>In the Project Folder add a new <img src="images/Folder.png" alt="Folder" /> Folder 'External Dependencies' (In Explorer)</p>
+<p>Add the 3 Symantec libs</p>
+<ul>
+<li>LogicBase.Components.Default.dll</li>
+<li>LogicBase.Core.dll</li>
+<li>LogicBase.Framework.dll</li>
+</ul>
+<p>Make sure these are the correct versions from the correct WF box i.e. 7.5 / 7.6 / 8.0.</p>
+<p>Now in the VS Project</p>
+<p>Right Click -&gt; Add -&gt; New Solution Folder</p>
+<p>Add Existing Item -&gt; Browse to the 3 DLLs and add them</p>
+<p><img src="images/References.png" alt="References" /> References -&gt; Right Click -&gt; Add Reference</p>
+<p>Expand Browse then right click Browse button</p>
+<p>Go to this Folder and add the 3 DLLs again.</p>
+<p>Update the <img src="images/Properties.png" alt="Properties" /> Properties, double click to open the window.</p>
+<p>Click on Assembly Information,</p>
+<p>Add the Description and Company info - this is used in the Component within Workflow.</p>
+<p><img src="images/Assembly_Information.png" alt="Assembly_Information" /></p>
+<p>Check the Target Framework for .NET in Properties.</p>
+<p>Now back to the .cs file that was created.</p>
+<p>Rename this to the name of your component - i.e. <img src="images/cs.png" alt="cs.png" /> Concat.cs</p>
+<p>Add the <em>using</em> for the new namespaces</p>
+<pre><code>using LogicBase.Core;
+using LogicBase.Core.Data;
+using LogicBase.Core.Data.DataTypes;
+using LogicBase.Core.PropertySheets;
+using LogicBase.Framework;
+
+using LogicBase.Core.Data.TypeEditors;
+using System.ComponentModel;
+</code></pre>
+<p>We also need to add a couple of .NET References for</p>
+<pre><code>System.Drawing
+
+System.Drawing.Design
+</code></pre>
+<p>Then add a using statement</p>
+<pre><code>using System.Drawing.Design;
+</code></pre>
+<p>Next add an Image to the project (Protirus.Workflow.Protirus.png), this will be the Component image,</p>
+<p>Change the Build Action to <strong>Embedded Resource</strong></p>
+<p><img src="images/Protirus.Workflow.Protirus.png" alt="Protirus.Workflow.Protirus" /></p>
+<p>You could use images from WF:</p>
+<pre><code>[Install Drive]:\Program Files\Symantec\Workflow\Designer\Images\
+</code></pre>
+<ul>
+<li>general</li>
+<li>processmanager</li>
+</ul>
+<p>Next we want to add some metadata to the project.</p>
+<p>This can be done between the <em>namespace</em> and the <em>public class</em></p>
+<pre><code>/// &lt;summary&gt;
+///     Custom component for joining two strings.
+/// &lt;/summary&gt;
+/// 
+[Serializable,
+ComponentCategory(&quot;Protirus&quot;),
+ComponentImage(&quot;Protirus.Workflow.Protirus.png&quot;),
+ComponentName(&quot;Protirus Concat&quot;),
+ComponentDescription(&quot;This component joins two Strings.&quot;),
+ComponentHelp(&quot;http://www.protirus.com/components/&quot;),
+ComponentUsage(&quot;Requires two strings.&quot;),
+ComponentExample(&quot;String a = 'Hello' String b = 'World', this will return 'Hello World', if Add Space is True.&quot;),
+ComponentPublisher(&quot;Protirus&quot;, &quot;www.protirus.com&quot;)]
+[PropertyPageOrder(&quot;General&quot;, &quot;Configuration&quot;, &quot;Settings&quot;)]
+</code></pre>
+<p>Not all properties are used in the component and will need to update in the corresponding <em>.libconfig</em> file.</p>
+<p>These are located:</p>
+<pre><code>[Install Drive]:\Program Files\Symantec\Workflow\Designer\Help\
+</code></pre>
+<p>I'll explain how to create/update these in a later tutorial.</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80437c69-ccc3-47e6-a850-9cf3f301b340&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Help File</a></li>
+</ul>
+<p>Now we need to conform to some protocols for the components to be useable in Workflow.</p>
+<p>Extend the Class</p>
+<pre><code>public class Concat : AbstractSinglePathProcessComponent, ISinglePathDataAdded
+</code></pre>
+<p>Now implement the required methods.</p>
+<p>First &quot;<strong>AbstractSinglePathProcessComponent</strong>&quot;</p>
+<pre><code>public override void Run(IData data)
+{
+}
+
+public override void ReadFromStream(ObjectReadStream info)
+{
+}
+
+public override void WriteToStream(ObjectWriteStream info)
+{
+}
+</code></pre>
+<p>And the &quot;<strong>ISinglePathDataAdded</strong>&quot;</p>
+<pre><code>public DataDefinition[] GetAddedData()
+{
+}
+</code></pre>
+<p>Now we have all the necessary method stubs but nothing actually happens, onto the next Article <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Simple Component</a> to create a working item.</p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
