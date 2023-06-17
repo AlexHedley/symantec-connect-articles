@@ -4,8 +4,592 @@
 	<title>Alex Hedley</title>
 	<link rel="self" href="https://alexhedley.github.io/symantec-connect-articles" />
 	<rights>Copyright © 2023</rights>
-	<updated>2023-06-16T22:30:30Z</updated>
+	<updated>2023-06-17T11:00:28Z</updated>
 	<subtitle>Welcome to my Symantec Connect Articles!</subtitle>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sharepoint</id>
+		<title>Workflow - Sharepoint</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sharepoint" />
+		<updated>2016-07-08T00:00:00Z</updated>
+		<content>&lt;p&gt;Workflow offers a couple of options when working with Sharepoint.&lt;/p&gt;
+&lt;p&gt;There is the Integration Component for Sharepoint List manipulation or there is the library.&lt;/p&gt;
+&lt;p&gt;New &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Integration Component&lt;br&gt;
+Choose "Microsoft"&lt;br&gt;
+SharePoint Lists Generator&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CreateGenerator-SharepointListGenerator.png" alt="Create Generator - Sharepoint List Generator"&gt;&lt;/p&gt;
+&lt;p&gt;Next fill in your details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Sharepoint site:&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Use authentication&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Username:&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Password:&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Domain:&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Choose which Lists you want to work with&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointList.png" alt="Sharepoint List"&gt;&lt;/p&gt;
+&lt;p&gt;Give it a Namespace and Component names&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointList-Components.png" alt="Sharepoint List - Components"&gt;&lt;/p&gt;
+&lt;p&gt;Add this Library to your Workflow and pull in the components you need.&lt;/p&gt;
+&lt;p&gt;You can use the Search Items where ID - IS NOT NULL if you want all items returned.&lt;/p&gt;
+&lt;p&gt;Precreated DLL&lt;/p&gt;
+&lt;p&gt;Another option is to use the DLL created by Symantec.&lt;br&gt;
+Create a Web Forms project and add in:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;LogicBase.Components.SharePoint.dll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will then prompt and tell you new Properties have been created.&lt;/p&gt;
+&lt;p&gt;When you drag on a component some Properties will be created for.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SharepointUsername&lt;/li&gt;
+&lt;li&gt;SharepointPassword&lt;/li&gt;
+&lt;li&gt;SharepointDomain&lt;/li&gt;
+&lt;li&gt;SharepointHost&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointProperty-Username.png" alt="Sharepoint Property - Username"&gt;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointProperty-Password.png" alt="Sharepoint Property - Password"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointProperty-Domain.png" alt="Sharepoint Property - Domain"&gt;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointProperty-Host.png" alt="Sharepoint Property - Host"&gt;&lt;/p&gt;
+&lt;p&gt;Go to the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Project.png" alt="Project"&gt;&amp;nbsp;Project Root then the &lt;strong&gt;Properties&lt;/strong&gt; Tab.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Project-Properties-Sharepoint.png" alt="Project - Properties - Sharepoint"&gt;&lt;/p&gt;
+&lt;p&gt;There will then be a number of Components available to you:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components-Sharepoint.png" alt="Components - Sharepoint"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Document&lt;/li&gt;
+&lt;li&gt;Add List Item&lt;/li&gt;
+&lt;li&gt;Create Document Workspace&lt;/li&gt;
+&lt;li&gt;Create Folder&lt;/li&gt;
+&lt;li&gt;Delete Document Workspace&lt;/li&gt;
+&lt;li&gt;Delete Folder&lt;/li&gt;
+&lt;li&gt;Document List (&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=81354724-ec65-4cad-816f-f8d9fb2b550f&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/document-list&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Find Document Workspace Doc&lt;/li&gt;
+&lt;li&gt;Get Document Workspace Data&lt;/li&gt;
+&lt;li&gt;Rename Document Workspace&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Forum&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=e85ebb47-071f-4137-8100-5d2f47e8b766&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bme85ebb47-071f-4137-8100-5d2f47e8b766"&gt;https://www.symantec.com/connect/forums/workflow-reading-sharepoint-list&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=bef0f064-e339-4b2f-8708-977fbc6b3ff3&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=digestviewer#bmbef0f064-e339-4b2f-8708-977fbc6b3ff3"&gt;https://www.symantec.com/connect/forums/workflow-and-sharepoint-lists&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=0721efbc-1bf1-443b-bdfb-edf8d2cd7d30&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm0721efbc-1bf1-443b-bdfb-edf8d2cd7d30"&gt;https://www.symantec.com/connect/forums/how-get-list-items-sharepoint-list-within-workflow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Articles&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d36f9941-9c17-4130-b689-a647735ee194&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/symantec-workflow-and-microsoft-sharepoint&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Workflow offers a couple of options when working with Sharepoint.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-read-write-json</id>
+		<title>Workflow - Read Write JSON</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-read-write-json" />
+		<updated>2016-05-16T00:00:00Z</updated>
+		<content>&lt;p&gt;There was a question on the Forums from @&lt;a href="https://www-secure.symantec.com/connect/user/lark"&gt;Lark&lt;/a&gt; about Reading/Writing JSON in Workflow&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=47441a32-16c6-41ef-823f-db8640f68b0d&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm47441a32-16c6-41ef-823f-db8640f68b0d"&gt;https://www-secure.symantec.com/connect/forums/write-object-json-and-read-object-json&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I made a couple of suggestions on the post but thought it would be useful as a article.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Say you have some local JSON you need to work with, the REST Generator can still be of use to turn this into an Object to work with in Workflow.&lt;/p&gt;
+&lt;p&gt;I explained about the new feature they added in a later release that allowed "Create From Sample"&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A couple of things to note here, on the first page of the Generator this asks for a &lt;strong&gt;Namespace&lt;/strong&gt; (Protirus), take a note of it as we will need to work with this later.&lt;/p&gt;
+&lt;p&gt;You will need to add a URL here too but it won't be used.&lt;/p&gt;
+&lt;p&gt;Grab the JSON you are wanting to work with and paste it here.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTGenerator-CreateFromSample.png" alt="REST Generator - Create From Sample"&gt;&lt;/p&gt;
+&lt;p&gt;Depending on the name of your Method you will get the Data Type (DT) called this, click on &lt;strong&gt;Edit Type&lt;/strong&gt; and rename if necessary.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTGenerator-CreateFromSample-DataType.png" alt="REST Generator - Create From Sample - Data Type"&gt;&lt;/p&gt;
+&lt;p&gt;Close and compile this.&lt;/p&gt;
+&lt;p&gt;Now add this Library to your Workflow Project.&lt;/p&gt;
+&lt;p&gt;Also add the&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Newtonsoft.Json.dll
+&lt;ul&gt;
+&lt;li&gt;E:\Program Files\Symantec\Workflow\Shared\lib\&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is an issue outstanding with that not being used throughout workflow - &lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=5571b718-8919-4367-8eea-1548ec0cad29&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm5571b718-8919-4367-8eea-1548ec0cad29"&gt;Forum&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In the Workflow use an &lt;strong&gt;Add Data Element&lt;/strong&gt; (LogicBase.Components.Default.Process.InsertDataComponent) and set it to your new Date Type (DT).&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/JSONDataType.png" alt="JSON Data Type.png"&gt;&lt;/p&gt;
+&lt;p&gt;Then a&amp;nbsp;&lt;strong&gt;Read File&lt;/strong&gt;&amp;nbsp;(LogicBase.Components.Default.IO.ReadFile) to locate the JSON file you want to read.&lt;/p&gt;
+&lt;p&gt;A&amp;nbsp;&lt;strong&gt;ByteArray To Text&lt;/strong&gt;&amp;nbsp;(LogicBase.Components.Default.EncodingComponents.ByteArrayToText)****to convert the .Contents[] of the Read File.&lt;/p&gt;
+&lt;p&gt;You now&amp;nbsp;have a String you can work with.&lt;/p&gt;
+&lt;p&gt;Add a &lt;strong&gt;Script Component&lt;/strong&gt; (LogicBase.Components.Scripting.ScriptedComponent)&lt;/p&gt;
+&lt;p&gt;Map your variable to the input.&lt;/p&gt;
+&lt;p&gt;Set your Result variable type to "Protirus.User"&lt;/p&gt;
+&lt;p&gt;Add in the Namespaces you saved earlier&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Newtonsoft.Json
+Protirus
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now add your code to deserialise the string/json to your new object&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Protirus.User u = JsonConvert.DeserializeObject&amp;lt;Protirus.User&amp;gt;(json);
+return u;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To do the reverse is a little simplier.&lt;/p&gt;
+&lt;p&gt;You already have your Data Type (DT), that you've retrieved and mapped in.&lt;/p&gt;
+&lt;p&gt;Grab a scripting component&lt;/p&gt;
+&lt;p&gt;Add the Namespace&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;System.Web.Script.Serialization
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pass it in as an input of your DataType (DT) (obj) and return a string. obj is the name of the input, this could be anything you name it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var json = new JavaScriptSerializer().Serialize(obj);
+return json;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then you can write to a file or use however you want.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;There was a question on the Forums from &amp;#64;&lt;a href="https://www-secure.symantec.com/connect/user/lark"&gt;Lark&lt;/a&gt; about Reading/Writing JSON in Workflow&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-altiris-agent-send-notification-task</id>
+		<title>SMP - Altiris Agent - Send Notification Task</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-altiris-agent-send-notification-task" />
+		<updated>2016-04-05T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I'm going to explain how to send a message to the Altiris Agent via a Task, this is possible due to a method within the Agent called&amp;nbsp;&lt;strong&gt;DisplayBalloon&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Remote onto your SMP/Altiris Server&lt;/p&gt;
+&lt;p&gt;Go to the ASDK Help file&lt;/p&gt;
+&lt;p&gt;"[Install Drive]:\Program Files\Altiris\Altiris ASDK\Help\ASDK7.6.chm"&lt;/p&gt;
+&lt;p&gt;Open and search for "DisplayBalloon"&lt;/p&gt;
+&lt;p&gt;Cause the agent to display a message to the user.
+Namespace: Altiris.ASDK.Agent&lt;br&gt;
+Assembly: Altiris.ASDK.Agent (in Altiris.ASDK.Agent.dll)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public Object DisplayBalloon(string title,string message,int iconType,int timeout
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;br&gt;
+title&lt;br&gt;
+Type: System..&lt;span&gt;.String&lt;br&gt;
+Text to display in the balloon title.&lt;br&gt;
+message&lt;br&gt;
+Type: System..&lt;/span&gt;.String&lt;br&gt;
+Text to display as the balloon message.&lt;br&gt;
+iconType&lt;br&gt;
+Type: System..&lt;span&gt;.Int32&lt;br&gt;
+Id number of the icon to display.&lt;br&gt;
+timeout&lt;br&gt;
+Type: System..&lt;/span&gt;.Int32&lt;br&gt;
+Number of seconds to display the balloon.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Return Value&lt;/strong&gt;&lt;br&gt;
+A handle to the balloon.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DisplayBalloon.png" alt="DisplayBalloon"&gt;&lt;/p&gt;
+&lt;p&gt;So create a vbs file (SendNotificationTask.vbs):&lt;/p&gt;
+&lt;p&gt;We need a few objects to work with so we will set them first.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;'Altiris Agent - Send Notification Task
+Set objAltirisAgent = Nothing
+Set objWshShell = WScript.CreateObject("WScript.Shell")
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next we wan to check if the Altiris Agent exists:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Dim strAltirisDir, strAltirisReg
+strAltirisDir = "c:"
+strAltirisReg = "HKEY_LOCAL_MACHINE\SOFTWARE\Altiris\Altiris Agent\InstallDir"
+if RegVerify(strAltirisReg) then
+    strAltirisDir = objWshShell.RegRead(strAltirisReg)
+end if
+If objFSO.FileExists(strAltirisDir &amp;amp; "\AeXAgentActivate.exe") Then
+    set objAltirisAgent = CreateObject("Altiris.AeXClient")
+else
+    set objAltirisAgent = Nothing
+End if
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can do this with a method to verify the Registry key exists and check that folder.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Public Function RegVerify(ByVal sRegEntry)
+    On Error Resume next
+    Dim WSH, sKeyTmp
+    Set WSH = CreateObject("WScript.Shell")
+    sKeyTmp = WSH.RegRead (sRegEntry)
+    if err.number=0 then
+        RegVerify = True
+    else
+        RegVerify = False               
+    end if
+    err.clear
+    On Error goto 0
+End Function
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RegistryEditor-AltirisAgent.png" alt="Registry Editor - Altiris Agent"&gt;&lt;/p&gt;
+&lt;p&gt;Next we want to create a function to display a message&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sub AltirisBubble(strTitle, strMsg, intIcon, intTime)
+    if numLoggedinUsers() =&amp;gt; 0 then
+        if not objAltirisAgent Is Nothing then
+            dim sessmgr, sessions, session, cookie
+            set sessmgr = objAltirisAgent.SessionManager
+            set sessions = sessmgr.Sessions
+            set session = sessions.Item ( 0 )
+            
+            cookie = session.DisplayBalloon ( "", "", intIcon, 0, Nothing)
+            WScript.Sleep 10
+            cookie = session.DisplayBalloon ( strTitle, strMsg, intIcon, intTime, Nothing)
+            set sessmgr = Nothing
+            set sessions = Nothing
+            set session = Nothing
+        end if
+    else
+        'Log
+    end if
+end sub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To change the Icon on the Message pass in one of the following numbers&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0 | 1 |&amp;nbsp;2 |&amp;nbsp;3 |&amp;nbsp;4 |&amp;nbsp;5 |&amp;nbsp;6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;'intIcon info&lt;br&gt;
+' 0 = No Icon&lt;br&gt;
+' 1 = Information Icon&lt;br&gt;
+' 2 = Warning Icon&lt;br&gt;
+' 3 = Error Icon&lt;br&gt;
+' 4 = Altiris&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AltirisBubble "No Icon", "There is No Icon", 0, 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AgentMessage-NoIcon.png" alt="Agent Message - No Icon"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AltirisBubble "Information Icon", "Information Icon", 1, 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AgentMessage-Info.png" alt="Agent Message - Info"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AltirisBubble "Warning Icon", "Warning Icon", 2, 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AgentMessage-Warning.png" alt="Agent Message - Warning"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AltirisBubble "Error Icon", "Error Icon", 3, 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AgentMessage-Error.png" alt="Agent Message - Error"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AltirisBubble "Altiris", "Altiris", 4, 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AgentMessage-Altiris.png" alt="Agent Message - Altiris"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AltirisBubble "Test", "Warning Big", 5, 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AgentMessage-WarningBig.png" alt="Agent Message - Warning (Big)"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AltirisBubble "Test", "Error Big", 6, 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AgentMessage-ErrorBig.png" alt="Agent Message - Error (Big)"&gt;&lt;/p&gt;
+&lt;p&gt;Another helper method we can use is to&amp;nbsp;get the number of logged in users&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Function numLoggedinUsers()
+    Dim objWMIService
+    Dim intUserLoggin
+    
+    strComputer = "."  
+    Set objWMIService = GetObject("winmgmts:" _  
+        &amp;amp; "{impersonationLevel=impersonate}!\\" &amp;amp; strComputer &amp;amp; "\root\cimv2")  
+        Set colComputer = objWMIService.ExecQuery _  
+        ("Select * from Win32_ComputerSystem") 
+        
+    intUserLoggin = 0
+    
+    For Each objComputer in colComputer
+        if objComputer.UserName &amp;lt;&amp;gt; "" then
+            intUserLoggin = intUserLoggin + 1
+        end if
+    Next
+    numLoggedinUsers = intUserLoggin
+End Function
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can now create this as a Task in the SMP and add it to a Job, beginning/end to display a message to the User.&lt;/p&gt;
+&lt;p&gt;At the moment the message is hardcoded which doesn't make it very flexible, why not use a &lt;a href="https://community.broadcom.com/groups/viewdocument?DocumentKey=c8ebc0e8-ed0c-4b7f-8860-eb195ac34be0&amp;amp;CommunityKey=36a652c6-c7e1-4701-af0f-b978f701f102&amp;amp;tab=librarydocuments"&gt;Task Parameter&lt;/a&gt;?&lt;/p&gt;
+&lt;p&gt;Adding a variable into the script is done by enclosing your Paramter name in "%!" and "!%"&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;"%!Message!%"
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can now replace the script to have&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AltirisBubble "%!Title!%", "%!Message!%", 1, 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And now you can choose which &lt;strong&gt;Title&lt;/strong&gt; and &lt;strong&gt;Message&lt;/strong&gt; you want in each task you create.&lt;/p&gt;
+&lt;p&gt;Other Articles&lt;/p&gt;
+&lt;p&gt;If you've got a Win10 machine you wish to send the new toast notifications,&amp;nbsp;check out this excellent Article from a fellow developer &lt;a href="https://www-secure.symantec.com/connect/user/christophermcewen"&gt;Chris&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=b6a1c2e9-6b46-4104-be85-3718691ab584&amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;tab=librarydocuments"&gt;http://www.symantec.com/connect/articles/windows-10-toast-notification&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I'm going to explain how to send a message to the Altiris Agent via a Task, this is possible due to a method within the Agent called &lt;strong&gt;DisplayBalloon&lt;/strong&gt;.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-classification</id>
+		<title>ServiceDesk - Classification</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-classification" />
+		<updated>2016-02-29T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I'm going to explain a way of getting the Classifications from the Process Manager db for use within your Workflows.&lt;/p&gt;
+&lt;p&gt;In an Incdient in ServiceDesk&amp;nbsp;you can set classification.&lt;/p&gt;
+&lt;p&gt;These are created and administered at &lt;strong&gt;Admin&lt;/strong&gt; | &lt;strong&gt;Data&lt;/strong&gt; |&amp;nbsp;&lt;strong&gt;Hierarchy Data Service&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://localhost/ProcessManager/Hierarchy/HierarchyItemListing.aspx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When they are stored against the ticket they are saved as a "." separated string&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;e.g. Hardware.Desktop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are split and joined within the various Workflows.&lt;/p&gt;
+&lt;p&gt;I had the need in a WF to check if given string was an available Classification before setting it.&lt;/p&gt;
+&lt;p&gt;I can use the below CTE that takes in a&amp;nbsp;@flag parameter of 'Hardware', being the Second Level item, below 'Incident Management'&amp;nbsp;to check it exists and then show all it's siblings.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DECLARE @ParentChildLocationRAT UNIQUEIDENTIFIER
+SET @ParentChildLocationRAT = '3B4F3C0E-31DF-4AB3-A05F-C6F0550A9305'; --'Incident Management' FROM [HierarchyCategory]
+DECLARE @flag nvarchar(255) = 'hardware'
+
+BEGIN
+WITH CTE_HierarchyAssociatedPairs
+    AS (
+        SELECT 
+    hi.parentHierarchyItemid,
+    name 'name',
+    HierarchyItemid,
+    0 as Depth,
+    name as flag
+        FROM [HierarchyItem] hi
+        where HierarchyCategoryID = @ParentChildLocationRAT--'3B4F3C0E-31DF-4AB3-A05F-C6F0550A9305'
+        
+        UNION ALL
+        
+  SELECT 
+   hi1.parentHierarchyItemid,
+   hi1.name,
+   hi1.HierarchyItemid,
+            ha.Depth + 1 AS Depth,
+            ha.flag
+        FROM [HierarchyItem] hi1
+        JOIN CTE_HierarchyAssociatedPairs ha ON hi1.parentHierarchyItemid = ha.HierarchyItemid
+        )
+    SELECT DISTINCT *
+    FROM CTE_HierarchyAssociatedPairs
+    WHERE flag = @flag
+    ORDER BY Depth
+END
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Result&lt;/p&gt;
+&lt;table guid=""&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;parentHierarchyItemid&lt;/th&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;HierarchyItemid&lt;/th&gt;
+&lt;th&gt;Depth&lt;/th&gt;
+&lt;th&gt;flag&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;NULL&lt;/td&gt;
+&lt;td&gt;Hardware&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;Hardware&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Desktop&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Hardware&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Drive&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Hardware&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;CPU or Blade&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Hardware&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;One use for this is with the Email Monitor.&lt;/p&gt;
+&lt;p&gt;Say you put a Classification in the body of an email and wish to map it to a ticket you could split it, pass the first value to this SP, return the results then filter on the subsequent depth&amp;nbsp;fields to get at least a parital match classification set. This could be if it was incorrect in the email or classifications had been removed from Process Manager.&lt;/p&gt;
+&lt;p team:="" support=""&gt;| Subject | New Incident |
+| --- | --- |
+| Message | My computer has broken&lt;br&gt;
+&lt;br&gt;Please fix&lt;br&gt;
+&lt;br&gt;  &lt;br&gt;				 |&lt;/p&gt;
+&lt;p&gt;So Hardware is found, then Desktop is found but Computer isn't so only the first two are mapped in.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In a previous version of ServiceDesk the Classification was split into separate Fields, this could made it easier&amp;nbsp;for reporting and other requirements.&lt;/p&gt;
+&lt;p&gt;If you have migrated it and it is stored as a "." separated string in the new version&amp;nbsp;and want it back into the separate Fields you could use the following.&lt;/p&gt;
+&lt;p&gt;This does assume there are only &lt;strong&gt;10&lt;/strong&gt; levels.&lt;/p&gt;
+&lt;p&gt;(Create by our resident SQL Guru &lt;a href="https://www-secure.symantec.com/connect/user/kevin-huntley-protirus"&gt;Kev&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;You could create&amp;nbsp;a Stored Procedure that gets Incident Details with the Classification split&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;sp_IncidentWithSplitClassification&lt;/p&gt;
+&lt;p&gt;WITH e1(n)
+AS
+(SELECT 1 UNION ALL SELECT 1 UNION ALLSELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1
+)
+,e2(n)
+AS
+(SELECT 0 UNION ALLSELECT ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) FROM 		(SELECT 1 as 'n'			FROM 				e1 a,				e1 b, 				e1 c)  cj
+)
+,IMwithSplit AS
+(SELECT [ProcessId]	  ,[SessionId]	  ,[ReportProcessId]	  ,[CurrentTask]	  ,[IncidentName]	  ,[IncidentDescription]	  ,[IncidentType]	  ,[Classification]	  ,[SubmittedBy]	  ,[AffectedUser]	  ,[Owner]	  ,[TicketStatus]	  ,[CurrentlyAssignedQueueId]	  ,SUBSTRING(Classification,n+1,ISNULL(NULLIF(CHARINDEX('.',classification,N+1),0)-(N+1),8000)) 'csplit'	  ,ROW_NUMBER() OVER (PARTITION BY processid ORDER BY (e.n)) rnoFROM 	ImIncidentTicket itLEFT JOIN 	e2 e	ON e.n &amp;lt;= 1000WHERE 	SUBSTRING(Classification, n, 1) = '.' OR	n = 0
+)SELECT [ProcessId]
+,[SessionId],ISNULL([1],'') AS  'Classification1',ISNULL([2],'') AS 'Classification2',ISNULL([3],'') AS 'Classification3',ISNULL([4],'') AS 'Classification4',ISNULL([5],'') AS 'Classification5',ISNULL([6],'') AS 'Classification6',ISNULL([7],'') AS 'Classification7',ISNULL([8],'') AS 'Classification8',ISNULL([9],'') AS 'Classification9',ISNULL([10],'') AS 'Classification10'
+FROM IMwithSplit
+PIVOT
+(max(csplit) for rno in ([1],[2],[3],[4],[5],[6],[7],[8],[9],[10])
+) pvt&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Classification = "Software.Altiris.CMDB"&lt;/p&gt;
+&lt;p&gt;Result&lt;/p&gt;
+&lt;table guid=""&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;ProcessId&lt;/th&gt;
+&lt;th&gt;SessionId&lt;/th&gt;
+&lt;th&gt;Classification1&lt;/th&gt;
+&lt;th&gt;Classification2&lt;/th&gt;
+&lt;th&gt;Classification3&lt;/th&gt;
+&lt;th&gt;Classification4&lt;/th&gt;
+&lt;th&gt;Classification5&lt;/th&gt;
+&lt;th&gt;Classification6&lt;/th&gt;
+&lt;th&gt;Classification7&lt;/th&gt;
+&lt;th&gt;Classification8&lt;/th&gt;
+&lt;th&gt;Classification9&lt;/th&gt;
+&lt;th&gt;Classification10&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;IM-000002&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Software&lt;/td&gt;
+&lt;td&gt;Altiris&lt;/td&gt;
+&lt;td&gt;CMDB&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;u&gt;Forum&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Export the Hierarchy Classifications to a Spreadsheet&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=3f0dcc84-f934-4897-bb3d-e519556c76ad&amp;amp;CommunityKey=a067504a-9710-492c-bbef-18d2ed6b44af&amp;amp;tab=digestviewer#bm3f0dcc84-f934-4897-bb3d-e519556c76ad"&gt;https://www-secure.symantec.com/connect/forums/export-hierarchy-classifications-spreadsheet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Category, Parent, Item&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT 
+    p.Name AS Category, 
+    i.Name AS Parent, 
+    o.Name AS Item
+FROM 
+    [HierarchyCategory] AS p 
+    INNER JOIN [HierarchyItem] AS i ON p.HierarchyCategoryID = i.HierarchyCategoryID 
+    LEFT OUTER JOIN [HierarchyItem] AS o ON i.HierarchyItemID = o.ParentHierarchyItemID
+ORDER BY 
+    Category, Parent
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;Get a Simple List&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT 
+    i.name as Parent, 
+    o.name as Item
+FROM 
+    [HierarchyItem] o
+    INNER JOIN [HierarchyItem] i ON i.HierarchyItemID = o.ParentHierarchyItemID
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Email Routing and Classification&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=6b9410ea-ec8a-4ea4-8d97-c182de0ce82d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=digestviewer#bm6b9410ea-ec8a-4ea4-8d97-c182de0ce82d"&gt;https://www-secure.symantec.com/connect/forums/email-routing-and-classification&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I'm going to explain a way of getting the Classifications from the Process Manager db for use within your Workflows.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-paths-in-workflow-7.6</id>
+		<title>Using the REST Generator (PATHs) in Workflow 7.6</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-paths-in-workflow-7.6" />
+		<updated>2016-01-05T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I will explain how to use the REST Generator (PATHs)&amp;nbsp;within&amp;nbsp;&lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt;&amp;nbsp;7.6.&lt;/p&gt;
+&lt;p&gt;Follow up articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (PATHs) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Read Write JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - REST - Response Header&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;New to me in&amp;nbsp;build&amp;nbsp;Symantec.Workflow.Setup.7.6.4383.&lt;strong&gt;504&lt;/strong&gt;&amp;nbsp;(think it was .479 but I'd advise getting the last build) the REST Generator has been updated to allow multiple paths from the response content.&lt;/p&gt;
+&lt;p&gt;This is a great addition as what if your request fails or returns a StatusCode other than 200, this needs to be handled differently, you won't get the same data type returned,&lt;/p&gt;
+&lt;p&gt;By default this creates a PATH of 200-299. As of writing there is no way to delete this path, which I believe is incorrect, what about a PUT request that returns a 301.&lt;/p&gt;
+&lt;p&gt;The 200-299&amp;nbsp;PATH requires an output type, if none is selected you get the following error:&lt;/p&gt;
+&lt;p&gt;"Error validating info - ResponseContent on component &lt;em&gt;x&lt;/em&gt;"&lt;/p&gt;
+&lt;p&gt;If you don't need one you could just set it to text, it's never going to go down that path, so just have a demo component going to end?&lt;/p&gt;
+&lt;p&gt;Let's use our trusty Star Wars API to see it in action:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://swapi.co/"&gt;http://swapi.co/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fill in the usual content and get the Response Content using "Create the Request" option.&lt;/p&gt;
+&lt;p&gt;Now click on "&lt;strong&gt;Paths...&lt;/strong&gt;" to see the new path.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTGenerator-2Components-Paths.png" alt="REST Generator - 2 Components - Paths"&gt;&lt;/p&gt;
+&lt;p&gt;You can create multiple paths, make sure OK has a Response, this defaults to your response from the previous screen.&lt;/p&gt;
+&lt;p&gt;You could have individual ones or you can comma separate them if they return the same data type,&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RESTGenerator-2Components-Paths-Multiple.png" alt="REST Generator - 2 Components - Paths - Multiple"&gt;&lt;/p&gt;
+&lt;p&gt;I would advise either a path for each OR a range for the same, don't have both, it is likely to pick the first code it matches.&lt;/p&gt;
+&lt;p&gt;For the Name don't put spaces, or you get the following error&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3554101-files_REST+Generator+-+2+Components+-+Paths+-+Compiler+Errors.png" alt="REST Generator - 2 Components - Paths - Compiler Errors"&gt;&lt;/p&gt;
+&lt;p&gt;It would be nice if the Generator warned you about this when creating a new Path name, as this is when you compile and don't know this is the reason.&lt;/p&gt;
+&lt;p&gt;Then back in Workflow&amp;nbsp;we have the component with all the Paths,&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/REST-Workflow-Paths-Multiple.png" alt="REST - Workflow - Paths - Multiple"&gt;&lt;/p&gt;
+&lt;p&gt;You have the data available to you given the chosen path, and you can deal with it accordingly,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ideas&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Show StatusCode in Path Name&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other articles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Using the REST Generator (Response Content) in Workflow 7.6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In this Article I will explain how to use the REST Generator (PATHs) within &lt;a href="http://www.symantec.com/connect/workflow-servicedesk"&gt;Workflow&lt;/a&gt; 7.6.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<id>https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-response-content-in-workflow-7.6</id>
 		<title>Using the REST Generator (Response Content) in Workflow 7.6</title>
@@ -599,449 +1183,5 @@ namespace client
 &lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;In this Article I'm going to explain how Asset Ownership is controlled in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="smp"&gt;&amp;nbsp;SMP and how to maintain it using &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow and the ASDK.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-map-ad-status-from-ad-import</id>
-		<title>SMP - Map AD Status from AD Import</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-map-ad-status-from-ad-import" />
-		<updated>2015-10-08T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article I'm going to show you how to extend the User Resource to include extra properties you can retrieve from the AD Import to gain extra information about your user base. We are going to map the AD Status value (aka&amp;nbsp;UserAccountControl)&lt;/p&gt;
-&lt;p&gt;First lets create a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DataClasses.png" alt="Data Classes"&gt;&amp;nbsp;Data Class to store this information.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource and Data Class Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Data Classes&lt;/p&gt;
-&lt;p&gt;Right-Click | New | Editable Data Class&lt;/p&gt;
-&lt;p&gt;Call it &lt;strong&gt;AD User Details&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Add some Fields&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ADStatus (Static List)&lt;/li&gt;
-&lt;li&gt;UserAccountControl (String/Integer)&lt;/li&gt;
-&lt;li&gt;LastUpdated (Date)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For the Static List add the following values&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Active&lt;/li&gt;
-&lt;li&gt;Disabled&lt;/li&gt;
-&lt;li&gt;Deleted&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If we take a look at an AD User to see what value this is:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AD-AccountDisabled.png" alt="AD - Account (Disabled)"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AD-AttributeEditor.png" alt="AD - Attribute Editor"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/userAccountControl.png" alt="userAccountControl"&gt;&lt;/p&gt;
-&lt;p&gt;What does 512 equate to?&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.netvision.com/ad_useraccountcontrol.php"&gt;http://www.netvision.com/ad_useraccountcontrol.php&lt;/a&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;Value&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;512&lt;/td&gt;
-&lt;td&gt;Enabled Account&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;514&lt;/td&gt;
-&lt;td&gt;Disabled Account&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;544&lt;/td&gt;
-&lt;td&gt;Enabled, Password Not Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;546&lt;/td&gt;
-&lt;td&gt;Disabled, Password Not Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;66048&lt;/td&gt;
-&lt;td&gt;Enabled, Password Doesn't Expire&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;66050&lt;/td&gt;
-&lt;td&gt;Disabled, Password Doesn't Expire&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;66080&lt;/td&gt;
-&lt;td&gt;Enabled, Password Doesn't Expire &amp;amp; Not Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;66082&lt;/td&gt;
-&lt;td&gt;Disabled, Password Doesn't Expire &amp;amp; Not Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;262656&lt;/td&gt;
-&lt;td&gt;Enabled, Smartcard Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;262658&lt;/td&gt;
-&lt;td&gt;Disabled, Smartcard Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;262688&lt;/td&gt;
-&lt;td&gt;Enabled, Smartcard Required, Password Not Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;262690&lt;/td&gt;
-&lt;td&gt;Disabled, Smartcard Required, Password Not Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;328192&lt;/td&gt;
-&lt;td&gt;Enabled, Smartcard Required, Password Doesn't Expire&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;328194&lt;/td&gt;
-&lt;td&gt;Disabled, Smartcard Required, Password Doesn't Expire&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;328224&lt;/td&gt;
-&lt;td&gt;Enabled, Smartcard Required, Password Doesn't Expire &amp;amp; Not Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;328226&lt;/td&gt;
-&lt;td&gt;Disabled, Smartcard Required, Password Doesn't Expire &amp;amp; Not Required&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Let's map this value into the new Data Class with the AD Import.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MicrosoftActiveDirectoryImport.png" alt="Microsoft Active Directory Import"&gt;&amp;nbsp;Microsoft Active Directory Import&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/MicrosoftActiveDirectoryImport-Config.png" alt="Microsoft Active Directory Import - Config"&gt;&lt;/p&gt;
-&lt;p&gt;Under&amp;nbsp;"User" click on "specified column mappings"&lt;/p&gt;
-&lt;p&gt;Select the newly created Data Class&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ADImport-CoumnMappingsforUser.png" alt="AD Import - Coumn Mappings for User"&gt;&lt;/p&gt;
-&lt;p&gt;Then click on UserAccountControl "(null)" to select a Field&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ADImport-Directoryentryattribute.png" alt="AD Import - Directory entry attribute"&gt;&lt;/p&gt;
-&lt;p&gt;OK | OK&lt;/p&gt;
-&lt;p&gt;Run the Import Rule&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RunImportRule.png" alt="Run Import Rule"&gt;&lt;/p&gt;
-&lt;p&gt;Now let's create a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CMDBRule.png" alt="CMDB Rule"&gt;&amp;nbsp;CMDB Rule to map this number to some text.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Connector | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;CMDB Rules&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CMDBRule-SetADStatus.png" alt="CMDB Rule - Set AD Status"&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Resource Type&lt;/th&gt;
-&lt;th&gt;User&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Target using&lt;/td&gt;
-&lt;td&gt;Sql Query&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;SQL query&lt;/td&gt;
-&lt;td&gt;&amp;lt;below&amp;gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;pre&gt;&lt;code&gt;SELECT 
-    rru.[Guid],
-    rru.Name,
-    iaud.UserAccountControl,
-    GetDate() AS CurrentDateTime
-FROM 
-    [RM_ResourceUser] rru
-INNER JOIN 
-    Inv_AD_User_Details iaud 
-    ON iaud._ResourceGuid = rru.Guid
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Choose the data class of the one you've just created:&lt;/p&gt;
-&lt;p&gt;I'm getting the current date from SQL.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;LastUpdated&lt;/th&gt;
-&lt;th&gt;CurrentDateTime&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;Anybody know how to get the current DateTime in an Expression?&lt;/p&gt;
-&lt;p&gt;I've tried the following&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Now()&lt;/li&gt;
-&lt;li&gt;Today()&lt;/li&gt;
-&lt;li&gt;DateTime.Today&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;With and without equals...&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=a98001a0-57f5-4d71-851c-cff888119198&amp;amp;CommunityKey=63b01f30-d5eb-43c7-9232-72362b508207&amp;amp;tab=digestviewer#bma98001a0-57f5-4d71-851c-cff888119198"&gt;https://www-secure.symantec.com/connect/forums/cmdb-rule-help&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;In the 'AD Status' column choose "&amp;lt;Expression&amp;gt;" from the dropdown&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;Articles&lt;/u&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Scriptable fields for modifying Resource Import Export and CMDB rules&amp;nbsp;&lt;a href="https://support.symantec.com/en_US/article.HOWTO45608.html#v19412924"&gt;https://support.symantec.com/en_US/article.HOWTO45608.html#v19412924&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Expression Functions&amp;nbsp;&lt;a href="https://support.symantec.com/en_US/article.HOWTO45613.html#v19412948"&gt;https://support.symantec.com/en_US/article.HOWTO45613.html#v19412948&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;IIF&lt;/strong&gt;&amp;nbsp;&lt;a href="https://support.symantec.com/en_US/article.HOWTO45647.html#v22897377"&gt;https://support.symantec.com/en_US/article.HOWTO45647.html#v22897377&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now we can use a bunch of nested IIFs, it's not eloquent but it works.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;IIF([AD User Details.UserAccountControl]='512','Active',
- IIF([AD User Details.UserAccountControl]='514','Disabled',
-  IIF([AD User Details.UserAccountControl]='544','Active',
-   IIF([AD User Details.UserAccountControl]='546','Disabled',
-    IIF([AD User Details.UserAccountControl]='66048','Active',
-     IIF([AD User Details.UserAccountControl]='66050','Disabled',
-      IIF([AD User Details.UserAccountControl]='66080','Active',
-       IIF([AD User Details.UserAccountControl]='66082','Disabled',
-        IIF([AD User Details.UserAccountControl]='262656','Active',
-         IIF([AD User Details.UserAccountControl]='262658','Disabled',
-          IIF([AD User Details.UserAccountControl]='262688','Active',
-           IIF([AD User Details.UserAccountControl]='262690','Disabled',
-            IIF([AD User Details.UserAccountControl]='328192','Active',
-             IIF([AD User Details.UserAccountControl]='328194','Disabled',
-              IIF([AD User Details.UserAccountControl]='328224','Active',
-               IIF([AD User Details.UserAccountControl]='328226','Disabled','Deleted'
-                ))))))))))))))))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I tried a CASE statement but it couldn't get it to verify.&lt;/p&gt;
-&lt;p&gt;Set a Schedule - a Shared one makes sense, match it to the AD Import.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I'm going to show you how to extend the User Resource to include extra properties you can retrieve from the AD Import to gain extra information about your user base. We are going to map the AD Status value (aka UserAccountControl)&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tips-and-tricks</id>
-		<title>Workflow - Tips and Tricks</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tips-and-tricks" />
-		<updated>2015-09-22T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article I'm going to share some Workflow Tips and Tricks,&lt;/p&gt;
-&lt;p&gt;Go to the Workflow Task Tray&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;"&amp;lt;Install Folder&amp;gt;:\Program Files\Symantec\Workflow\Tools\LogicBase.Local.TaskTray.exe"&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Down to the Task Tray and Right Click on the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow Icon.&lt;/p&gt;
-&lt;p&gt;Select &lt;strong&gt;Settings&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-Settings.png" alt="Task Tray Settings - Settings"&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;u&gt;Application Properties&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;Select the &lt;strong&gt;Workflow Server&lt;/strong&gt; in the Local Machine Info tree.&lt;/p&gt;
-&lt;p&gt;Here you can change the &lt;strong&gt;Application Properties Refresh Interval&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-WorkflowServer.png" alt="Task Tray Settings - Workflow Server"&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;There are more Preferences you can edit.&lt;/p&gt;
-&lt;p&gt;Right Click | Shortcuts | Edit Tool Preferences&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-RightClick.png" alt="Task Tray Settings - Right Click"&gt;&lt;/p&gt;
-&lt;p&gt;I spend quite a bit of time dragging property labels&amp;nbsp;onto forms then removing the "Not Found". I'd prefer it to be blank if there isn't one.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AdvancedTextCreator-StringFormatter-Configurator.png" alt="Advanced Text Creator - String Formatter - Configurator"&gt;&lt;/p&gt;
-&lt;p&gt;Sometimes when you close this Form then reopen it later the option for the Label has gone.&lt;/p&gt;
-&lt;p&gt;You can Right Click on the Label, Convert To - String Formatter&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ConvertTo-StringFormatter.png" alt="Convert To - String Formatter"&gt;&lt;/p&gt;
-&lt;p&gt;Or just Right Click - Edit, click on the ellipse (...) and edit it there.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EditObject.png" alt="Edit Object"&gt;&lt;/p&gt;
-&lt;p&gt;There is another option.&lt;/p&gt;
-&lt;p&gt;Task Tray | Edit Tool Preferences | Designer | Designer Configuration&lt;/p&gt;
-&lt;p&gt;Default Variable Not Found Text&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-EditToolPreferences-Designer-DesignerConfiguration.png" alt="Task Tray Settings - Edit Tool Preferences - Designer - Designer Configuration"&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;u&gt;Sort Models Alphabetically&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;Edit Tool Preferences&lt;/p&gt;
-&lt;p&gt;Studio Configuration | Project Configuration&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTraySettings-EditToolPreferences-StudioConfiguration-ProjectConfiguration.png" alt="Task Tray Settings - Edit Tool Preferences - Studio Configuration - Project Configuration"&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Please do add any of your own :)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;p&gt;There's a great one from&amp;nbsp;&lt;a href="https://www-secure.symantec.com/connect/user/africo"&gt;africo&lt;/a&gt;&amp;nbsp;about changing the Debug Browser&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://atmaworkflow.com/2014/12/23/workflow-short-adjust-default-debugger-browser/"&gt;http://atmaworkflow.com/2014/12/23/workflow-short-adjust-default-debugger-browser/&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I'm going to share some Workflow Tips and Tricks,&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/utility-app</id>
-		<title>Utility App</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/utility-app" />
-		<updated>2015-07-31T00:00:00Z</updated>
-		<content>&lt;p&gt;Hi All,&lt;/p&gt;
-&lt;p&gt;I've created a mini Utility App with a couple of functions to aid in your day to day work.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;HTML Encode/Decode
-&lt;ul&gt;
-&lt;li&gt;Sometimes when you log a Table in workflow it swaps the &amp;lt; to &amp;lt;, this converts it back and displays it in a webbrowser view&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;URL Encode&lt;/li&gt;
-&lt;li&gt;HEX to RGB&lt;/li&gt;
-&lt;li&gt;SQL Builder (IN Clause)&lt;/li&gt;
-&lt;li&gt;Guid
-&lt;ul&gt;
-&lt;li&gt;Zero Guid&lt;/li&gt;
-&lt;li&gt;New Guid Generator&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;XML Pretty Print&lt;/li&gt;
-&lt;li&gt;JSON Pretty Print&lt;/li&gt;
-&lt;li&gt;SQL Formatter&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Utility.png" alt="Utility.png"&gt;&lt;/p&gt;
-&lt;p&gt;Link:&amp;nbsp;&lt;a href="http://alexhedley.com/apps/vb/utility/"&gt;http://alexhedley.com/apps/vb/utility/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is still in development&amp;nbsp;so please let me know if anything needs updating or if you can think of anything else I can add to make it more useful.&lt;/p&gt;
-&lt;p&gt;There is a chm Help file that comes with it, likely to be blocked, just with a little explanation and links to code used within the app.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Mac&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Mac app has been added - still need to add a couple of tabs for the SQL functions. (9th Aug)&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;Hi All,&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-theme-editor-control-style-rename-error</id>
-		<title>Workflow - Theme Editor - Control Style Rename *Error*</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-theme-editor-control-style-rename-error" />
-		<updated>2015-07-17T00:00:00Z</updated>
-		<content>&lt;p&gt;I was recently working with the Theme Editor and got the following error.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;"A style with this name already exists"&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ThemeEditorRenameError.png" alt="Theme Editor Rename Error"&gt;&lt;/p&gt;
-&lt;p&gt;I'd created a style for a button and named it "&lt;strong&gt;.but Green&lt;/strong&gt;".&lt;/p&gt;
-&lt;p&gt;I then tried to change the name to "&lt;strong&gt;.but green&lt;/strong&gt;".&lt;/p&gt;
-&lt;p&gt;To rename it successfully change it&amp;nbsp;to anything else i.e. "&lt;strong&gt;test&lt;/strong&gt;"&amp;nbsp;then rename it again back to "&lt;strong&gt;.but green&lt;/strong&gt;"&lt;/p&gt;
-&lt;p&gt;This is as designed and has been raised as an Enhancement request.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;\Programs\Symantec\Workflow Designer\Composer Theme Editor&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;"INSTALL DRIVE:\Program Files\Symantec\Workflow\Designer\bin\LogicBase.Composer.ThemeEditor.exe"&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;Links&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;Want to know how to build a theme? Check out this great article&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=186a54b9-ab4d-4144-9098-001c95734781&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=librarydocuments"&gt;https://www-secure.symantec.com/connect/articles/creating-workflow-themes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Convert a CSS file to an xTheme&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=7709f909-9a40-47c5-bc26-4c5b693d8878&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm7709f909-9a40-47c5-bc26-4c5b693d8878"&gt;http://www.symantec.com/connect/forums/include-css-web-form-workflow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;I was recently working with the Theme Editor and got the following error.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-grid-view-column-cell-colouring</id>
-		<title>Workflow - Grid View Column Cell Colouring</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-grid-view-column-cell-colouring" />
-		<updated>2015-07-15T00:00:00Z</updated>
-		<content>&lt;p&gt;In this article I will show you how to&amp;nbsp;change the colour of a cell (in a given column) in a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Grid.png" alt="Grid"&gt;&amp;nbsp;Grid Component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type.&lt;/p&gt;
-&lt;p&gt;This can be handy for a RAG Status or Traffic light system.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Linked Article&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0f43883e-d4dd-4c00-8da0-ccfffeb3a12c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www-secure.symantec.com/connect/articles/workflow-multistatecolor-component&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Add a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Grid.png" alt="Grid"&gt;&amp;nbsp;Grid to your &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/FormBuilder.png" alt="Form Builder.png"&gt;&amp;nbsp;Web Form.&lt;/p&gt;
-&lt;p&gt;Give the Grid a name&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;Functionality tab&lt;/u&gt;&lt;br&gt;
-Control ID: ProdTable&lt;/p&gt;
-&lt;p&gt;This assumes the data set you are returning includes a column that lists the colour you want to show.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Data&lt;/th&gt;
-&lt;th&gt;Colour&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;John&lt;/td&gt;
-&lt;td&gt;Red&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Fred&lt;/td&gt;
-&lt;td&gt;Amber&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Lucy&lt;/td&gt;
-&lt;td&gt;Green&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Make this the LAST column of your Table.&lt;/p&gt;
-&lt;p&gt;You want it to change to&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TableColour.png" alt="Table Colour.png"&gt;&lt;/p&gt;
-&lt;p&gt;Add the following to the &lt;strong&gt;onload&lt;/strong&gt; event of the Form.&lt;/p&gt;
-&lt;p&gt;Double click on the Form, go to the &lt;strong&gt;Behavior&lt;/strong&gt; Tab.&lt;/p&gt;
-&lt;p&gt;In the 'Body Custom Events' click on &lt;strong&gt;Add&lt;/strong&gt; -&amp;gt; &lt;strong&gt;AttributesKeyValuePair&lt;/strong&gt;.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Event&lt;/th&gt;
-&lt;th&gt;onload&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Event Handler&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;#below code#&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;pre&gt;&lt;code&gt;$(function () {
-    $('#ProdTable tr').each(function (index, value) {
-        var lastTr = $('td', value).last();
-        var colour = lastTr.text();
-        if( colour == 'Amber' )
-            colour = 'Orange';
-            lastTr.text('');
-            lastTr.css("background-color", colour);
-    });
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;*There are certain colours in CSS instead of using the HEX code, Amber is not one of them so we need to change it to Orange.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/"&gt;https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;There's an interesting &lt;a href="http://stackoverflow.com/questions/8318911/why-does-html-think-chucknorris-is-a-color"&gt;read&lt;/a&gt; on why "ChuckNorris" is a colour.&lt;/p&gt;
-&lt;p&gt;If you wish to have it update a different column you will need to change the following line&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var lastTr = $('td', value).last();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;and get the column you need instead.&lt;/p&gt;
-&lt;p&gt;This works fine for the first page of a Grid but the Paging is performed using&amp;nbsp;AJAX so if you change to Page 2 the colours aren't updated.&lt;/p&gt;
-&lt;p&gt;To combat this&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$(function() {
-    var previous = $("#ProdTable").text();
-    $check = function() {
-        if ($("#ProdTable").text() != previous) { 
-          updateColor();
-        }
-        previous = $("#ProdTable").text();        
-    }
-    updateColor();
-    setInterval(function() { $check(); }, 1000);
-});
-
-function updateColor() {
-    $('#ProdTable tr').each(function (index, value) {
-      var colour =  $(':nth-child(11)', $(this)).text();      
-      var lastTr = $('td', value).last();   
-    
-      if( colour == 'Amber' )
-          colour = 'Orange';
-   
-      lastTr.text('');
-      lastTr.css("background-color", colour);
-    });
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This uses a Timer to keep checking the Grid so it's the best performance wise solution but it works.&lt;/p&gt;
-&lt;p&gt;In Workflow 7.5 you could just map a value into a Column of&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;span style="background-color:blue"&amp;gt;&amp;lt;/span&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You could map across the colour from the DataType using the Merge component.&lt;/p&gt;
-&lt;p&gt;This is now encoded in the Grid in 7.6,&amp;nbsp;the "&amp;lt;" is converted to "&amp;lt;" etc so therefore doesn't work anymore.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="http://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this article I will show you how to&amp;nbsp;change the colour of a cell (in a given column) in a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Grid.png" alt="Grid"&gt;&amp;nbsp;Grid Component&amp;nbsp;in the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Forms%2520%2528Web%2529.png" alt="Forms (Web).png"&gt;&amp;nbsp;Forms (Web) Project Type.&lt;/p&gt;</summary>
 	</entry>
 </feed>

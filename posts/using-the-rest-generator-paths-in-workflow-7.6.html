@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Using the REST Generator (PATHs) in Workflow 7.6</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-paths-in-workflow-7.6'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Using the REST Generator (PATHs) in Workflow 7.6' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/using-the-rest-generator-paths-in-workflow-7.6' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Using the REST Generator (PATHs) in Workflow 7.6
+          </h1>
+            <div class="meta">Published on Tuesday, 5 January 2016</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I will explain how to use the REST Generator (PATHs) within <a href="http://www.symantec.com/connect/workflow-servicedesk">Workflow</a> 7.6.</p>
+<p>Follow up articles</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - REST Generator</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator in Workflow 7.6</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (Response Content) in Workflow 7.6</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (PATHs) in Workflow 7.6</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d8050704-5515-4e3c-8f82-0bc67a8260dc&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - Read Write JSON</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=92aa8f35-4dda-4afd-8639-1452c5e7e666&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - REST - Response Header</a></li>
+</ul>
+<p>New to me in build Symantec.Workflow.Setup.7.6.4383.<strong>504</strong> (think it was .479 but I'd advise getting the last build) the REST Generator has been updated to allow multiple paths from the response content.</p>
+<p>This is a great addition as what if your request fails or returns a StatusCode other than 200, this needs to be handled differently, you won't get the same data type returned,</p>
+<p>By default this creates a PATH of 200-299. As of writing there is no way to delete this path, which I believe is incorrect, what about a PUT request that returns a 301.</p>
+<p>The 200-299 PATH requires an output type, if none is selected you get the following error:</p>
+<p>&quot;Error validating info - ResponseContent on component <em>x</em>&quot;</p>
+<p>If you don't need one you could just set it to text, it's never going to go down that path, so just have a demo component going to end?</p>
+<p>Let's use our trusty Star Wars API to see it in action:</p>
+<p><a href="http://swapi.co/">http://swapi.co/</a></p>
+<p>Fill in the usual content and get the Response Content using &quot;Create the Request&quot; option.</p>
+<p>Now click on &quot;<strong>Paths...</strong>&quot; to see the new path.</p>
+<p><img src="images/RESTGenerator-2Components-Paths.png" alt="REST Generator - 2 Components - Paths" /></p>
+<p>You can create multiple paths, make sure OK has a Response, this defaults to your response from the previous screen.</p>
+<p>You could have individual ones or you can comma separate them if they return the same data type,</p>
+<p><img src="images/RESTGenerator-2Components-Paths-Multiple.png" alt="REST Generator - 2 Components - Paths - Multiple" /></p>
+<p>I would advise either a path for each OR a range for the same, don't have both, it is likely to pick the first code it matches.</p>
+<p>For the Name don't put spaces, or you get the following error</p>
+<p><img src="images/article-3554101-files_REST+Generator+-+2+Components+-+Paths+-+Compiler+Errors.png" alt="REST Generator - 2 Components - Paths - Compiler Errors" /></p>
+<p>It would be nice if the Generator warned you about this when creating a new Path name, as this is when you compile and don't know this is the reason.</p>
+<p>Then back in Workflow we have the component with all the Paths,</p>
+<p><img src="images/REST-Workflow-Paths-Multiple.png" alt="REST - Workflow - Paths - Multiple" /></p>
+<p>You have the data available to you given the chosen path, and you can deal with it accordingly,</p>
+<p><strong>Ideas</strong></p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c884d3-48d6-4f07-abfa-b6826cf35ae8&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Show StatusCode in Path Name</a></li>
+</ul>
+<p>Other articles</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator in Workflow 7.6</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a2dcdd55-e5af-4a79-98fb-20316278b763&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (GET) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9436681a-270e-439f-ae3d-3b20b9a25341&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (Headers) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f63d5608-8e51-43fb-a09e-c38ebca50cff&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (POST) in Workflow 7.6 with Mobility Suite</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70c640bd-f482-4db4-b56b-3770a85df85d&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the REST Generator (Response Content) in Workflow 7.6</a></li>
+</ul>
+<p><a href="http://protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

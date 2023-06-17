@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - ServiceDesk - Classification</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-classification'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - ServiceDesk - Classification' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-classification' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            ServiceDesk - Classification
+          </h1>
+            <div class="meta">Published on Monday, 29 February 2016</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I'm going to explain a way of getting the Classifications from the Process Manager db for use within your Workflows.</p>
+<p>In an Incdient in ServiceDesk you can set classification.</p>
+<p>These are created and administered at <strong>Admin</strong> | <strong>Data</strong> | <strong>Hierarchy Data Service</strong></p>
+<ul>
+<li>http://localhost/ProcessManager/Hierarchy/HierarchyItemListing.aspx</li>
+</ul>
+<p>When they are stored against the ticket they are saved as a &quot;.&quot; separated string</p>
+<ul>
+<li>e.g. Hardware.Desktop</li>
+</ul>
+<p>These are split and joined within the various Workflows.</p>
+<p>I had the need in a WF to check if given string was an available Classification before setting it.</p>
+<p>I can use the below CTE that takes in a &#64;flag parameter of 'Hardware', being the Second Level item, below 'Incident Management' to check it exists and then show all it's siblings.</p>
+<pre><code>DECLARE &#64;ParentChildLocationRAT UNIQUEIDENTIFIER
+SET &#64;ParentChildLocationRAT = '3B4F3C0E-31DF-4AB3-A05F-C6F0550A9305'; --'Incident Management' FROM [HierarchyCategory]
+DECLARE &#64;flag nvarchar(255) = 'hardware'
+
+BEGIN
+WITH CTE_HierarchyAssociatedPairs
+    AS (
+        SELECT 
+    hi.parentHierarchyItemid,
+    name 'name',
+    HierarchyItemid,
+    0 as Depth,
+    name as flag
+        FROM [HierarchyItem] hi
+        where HierarchyCategoryID = &#64;ParentChildLocationRAT--'3B4F3C0E-31DF-4AB3-A05F-C6F0550A9305'
+        
+        UNION ALL
+        
+  SELECT 
+   hi1.parentHierarchyItemid,
+   hi1.name,
+   hi1.HierarchyItemid,
+            ha.Depth + 1 AS Depth,
+            ha.flag
+        FROM [HierarchyItem] hi1
+        JOIN CTE_HierarchyAssociatedPairs ha ON hi1.parentHierarchyItemid = ha.HierarchyItemid
+        )
+    SELECT DISTINCT *
+    FROM CTE_HierarchyAssociatedPairs
+    WHERE flag = &#64;flag
+    ORDER BY Depth
+END
+</code></pre>
+<p>Result</p>
+<table Guid="">
+<thead>
+<tr>
+<th>parentHierarchyItemid</th>
+<th>name</th>
+<th>HierarchyItemid</th>
+<th>Depth</th>
+<th>flag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NULL</td>
+<td>Hardware</td>
+<td></td>
+<td>0</td>
+<td>Hardware</td>
+</tr>
+<tr>
+<td></td>
+<td>Desktop</td>
+<td></td>
+<td>1</td>
+<td>Hardware</td>
+</tr>
+<tr>
+<td></td>
+<td>Drive</td>
+<td></td>
+<td>1</td>
+<td>Hardware</td>
+</tr>
+<tr>
+<td></td>
+<td>CPU or Blade</td>
+<td></td>
+<td>2</td>
+<td>Hardware</td>
+</tr>
+</tbody>
+</table>
+<p>One use for this is with the Email Monitor.</p>
+<p>Say you put a Classification in the body of an email and wish to map it to a ticket you could split it, pass the first value to this SP, return the results then filter on the subsequent depth fields to get at least a parital match classification set. This could be if it was incorrect in the email or classifications had been removed from Process Manager.</p>
+<p Team:="" Support="">| Subject | New Incident |
+| --- | --- |
+| Message | My computer has broken<br>
+<br>Please fix<br>
+<br>  <br>				 |</p>
+<p>So Hardware is found, then Desktop is found but Computer isn't so only the first two are mapped in.</p>
+<hr />
+<p>In a previous version of ServiceDesk the Classification was split into separate Fields, this could made it easier for reporting and other requirements.</p>
+<p>If you have migrated it and it is stored as a &quot;.&quot; separated string in the new version and want it back into the separate Fields you could use the following.</p>
+<p>This does assume there are only <strong>10</strong> levels.</p>
+<p>(Create by our resident SQL Guru <a href="https://www-secure.symantec.com/connect/user/kevin-huntley-protirus">Kev</a>)</p>
+<p>You could create a Stored Procedure that gets Incident Details with the Classification split</p>
+<ul>
+<li><p>sp_IncidentWithSplitClassification</p>
+<p>WITH e1(n)
+AS
+(SELECT 1 UNION ALL SELECT 1 UNION ALLSELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1
+)
+,e2(n)
+AS
+(SELECT 0 UNION ALLSELECT ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) FROM 		(SELECT 1 as 'n'			FROM 				e1 a,				e1 b, 				e1 c)  cj
+)
+,IMwithSplit AS
+(SELECT [ProcessId]	  ,[SessionId]	  ,[ReportProcessId]	  ,[CurrentTask]	  ,[IncidentName]	  ,[IncidentDescription]	  ,[IncidentType]	  ,[Classification]	  ,[SubmittedBy]	  ,[AffectedUser]	  ,[Owner]	  ,[TicketStatus]	  ,[CurrentlyAssignedQueueId]	  ,SUBSTRING(Classification,n+1,ISNULL(NULLIF(CHARINDEX('.',classification,N+1),0)-(N+1),8000)) 'csplit'	  ,ROW_NUMBER() OVER (PARTITION BY processid ORDER BY (e.n)) rnoFROM 	ImIncidentTicket itLEFT JOIN 	e2 e	ON e.n &lt;= 1000WHERE 	SUBSTRING(Classification, n, 1) = '.' OR	n = 0
+)SELECT [ProcessId]
+,[SessionId],ISNULL([1],'') AS  'Classification1',ISNULL([2],'') AS 'Classification2',ISNULL([3],'') AS 'Classification3',ISNULL([4],'') AS 'Classification4',ISNULL([5],'') AS 'Classification5',ISNULL([6],'') AS 'Classification6',ISNULL([7],'') AS 'Classification7',ISNULL([8],'') AS 'Classification8',ISNULL([9],'') AS 'Classification9',ISNULL([10],'') AS 'Classification10'
+FROM IMwithSplit
+PIVOT
+(max(csplit) for rno in ([1],[2],[3],[4],[5],[6],[7],[8],[9],[10])
+) pvt</p>
+</li>
+</ul>
+<p>Classification = &quot;Software.Altiris.CMDB&quot;</p>
+<p>Result</p>
+<table Guid="">
+<thead>
+<tr>
+<th>ProcessId</th>
+<th>SessionId</th>
+<th>Classification1</th>
+<th>Classification2</th>
+<th>Classification3</th>
+<th>Classification4</th>
+<th>Classification5</th>
+<th>Classification6</th>
+<th>Classification7</th>
+<th>Classification8</th>
+<th>Classification9</th>
+<th>Classification10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IM-000002</td>
+<td></td>
+<td>Software</td>
+<td>Altiris</td>
+<td>CMDB</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><u>Forum</u></p>
+<p><strong>Export the Hierarchy Classifications to a Spreadsheet</strong></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=3f0dcc84-f934-4897-bb3d-e519556c76ad&amp;CommunityKey=a067504a-9710-492c-bbef-18d2ed6b44af&amp;tab=digestviewer#bm3f0dcc84-f934-4897-bb3d-e519556c76ad">https://www-secure.symantec.com/connect/forums/export-hierarchy-classifications-spreadsheet</a></p>
+<p>Category, Parent, Item</p>
+<pre><code>SELECT 
+    p.Name AS Category, 
+    i.Name AS Parent, 
+    o.Name AS Item
+FROM 
+    [HierarchyCategory] AS p 
+    INNER JOIN [HierarchyItem] AS i ON p.HierarchyCategoryID = i.HierarchyCategoryID 
+    LEFT OUTER JOIN [HierarchyItem] AS o ON i.HierarchyItemID = o.ParentHierarchyItemID
+ORDER BY 
+    Category, Parent
+</code></pre>
+<hr />
+<p>Get a Simple List</p>
+<pre><code>SELECT 
+    i.name as Parent, 
+    o.name as Item
+FROM 
+    [HierarchyItem] o
+    INNER JOIN [HierarchyItem] i ON i.HierarchyItemID = o.ParentHierarchyItemID
+</code></pre>
+<hr />
+<p><strong>Email Routing and Classification</strong></p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=6b9410ea-ec8a-4ea4-8d97-c182de0ce82d&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=digestviewer#bm6b9410ea-ec8a-4ea4-8d97-c182de0ce82d">https://www-secure.symantec.com/connect/forums/email-routing-and-classification</a></p>
+<hr />
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus.png" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
