@@ -4,948 +4,763 @@
 	<title>Alex Hedley</title>
 	<link rel="self" href="https://alexhedley.github.io/symantec-connect-articles" />
 	<rights>Copyright © 2023</rights>
-	<updated>2023-06-17T11:44:40Z</updated>
+	<updated>2023-06-18T11:22:55Z</updated>
 	<subtitle>Welcome to my Symantec Connect Articles!</subtitle>
 	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide</id>
-		<title>Workflow - Component - Developer Guide</title>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-component-report</id>
+		<title>Workflow - Plugins - Component Report</title>
 		<author>
 			<name>AlexHedley</name>
 		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide" />
-		<updated>2016-11-09T00:00:00Z</updated>
-		<content>&lt;p&gt;In this set of Articles I'm going to explain how to create a number of different custom components for use within &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3608101-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;Workflow.&lt;/p&gt;
-&lt;p&gt;I will run through the different parts needed to create a usable component.&lt;/p&gt;
-&lt;p&gt;Each one will build upon what we have learnt in a previous article, so don't skip any :p&lt;/p&gt;
-&lt;p&gt;Articles&lt;/p&gt;
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-component-report" />
+		<updated>2017-05-24T00:00:00Z</updated>
+		<content>&lt;h2 id="component-report"&gt;Component Report&lt;/h2&gt;
+&lt;p&gt;The 'Component Report' Plugin generates a set of web pages to display all the Components within Workflow.&lt;/p&gt;
+&lt;h3 id="component-icon"&gt;Component icon&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/cubes.png" alt="cubes"&gt;&lt;/p&gt;
+&lt;h3 id="author"&gt;Author&lt;/h3&gt;
+&lt;p&gt;LogicBase /&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Symantec.png" alt="Symantec"&gt;&amp;nbsp;Symantec&lt;/p&gt;
+&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
+&lt;p&gt;Plugins |&amp;nbsp;Component Report&lt;/p&gt;
+&lt;p&gt;Select your options:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ComponentReport-Options.png" alt="Component Report - Options"&gt;&lt;/p&gt;
+&lt;p&gt;Click 'Generate' and chose a folder location from the dialog.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-ComponentReport-Generating.png" alt="Workflow-Plugins-ComponentReport-Generating"&gt;&lt;/p&gt;
+&lt;p&gt;Once it's complete you can either open the Report or the Folder you've just created.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-ComponentReport-Open.png" alt="Workflow-Plugins-ComponentReport-Open"&gt;&lt;/p&gt;
+&lt;p&gt;This generates a set of webpages in HTML which allow easy browsing of ALL components, not just the ones in your current Project.&lt;/p&gt;
+&lt;p&gt;There maybe a warning about ActiveX controls and needing to allow to for certain actions to be enabled like Expand/Collapse.&lt;/p&gt;
+&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="location"&gt;Location&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2f07f920-0cbd-4be4-83a8-c6180eee3092&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;List&lt;/a&gt;&amp;nbsp;(this)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=17aa2b9a-9092-40d0-afab-a6d8316de97d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Component&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70a9fde5-0d87-4b9d-a3be-0907567ffc00&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Deploy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80437c69-ccc3-47e6-a850-9cf3f301b340&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Help File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=63b72a9a-53b8-4d4b-bce3-5f0732b134d5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Logging&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Inputs
+&lt;li&gt;LogicBase.Plugins.Reporting.Components.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="code"&gt;Code&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
+&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=74c56ef7-1119-40fe-9d5f-3c7a1d808d4c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Checkbox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=267159ac-b8e7-45b4-abe4-f85d78e30783&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Dropdown / Combo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Title URL
+&lt;ul&gt;
+&lt;li&gt;Chapter/Page #&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2c3b3a6f-01d7-4157-a143-ba30c9edc930&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Inspecting&lt;/a&gt; other Components&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=cf54de06-be56-46ff-b937-148efa57eaec&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating&amp;nbsp;Globals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=4cfc07c5-404e-49b3-81b6-520d4ea43d5c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating Project Properties&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f3cf0097-06e7-42f3-a747-d0dff319c1e5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with SQL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=26368883-708b-4432-999b-7064f2f25794&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with a Web Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="support"&gt;Support&lt;/h3&gt;
+&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title
+&lt;ul&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;The 'Component Report' Plugin generates a set of web pages to display all the Components within Workflow.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-export-translation-strings-plugin</id>
+		<title>Workflow - Plugins - Export Translation Strings Plugin</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-export-translation-strings-plugin" />
+		<updated>2017-05-24T00:00:00Z</updated>
+		<content>&lt;h2 id="export-translation-strings-plugin"&gt;Export Translation Strings Plugin&lt;/h2&gt;
+&lt;p&gt;The 'Export Translation Strings Plugin' Plugin ...&lt;/p&gt;
+&lt;h3 id="component-icon"&gt;Component icon&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="author"&gt;Author&lt;/h3&gt;
+&lt;p&gt;LogicBase /&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Symantec.png" alt="Symantec"&gt;&amp;nbsp;Symantec&lt;/p&gt;
+&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
+&lt;p&gt;Plugins |&amp;nbsp;Export Translation Strings Plugin&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-ExportTranslationStringsPlugin.png" alt="Workflow-Plugins-ExportTranslationStringsPlugin"&gt;&lt;/p&gt;
+&lt;p&gt;If you have a Strings tab in your Project, e.g. &lt;strong&gt;SD.Feeder.TechnicanIncidentForms&lt;/strong&gt; you will have a longer list.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-ExportTranslationStringsPlugin-Advanced.png" alt="Workflow-Plugins-ExportTranslationStringsPlugin-Advanced"&gt;&lt;/p&gt;
+&lt;p&gt;You can select any number of items and click 'Submit for Translation'.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-ExportTranslationStringsPlugin-Submit.png" alt="Workflow-Plugins-ExportTranslationStringsPlugin-Submit"&gt;&lt;/p&gt;
+&lt;p&gt;It will take some time then a message will appear.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-ExportTranslationStringsPlugin-Complete.png" alt="Workflow-Plugins-ExportTranslationStringsPlugin-Complete"&gt;&lt;/p&gt;
+&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="location"&gt;Location&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LogicBase.Plugins.ExportTranslationStrings.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="code"&gt;Code&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
+&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title URL
+&lt;ul&gt;
+&lt;li&gt;Chapter/Page #&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="support"&gt;Support&lt;/h3&gt;
+&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title
+&lt;ul&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;The 'Export Translation Strings Plugin' Plugin ...&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-create-guid</id>
+		<title>Workflow - Plugins - Create GUID</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-create-guid" />
+		<updated>2017-05-24T00:00:00Z</updated>
+		<content>&lt;h2 id="create-guid"&gt;Create GUID&lt;/h2&gt;
+&lt;p&gt;The 'Create GUID' Plugin allows you to generate a random GUID, which can then either be copied to the clipboard or added to the &amp;nbsp;Primary Model of the current Workflow Project.&lt;/p&gt;
+&lt;h3 id="component-icon"&gt;Component icon&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="author"&gt;Author&lt;/h3&gt;
+&lt;p&gt;LogicBase /&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Symantec.png" alt="Symantec"&gt;&amp;nbsp;Symantec&lt;/p&gt;
+&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
+&lt;p&gt;Plugins | Create GUID&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Menu-Plugins-CreateGUID.png" alt="Workflow - Menu - Plugins - Create GUID"&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;BUG: This states "current model" but actually puts it into the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Model1.png" alt="Model 1"&gt;&amp;nbsp;Primary model.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="location"&gt;Location&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LogicBase.Plugins.CreateGUID.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="code"&gt;Code&lt;/h3&gt;
+&lt;p&gt;Generate a GUID&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;return Guid.NewGuid().ToString();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Copy to Clipboard&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Clipboard.SetDataObject(guid, true);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create Component with the Guid pre-populated.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a1fe7799-786f-402d-af88-d1560d2834d8&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Add New Data Element&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is more information in the following Article&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6d54d145-537c-40e6-86ca-b5dec2b1e972&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Plugin - Developer Guide - Inspecting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
+&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title URL
+&lt;ul&gt;
+&lt;li&gt;Chapter/Page #&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="support"&gt;Support&lt;/h3&gt;
+&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title
+&lt;ul&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;The 'Create GUID' Plugin allows you to generate a random GUID, which can then either be copied to the clipboard or added to the  Primary Model of the current Workflow Project.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-encryption-keys-generator</id>
+		<title>Workflow - Plugins - Encryption Keys Generator</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-encryption-keys-generator" />
+		<updated>2017-05-24T00:00:00Z</updated>
+		<content>&lt;h2 id="encryption-keys-generator"&gt;Encryption Keys Generator&lt;/h2&gt;
+&lt;p&gt;The 'Encryption Keys Generator' Plugin allows you to generate a number of different types of keys,&amp;nbsp;Symetrical and&amp;nbsp;Asymetrical.&lt;/p&gt;
+&lt;h3 id="component-icon"&gt;Component icon&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/key1.png" alt="key1"&gt;&lt;/p&gt;
+&lt;h3 id="author"&gt;Author&lt;/h3&gt;
+&lt;p&gt;LogicBase /&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Symantec.png" alt="Symantec"&gt;&amp;nbsp;Symantec&lt;/p&gt;
+&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
+&lt;p&gt;Plugins |&amp;nbsp;Encryption Keys Generator&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-EncryptionKeysGenerator.png" alt="Workflow-Plugins-EncryptionKeysGenerator"&gt;&lt;/p&gt;
+&lt;p&gt;There are 5 options&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SymetricalCryptographyTypes
+&lt;ul&gt;
+&lt;li&gt;DES&lt;/li&gt;
+&lt;li&gt;TripleDES&lt;/li&gt;
+&lt;li&gt;Rijndael&lt;/li&gt;
+&lt;li&gt;RC2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AsymetricalCryptographyTypes
+&lt;ul&gt;
+&lt;li&gt;RSA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-EncryptionKeysGenerator-RSA.png" alt="Workflow-Plugins-EncryptionKeysGenerator-RSA"&gt;&lt;/p&gt;
+&lt;p&gt;Click on Generate, a message will be displayed.&lt;/p&gt;
+&lt;p&gt;Click on Save Key / Save private key / Save public key&lt;/p&gt;
+&lt;p&gt;A Save Dialog box will open where you can choose a name and save your key.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Shared\lib
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alternative&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="location"&gt;Location&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LogicBase.Plugins.Encryption.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="code"&gt;Code&lt;/h3&gt;
+&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
+&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title URL
+&lt;ul&gt;
+&lt;li&gt;Chapter/Page #&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="support"&gt;Support&lt;/h3&gt;
+&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title
+&lt;ul&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;The 'Encryption Keys Generator' Plugin allows you to generate a number of different types of keys, Symetrical and Asymetrical.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-license-status</id>
+		<title>Workflow - Plugins - License Status</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-license-status" />
+		<updated>2017-05-23T00:00:00Z</updated>
+		<content>&lt;h2 id="license-status"&gt;License Status&lt;/h2&gt;
+&lt;p&gt;The License Status Manager lets you view licensing information about Workflow and Workflow-related applications (such as ServiceDesk). This tool also lets you run tests on your license to verify that it works properly. The tool does not create or manage licensing. The Symantec Management Platform manages all licensing. The tool communicates with the Symantec Management Platform to determine licensing information.&lt;/p&gt;
+&lt;p&gt;This checks a webservice on your &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="smp"&gt;&amp;nbsp;SMP box&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://&amp;lt;SMP_SERVER&amp;gt;/Altiris/ServiceDesk/Licensing.asmx&lt;/li&gt;
+&lt;li&gt;http://&amp;lt;SMP_SERVER&amp;gt;/Altiris/ServiceDesk/Licensing.asmx?op=GetLicenseCount&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check the default in 'Credentials Manager'.&lt;/p&gt;
+&lt;h3 id="component-icon"&gt;Component icon&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="author"&gt;Author&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Symantec.png" alt="Symantec"&gt;&amp;nbsp;Symantec&lt;/p&gt;
+&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
+&lt;p&gt;A new window will open which displays the License Status.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-LicenseStatus.png" alt="Workflow-LicenseStatus"&gt;&lt;/p&gt;
+&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
+&lt;p&gt;'License Status View' can be opened as an AppLication from the Start Menu.&lt;/p&gt;
+&lt;p&gt;"[Install Drive]:\Program Files\Symantec\Workflow\Tools\Symantec.LicenseStatus.Editor.exe"&lt;/p&gt;
+&lt;h3 id="location"&gt;Location&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Symantec.Workflow.Plugins.LicenseTest.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="code"&gt;Code&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Symantec™ Workflow 8.1 User Guide&amp;nbsp;&lt;a href="https://support.symantec.com/en_US/article.DOC9625.html"&gt;https://support.symantec.com/en_US/article.DOC9625.html&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Chapter 34&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="support"&gt;Support&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ServiceDesk 7.x Licensing Error Messages and Troubleshooting Ideas
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://support.symantec.com/en_US/article.HOWTO50304.html"&gt;https://support.symantec.com/en_US/article.HOWTO50304.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;The License Status Manager lets you view licensing information about Workflow and Workflow-related applications (such as ServiceDesk). This tool also lets you run tests on your license to verify that it works properly. The tool does not create or manage licensing. The Symantec Management Platform manages all licensing. The tool communicates with the Symantec Management Platform to determine licensing information.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-generate-business-model</id>
+		<title>Workflow - Plugins - Generate Business Model</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-generate-business-model" />
+		<updated>2017-05-23T00:00:00Z</updated>
+		<content>&lt;h2 id="generate-business-model"&gt;Generate Business Model&lt;/h2&gt;
+&lt;p&gt;The 'Generate Business Model' Plugin allows you to add a custom Model to your Project which allows a process to be documented, this is not going to produce any code but is a great place to inform Developers who you wish the process to be work.&lt;/p&gt;
+&lt;h3 id="component-icon"&gt;Component icon&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/book_blue_new.png" alt="book_blue_new"&gt;&lt;/p&gt;
+&lt;h3 id="author"&gt;Author&lt;/h3&gt;
+&lt;p&gt;LogicBase /&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Symantec.png" alt="Symantec"&gt;&amp;nbsp;Symantec&lt;/p&gt;
+&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
+&lt;p&gt;Plugins | Generate Business Model&lt;/p&gt;
+&lt;p&gt;A form will appear asking for a Model Name:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-GenerateBusinessModel.png" alt="Workflow-Plugins-GenerateBusinessModel"&gt;&lt;/p&gt;
+&lt;p&gt;Give it a name and a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/BusinessModel.png" alt="Business Model"&gt;&amp;nbsp;Business Model will appear in the Project view.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Project-BusinessModel.png" alt="Workflow-Project-BusinessModel"&gt;&lt;/p&gt;
+&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
+&lt;p&gt;If you right click on a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Project.png" alt="Project"&gt;&amp;nbsp;Project and select New Business Model.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Project-RightClick.png" alt="Workflow-Project-RightClick"&gt;&lt;/p&gt;
+&lt;p&gt;You will get a slight different form that allows you to choose where to add the Business Model.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-GenerateBusinessModel-Advanced.png" alt="Workflow-Plugins-GenerateBusinessModel-Advanced"&gt;&lt;/p&gt;
+&lt;h3 id="location"&gt;Location&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LogicBase.Plugins.BusinessModel.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="code"&gt;Code&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
+&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title URL
+&lt;ul&gt;
+&lt;li&gt;Chapter/Page #&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="support"&gt;Support&lt;/h3&gt;
+&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title
+&lt;ul&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;The 'Generate Business Model' Plugin allows you to add a custom Model to your Project which allows a process to be documented, this is not going to produce any code but is a great place to inform Developers who you wish the process to be work.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins</id>
+		<title>Workflow - Plugins</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins" />
+		<updated>2017-05-23T00:00:00Z</updated>
+		<content>&lt;p&gt;Symantec &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3683401-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;Workflow Manager has a number of Plugins available from install.&lt;/p&gt;
+&lt;p&gt;The idea here is to document each plugin, much like the &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=85f6ec73-8a87-43b9-a87f-743497fa0fb0&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Components&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2297705e-59fe-4c33-9c47-feb373aee62c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Reset Cache&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=231dfb42-45bc-4b54-9a0e-25c6968220ad&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;License Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e6e4f5f1-eae4-4148-9f09-13a93f5ef49f&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Generate Business Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0cb4ba5b-6f4b-4fe8-bc05-a16971bd1f5d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Create GUID&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d3e2baf7-bf11-416a-afca-b16d18e291f9&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Encryption Keys Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a0e37fe0-f4b2-404b-ab6c-5f96d1d42310&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Export Translation Strings Plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d35608ae-06e2-4d0d-85bd-8067a60a460d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Component Report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5eb43ff2-f2b0-4202-82be-03c777557763&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Model Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3683401-files_Workflow-Menu-Plugins.png" alt="Workflow-Menu-Plugins.png"&gt;&lt;/p&gt;
+&lt;p&gt;Three others are from within the Workflow Manager&amp;nbsp;home page under the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3683401-files_Folder.png" alt=""&gt;&amp;nbsp;Local folder.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=485fc023-503c-4815-becd-87a070513cb7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;ASDK&lt;/a&gt;&amp;nbsp;-&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3683401-files_Int.png" alt=""&gt;&amp;nbsp;Symantec.Components.Generated7.Altiris.ASDK&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=794770f9-b023-400d-90dc-3e1060738b51&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;ASDKTask&lt;/a&gt;&amp;nbsp;-&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3683401-files_Int.png" alt=""&gt;&amp;nbsp;Symantec.Components.Generated7.Altiris.ASDKTask&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=8aec2e03-20de-4642-a17f-8731397cb561&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Resource&lt;/a&gt;&amp;nbsp;-&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3683401-files_Int.png" alt=""&gt;&amp;nbsp;Symantec.Components.Generated7.Altiris.Resource&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;The Community listed ones are below&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus_0"&gt;&amp;nbsp;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=fcb75f37-a261-47dd-8217-d66552f8fa07&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Protirus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Please comment if you've created any and I'll add them to the list.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
 &lt;hr&gt;
-&lt;p&gt;Below is a list of documentation that would be useful to read.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Symantec™ Workflow 8.0 Component Developer Guide&lt;br&gt;
-&lt;a href="https://support.symantec.com/en_US/article.DOC8700.html"&gt;https://support.symantec.com/en_US/article.DOC8700.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Symantec™ Workflow 7.6 Component Developer Guide&lt;br&gt;
-&lt;a href="https://support.symantec.com/en_US/article.DOC8166.html"&gt;https://support.symantec.com/en_US/article.DOC8166.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Symantec™ Workflow 7.5 SP1 Component Developer Guide&lt;br&gt;
-&lt;a href="https://support.symantec.com/en_US/article.DOC7226.html"&gt;https://support.symantec.com/en_US/article.DOC7226.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Symantec™ Workflow 7.5 Component Developer Guide&lt;br&gt;
-&lt;a href="https://support.symantec.com/en_US/article.DOC5940.html"&gt;https://support.symantec.com/en_US/article.DOC5940.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Workflow Documentation&lt;br&gt;
-&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=001862c9-ba6d-47ab-b44d-f052615e375b&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/workflow-documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Symantec™ Workflow 8.1 User Guide&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.DOC9625.html"&gt;https://support.symantec.com/en_US/article.DOC9625.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Symantec™ Workflow 8.1 Component Developer Guide&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.DOC9626.html"&gt;https://support.symantec.com/en_US/article.DOC9626.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And a set of Articles you can follow&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=016f70af-1c51-438b-bbae-f98e86164f26&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow Plugin Developer Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;Symantec &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3683401-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;Workflow Manager has a number of Plugins available from install.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-reset-cache</id>
+		<title>Workflow - Plugins - Reset Cache</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-reset-cache" />
+		<updated>2017-05-23T00:00:00Z</updated>
+		<content>&lt;h2 id="reset-cache"&gt;Reset Cache&lt;/h2&gt;
+&lt;p&gt;The Reset Cache plugin ...&lt;/p&gt;
+&lt;h3 id="component-icon"&gt;Component icon&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="author"&gt;Author&lt;/h3&gt;
+&lt;p&gt;LogicBase / &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Symantec.png" alt="Symantec"&gt;&amp;nbsp;Symantec&lt;/p&gt;
+&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
+&lt;p&gt;There is no indication that the action has been performed visually in Workflow Manager.&lt;/p&gt;
+&lt;h3 id="section"&gt;&lt;/h3&gt;
+&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;h3 id="location"&gt;Location&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LogicBase.Plugins.ResetCache.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="code"&gt;Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;NotificationBus.GetInstance(Constants.CACHE_BUS_NAME).Notify(Constants.CACHE_RESET_MESSAGE_NAME);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Inputs&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//LogicBase.Core.Utilities - Constants
+Constants.CACHE_BUS_NAME = "DesignerCache";
+Constants.CACHE_RESET_MESSAGE_NAME = "ResetCache";
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;NotificationBus&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//LogicBase.Framework - NotificationBus
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
+&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title URL
+&lt;ul&gt;
+&lt;li&gt;Chapter/Page #&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="support"&gt;Support&lt;/h3&gt;
+&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title
+&lt;ul&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+		<summary>&lt;p&gt;The Reset Cache plugin ...&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-windowsform</id>
+		<title>Workflow - Component - Developer Guide - WindowsForm</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-windowsform" />
+		<updated>2017-05-22T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article I'm going to explain how to add a Form to your Plugin to allow user interaction.&lt;/p&gt;
+&lt;p&gt;Table of Contents&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=016f70af-1c51-438b-bbae-f98e86164f26&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=84ee5f15-df6c-44c7-8acd-e2764f0c4717&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=8aeca32a-9a00-4d91-b618-f6af07957e71&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2e508788-3a83-4a91-8e5b-18b28ca1cc02&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Deploy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5076bfd9-0b26-408c-b957-3bb5fb0b59c2&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Advanced Plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6d54d145-537c-40e6-86ca-b5dec2b1e972&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Inspecting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80b95a29-8a1a-44ce-a616-87cf8e001dbd&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;WindowsForm&lt;/a&gt;&amp;nbsp;(this)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Right Click | Add |&amp;nbsp;Windows Form&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/VS-RC-Add-WindowsForm.png" alt="VS-RC-Add-WindowsForm"&gt;&lt;/p&gt;
+&lt;p&gt;Give it a name "&lt;em&gt;x&lt;/em&gt;Form"&lt;/p&gt;
+&lt;p&gt;Change some Properties&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Text&lt;/td&gt;
+&lt;td&gt;Protirus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TopMost&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MaxamizeBox&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MinimizeBox&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Icon&lt;/td&gt;
+&lt;td&gt;Set to one you've added or the default WF one.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FormBorderSize&lt;/td&gt;
+&lt;td&gt;FixedSingle&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SizeGripStyle&lt;/td&gt;
+&lt;td&gt;Hide&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Add some labels and textboxes.&lt;/p&gt;
+&lt;p&gt;Set the Textboxes&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Enabled&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Add some buttons to copy the values to the clipboard.&lt;/p&gt;
+&lt;p&gt;Add a 'StatusStrip' and add a 'StatusLabel' to the Form, we've already set the properties on the Form.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SizingGrip&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Add an PictureBox to display the Project Type.&lt;/p&gt;
+&lt;p&gt;Final Form&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ProtirusForm.png" alt="ProtirusForm"&gt;&lt;/p&gt;
+&lt;p&gt;We will need a key from the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RegeditS.png" alt="Regedit [S]"&gt;Registry.&lt;/p&gt;
+&lt;p&gt;It's a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/StringValue.png" alt="String Value"&gt;&amp;nbsp;String Value&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Software\Wow6432Node\TransparentLogic.com\LogicBase Shared
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which returns&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Shared\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;We can't hardcode the imagePath, as the install drive might be different, so use some code to get a RegKey instead.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;We need to add the following folders to the path.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\logicbaselib\ProjectTypes\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To get the image&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/WebForm_48.png" alt="WebForm_48"&gt;&lt;/p&gt;
+&lt;p&gt;Full path&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;E:\Program Files\Symantec\Workflow\Shared\logicbaselib\ProjectTypes\WebForm_48.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Note&lt;/th&gt;
+&lt;th&gt;There are some interesting files in this folder, if you look in the XML you will see the 'OldProjectType' name listed.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;Monitoring.xml
+...
+&amp;lt;OldProjectType&amp;gt;Metronome&amp;lt;/OldProjectType&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As we are displaying information about the Project in the Form we need to pass the Project as an input.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public ProtirusForm(AbstractOrchestrationProject project)
+{
+    InitializeComponent();
+    _project = project;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Code&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;using System.Windows.Forms;
+using LogicBase.Core;
+
+private AbstractOrchestrationProject _project;
+private string imagePath = @"E:\Program Files\Symantec\Workflow\Shared\logicbaselib\ProjectTypes\";
+
+public ProtirusForm(AbstractOrchestrationProject project)
+{
+    InitializeComponent();
+    _project = project;
+}
+
+private void ProtirusForm_Load(object sender, EventArgs e)
+{
+    string filePath = string.Format(@"{0}{1}", imagePath, _project.ProjectSetupData.ProjectType.ImageFileName);
+    pbProjectImage.Image = Image.FromFile(filePath);
+    txtProjectName.Text = _project.MainFile.FullName;
+    txtProjectDirectory.Text = _project.MainFile.DirectoryName;
+}
+
+#region &amp;lt;Button Clicks&amp;gt;
+
+private void btnCopyProjectName_Click(object sender, EventArgs e)
+{
+    Clipboard.SetText(txtProjectName.Text);
+    //Clipboard.SetDataObject(txtProjectName.Text, true);
+    toolStripStatusLabel1.Text = @"Copied 'Project Name' to Clipboard.";
+}
+
+private void btnCopyProjectDirectory_Click(object sender, EventArgs e)
+{
+    Clipboard.SetText(txtProjectDirectory.Text);
+    //Clipboard.SetDataObject(txtProjectDirectory.Text, true);
+    toolStripStatusLabel1.Text = @"Copied 'Project Directory' to Clipboard.";
+}
+
+#endregion &amp;lt;Button Clicks&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To show the Form from the Plugins menu update the &lt;em&gt;PerformAction&lt;/em&gt; method:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public void PerformAction(AbstractOrchestrationProject project)
+{
+    ProtirusForm pF = new ProtirusForm(project);
+    pF.Show();
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;In this set of Articles I'm going to explain how to create a number of different custom components for use within &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3608101-files_Workflow.png" alt="Workflow.png"&gt;&amp;nbsp;Workflow.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;In this Article I'm going to explain how to add a Form to your Plugin to allow user interaction.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-deploy</id>
-		<title>Workflow - Component - Developer Guide - Deploy</title>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugin-developer-guide-inspecting</id>
+		<title>Workflow - Plugin - Developer Guide - Inspecting</title>
 		<author>
 			<name>AlexHedley</name>
 		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-deploy" />
-		<updated>2016-11-09T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article&amp;nbsp;I'm going to explain how to deploy the component to a workflow server.&lt;/p&gt;
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugin-developer-guide-inspecting" />
+		<updated>2017-05-19T00:00:00Z</updated>
+		<content>&lt;p&gt;In this Article&amp;nbsp;I'm going to explain how to inspect other Plugins to learn how to implement items that aren't in the Developer Guide PDF.&lt;/p&gt;
 &lt;p&gt;Table of Contents&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2f07f920-0cbd-4be4-83a8-c6180eee3092&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;List&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=17aa2b9a-9092-40d0-afab-a6d8316de97d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Component&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70a9fde5-0d87-4b9d-a3be-0907567ffc00&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Deploy&lt;/a&gt;&amp;nbsp;(this)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80437c69-ccc3-47e6-a850-9cf3f301b340&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Help File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=63b72a9a-53b8-4d4b-bce3-5f0732b134d5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Logging&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Inputs
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=016f70af-1c51-438b-bbae-f98e86164f26&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=84ee5f15-df6c-44c7-8acd-e2764f0c4717&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=8aeca32a-9a00-4d91-b618-f6af07957e71&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2e508788-3a83-4a91-8e5b-18b28ca1cc02&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Deploy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5076bfd9-0b26-408c-b957-3bb5fb0b59c2&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Advanced Plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6d54d145-537c-40e6-86ca-b5dec2b1e972&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Inspecting&lt;/a&gt;&amp;nbsp;(this)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80b95a29-8a1a-44ce-a616-87cf8e001dbd&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;WindowsForm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are a number of decompilers available&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=74c56ef7-1119-40fe-9d5f-3c7a1d808d4c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Checkbox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=267159ac-b8e7-45b4-abe4-f85d78e30783&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Dropdown / Combo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/JustDecompile.png" alt="JustDecompile"&gt;&amp;nbsp;&lt;a href="http://www.telerik.com/products/decompiler.aspx"&gt;JustDecompile&lt;/a&gt;&amp;nbsp;from&amp;nbsp;&lt;a href="http://www.telerik.com/"&gt;Telerik&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/dotPeekS.png" alt="dotPeek (S)"&gt;&amp;nbsp;&lt;a href="https://www.jetbrains.com/decompiler/"&gt;dotPeek&lt;/a&gt;&amp;nbsp;from&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/JetBrainsS.png" alt="JetBrains (S)"&gt;&amp;nbsp;&lt;a href="https://www.jetbrains.com/"&gt;JetBrains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ilspy.net/"&gt;ILSpy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2c3b3a6f-01d7-4157-a143-ba30c9edc930&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Inspecting&lt;/a&gt;&amp;nbsp;other Components&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=cf54de06-be56-46ff-b937-148efa57eaec&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating&amp;nbsp;Globals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=4cfc07c5-404e-49b3-81b6-520d4ea43d5c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating Project Properties&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f3cf0097-06e7-42f3-a747-d0dff319c1e5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with SQL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=26368883-708b-4432-999b-7064f2f25794&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with a Web Service&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In the&amp;nbsp;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Component&lt;/a&gt; I suggested adding a Post Build event of&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;xcopy "$(ProjectDir)$(OutDir)$(TargetName)$(TargetExt)" "\\WORKFLOWSERVER\e$\Program Files\Symantec\Workflow\Shared\customlib\" /Y
+&lt;p&gt;We need some Plugins to look at, grab them from the folder you deploy yours too.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There are a number to choose from, firstly we will look at &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0cb4ba5b-6f4b-4fe8-bc05-a16971bd1f5d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Create GUID&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;LogicBase.Plugins.CreateGUID.dll
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Replace WORKFLOWSERVER with the name of the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;WF Server and e$ to your install drive.&lt;/p&gt;
-&lt;p&gt;Another option, which would be better is to copy the file to another folder on the server then run the following script to copy it to &lt;strong&gt;customlib&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;If you've ever packaged up a project and ticked include custom libs there is a install.bat that is created along with the project.&lt;/p&gt;
-&lt;p&gt;Just update the 'LBPath' to the correct drive.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@echo off
-if !%1 == ! goto SetDefaultLBPath
-set LBPath=%~1
-goto CheckLBPath
-:SetDefaultLBPath
-set LBPath=E:\Program Files\Symantec\Workflow
-:CheckLBPath
-if not exist "%LBPath%" (
-echo The directory "%LBPath%" does not exist!
-echo Please provide the directory where LogicBase is installed as parameter 1.
-echo Put in quotes if it is a long path.
-PAUSE
-goto :eof
-)
-if not exist "%LBPath%\Designer\bin\LBUtil.exe" (
-echo The LogicBase Command Line Utility does not exist by path '%LBPath%\Designer\bin\LBUtil.exe'!
-echo Please provide the directory where LogicBase is installed correctly as parameter 1.
-echo Put in quotes if it is a long path.
-PAUSE
-goto :eof
-)
-@echo Moving files into platform...
-"%LBPath%\Designer\bin\LBUtil.exe" -InstallCustomLibs -warn
-PAUSE
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Add it to the same folder as your dll and run.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/InstallLibsbatoutput.png" alt="InstallLibsbat output"&gt;&lt;/p&gt;
-&lt;p&gt;Output&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Moving files into platform...
-LogicBase Studio Command Line Utility v Version 7.6.3 build number 4383
-
-Executing general actions.
-Installing libraries...
-Installing library Protirus.Components.Concat.dll
-1 libraries installed.
-Done.
-Press any key to continue . . .
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now the DLL should be in the CustomLib folder as the updated version.&lt;/p&gt;
-&lt;p&gt;Create a new Project, add the DLL as a Library and add the Component to your flow.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I'm going to explain how to deploy the component to a workflow server.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-setup</id>
-		<title>Workflow - Component - Developer Guide - Setup</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-setup" />
-		<updated>2016-11-09T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article&amp;nbsp;I'm going to explain how setup your environment for creating a Component.&lt;/p&gt;
-&lt;p&gt;Table of Contents&lt;/p&gt;
+&lt;p&gt;Open&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2f07f920-0cbd-4be4-83a8-c6180eee3092&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;List&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=17aa2b9a-9092-40d0-afab-a6d8316de97d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Setup&lt;/a&gt;&amp;nbsp;(this)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Component&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70a9fde5-0d87-4b9d-a3be-0907567ffc00&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Deploy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80437c69-ccc3-47e6-a850-9cf3f301b340&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Help File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=63b72a9a-53b8-4d4b-bce3-5f0732b134d5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Logging&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Inputs
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=74c56ef7-1119-40fe-9d5f-3c7a1d808d4c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Checkbox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=267159ac-b8e7-45b4-abe4-f85d78e30783&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Dropdown / Combo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;GUIDPlugIn.cs&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2c3b3a6f-01d7-4157-a143-ba30c9edc930&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Inspecting&lt;/a&gt;&amp;nbsp;other Components&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=cf54de06-be56-46ff-b937-148efa57eaec&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating&amp;nbsp;Globals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=4cfc07c5-404e-49b3-81b6-520d4ea43d5c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating Project Properties&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f3cf0097-06e7-42f3-a747-d0dff319c1e5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with SQL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=26368883-708b-4432-999b-7064f2f25794&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with a Web Service&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You will need &lt;a href="https://www.visualstudio.com/"&gt;Visual Studio&lt;/a&gt;, download a version if you haven't already.&lt;/p&gt;
-&lt;p&gt;A &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow Server to get the necessary DLLs.&lt;/p&gt;
-&lt;p&gt;Go to this server.&lt;/p&gt;
-&lt;p&gt;We need to get the necessary DLLs from the GAC (Global Assembly Cache)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;C:\Windows\Microsoft.NET\assembly\GAC_MSIL\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This may not show a list of DLLs as the viewer is configured using a RegKey.&lt;/p&gt;
-&lt;p&gt;*Warning modifying the Registry can be dangerous, make sure you know what you're doing before you edit these. Take a copy first as a backup.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Launch RegEdit.&lt;/li&gt;
-&lt;li&gt;Navigate to &lt;strong&gt;HKLM\Software\Microsoft\Fusion&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Add a &lt;strong&gt;DWORD&lt;/strong&gt; called &lt;strong&gt;DisableCacheViewer&lt;/strong&gt; and set the value to &lt;strong&gt;1&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Now search for 3 Libraries:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;LogicBase.Components.Default.dll&lt;/li&gt;
-&lt;li&gt;LogicBase.Core.dll&lt;/li&gt;
-&lt;li&gt;LogicBase.Framework.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now we have the libs, we can create the VS project.&lt;/p&gt;
-&lt;p&gt;Start by creating a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Project-ClassLibrary.png" alt="Project - Class Library"&gt;&amp;nbsp;Class Library.&lt;/p&gt;
-&lt;p&gt;In the Project Folder add a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Folder 'External Dependencies' (In Explorer)&lt;/p&gt;
-&lt;p&gt;Add the 3 Symantec libs&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;LogicBase.Components.Default.dll&lt;/li&gt;
-&lt;li&gt;LogicBase.Core.dll&lt;/li&gt;
-&lt;li&gt;LogicBase.Framework.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Make sure these are the correct versions from the correct WF box i.e. 7.5 / 7.6 / 8.0.&lt;/p&gt;
-&lt;p&gt;Now in the VS Project&lt;/p&gt;
-&lt;p&gt;Right Click -&amp;gt; Add -&amp;gt; New Solution Folder&lt;/p&gt;
-&lt;p&gt;Add Existing Item -&amp;gt; Browse to the 3 DLLs and add them&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/References.png" alt="References"&gt;&amp;nbsp;References -&amp;gt; Right Click -&amp;gt; Add Reference&lt;/p&gt;
-&lt;p&gt;Expand Browse then right click Browse button&lt;/p&gt;
-&lt;p&gt;Go to this Folder and add the 3 DLLs again.&lt;/p&gt;
-&lt;p&gt;Update the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Properties.png" alt="Properties"&gt;&amp;nbsp;Properties, double click to open the window.&lt;/p&gt;
-&lt;p&gt;Click on Assembly Information,&lt;/p&gt;
-&lt;p&gt;Add the Description and Company info - this is used in the Component within Workflow.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Assembly_Information.png" alt="Assembly_Information"&gt;&lt;/p&gt;
-&lt;p&gt;Check the Target Framework for .NET in Properties.&lt;/p&gt;
-&lt;p&gt;Now back to the .cs file that was created.&lt;/p&gt;
-&lt;p&gt;Rename this to the name of your component - i.e. &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/cs.png" alt="cs.png"&gt;&amp;nbsp;Concat.cs&lt;/p&gt;
-&lt;p&gt;Add the &lt;em&gt;using&lt;/em&gt; for the new&amp;nbsp;namespaces&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;using LogicBase.Core;
-using LogicBase.Core.Data;
-using LogicBase.Core.Data.DataTypes;
-using LogicBase.Core.PropertySheets;
-using LogicBase.Framework;
-
-using LogicBase.Core.Data.TypeEditors;
-using System.ComponentModel;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We also need to add a couple of&amp;nbsp;.NET References for&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;System.Drawing
-
-System.Drawing.Design
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then add a using statement&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;using System.Drawing.Design;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Next add an Image to the project (Protirus.Workflow.Protirus.png), this will be the Component image,&lt;/p&gt;
-&lt;p&gt;Change the Build Action to &lt;strong&gt;Embedded Resource&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.Workflow.Protirus.png" alt="Protirus.Workflow.Protirus"&gt;&lt;/p&gt;
-&lt;p&gt;You could use images from WF:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Images\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;general&lt;/li&gt;
-&lt;li&gt;processmanager&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Next we want to add some metadata to the project.&lt;/p&gt;
-&lt;p&gt;This can be done between the &lt;em&gt;namespace&lt;/em&gt; and the &lt;em&gt;public class&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/// &amp;lt;summary&amp;gt;
-///     Custom component for joining two strings.
-/// &amp;lt;/summary&amp;gt;
-/// 
-[Serializable,
-ComponentCategory("Protirus"),
-ComponentImage("Protirus.Workflow.Protirus.png"),
-ComponentName("Protirus Concat"),
-ComponentDescription("This component joins two Strings."),
-ComponentHelp("http://www.protirus.com/components/"),
-ComponentUsage("Requires two strings."),
-ComponentExample("String a = 'Hello' String b = 'World', this will return 'Hello World', if Add Space is True."),
-ComponentPublisher("Protirus", "www.protirus.com")]
-[PropertyPageOrder("General", "Configuration", "Settings")]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Not all properties are used in the component and will need to&amp;nbsp;update&amp;nbsp;in the corresponding &lt;em&gt;.libconfig&lt;/em&gt; file.&lt;/p&gt;
-&lt;p&gt;These are located:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Help\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I'll explain how to create/update these in a later tutorial.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80437c69-ccc3-47e6-a850-9cf3f301b340&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Help File&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now we need to&amp;nbsp;conform to some protocols for the components to be useable in Workflow.&lt;/p&gt;
-&lt;p&gt;Extend the Class&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public class Concat : AbstractSinglePathProcessComponent, ISinglePathDataAdded
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now implement the required methods.&lt;/p&gt;
-&lt;p&gt;First "&lt;strong&gt;AbstractSinglePathProcessComponent&lt;/strong&gt;"&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public override void Run(IData data)
+&lt;p&gt;The main difference here is in the &lt;em&gt;PerformAction&lt;/em&gt; method.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public void PerformAction(AbstractOrchestrationProject project)
 {
-}
-
-public override void ReadFromStream(ObjectReadStream info)
-{
-}
-
-public override void WriteToStream(ObjectWriteStream info)
-{
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And the "&lt;strong&gt;ISinglePathDataAdded&lt;/strong&gt;"&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public DataDefinition[] GetAddedData()
-{
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now we have all the necessary method stubs but nothing actually happens, onto the next Article&amp;nbsp;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Component&lt;/a&gt;&amp;nbsp;to create a working item.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I'm going to explain how setup your environment for creating a Component.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-help-file</id>
-		<title>Workflow - Component - Developer Guide - Help File</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-help-file" />
-		<updated>2016-11-09T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article&amp;nbsp;I'm going to explain how to create an accompanying Help file with added information to display to the User when they open and configure the component.&lt;/p&gt;
-&lt;p&gt;Table of Contents&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2f07f920-0cbd-4be4-83a8-c6180eee3092&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;​&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2f07f920-0cbd-4be4-83a8-c6180eee3092&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;List&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=17aa2b9a-9092-40d0-afab-a6d8316de97d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Component&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70a9fde5-0d87-4b9d-a3be-0907567ffc00&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Deploy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80437c69-ccc3-47e6-a850-9cf3f301b340&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Help File&lt;/a&gt;&amp;nbsp;(this)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=63b72a9a-53b8-4d4b-bce3-5f0732b134d5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Logging&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Inputs
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=74c56ef7-1119-40fe-9d5f-3c7a1d808d4c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Checkbox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=267159ac-b8e7-45b4-abe4-f85d78e30783&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Dropdown / Combo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2c3b3a6f-01d7-4157-a143-ba30c9edc930&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Inspecting&lt;/a&gt;&amp;nbsp;other Components&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=cf54de06-be56-46ff-b937-148efa57eaec&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating&amp;nbsp;Globals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=4cfc07c5-404e-49b3-81b6-520d4ea43d5c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating Project Properties&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f3cf0097-06e7-42f3-a747-d0dff319c1e5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with SQL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=26368883-708b-4432-999b-7064f2f25794&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with a Web Service&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;These are located:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Help\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;When creating a Component using the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int"&gt;&amp;nbsp;Integration Project type when you Compile and close the Help Editor loads and allows you to make changes.&lt;/p&gt;
-&lt;p&gt;If you have created a custom component this file won't exist.&lt;/p&gt;
-&lt;p&gt;The File name is usally the DLL name with the ".libconfig" file extension.&lt;/p&gt;
-&lt;p&gt;To create a new Help file for a custom dll open the Help Editor&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\bin\WorkflowHelpEditor.exe
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Select &lt;strong&gt;File&lt;/strong&gt; | &lt;strong&gt;New&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-FileNew.png" alt="Help Editor - File New"&gt;&lt;/p&gt;
-&lt;p&gt;Select &lt;strong&gt;Browse&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-NewFile.png" alt="Help Editor - New File"&gt;&lt;/p&gt;
-&lt;p&gt;Find the dll in the customlib folder&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-New+File-FromAssembly.png" alt="Help Editor - New File - From Assembly"&gt;&lt;/p&gt;
-&lt;p&gt;Now we have the Component to work with.&lt;/p&gt;
-&lt;p&gt;If we compare what data we have to what Attributes&amp;nbsp;we provided in code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Serializable,
-ComponentCategory("Protirus"),
-ComponentImage("Protirus.Workflow.Protirus.png"),
-ComponentName("Protirus Concat"),
-ComponentDescription("This component joins two Strings."),
-ComponentHelp("http://www.protirus.com/components/"),
-ComponentUsage("Requires two strings."),
-ComponentExample("String a = 'Hello' String b = 'World', this will return 'Hello World', if Add Space is True."),
-ComponentPublisher("Protirus", "www.protirus.com")]
-[PropertyPageOrder("General", "Configuration", "Settings")]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-Protirus.Components.ConcatAnno.png" alt="Help Editor - Protirus.Components.Concat (Anno)"&gt;&lt;/p&gt;
-&lt;p&gt;If you click on &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Property2.png" alt="Property (2)"&gt;&amp;nbsp;Properties we can then add extra information and group them by tabs.&lt;/p&gt;
-&lt;p&gt;Data annotations in code are now deprecated so the help file is the only way to add it and show in the Help file within Workflow.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-Protirus.Components.Concat-Properties.png" alt="Help Editor - Protirus.Components.Concat - Properties"&gt;&lt;/p&gt;
-&lt;p&gt;As we see the Component Properties don't have any information and aren't grouped by tabs.&lt;/p&gt;
-&lt;p&gt;To add the Published add the Company name in the Assembly Info of the component in Visual Studio.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.ConcatHelpAnno.png" alt="Protirus.Concat Help (Anno)"&gt;&lt;/p&gt;
-&lt;p&gt;I annotate my variables in code, these can then be copied to help&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[VariableType(typeof(string), false), 
-  PropertyIndex(3), 
-  DisplayName("String 1"), 
-  Category("Configuration"), 
-  ComponentDescription("The first String to be merged")]      
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You can create new Categories or groupings within a tab,&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-Protirus.Components.Concat-Properties-NewCategory.png" alt="Help Editor - Protirus.Components.Concat - Properties - New Category.png"&gt;&lt;/p&gt;
-&lt;p&gt;Give it a name&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-Protirus.Components.Concat+-Properties-NewCategory-Name.png" alt="Help Editor - Protirus.Components.Concat - Properties - New Category - Name"&gt;&lt;/p&gt;
-&lt;p&gt;Drag the Properties into the Category, then add your information.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-Protirus.Components.Concat-Properties-Category-Configuration.png" alt="Help Editor - Protirus.Components.Concat - Properties - Category - Configuration.png"&gt;&lt;/p&gt;
-&lt;p&gt;Save this file.&lt;/p&gt;
-&lt;p&gt;Reload your Workflow.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.ConcatGeneralUpdated.png" alt="Protirus.Concat General (Updated)"&gt;&lt;/p&gt;
-&lt;p&gt;You may notice the Icon has changed back to the default.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/article-3610721-files_cubes.png" alt="cubes.png"&gt;&lt;/p&gt;
-&lt;p&gt;Back to the Help file.&lt;/p&gt;
-&lt;p&gt;Click on the Component, then click &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Icon.png" alt="Icon"&gt;&amp;nbsp;Icon&lt;/p&gt;
-&lt;p&gt;Click &lt;strong&gt;Add&lt;/strong&gt; then search for your image, choose and click OK.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-Protirus.Components.Concat-Icon.png" alt="Help Editor - Protirus.Components.Concat - Icon"&gt;&lt;/p&gt;
-&lt;p&gt;Now you might want Tabs aswell as grouping items in the General tab.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HelpEditor-Protirus.Components.Concat-Properties-NewPage.png" alt="Help Editor - Protirus.Components.Concat - Properties - New Page"&gt;&lt;/p&gt;
-&lt;p&gt;Drag the Category into the new tab&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Help+Editor-Protirus.Components.Concat-Properties-Page.png" alt="Help Editor - Protirus.Components.Concat - Properties - Page"&gt;&lt;/p&gt;
-&lt;p&gt;Now save and reload the WF.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.ConcatConfigurationFilledIn.png" alt="Protirus.Concat Configuration (Filled In)"&gt;&lt;/p&gt;
-&lt;p&gt;If we click the Help ?&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.ConcatHelpUpdated.png" alt="Protirus.Concat Help (Updated)"&gt;&lt;/p&gt;
-&lt;p&gt;If we'd filled in the Help and Example etc they would show here too.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I'm going to explain how to create an accompanying Help file with added information to display to the User when they open and configure the component.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-simple-component</id>
-		<title>Workflow - Component - Developer Guide - Simple Component</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-component-developer-guide-simple-component" />
-		<updated>2016-11-09T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article&amp;nbsp;I'm going to explain how to create a simple component to Concatenate two strings.&lt;/p&gt;
-&lt;p&gt;Table of Contents&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2f07f920-0cbd-4be4-83a8-c6180eee3092&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;​&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2f07f920-0cbd-4be4-83a8-c6180eee3092&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;List&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=17aa2b9a-9092-40d0-afab-a6d8316de97d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=86d55504-8f8e-41c7-9eff-ad882326a8f7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Simple Component&lt;/a&gt;&amp;nbsp;(this)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70a9fde5-0d87-4b9d-a3be-0907567ffc00&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Deploy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80437c69-ccc3-47e6-a850-9cf3f301b340&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Help File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=63b72a9a-53b8-4d4b-bce3-5f0732b134d5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Logging&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Inputs
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=74c56ef7-1119-40fe-9d5f-3c7a1d808d4c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Checkbox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=267159ac-b8e7-45b4-abe4-f85d78e30783&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Dropdown / Combo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2c3b3a6f-01d7-4157-a143-ba30c9edc930&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Inspecting&lt;/a&gt;&amp;nbsp;other Components&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=cf54de06-be56-46ff-b937-148efa57eaec&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating&amp;nbsp;Globals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=4cfc07c5-404e-49b3-81b6-520d4ea43d5c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Creating Project Properties&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f3cf0097-06e7-42f3-a747-d0dff319c1e5&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with SQL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=26368883-708b-4432-999b-7064f2f25794&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Working with a Web Service&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you haven't already setup the basic project using the &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=17aa2b9a-9092-40d0-afab-a6d8316de97d&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;previous&lt;/a&gt; article.&lt;/p&gt;
-&lt;p&gt;As we have the bare bones configured we now need to start writing some code.&lt;/p&gt;
-&lt;p&gt;The goal of this component to to concatenate (+) two strings so we need an output variable of the result.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;private string _variableName;
-
-[Editor(typeof(VariableTypeEditor), typeof(UITypeEditor))]
-[VariableType(typeof(string), false, true)]
-[StringNotEmptyRule]
-public string VariableName {
-    get {
-        return this._variableName;
-    }
-    set {
-        this._variableName = value;
-        this.IsValid(true);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let's break this down into smaller chunks and explain what each one is doing.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Editor(typeof(VariableTypeEditor), typeof(UITypeEditor))]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We need to tell Workflow how are are going to access the variable.&lt;/p&gt;
-&lt;p&gt;We want a picker to either choose a string in the process to overwrite, or create a new one.&lt;/p&gt;
-&lt;p&gt;Next define the Type of the object, in this case a&amp;nbsp;&lt;em&gt;string&lt;/em&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[VariableType(typeof(string), false, true)]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We wish for the value not to be empty so add the following attribute:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[StringNotEmptyRule]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now add the usual getter and setter methods.&lt;/p&gt;
-&lt;p&gt;That's the output, now let's configure the input, we need two more strings to append together:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;private VariableOrValueDataType _string1 = new VariableOrValueDataType(typeof(string));
-
-[VariableType(typeof(string), false), 
-  PropertyIndex(3), 
-  DisplayName("String 1"), 
-  Category("Configuration"), 
-  ComponentDescription("The first String to be merged")]
-public VariableOrValueDataType String1 {
-    get {
-        return _string1 ?? (_string1 = new VariableOrValueDataType(typeof(string)));
-    }
-    set {
-        _string1 = value;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This way has a couple of differences, with added properties that are used in the component help.&lt;/p&gt;
-&lt;p&gt;We have&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DisplayName&lt;/li&gt;
-&lt;li&gt;Category&lt;/li&gt;
-&lt;li&gt;ComponentDescription&lt;/li&gt;
-&lt;li&gt;PropertyIndex&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Repeat this for&amp;nbsp;&lt;em&gt;String2&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;We now have all the variable we require, let's use them in&amp;nbsp;the component.&lt;/p&gt;
-&lt;p&gt;Let's look at the&amp;nbsp;&lt;em&gt;ReadFromStream&lt;/em&gt;&amp;nbsp;first.&lt;/p&gt;
-&lt;p&gt;info is a variable you name, so keep it consistent throughout your components.&lt;/p&gt;
-&lt;p&gt;We want to grab these values from whatever the User has set in WF.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public override void ReadFromStream(ObjectReadStream info) {
-    base.ReadFromStream(info);
-    _variableName = info.GetString("_variableName");
-    _string1 = (VariableOrValueDataType)info.GetValue("_string1", typeof(VariableOrValueDataType));
-    _string2 = (VariableOrValueDataType)info.GetValue("_string2", typeof(VariableOrValueDataType));
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now&amp;nbsp;&lt;em&gt;WriteFromStream&lt;/em&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public override void WriteToStream(ObjectWriteStream info) {
-    base.WriteToStream(info);
-    info.AddValue("_variableName", _variableName);
-    info.AddValue("_string1", _string1);
-    info.AddValue("_string2", _string2);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To use this data within WF add need to add the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public DataDefinition[] GetAddedData() {
-    if (string.IsNullOrEmpty(this.VariableName))
-        return (DataDefinition[])null;
-    return new DataDefinition[1]
+    GUIDForm gUIDForm = new GUIDForm();
+    if (gUIDForm.ShowDialog() == DialogResult.OK)
     {
-        new DataDefinition(this.VariableName, typeof (string), false)
-    };
+        string guid = gUIDForm.Guid;
+        ActionType selectedAction = gUIDForm.SelectedAction;
+        if (selectedAction == ActionType.CreateAsDataComponent)
+        {
+            IComponentModel primaryComponentModel = project.GetPrimaryComponentModel();
+            InsertDataComponent insertDataComponent = new InsertDataComponent();
+            insertDataComponent.set_DataType(typeof(string));
+            insertDataComponent.set_IsArray(false);
+            insertDataComponent.set_Value(guid);
+            insertDataComponent.Location = new PointF(20f, 20f);
+            primaryComponentModel.AddComponent(insertDataComponent);
+            return;
+        }
+        if (selectedAction == ActionType.CopyToClipboard)
+        {
+            Clipboard.SetDataObject(guid, true);
+        }
+    }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This is needed for when you right click in the process and "Browse Data".&lt;/p&gt;
-&lt;p&gt;Now if you want to add some nice to have warning messages the following method is required,&amp;nbsp;&lt;em&gt;RunValidation&lt;/em&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// Show an icon telling you need to add data
-protected override InvalidReason[] RunValidation() {
-    var invalid = new InvalidReasonsList();
-
-    if (!String1.IsFilledIn()) invalid.Add(new InvalidReason((IValid)this, "String1 is Required.", BreakLevel.Fatal, new[] { "String1" }));
-    if (!String2.IsFilledIn()) invalid.Add(new InvalidReason((IValid)this, "String2 is Required.", BreakLevel.Fatal, new[] { "String2" }));
-
-    return invalid.GetInvalidReasons();
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Different Levels will show different symbols in WF.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;BreakLevel&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Warning (0)&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Warning.png" alt="Warning"&gt;&lt;/li&gt;
-&lt;li&gt;Fatal (1)&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Fatal.png" alt="Fatal"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The message will be shown beneath the component variable.&lt;/p&gt;
-&lt;p&gt;Finally with all this configured we can get the actual Run method that performs the action we wish the component to do.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public override void Run(IData data)
-{
-    data[_variableName] = _string1.GetValue&amp;lt;String&amp;gt;(data) + " " + _string2.GetValue&amp;lt;String&amp;gt;(data);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The&amp;nbsp;&lt;em&gt;.GetValue&amp;lt;&amp;gt;&lt;/em&gt;&amp;nbsp;can retrieve a number of Types depending on what you declared your variables as.&lt;/p&gt;
-&lt;p&gt;Build your component.&lt;/p&gt;
-&lt;p&gt;Check the output path&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;E:\WF\Protirus.Components.Concat\Protirus.Components.Concat\bin\Debug\Protirus.Components.Concat.dll
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Copy the dll and add it to a folder on your WF Server.&lt;/p&gt;
-&lt;p&gt;You could create a Build Event that copies the output to the WF Server.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/VS-BuildEvents.png" alt="VS - Build Events"&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;xcopy "$(ProjectDir)$(OutDir)$(TargetName)$(TargetExt)" "\\WORKFLOWSERVER\e$\Program Files\Symantec\Workflow\Shared\customlib\" /Y
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This can run into problems once the WF is published as the DLL is in use so the /Y flag can't overwrite the file.&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=70a9fde5-0d87-4b9d-a3be-0907567ffc00&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Deploy&lt;/a&gt; guide next for other methods.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I'm going to explain how to create a simple component to Concatenate two strings.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-asdk-web-service-update-resource-target</id>
-		<title>SMP - ASDK - Web Service - Update Resource Target</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-asdk-web-service-update-resource-target" />
-		<updated>2016-10-12T00:00:00Z</updated>
-		<content>&lt;p&gt;I raised an &lt;a href="https://www.symantec.com/connect/endpoint-management/ideas"&gt;Idea&lt;/a&gt; on connect - &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=ecf4247c-6459-4fee-ae38-8528124c4c00&amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;tab=librarydocuments"&gt;SMP - ASDK - Web Service - InvalidateTargetMembership&lt;/a&gt; asking for a way to programatically update a Target in an efficient way.&lt;/p&gt;
-&lt;p&gt;There are a number of ways to do this either via SQL or using NScript but none are great.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;exec spResourceTargetDeltaUpdate &amp;#64;resourceTargetGuid='target guid goes here', &amp;#64;flush=1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you search the forums for &lt;strong&gt;spResourceTargetDeltaUpdate&lt;/strong&gt; there are a number of times it's mentioned.&lt;/p&gt;
-&lt;p&gt;In &lt;a href="https://community.broadcom.com/groups/viewthread?MessageKey=c0e4f916-b302-4f6b-add0-b1f6e4b91ecf&amp;amp;CommunityKey=36a652c6-c7e1-4701-af0f-b978f701f102&amp;amp;tab=digestviewer#bmc0e4f916-b302-4f6b-add0-b1f6e4b91ecf"&gt;SMP 8.0 HF4&lt;/a&gt; there were 4 new Web Services added to the Resource Model&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;URL: http://localhost/altiris/nswebservice/resourcemodel.asmx
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Methods:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;UpdateResourceTargetMembership&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;targetGuid (guid)&lt;/li&gt;
-&lt;li&gt;fullUpdate (bool)&lt;/li&gt;
-&lt;li&gt;updateDependencies (bool)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;UpdateResourceTargets&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;targetGuids (string)&lt;/li&gt;
-&lt;li&gt;fullUpdate (bool)&lt;/li&gt;
-&lt;li&gt;updateDependencies (bool)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;UpdateResourceTargetsAsync&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;targetGuids (string)&lt;/li&gt;
-&lt;li&gt;fullUpdate (bool)&lt;/li&gt;
-&lt;li&gt;updateDependencies (bool)&lt;/li&gt;
-&lt;li&gt;urgent (bool)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;UpdateResourceTargetsMembership&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;targetGuid (guids [])&lt;/li&gt;
-&lt;li&gt;fullUpdate (bool)&lt;/li&gt;
-&lt;li&gt;updateDependencies (bool)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;An update was posted on the Idea from &amp;#64;&lt;a href="https://www.symantec.com/connect/user/vladimir-zelenjak"&gt;Vladimir&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;With several months passed since last update here, I can now officially confirm that new ASDK method: ScopingManagementLib.InvalidateTargetMembership(Guid targetGuid, bool invalidateDependencies) added recently and will be available starting 8.1 release.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;So take a look at the new method in 8.1&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;InvalidateTargetMembership
-&lt;ul&gt;
-&lt;li&gt;targetGuid (Guid )&lt;/li&gt;
-&lt;li&gt;invalidateDependencies (bool)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;I raised an &lt;a href="https://www.symantec.com/connect/endpoint-management/ideas"&gt;Idea&lt;/a&gt; on connect - &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=ecf4247c-6459-4fee-ae38-8528124c4c00&amp;amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;amp;tab=librarydocuments"&gt;SMP - ASDK - Web Service - InvalidateTargetMembership&lt;/a&gt; asking for a way to programatically update a Target in an efficient way.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-list-maintenance</id>
-		<title>Workflow - List Maintenance</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-list-maintenance" />
-		<updated>2016-08-19T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article I will explain how to maintain a list using Workflow components.&lt;/p&gt;
-&lt;p&gt;In this example I have a Resource in the SMP of Company. This has a Currency Resource associated to it.&lt;/p&gt;
-&lt;p&gt;Instead of allowing the User to control this in the SMP I've written a Workflow to do the maintenance.&lt;/p&gt;
-&lt;p&gt;You retrieve the list from SQL (using the &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2fe8b3ce-9df8-402a-a899-c5978fd16142&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;SQL Generator&lt;/a&gt;)&amp;nbsp;then you wish to update it to reflect any changes, additions and deletions.&lt;/p&gt;
-&lt;p&gt;The user is able to add/remove values via a Web Form.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ListMaintenance-CurrencyWebForm.png" alt="List Maintenance - Currency Web Form"&gt;&lt;/p&gt;
-&lt;p&gt;There might be lots of operations you need to perform with the chosen items so you need full flexibility of the items that have been modified.&lt;/p&gt;
-&lt;p&gt;The form shows this list in a grid, you allow the user to add/remove items,&lt;/p&gt;
-&lt;p&gt;In this case we Originally have A, B and C in the list, we remove A and add D.&lt;/p&gt;
+&lt;p&gt;In Workflow Manager click on the Menu -&amp;nbsp;Plugins | Create GUID&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Menu-Plugins-CreateGUID.png" alt="Workflow - Menu - Plugins - Create GUID"&gt;&lt;/p&gt;
+&lt;p&gt;This opens a Form and depending on the chosen action it does either of two things.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Original&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;BUG: This states "current model" but actually puts it into the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Model1.png" alt="Model 1"&gt;&amp;nbsp;Primary model.&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td&gt;Remove&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;B&lt;/td&gt;
-&lt;td&gt;Ignore&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;C&lt;/td&gt;
-&lt;td&gt;Ignore&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Current&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;B&lt;/td&gt;
-&lt;td&gt;Ignore&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;C&lt;/td&gt;
-&lt;td&gt;Ignore&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;D&lt;/td&gt;
-&lt;td&gt;Add&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;My method is to get the Data, &lt;strong&gt;ListA&lt;/strong&gt;, create a copy &lt;strong&gt;ListA_Copy&lt;/strong&gt;,&lt;/p&gt;
-&lt;p&gt;This gives you the Original List you can use to compare later.&lt;/p&gt;
-&lt;p&gt;Now create three more empty&amp;nbsp;arrays&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ignore&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Add&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Remove&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The user interacts with the Form, adding and removing any necessary items.&lt;/p&gt;
-&lt;p&gt;When the user clicks Save we can perform some maintenance,&lt;/p&gt;
-&lt;p&gt;Loop the current list (&lt;strong&gt;ListA&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;Use an 'ItemIsInCollection' to check the current item in the loop already exists in the original (&lt;strong&gt;ListA_Copy&lt;/strong&gt;).&lt;/p&gt;
-&lt;p&gt;If it does add it to the &lt;strong&gt;Ignore&lt;/strong&gt; array, if it doesn't add it to the &lt;strong&gt;Add&lt;/strong&gt; array.&lt;/p&gt;
-&lt;p&gt;Current Loop&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ListMaintenance-CurrentLoop.png" alt="List Maintenance - Current Loop"&gt;&lt;/p&gt;
-&lt;p&gt;Next we want to loop the original list (&lt;strong&gt;ListA_Copy&lt;/strong&gt;) and check if any items have been removed.&lt;/p&gt;
-&lt;p&gt;If they have add them to a &lt;strong&gt;Remove&lt;/strong&gt; array.&lt;/p&gt;
-&lt;p&gt;Original Loop&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ListMaintenance-OriginalLoop.png" alt="List Maintenance - Original Loop"&gt;&lt;/p&gt;
-&lt;p&gt;Both&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ListMaintenance-UpdateModel.png" alt="List Maintenance - Update Model"&gt;&lt;/p&gt;
-&lt;p&gt;Now we can use these Add/Remove arrays to perform the necessary tasks, you could add/remove them from SQL, break/create associations, whatever is needed.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ListMaintenance-BreakCreate.png" alt="List Maintenance - Break Create"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I will explain how to maintain a list using Workflow components.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-smp-dell-warranty</id>
-		<title>Workflow - SMP - Dell Warranty</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-smp-dell-warranty" />
-		<updated>2016-07-22T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article I'm going to explain how to use the new DELL API to get Warranty information and add it to your Assets in the SMP.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DellS.png" alt="Dell (S)"&gt;&lt;/p&gt;
-&lt;p&gt;First you will need to sign up to get access to the DELL API&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://en.community.dell.com/dell-groups/supportapisgroup/"&gt;http://en.community.dell.com/dell-groups/supportapisgroup/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;There’s a powerpoint in the '&lt;a href="http://en.community.dell.com/dell-groups/supportapisgroup/m/mediagallery/20428185/download.aspx"&gt;get started&lt;/a&gt;' section with an excel sheet embedded, that you will need to fill out to request API access.&lt;/p&gt;
-&lt;p&gt;Complete that, send it off then wait to hear&amp;nbsp;back with your API Key.&lt;/p&gt;
-&lt;p&gt;Once you have that check out the DELL API page:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://developer.dell.com/api"&gt;https://developer.dell.com/api&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now for the config.&lt;/p&gt;
-&lt;p&gt;Create a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DataClasses.png" alt="Data Classes"&gt;&amp;nbsp;Data Class in the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="smp"&gt;&amp;nbsp;SMP to store the information retrieved from the API.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder" alt="Reports Folder"&gt;&amp;nbsp;Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource and Data Class Settings | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Data Classes | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;_Protirus |&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DataClasses.png" alt="Data Classes"&gt;&amp;nbsp;Simple Warranty&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Simple Warranty&lt;/th&gt;
-&lt;th&gt;String&lt;/th&gt;
-&lt;th&gt;Text to describe how this detail was achieved. e.g. Dell Warranty Import Workflow&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Warranty Until&lt;/td&gt;
-&lt;td&gt;Date&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;LastCheckedDate&lt;/td&gt;
-&lt;td&gt;Date&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Then you need to link it to a Computer/Asset Resource via settings.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports Folder"&gt;&amp;nbsp;Settings |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Notification Server |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource and Data Class Settings |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Resource Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Asset Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Folder.png" alt="Folder"&gt;&amp;nbsp;Generic Asset Types&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Resource.png" alt="Resource"&gt;&amp;nbsp;Asset&lt;/p&gt;
-&lt;p&gt;Scroll down to Data Classes, click "Add data classes" and search for the new one.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AssetResource.png" alt="Asset Resource"&gt;&lt;/p&gt;
-&lt;p&gt;You might only want to store this information on a particular type of Resource so this can be modified, if necessary.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow&lt;/p&gt;
-&lt;p&gt;You'll need 7.6+ as we are going to be using the REST Generator.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;See my other &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e7c91120-a123-4625-979d-1734c77e75d7&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Articles&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The great thing about the REST Generator is it will create the DataTypes we need for the Warranty info, we only need a couple of fields but they are all there for future requirements.&lt;/p&gt;
-&lt;p&gt;We are going to be using the&amp;nbsp;&lt;strong&gt;AssetEntitlementData&lt;/strong&gt; in combination with&amp;nbsp;&lt;strong&gt;ServiceLevelDescription&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;There are some requirements when using the API including how often you can query the dataset and how many machines you can ask for.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;5.3 API Access Criteria&lt;/p&gt;
-&lt;p&gt;5.3.1 Scheduled or Automated Retrieval of Warranty Information&lt;/p&gt;
-&lt;p&gt;To avoid undue load on the Warranty Status API server, the following algorithm should be followed for scheduling or automating warranty retrievals:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Query warranty API once for all new devices.&lt;/li&gt;
-&lt;li&gt;Query warranty API every 60-days for devices that have warranties expiring outside 1 year window.&lt;/li&gt;
-&lt;li&gt;Query warranty API every 30-days for devices that have warranties expiring inside a +/- 1 year window.&lt;/li&gt;
-&lt;li&gt;Query API every 15-days for warranties expiring between 45 to 90 days.&lt;/li&gt;
-&lt;li&gt;Query API weekly for warranties expiring between 30 to 45 days.&lt;/li&gt;
-&lt;li&gt;Query API daily for warranties expiring between -10 to 30 days.&lt;/li&gt;
-&lt;li&gt;Query API every 30 days for warranties expiring between -10 to -60 days.&lt;/li&gt;
-&lt;li&gt;Do not query for warranties for devices that have warranty expired more than 60 days.&lt;/li&gt;
-&lt;li&gt;Code Mapper Service need to be looked up only for new countries.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Dell_Warranty_Status_Api_Certification_Guide_v1-1.doc&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;You are also required to perform some tests and supply a list of results to confirm you have understood how to use the API and that you are using it correctly. We created a Web Forms Project to test and&amp;nbsp;provide this data.&lt;/p&gt;
-&lt;p&gt;The first step when creating the main WFs is to get a list of Assets with their ServiceTags.&lt;/p&gt;
-&lt;p&gt;You could build a View for this, amend to suit your needs,&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;SELECT DISTINCT a.Guid AS AssetGuid,a.NAME AS AssetName,rt.Guid AS ResourceTypeGuid,rt.NAME AS ResourceTypeName,COALESCE(hwcs.[Identifying Number], whc.[Serial Number]) AS [Identifying Number],sw.[Warranty Until],DATEDIFF(DAY, GETDATE(), sw.[Warranty Until]) AS NumOfDays,sw.LastCheckedDate,DATEDIFF(DAY, GETDATE(), sw.LastCheckedDate) AS LastCheckedDiff--,m.Manufacturer--,hwld.[Description]
-FROM vRM_Asset_Item AS aINNER JOIN ResourceType AS rt ON rt.Guid = a.ResourceTypeGuid--INNER JOIN Inv_Manufacturer m ON m._ResourceGuid = a.GuidLEFT OUTER JOIN Inv_HW_Computer_System AS hwcs ON hwcs._ResourceGuid = a.GuidLEFT OUTER JOIN Inv_HW_Chassis AS whc ON whc._ResourceGuid = a.GuidLEFT OUTER JOIN Inv_Simple_Warranty AS sw ON sw._ResourceGuid = a.GuidLEFT OUTER JOIN Inv_HW_Logical_Device AS hwld ON hwld._ResourceGuid = a.Guid
-WHERE--m.Manufacturer LIKE '%Dell%' ORhwld.[Description] LIKE '%Dell%'
+&lt;p&gt;If we look at the code it's asking for the Primary.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;IComponentModel primaryComponentModel = project.GetPrimaryComponentModel();
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now that we have a list we want to filter it on the requirements above. We can use a&amp;nbsp;&lt;strong&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6193480f-7974-4a5b-a56d-75113ecff3df&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Configurable Collection Filter&lt;/a&gt;&lt;/strong&gt;&amp;nbsp;for this.&lt;/p&gt;
-&lt;p&gt;Next group them by sets of 50 and join the serial numbers together with&amp;nbsp;&lt;strong&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=c53e85f2-cc4c-4c26-915f-17a5256640a1&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Build Text From Elements&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Call the API and use the dataset returned.&lt;/p&gt;
-&lt;p&gt;We can now map the data to the SMP Resource and save.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/HWAM_DELLWARRANTY_UPDATER.png" alt="HWAM_DELLWARRANTY_UPDATER"&gt;&lt;/p&gt;
-&lt;p&gt;This we created using a &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Monitoring.png" alt="Monitoring"&gt;&amp;nbsp;Monitoring Project so we could set it on a schedule and leave it to run in a given interval.&lt;/p&gt;
-&lt;p&gt;If you'd like a copy of this do get in touch&amp;nbsp;&lt;a href="mailto:info@protirus.com?subject=Workflow%20-%20SMP%20-%20Dell%20Warranty&amp;amp;body=Workflow%20-%20SMP%20-%20Dell%20Warranty"&gt;info@protirus.com&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/WebForm.png" alt="Web Form"&gt;&amp;nbsp;DELL_API_TestCertification_Form&lt;/li&gt;
-&lt;li&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int"&gt;&amp;nbsp;DELL_INT&lt;/li&gt;
-&lt;li&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Monitoring.png" alt="Monitoring"&gt;&amp;nbsp;HWAM_DELLWARRANTY_UPDATER&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Or saving to the Clipboard&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Clipboard.SetDataObject(guid, true);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to work with Components you will need to add a ref.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;using LogicBase.Components.Default.Process;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Find the component you want to work with and set the desired properties.&lt;/p&gt;
+&lt;p&gt;Custom Form&lt;/p&gt;
+&lt;p&gt;You can create a WinForms Form and design it how you would any C# project.&lt;/p&gt;
+&lt;p&gt;As you can see from the above code just create an instance and use how you would normally, nothing specific to WF.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Previous Downloads&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/groups/viewdocument?DocumentKey=13045b3a-be58-41c4-b38e-8b4b06b7394c&amp;amp;CommunityKey=36a652c6-c7e1-4701-af0f-b978f701f102&amp;amp;tab=librarydocuments"&gt;http://www.symantec.com/connect/downloads/dell-product-information-smp&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The captcha on the website can cause issues.&lt;/p&gt;
+&lt;p&gt;You can try creating a Project from the DLL (using &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/JustDecompile.png" alt="JustDecompile"&gt;&amp;nbsp;JustDecompile) but I've had issues getting this to work.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/JustDecompile-Project-RightClick.png" alt="JustDecompile-Project-RightClick"&gt;&lt;/p&gt;
+&lt;p&gt;(load failed)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;E:\WF\LogicBase.Plugins.CreateGUID\LogicBase.Plugins.CreateGUID.csproj : error &amp;nbsp;: The project file could not be loaded. Data at the root level is invalid. Line 1, position 1. &amp;nbsp;E:\WF\LogicBase.Plugins.CreateGUID\LogicBase.Plugins.CreateGUID.csproj&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you look at the .csproj&amp;nbsp;in notepad there is an object ref error.&lt;/p&gt;
+&lt;p&gt;If you copy another blank projects .csproj, rename it to this Project name&amp;nbsp;you can play about with some files to make it work, add Existing Items and pull in the files that were created.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;In this Article I'm going to explain how to use the new DELL API to get Warranty information and add it to your Assets in the SMP.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tests</id>
-		<title>Workflow - Tests</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-tests" />
-		<updated>2016-07-14T00:00:00Z</updated>
-		<content>&lt;p&gt;In this Article I will explain how to add Tests to your Workflow projects.&lt;/p&gt;
-&lt;p&gt;Everyone is running tests aren't they?&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TestInProduction.jpg" alt="Test In Production"&gt;&lt;/p&gt;
-&lt;p&gt;We are going to create a simple WebService Project.&lt;/p&gt;
-&lt;p&gt;Create a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/DecisionOnly.png" alt="Decision Only"&gt;&amp;nbsp;Decision Project.&lt;/p&gt;
-&lt;p&gt;Add a new &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Model2.png" alt="Model 2"&gt;&amp;nbsp;Model called &lt;strong&gt;Test&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Set an Input and Output&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Input&lt;/th&gt;
-&lt;th&gt;Param&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Output&lt;/th&gt;
-&lt;th&gt;Success&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;p&gt;Add a simple Workflow that tests for a given param word. In this case my Name - "Alex"&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/POC_DataService_DEC.png" alt="POC_DataService_DEC"&gt;&lt;/p&gt;
-&lt;p&gt;Right-Click on the Model &lt;strong&gt;Test&lt;/strong&gt; and "Set Model As Invocation Target".&lt;/p&gt;
-&lt;p&gt;Next Right-Click on the Project and select "New Test".&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/RightClickProject.png" alt="RightClick Project"&gt;&lt;/p&gt;
-&lt;p&gt;Give it a &lt;strong&gt;Name&lt;/strong&gt; and choose your &lt;strong&gt;Model&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/NewTest.png" alt="New Test"&gt;&lt;/p&gt;
-&lt;p&gt;Now fill in the required fields&lt;/p&gt;
-&lt;p&gt;General&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Test-General.png" alt="Test - General"&gt;&lt;/p&gt;
-&lt;p&gt;Data&lt;/p&gt;
-&lt;p&gt;Click on the ellipse and fill in the param(s):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Test-Data.png" alt="Test - Data"&gt;&lt;/p&gt;
-&lt;p&gt;The Params are shown from the Parameters in the Model.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TestStartData.png" alt="Test Start Data"&gt;&lt;/p&gt;
-&lt;p&gt;Now fill in your condition to check in the End Data&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/EndData.png" alt="End Data"&gt;&lt;/p&gt;
-&lt;p&gt;Repeat for as many tests as you need, I just need the opposite so failed via a param that isn't "Alex".&lt;/p&gt;
-&lt;p&gt;Click Debug.&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Debug.png" alt="Debug"&gt;&lt;/p&gt;
-&lt;p&gt;There will be a new line in under the usual options - "Test"&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Test-DebuggingForm.png" alt="Test - Debugging Form"&gt;&lt;/p&gt;
-&lt;p&gt;Click &lt;strong&gt;Run&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Test-RunTests.png" alt="Test - Run Tests"&gt;&lt;/p&gt;
-&lt;p&gt;They will then start "Running" or be "Pending".&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Test-RunTests-RunningPending.png" alt="Test - Run Tests - Running Pending"&gt;&lt;/p&gt;
-&lt;p&gt;Then hopefully you should have them all Pass.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Test-RunTests-Passed.png" alt="Test - Run Tests - Passed"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;In this Article I will explain how to add Tests to your Workflow projects.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sharepoint</id>
-		<title>Workflow - Sharepoint</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sharepoint" />
-		<updated>2016-07-08T00:00:00Z</updated>
-		<content>&lt;p&gt;Workflow offers a couple of options when working with Sharepoint.&lt;/p&gt;
-&lt;p&gt;There is the Integration Component for Sharepoint List manipulation or there is the library.&lt;/p&gt;
-&lt;p&gt;New &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int"&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Integration Component&lt;br&gt;
-Choose "Microsoft"&lt;br&gt;
-SharePoint Lists Generator&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/CreateGenerator-SharepointListGenerator.png" alt="Create Generator - Sharepoint List Generator"&gt;&lt;/p&gt;
-&lt;p&gt;Next fill in your details&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Sharepoint site:&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Use authentication&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Username:&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Password:&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Domain:&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Choose which Lists you want to work with&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointList.png" alt="Sharepoint List"&gt;&lt;/p&gt;
-&lt;p&gt;Give it a Namespace and Component names&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointList-Components.png" alt="Sharepoint List - Components"&gt;&lt;/p&gt;
-&lt;p&gt;Add this Library to your Workflow and pull in the components you need.&lt;/p&gt;
-&lt;p&gt;You can use the Search Items where ID - IS NOT NULL if you want all items returned.&lt;/p&gt;
-&lt;p&gt;Precreated DLL&lt;/p&gt;
-&lt;p&gt;Another option is to use the DLL created by Symantec.&lt;br&gt;
-Create a Web Forms project and add in:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;LogicBase.Components.SharePoint.dll
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This will then prompt and tell you new Properties have been created.&lt;/p&gt;
-&lt;p&gt;When you drag on a component some Properties will be created for.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SharepointUsername&lt;/li&gt;
-&lt;li&gt;SharepointPassword&lt;/li&gt;
-&lt;li&gt;SharepointDomain&lt;/li&gt;
-&lt;li&gt;SharepointHost&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointProperty-Username.png" alt="Sharepoint Property - Username"&gt;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointProperty-Password.png" alt="Sharepoint Property - Password"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointProperty-Domain.png" alt="Sharepoint Property - Domain"&gt;&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/SharepointProperty-Host.png" alt="Sharepoint Property - Host"&gt;&lt;/p&gt;
-&lt;p&gt;Go to the &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Project.png" alt="Project"&gt;&amp;nbsp;Project Root then the &lt;strong&gt;Properties&lt;/strong&gt; Tab.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Project-Properties-Sharepoint.png" alt="Project - Properties - Sharepoint"&gt;&lt;/p&gt;
-&lt;p&gt;There will then be a number of Components available to you:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Components-Sharepoint.png" alt="Components - Sharepoint"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Add Document&lt;/li&gt;
-&lt;li&gt;Add List Item&lt;/li&gt;
-&lt;li&gt;Create Document Workspace&lt;/li&gt;
-&lt;li&gt;Create Folder&lt;/li&gt;
-&lt;li&gt;Delete Document Workspace&lt;/li&gt;
-&lt;li&gt;Delete Folder&lt;/li&gt;
-&lt;li&gt;Document List (&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=81354724-ec65-4cad-816f-f8d9fb2b550f&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/document-list&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Find Document Workspace Doc&lt;/li&gt;
-&lt;li&gt;Get Document Workspace Data&lt;/li&gt;
-&lt;li&gt;Rename Document Workspace&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Forum&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=e85ebb47-071f-4137-8100-5d2f47e8b766&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bme85ebb47-071f-4137-8100-5d2f47e8b766"&gt;https://www.symantec.com/connect/forums/workflow-reading-sharepoint-list&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=bef0f064-e339-4b2f-8708-977fbc6b3ff3&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=digestviewer#bmbef0f064-e339-4b2f-8708-977fbc6b3ff3"&gt;https://www.symantec.com/connect/forums/workflow-and-sharepoint-lists&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=0721efbc-1bf1-443b-bdfb-edf8d2cd7d30&amp;amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;amp;tab=digestviewer#bm0721efbc-1bf1-443b-bdfb-edf8d2cd7d30"&gt;https://www.symantec.com/connect/forums/how-get-list-items-sharepoint-list-within-workflow&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Articles&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d36f9941-9c17-4130-b689-a647735ee194&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/symantec-workflow-and-microsoft-sharepoint&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;Workflow offers a couple of options when working with Sharepoint.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;In this Article I'm going to explain how to inspect other Plugins to learn how to implement items that aren't in the Developer Guide PDF.&lt;/p&gt;</summary>
 	</entry>
 </feed>

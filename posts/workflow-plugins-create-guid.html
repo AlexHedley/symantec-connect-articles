@@ -5,11 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to my Symantec Connect Articles!">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley</title>
+  <title>Alex Hedley - Workflow - Plugins - Create GUID</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/page/4'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-create-guid'>
 
       <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
@@ -18,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley' />
+  <meta property="og:title" content='Alex Hedley - Workflow - Plugins - Create GUID' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/page/4' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-create-guid' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -76,12 +76,11 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Alex Hedley
-              <small>(Page 4)</small>
+            Workflow - Plugins - Create GUID
           </h1>
-            <span class="subheading">Welcome to my Symantec Connect Articles!</span>
+            <div class="meta">Published on Wednesday, 24 May 2017</div>
         </div>
       </div>
     </div>
@@ -93,65 +92,65 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-        <div class="container-sm-height">
-  <div class="row row-sm-height">
-    <div class="col-md-6 right-border col-sm-height">
-      
+        <h2 id="create-guid">Create GUID</h2>
+<p>The 'Create GUID' Plugin allows you to generate a random GUID, which can then either be copied to the clipboard or added to the  Primary Model of the current Workflow Project.</p>
+<h3 id="component-icon">Component icon</h3>
+<p>N/A</p>
+<h3 id="author">Author</h3>
+<p>LogicBase / <img src="images/Symantec.png" alt="Symantec" /> Symantec</p>
+<h3 id="perform-action">Perform Action</h3>
+<p>Plugins | Create GUID</p>
+<p><img src="images/Workflow-Menu-Plugins-CreateGUID.png" alt="Workflow - Menu - Plugins - Create GUID" /></p>
+<table>
+<thead>
+<tr>
+<th>BUG: This states &quot;current model&quot; but actually puts it into the <img src="images/Model1.png" alt="Model 1" /> Primary model.</th>
+</tr>
+</thead>
+</table>
+<h3 id="alternative">Alternative</h3>
+<p>N/A</p>
+<h3 id="location">Location</h3>
+<pre><code>[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+</code></pre>
+<h3 id="dll">DLL</h3>
+<ul>
+<li>LogicBase.Plugins.CreateGUID.dll</li>
+</ul>
+<h3 id="code">Code</h3>
+<p>Generate a GUID</p>
+<pre><code>return Guid.NewGuid().ToString();
+</code></pre>
+<p>Copy to Clipboard</p>
+<pre><code>Clipboard.SetDataObject(guid, true);
+</code></pre>
+<p>Create Component with the Guid pre-populated.</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a1fe7799-786f-402d-af88-d1560d2834d8&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Add New Data Element</a></li>
+</ul>
+<p>There is more information in the following Article</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6d54d145-537c-40e6-86ca-b5dec2b1e972&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - Plugin - Developer Guide - Inspecting</a></li>
+</ul>
+<h3 id="documentation">Documentation</h3>
+<p>[Display any related Documentation]</p>
+<ul>
+<li>Title URL
+<ul>
+<li>Chapter/Page #</li>
+</ul>
+</li>
+</ul>
+<h3 id="support">Support</h3>
+<p>[Display any related Support Documents]</p>
+<ul>
+<li>Title
+<ul>
+<li>URL</li>
+</ul>
+</li>
+</ul>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide-inspecting">Workflow - Plugin - Developer Guide - Inspecting</a></h2>
-  <p class="post-meta">Published on Friday, 19 May 2017</p>
-<p>In this Article I'm going to explain how to inspect other Plugins to learn how to implement items that aren't in the Developer Guide PDF.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide-inspecting">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide-simple-plugin">Workflow - Plugin - Developer Guide - Simple Plugin</a></h2>
-  <p class="post-meta">Published on Thursday, 18 May 2017</p>
-<p>In this Article I'm going to explain how to create a simple Plugin with the basic properties and show some infomation about the current Project.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide-simple-plugin">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide">Workflow - Plugin - Developer Guide</a></h2>
-  <p class="post-meta">Published on Thursday, 18 May 2017</p>
-<p>In this set of Articles I'm going to explain how to create a Plugin for use within <img src="images/Workflow.png" alt="Workflow"> Workflow.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide">Read more...</a></p>
-</div>
-
-  <div>
-    <div class="float-sm-start">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/3" role="button"><i class="fas fa-angle-double-left"></i> Newer</a>
-    </div>
-    <div class="float-sm-end">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/5" role="button">Older <i class="fas fa-angle-double-right"></i></a>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-
-    </div>
-    <div class="col-md-4 mt-4 mt-md-0 col-sm-height sidebar">
-          <div>
-            <h5>Tags</h5>
-              <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (6)</a>
-              <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> Error (2)</a>
-              <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-              <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-              <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-light"> Integration Library (1)</a>
-              <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-            <div class="mt-3">
-              <div class="float-sm-end">
-                <a class="btn btn-sm btn-primary" href='/symantec-connect-articles/tags' role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-
-      
-
-    </div>
-  </div>
-</div>
 
         
 

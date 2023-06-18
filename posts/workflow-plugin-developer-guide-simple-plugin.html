@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - Plugin - Developer Guide - Simple Plugin</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugin-developer-guide-simple-plugin'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - Plugin - Developer Guide - Simple Plugin' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugin-developer-guide-simple-plugin' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Plugin - Developer Guide - Simple Plugin
+          </h1>
+            <div class="meta">Published on Thursday, 18 May 2017</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I'm going to explain how to create a simple Plugin with the basic properties and show some infomation about the current Project.</p>
+<p>Table of Contents<a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=016f70af-1c51-438b-bbae-f98e86164f26&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">​</a></p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=016f70af-1c51-438b-bbae-f98e86164f26&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">List</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=84ee5f15-df6c-44c7-8acd-e2764f0c4717&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Setup</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=8aeca32a-9a00-4d91-b618-f6af07957e71&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Simple Plugin</a> (this)</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2e508788-3a83-4a91-8e5b-18b28ca1cc02&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Deploy</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5076bfd9-0b26-408c-b957-3bb5fb0b59c2&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Advanced Plugin</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6d54d145-537c-40e6-86ca-b5dec2b1e972&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Inspecting</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80b95a29-8a1a-44ce-a616-87cf8e001dbd&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">WindowsForm</a></li>
+</ul>
+<p>If you haven't already, setup the basic project using the <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=84ee5f15-df6c-44c7-8acd-e2764f0c4717&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">previous</a> article.</p>
+<p>As we have the bare bones configured we now need to start writing some code.</p>
+<p><strong>IMAGE</strong></p>
+<p>Everybody loves an image!</p>
+<p>To add an Image to the project (Protirus.Workflow.Protirus.png), copy this to your Project. This can be the Menu image.</p>
+<p>Change the Build Action to <strong>Embedded Resource</strong></p>
+<p><img src="images/Protirus.Workflow.Protirus.png" alt="Protirus.Workflow.Protirus" /></p>
+<p>Create some variables for your Image name etc. (We will move these to Resources later.)</p>
+<p>Variables</p>
+<pre><code>Assembly _assembly;
+Stream _imageStream;
+
+private string imageIcon = &#64;&quot;Protirus.Workflow.Protirus.png&quot;;
+private string name = &#64;&quot;Protirus&quot;;
+</code></pre>
+<p>As we are using the <em>Assembly</em> we will need to add another <em>using</em> statement.</p>
+<pre><code>using System.Reflection;
+</code></pre>
+<p>To add it implement the <em>Image</em> method.</p>
+<pre><code>public Image Image
+{
+    get
+    {
+        _assembly = Assembly.GetExecutingAssembly();        
+        var currentNamespace = _assembly.GetName().Name; //&#64;&quot;Protirus.Workflow.Plugins&quot;
+        //Debug.Print(currentNamespace);
+                
+        string resource = string.Format(&#64;&quot;{0}.{1}&quot;, currentNamespace, imageIcon);
+        _imageStream = _assembly.GetManifestResourceStream(resource); //imageIcon
+        return new Bitmap(_imageStream); //Bitmap.FromStream(stream);
+    }
+}
+</code></pre>
+<p><img src="images/Workflow-Menu-Plugins.png" alt="Workflow - Menu - Plugins" /></p>
+<p>If you don't want an image</p>
+<pre><code>public Image Image
+{
+    get
+    {
+        return null;
+    }
+}
+</code></pre>
+<p>You could use one of the Cached Images:</p>
+<pre><code>public Image Image
+{
+    get
+    {
+        return CachedImages.GetImage(&quot;LogicBase.Tool.Images.Action.BusinessModelPlugin.png&quot;);;
+    }
+}
+</code></pre>
+<p><img src="images/book_blue_new.png" alt="book_blue_new" /></p>
+<p>Now implement the rest of the <em>IPluginUI</em> methods.</p>
+<p>GetMenuPosition</p>
+<pre><code>public int GetMenuPosition(string[] names)
+{
+    return -1;
+}
+</code></pre>
+<blockquote>
+<p>The index where this plugin should be inserted. Can be -1 to add the plugin at the end of the menu.</p>
+</blockquote>
+<p>GetToolBarPosition</p>
+<pre><code>public int GetToolBarPosition(string[] names)
+{
+    return -1;
+}
+</code></pre>
+<blockquote>
+<p>The index where this plugin should be inserted.Can be -1 to add the plugin at the end of the toolbar.</p>
+</blockquote>
+<p>ShowInMenu</p>
+<pre><code>public bool ShowInMenu
+{
+    get { return true; }
+}
+</code></pre>
+<blockquote>
+<p>Gets a value indicating if the plugin should be displayed in the menu.</p>
+</blockquote>
+<p>ShowInToolBar</p>
+<pre><code> public bool ShowInToolBar
+{
+    get { return false; }
+}
+</code></pre>
+<blockquote>
+<p>Gets a value indicating if the plugin should be displayed in the toolbar.</p>
+</blockquote>
+<p>As we are making a Project Plugin we can use data from the Project in the <em>PerformAction</em> method using the <em>project</em> variable.</p>
+<pre><code>public void PerformAction(AbstractOrchestrationProject project)
+{
+    MessageBox.Show(&quot;project action on project &quot; + project.MainFile.FullName + &quot;\n Directory: &quot; + project.MainFile.DirectoryName);
+}
+</code></pre>
+<p><em>Fullname</em></p>
+<blockquote>
+<p>E:\Program Files\Symantec\Workflow\WorkflowProjects\POC_Login_WEB\POC_Login_WEB.SymWorkflow</p>
+</blockquote>
+<p><em>Directory</em></p>
+<blockquote>
+<p>E:\Program Files\Symantec\Workflow\WorkflowProjects\POC_Login_WEB</p>
+</blockquote>
+<p>There are a lot of properties you can get from the class '<em>AbstractOrchestrationProject</em>', look into that for things that could be useful.</p>
+<p>Finally the original IPlugin/IProjectPlugin methods</p>
+<p>Name</p>
+<pre><code>public string Name
+{
+    get { return name; }
+}
+</code></pre>
+<p>ToolTip</p>
+<pre><code>public string ToolTip
+{
+    get { return &quot;test tooltip&quot;; }
+}
+</code></pre>
+<p>MenuLocation</p>
+<p>For the Menu Location set it to &quot;Plugins&quot; to show with the other Plugins.</p>
+<pre><code>public string MenuLocation
+{
+    get { return &quot;Plugins&quot;; }
+}
+</code></pre>
+<p>If you give it another name (&quot;Powershell&quot;) it will show up as its own Menu item.</p>
+<p><img src="images/Workflow-Menu-Custom.png" alt="Workflow - Menu - Custom" /></p>
+<p>MenuShortcut</p>
+<pre><code>public Shortcut MenuShortcut
+{
+    get { return Shortcut.None; }
+}
+</code></pre>
+<p>SeparatorAfter</p>
+<pre><code>public bool SeparatorAfter
+{
+    get { return false; }
+}
+</code></pre>
+<p>Build the project to make sure there are no errors.</p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

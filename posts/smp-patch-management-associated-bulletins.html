@@ -5,11 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to my Symantec Connect Articles!">
+    <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley</title>
+  <title>Alex Hedley - SMP - Patch Management - Associated Bulletins</title>
 
-  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/page/4'>
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/smp-patch-management-associated-bulletins'>
 
       <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
       <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
@@ -18,9 +18,9 @@
   <meta name="msapplication-tooltip" content='Alex Hedley' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley' />
+  <meta property="og:title" content='Alex Hedley - SMP - Patch Management - Associated Bulletins' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/page/4' />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/smp-patch-management-associated-bulletins' />
 
   <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
 
@@ -76,12 +76,11 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class='site-heading'>
+        <div class='post-heading'>
           <h1>
-            Alex Hedley
-              <small>(Page 4)</small>
+            SMP - Patch Management - Associated Bulletins
           </h1>
-            <span class="subheading">Welcome to my Symantec Connect Articles!</span>
+            <div class="meta">Published on Wednesday, 19 April 2017</div>
         </div>
       </div>
     </div>
@@ -93,65 +92,64 @@
   <div class="container">
     <div class="row">
       <div id="content" class="col-md-12">
-        <div class="container-sm-height">
-  <div class="row row-sm-height">
-    <div class="col-md-6 right-border col-sm-height">
-      
+        <p>I’m was working on a Patch Management Workflow and wanting to get the bulletins contained in a Policy created from the Patch Web Service.</p>
+<p>There is a Software Bulletins field which showed the list.</p>
+<table>
+<thead>
+<tr>
+<th>Software Bulletins</th>
+<th>MSFT-DN13, SB16-001</th>
+</tr>
+</thead>
+</table>
+<p><img src="images/SMP-PatchManagement-Policy.png" alt="SMP - PatchManagement - Policy" /></p>
+<p>If you export the XML of the Policy you can see the Associated Bulletins as an array.</p>
+<pre><code>&lt;item classGuid=&quot;{49fe4304-e09d-4382-9026-715868ffb856}&quot; guid=&quot;{4babbaac-b8e8-4895-8c38-a8e7f558a7ef}&quot;&gt;
+&lt;!-- Type: Altiris.PatchManagementCore.Policies.SoftwareUpdateAdvertismentSetPolicy --&gt;
+  &lt;softwareBulletinPolicy&gt;
+    &lt;associatedbulletins&gt;
+      &lt;associatedbulletin&gt;418ff377-63ec-4d16-a3a2-2a7c4bfdfd35&lt;/associatedbulletin&gt;
+      &lt;associatedbulletin&gt;91667244-3aea-42b0-adf6-7fdb85308abf&lt;/associatedbulletin&gt;
+    &lt;/associatedbulletins&gt;
+  &lt;softwareBulletinPolicy&gt;
+</code></pre>
+<p>There are Web Services to export Items from the SMP but then you'd need to save this file and parse it.</p>
+<p>As an alternative this information is stored in SQL, it is in the <em>State</em> column.</p>
+<p>SQL</p>
+<pre><code>SELECT State FROM vItem WHERE Guid = '4babbaac-b8e8-4895-8c38-a8e7f558a7ef'
+</code></pre>
+<p>To retrieve this from SQL you will need to perform the following:</p>
+<p>SQL</p>
+<pre><code>DECLARE &#64;myDoc xml
+SET &#64;myDoc = (SELECT State FROM vItem WHERE Guid = '4babbaac-b8e8-4895-8c38-a8e7f558a7ef')
+SELECT node.value('.','uniqueidentifier') AS AssociatedBulletins
+FROM &#64;myDoc.nodes('(/item/softwareBulletinPolicy/associatedbulletins/associatedbulletin)') AS PE(Node)
+</code></pre>
+<p>* Replace the following <em>Guid</em> with the Policy Guid you wish to retrieve information from.</p>
+<p>Output</p>
+<table>
+<thead>
+<tr>
+<th><strong>AssociatedBulletins</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>418FF377-63EC-4D16-A3A2-2A7C4BFDFD35</td>
+</tr>
+<tr>
+<td>91667244-3AEA-42B0-ADF6-7FDB85308ABF</td>
+</tr>
+</tbody>
+</table>
+<p>Web Services</p>
+<p><a href="https://localhost/altiris/patchmanagementcore/patchworkflowsvc.asmx">https://localhost/altiris/patchmanagementcore/patchworkflowsvc.asmx</a></p>
+<p>If you want more information about the <em>value</em> method and parsing XML in SQL check out the MS Article:</p>
+<p><strong>value() Method (xml Data Type)</strong></p>
+<p><a href="https://docs.microsoft.com/en-us/sql/t-sql/xml/value-method-xml-data-type">https://docs.microsoft.com/en-us/sql/t-sql/xml/value-method-xml-data-type</a></p>
+<p>(<a href="https://msdn.microsoft.com/en-us/library/ms178030.aspx">https://msdn.microsoft.com/en-us/library/ms178030.aspx</a>)</p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
 
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide-inspecting">Workflow - Plugin - Developer Guide - Inspecting</a></h2>
-  <p class="post-meta">Published on Friday, 19 May 2017</p>
-<p>In this Article I'm going to explain how to inspect other Plugins to learn how to implement items that aren't in the Developer Guide PDF.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide-inspecting">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide-simple-plugin">Workflow - Plugin - Developer Guide - Simple Plugin</a></h2>
-  <p class="post-meta">Published on Thursday, 18 May 2017</p>
-<p>In this Article I'm going to explain how to create a simple Plugin with the basic properties and show some infomation about the current Project.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide-simple-plugin">Read more...</a></p>
-</div>
-
-
-<div class="post-preview">
-  <h2 class="post-title"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide">Workflow - Plugin - Developer Guide</a></h2>
-  <p class="post-meta">Published on Thursday, 18 May 2017</p>
-<p>In this set of Articles I'm going to explain how to create a Plugin for use within <img src="images/Workflow.png" alt="Workflow"> Workflow.</p>    <p class="small"><a href="/symantec-connect-articles/posts/workflow-plugin-developer-guide">Read more...</a></p>
-</div>
-
-  <div>
-    <div class="float-sm-start">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/3" role="button"><i class="fas fa-angle-double-left"></i> Newer</a>
-    </div>
-    <div class="float-sm-end">
-        <a class="btn btn-primary" href="/symantec-connect-articles/page/5" role="button">Older <i class="fas fa-angle-double-right"></i></a>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-
-    </div>
-    <div class="col-md-4 mt-4 mt-md-0 col-sm-height sidebar">
-          <div>
-            <h5>Tags</h5>
-              <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow (6)</a>
-              <a href="/symantec-connect-articles/tags/error" class="badge text-bg-light"> Error (2)</a>
-              <a href="/symantec-connect-articles/tags/rest" class="badge text-bg-light"> REST (2)</a>
-              <a href="/symantec-connect-articles/tags/7.6" class="badge text-bg-light"> 7.6 (2)</a>
-              <a href="/symantec-connect-articles/tags/integration-library" class="badge text-bg-light"> Integration Library (1)</a>
-              <a href="/symantec-connect-articles/tags/mobility-suite" class="badge text-bg-light"> Mobility Suite (1)</a>
-            <div class="mt-3">
-              <div class="float-sm-end">
-                <a class="btn btn-sm btn-primary" href='/symantec-connect-articles/tags' role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-
-      
-
-    </div>
-  </div>
-</div>
 
         
 

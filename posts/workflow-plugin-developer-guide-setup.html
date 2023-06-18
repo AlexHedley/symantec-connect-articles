@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - Plugin - Developer Guide - Setup</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugin-developer-guide-setup'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - Plugin - Developer Guide - Setup' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugin-developer-guide-setup' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Plugin - Developer Guide - Setup
+          </h1>
+            <div class="meta">Published on Thursday, 18 May 2017</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I'm going to explain how setup your environment for creating a Plugin.</p>
+<p>Table of Contents</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=016f70af-1c51-438b-bbae-f98e86164f26&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">List</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=84ee5f15-df6c-44c7-8acd-e2764f0c4717&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Setup</a> (this)</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=8aeca32a-9a00-4d91-b618-f6af07957e71&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Simple Plugin</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2e508788-3a83-4a91-8e5b-18b28ca1cc02&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Deploy</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5076bfd9-0b26-408c-b957-3bb5fb0b59c2&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Advanced Plugin</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6d54d145-537c-40e6-86ca-b5dec2b1e972&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Inspecting</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80b95a29-8a1a-44ce-a616-87cf8e001dbd&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">WindowsForm</a></li>
+</ul>
+<p>You will need <a href="https://www.visualstudio.com/">Visual Studio</a>, download a version if you haven't already.</p>
+<p>A <img src="images/Workflow.png" alt="Workflow" /> Workflow Server to get the necessary DLLs.</p>
+<p>Go to this server.</p>
+<p>Go to your Workflow install location</p>
+<p>The document states</p>
+<blockquote>
+<p>C:\Program Files\Altiris\Workflow Designer\Designer\Plugins</p>
+</blockquote>
+<p>But you may have changed this on install, example:</p>
+<blockquote>
+<p>[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins</p>
+</blockquote>
+<p>Search for</p>
+<blockquote>
+<p>LogicBase.ToolShared.dll</p>
+</blockquote>
+<blockquote>
+<p>E:\Program Files\Symantec\Workflow\Shared\logicbaselib</p>
+</blockquote>
+<p>Make a copy of this DLL and add it to your Dev environment.</p>
+<p>We also need to get the necessary DLLs from the GAC (Global Assembly Cache)</p>
+<pre><code>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\
+</code></pre>
+<p>This may not show a list of DLLs as the viewer is configured using a RegKey.</p>
+<p>*Warning modifying the Registry can be dangerous, make sure you know what you're doing before you edit these. Take a copy first as a backup.</p>
+<ol>
+<li>Launch RegEdit.</li>
+<li>Navigate to <strong>HKLM\Software\Microsoft\Fusion</strong></li>
+<li>Add a <strong>DWORD</strong> called <strong>DisableCacheViewer</strong> and set the value to <strong>1</strong>.</li>
+</ol>
+<p>Now search for 2 Libraries:</p>
+<ul>
+<li>LogicBase.Core.dll</li>
+<li>LogicBase.Framework.dll</li>
+<li>LogicBase.Components.Default.dll (You may also need Components if you're working with those)</li>
+</ul>
+<p>Copy these to your Dev environment too.</p>
+<p>Now we have the libs, we can create the VS project.</p>
+<p>Start by creating a new <img src="images/Project-ClassLibrary.png" alt="Project - Class Library" /> Class Library.</p>
+<blockquote>
+<p>Protirus.Workflow.Plugins</p>
+</blockquote>
+<p>In the Project Folder add a new <img src="images/Folder.png" alt="Folder" /> Folder called 'External Dependencies' (In Explorer)</p>
+<p>Add the Symantec libs</p>
+<ul>
+<li>LogicBase.ToolShared.dll</li>
+<li>LogicBase.Core.dll</li>
+<li>LogicBase.Framework.dll</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>NOTE: Make sure these are the correct versions from the correct WF box i.e. 7.5 / 7.6 / 8.0 / 8.1.</th>
+</tr>
+</thead>
+</table>
+<p>Now in the VS Project</p>
+<p>Right Click -&gt; Add -&gt; New Solution Folder</p>
+<p>Add Existing Item -&gt; Browse to the DLL and add</p>
+<p><img src="images/References.png" alt="References" /> References -&gt; Right Click -&gt; Add Reference</p>
+<p>Expand Browse then right click Browse button</p>
+<p>Go to this Folder and add the DLL.</p>
+<p>Update the <img src="images/Properties.png" alt="Properties" /> Properties, double click to open the window.</p>
+<p>Click on Assembly Information,</p>
+<p>Add the Description and Company info.</p>
+<p>Check the Target Framework for .NET in Properties.</p>
+<blockquote>
+<p>.NET Framework 4.5.1</p>
+</blockquote>
+<p>Now back to the .cs file that was created (<img src="images/cs.png" alt="cs" /> Class1.cs).</p>
+<p>Rename this to the name of your Plugin</p>
+<blockquote>
+<p><img src="images/cs.png" alt="cs" /> ProtirusPlugin.cs</p>
+</blockquote>
+<p>Add the <em>using</em> for the new namespaces</p>
+<pre><code>using LogicBase.Components.Default.Process;
+using LogicBase.Core;
+using LogicBase.Framework;
+using LogicBase.Tool.Plugin;
+</code></pre>
+<p>We also need to add a couple of .NET References</p>
+<pre><code>System.Drawing
+System.Windows.Forms;
+</code></pre>
+<p>Then add them to your code</p>
+<pre><code>using System.Drawing;
+using System.Windows.Forms;
+</code></pre>
+<p>Now we are ready to code the Plugin.</p>
+<p>We will need to implement one of the Interfaces from the ToolShared lib.</p>
+<p><strong>IPlugin</strong></p>
+<pre><code>public class ProtirusPlugin : IPlugin
+</code></pre>
+<p>And implement the required methods.</p>
+<pre><code>public string Name { get; private set; }
+public string ToolTip { get; private set; }
+public string MenuLocation { get; private set; }
+public Shortcut MenuShortcut { get; private set; }
+public bool SeparatorAfter { get; private set; }
+public void PerformAction()
+{
+    throw new NotImplementedException();
+}
+</code></pre>
+<p><strong>IProjectPlugin</strong></p>
+<pre><code>public class ProtirusPlugin : IProjectPlugin
+</code></pre>
+<p>And implement the required methods.</p>
+<pre><code>public void PerformAction(AbstractOrchestrationProject project)
+{
+    //messageBox.Show(&quot;project action on project &quot; + project.MainFile.FullName);
+    throw new NotImplementedException();
+}
+</code></pre>
+<p>Finally</p>
+<p><strong>IPluginUI</strong></p>
+<pre><code>public class Protirus : IPluginUI
+</code></pre>
+<p>And implement the required methods.</p>
+<pre><code>public int GetMenuPosition(string[] names)
+{
+    throw new NotImplementedException();
+}
+
+public int GetToolBarPosition(string[] names)
+{
+    throw new NotImplementedException();
+}
+
+public Image Image { get; private set; }
+public bool ShowInMenu { get; private set; }
+public bool ShowInToolBar { get; private set; }
+</code></pre>
+<p>Or all three</p>
+<pre><code>public class Protirus : IProjectPlugin, IPluginUI //IPlugin,
+{
+    ...
+}
+</code></pre>
+<p>Now we have all the necessary method stubs but nothing actually happens, onto the next Article <a href="https://www.symantec.com/connect/articles/workflow-plugin-developer-guide-simple-component">Simple Component</a> to create a working item.</p>
+<hr />
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
