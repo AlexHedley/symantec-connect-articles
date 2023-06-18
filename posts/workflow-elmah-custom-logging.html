@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - ELMAH - Custom Logging</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-elmah-custom-logging'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - ELMAH - Custom Logging' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-elmah-custom-logging' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - ELMAH - Custom Logging
+          </h1>
+            <div class="meta">Published on Monday, 17 July 2017</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this article I will explain how to add custom logging to a Workflow Project using the Elmah project.</p>
+<p>We all use the Create Log Component to log Exceptions or useful information we need from our Projects, either whilst debugging or otherwise.</p>
+<p>Instead why not leverage a great resouce</p>
+<blockquote>
+<p>ELMAH (Error Logging Modules and Handlers) is an application-wide error logging facility that is completely pluggable. It can be dynamically added to a running <a href="http://www.asp.net/">ASP.NET</a> web application, or even all ASP.NET web applications on a machine, without any need for re-compilation or re-deployment.</p>
+<p>Once ELMAH has been dropped into a running web application and configured appropriately, you get the following facilities without changing a single line of your code:</p>
+<ul>
+<li>Logging of nearly all unhandled exceptions.</li>
+<li>A web page to remotely view the entire log of recoded exceptions.</li>
+<li>A web page to remotely view the full details of any one logged exception, including colored stack traces.</li>
+<li>In many cases, you can review the original <a href="http://en.wikipedia.org/wiki/Yellow_Screen_of_Death#ASP.NET">yellow screen of death</a> that ASP.NET generated for a given exception, even with customErrorsmode turned off.</li>
+<li>An e-mail notification of each error at the time it occurs.</li>
+<li>An RSS feed of the last 15 errors from the log.</li>
+</ul>
+</blockquote>
+<p>Create a new Web Forms project.</p>
+<p>Add the Library</p>
+<p>✓ Copy Local | ✓ Publish</p>
+<p>We need it in the bin folder.</p>
+<p>Open the web.config</p>
+<p>Add the following sections:</p>
+<p>As the first section:</p>
+<p>This will be used by the below sections.</p>
+<pre><code>  &lt;configSections&gt;
+    &lt;sectionGroup name=&quot;elmah&quot;&gt;
+      &lt;section name=&quot;security&quot; requirePermission=&quot;false&quot; type=&quot;Elmah.SecuritySectionHandler, Elmah&quot; /&gt;
+      &lt;section name=&quot;errorLog&quot; requirePermission=&quot;false&quot; type=&quot;Elmah.ErrorLogSectionHandler, Elmah&quot; /&gt;
+      &lt;section name=&quot;errorMail&quot; requirePermission=&quot;false&quot; type=&quot;Elmah.ErrorMailSectionHandler, Elmah&quot; /&gt;
+      &lt;section name=&quot;errorFilter&quot; requirePermission=&quot;false&quot; type=&quot;Elmah.ErrorFilterSectionHandler, Elmah&quot; /&gt;
+    &lt;/sectionGroup&gt;
+    &lt;section name=&quot;infragistics.web&quot; type=&quot;System.Configuration.SingleTagSectionHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;
+  &lt;/configSections&gt;
+</code></pre>
+<p>Next is the system.web options.</p>
+<pre><code>&lt;configuration&gt;
+  ...
+  &lt;system.web&gt;
+    ...
+    &lt;httpHandlers&gt;
+      ...
+      &lt;add verb=&quot;POST,GET,HEAD&quot; path=&quot;elmah.axd&quot; type=&quot;Elmah.ErrorLogPageFactory, Elmah&quot; /&gt;
+    &lt;/httpHandlers&gt;
+  
+    &lt;httpModules&gt;
+    ...
+      &lt;add name=&quot;ErrorLog&quot; type=&quot;Elmah.ErrorLogModule, Elmah&quot;/&gt;
+    &lt;/httpModules&gt;
+    ...
+  &lt;/system.web&gt;
+  ...
+&lt;/configuration&gt;
+</code></pre>
+<p>Then the webServer attributes.</p>
+<pre><code>&lt;configuration&gt;
+  ...
+  &lt;system.webServer&gt;
+    &lt;validation validateIntegratedModeConfiguration=&quot;false&quot;/&gt;
+    &lt;modules&gt;
+      ...
+      &lt;add name=&quot;Elmah.ErrorLog&quot; type=&quot;Elmah.ErrorLogModule, Elmah&quot; preCondition=&quot;managedHandler&quot; /&gt;
+    &lt;/modules&gt;
+    &lt;handlers&gt;
+      ...
+      &lt;add name=&quot;Elmah&quot; path=&quot;elmah.axd&quot; verb=&quot;POST,GET,HEAD&quot; type=&quot;Elmah.ErrorLogPageFactory, Elmah&quot; preCondition=&quot;integratedMode&quot; /&gt;
+    &lt;/handlers&gt;
+  &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+</code></pre>
+<p>We need to set the Security for Elmah.</p>
+<ul>
+<li><p>0 - prohibits remote users from viewing the error log</p>
+  <configuration>
+    ...
+    <elmah>
+    ...
+      <security allowRemoteAccess="0" />
+    ...
+    </elmah>
+    ...
+  </configuration>
+</li>
+<li><p>1 - allows remote access - add further security at an IIS level</p>
+  <location path="elmah.axd">
+    <system.web>
+      <authorization>
+        <allow roles="Admin" />
+        <deny users="*" />
+      </authorization>
+    </system.web>  
+  </location>
+</li>
+</ul>
+<p>By Default Elmah will log to the file Elmah.axd.</p>
+<p>To test this, publish your Workflow Project then go to</p>
+<pre><code>http://SERVER/PROJECTNAME/elmah.axd/test
+</code></pre>
+<p>Now go to the <strong>elmah.axd</strong> file to see the information</p>
+<pre><code>http://SERVER/PROJECTNAME/elmah.axd
+</code></pre>
+<p><img src="images/ElmahLogList.png" alt="Elmah Log List" /></p>
+<p>You can then click on the Details to see it further</p>
+<p><img src="images/ElmahLogDetails.png" alt="Elmah Log Details" /></p>
+<p>Now if we want to log information to this we can use a <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=17b8ad10-89ff-4552-8a5b-7ab69975efaa&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Scripting Component</a>.</p>
+<p>[See an upcoming Download of a Workflow Component to do this without a Scripting Component.]</p>
+<p>This library isn't added by default so search for it then expand Unloaded Libraries and add it in or find the &quot;LogicBase.Components.Scripting.dll&quot; and add that.</p>
+<ol>
+<li><p>Add an Input - Message.</p>
+</li>
+<li><p>Result variable - no return</p>
+</li>
+<li><p>Source Code</p>
+</li>
+</ol>
+<p>Add a using below System.</p>
+<pre><code>Elmah
+</code></pre>
+<p>There are a number of options here.</p>
+<p><img src="images/ElmahLogListCustom.png" alt="Elmah Log List Custom" /></p>
+<p>You could create an Exception and pass that:</p>
+<pre><code>var customEx = new Exception(Message, new NotSupportedException()); 
+ErrorSignal.FromCurrentContext().Raise(customEx);
+</code></pre>
+<p><img src="images/ElmahLogDetailsNotSupported.png" alt="Elmah Log Details Not Supported" /></p>
+<p>Or just use the Message as the Exception:</p>
+<pre><code>Elmah.ErrorSignal.FromCurrentContext().Raise(new Exception(Message));
+</code></pre>
+<p><img src="images/ElmahLogDetailsExceptionMessage.png" alt="Elmah Log Details Exception Message" /></p>
+<p>Wrap this in a Try Catch too</p>
+<pre><code>try {
+  ...
+} catch (Exception ex) {
+  ErrorSignal.FromCurrentContext().Raise(ex);
+}
+</code></pre>
+<p>This is only stored for the life cycle of the application so you might want to make it more permanent by using a Database.</p>
+<p>See an upcoming Article for this [<a href="https://www.symantec.com/connect/articles/workflow-elmah-custom-logging-database">Workflow - ELMAH - Custom Logging - Database</a>].</p>
+<p>Articles</p>
+<p><strong>Logging Error Details with ELMAH (C#)</strong></p>
+<p><a href="http://www.asp.net/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs">http://www.asp.net/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs</a></p>
+<p>Grab the code: <a href="https://code.google.com/p/elmah/">https://code.google.com/p/elmah/</a>, there are 32-Bit and 64-Bit versions of Elmah.dll.</p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
