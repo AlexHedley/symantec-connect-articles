@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - ServiceDesk - Software Request Process - Overview</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-software-request-process-overview'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - ServiceDesk - Software Request Process - Overview' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-software-request-process-overview' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            ServiceDesk - Software Request Process - Overview
+          </h1>
+            <div class="meta">Published on Tuesday, 10 October 2017</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this Article I'm going to explain how the new <strong>Software Request Process</strong> works in <a href="https://www.symantec.com/products/service-desk">ServiceDesk</a> 8.1.</p>
+<p>Table Of Contents</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=253f9b2f-045e-4e05-acb9-fcc37005f674&amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;tab=librarydocuments">Index</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a5fdba6d-707b-44be-a051-b08e5a5cfe19&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Overview</a> (this)</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e3acdfdc-8b09-4ca7-afb5-821c9cce9301&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Config</a></li>
+<li><a href="https://www.symantec.com/connect/articles/servicedesk-software-request-process-smp">SMP</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=24530d5f-01a3-464d-846b-01482ee0c85e&amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;tab=librarydocuments">Reports</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f39346c9-799f-4d1b-ba9b-7f0910cd9c74&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Hidden Reports</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=28879800-dd5e-436b-8f8b-9bc7301fbb1e&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">SQL</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=736fee28-7f45-497e-b208-b3de50cde839&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">WFs</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f4cef159-76c3-4b5b-9287-94aee6bec214&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">DLLs</a></li>
+</ul>
+<p>This comes in the base install of SD 8.1 and can be viewed by going to the the '<strong>Submit Request</strong>' page, under '<strong>IT Services</strong>' then '<strong>Software Request</strong>'.</p>
+<p>You have to have AMS, CMS and Software Management Framework installed on the SMP. You have to define proper software products that are managed, deliverable and licensed</p>
+<ol>
+<li>product has a software release component.</li>
+<li>product has a software license associated. Delivery will be blocked by the workflow if a license is not available</li>
+<li>the release component is installable via a file and has a managed delivery policy.</li>
+<li>The policy is setup based on a target with a filter. delivery works by putting the device into the target's filter (inclusion list)</li>
+</ol>
+<p>Firstly you need to configure a Managable and Deliverable piece of Software in your SMP.</p>
+<table>
+<thead>
+<tr>
+<th>This will be an upcoming article [<a href="https://www.symantec.com/connect/articles/servicedesk-software-request-process-smp">SMP</a>] from <a href="https://www.symantec.com/connect/user/sam-pace">&#64;SamPace</a></th>
+</tr>
+</thead>
+</table>
+<p>Login.</p>
+<p>Manage | Software</p>
+<p>Deliverable Software - Software Releases</p>
+<p>You need to set up a Managed Delivery Policy which has a Target and corresponding Filter so an Asset can be added and have the software pushed.</p>
+<p>Make sure to set Ownership of an Asset to the User you wish to test with.</p>
+<p>Login to your Process Manager</p>
+<p>Submit Request</p>
+<p>Click on 'IT Services'</p>
+<p>Then 'Request Software'</p>
+<p><img src="images/ProcessManager_SubmitRequest_ITServices.png" alt="ProcessManager SubmitRequest ITServices" /></p>
+<p>The logged in User has to be known by both the SMP and PM with the same Email address.</p>
+<p>This will show a list of Owned Assets, choose one from the dropdown (Target Devices)</p>
+<p>Enter a phonenumber.</p>
+<p><img src="images/SoftwareRequest_Submission_Step1.png" alt="SoftwareRequest Submission Step1" /></p>
+<p>Choose a piece of Software</p>
+<p><img src="images/SoftwareRequest_Submission_Step2.png" alt="SoftwareRequest Submission Step2" /></p>
+<p>You can request a piece of Software that isn't in the Catalog, this will create a Task for SAM team to complete.</p>
+<p>Next give a Justification</p>
+<p><img src="images/SoftwareRequest_Submission_Step3.png" alt="SoftwareRequest Submission Step3" /></p>
+<p>Review</p>
+<p><img src="images/SoftwareRequest_Submission_Step4.png" alt="SoftwareRequest Submission Step4" /></p>
+<p>Confirm</p>
+<p>You will then get a Ticket Number (SR-#)</p>
+<p><img src="images/SD-00001.png" alt="SD-00001" /></p>
+<p>Approvals</p>
+<p>The Request will go into a Queue to be actioned.</p>
+<p>1st Tier Approver - &quot;Software Asset Managers&quot;</p>
+<p>[IMAGE] - Request PVP</p>
+<p>The default logic is to go to the Requestor's Manager, if there isn't one fallback to the SAM.</p>
+<p>This can be configured in the Rule Engine to any Group or any User.</p>
+<p>Now action the Ticket using the Process Actions.</p>
+<p>Click Approve.</p>
+<p><img src="images/ApproveDeny.png" alt="Approve Deny" /></p>
+<p>This is pased to the Workflow Repsonse Queue to move to the next stage and create a Software Delivery Ticket (SDT)</p>
+<p>Refresh the page after a few seconds.</p>
+<p>Fulfilment phase</p>
+<p>Expand Related Processes and open this new Ticket.</p>
+<p>This is again assigned to the Software Asset Managers (SAM) Group.</p>
+<p>Here you can Authorize Delivery using another Action as all the configuration has already been set up and has allowed the process to get to the Task: Delivery Authorization (80%).</p>
+<p>Click on the Task</p>
+<p>This shows the Licensing information and options to see it in the SMP via a link.</p>
+<p><img src="images/DeliveryAuthorisation.png" alt="Delivery Authorisation" /></p>
+<p>Here you can check and select the Release, Delivery Policy and Filter.</p>
+<table>
+<thead>
+<tr>
+<th>Only support Filter based Targets.</th>
+</tr>
+</thead>
+</table>
+<p>Click Authorize.</p>
+<p>Check the SMP Filter to confirm it has been added.</p>
+<p>[IMAGE]</p>
+<p>The Request then returns to the Requestor to confirm the Software has been delivered.</p>
+<p>Custom Notifications at each step can be configured and sent to relevant parties.</p>
+<p>The User has an option to confirm/deny delivery.</p>
+<p><img src="images/DeliveryConfirmation.png" alt="Delivery Confirmation" /></p>
+<p>A remediation task is created if the user states there has been a problem.</p>
+<p>This task will loop back once an Analyst has checked, the user can then confirm again, this has a couple of days timeout.</p>
+<hr />
+<p>Documentation</p>
+<p>Symantec ServiceDesk 8.1 Documentation</p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=cfc7ef69-2520-4a10-9344-7a5de64ee9f8&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=digestviewer#bmcfc7ef69-2520-4a10-9344-7a5de64ee9f8">https://www.symantec.com/connect/forums/symantec-servicedesk-81-documentation</a></p>
+<ul>
+<li>Release Notes - <a href="http://www.symantec.com/docs/DOC9618">http://www.symantec.com/docs/DOC9618</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Added Software request process</td>
+<td>From this release onwards, you can create Software delivery requests, manage these requests and deliver software to the client computers using computer filters.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

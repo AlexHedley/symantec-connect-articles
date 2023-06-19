@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - ServiceDesk - Software Request Process - DLLs</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-software-request-process-dlls'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - ServiceDesk - Software Request Process - DLLs' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-software-request-process-dlls' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            ServiceDesk - Software Request Process - DLLs
+          </h1>
+            <div class="meta">Published on Tuesday, 10 October 2017</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In this series of Articles I'm going to explain how the new <strong>Software Request Process</strong> works in <a href="https://www.symantec.com/products/service-desk">ServiceDesk</a> 8.1.</p>
+<p>This Article explains the new DLLs that shipped with the Process and has links to the component pages.</p>
+<p>Table Of Contents</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=253f9b2f-045e-4e05-acb9-fcc37005f674&amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;tab=librarydocuments">Index</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a5fdba6d-707b-44be-a051-b08e5a5cfe19&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Overview</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e3acdfdc-8b09-4ca7-afb5-821c9cce9301&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Config</a></li>
+<li><a href="https://www.symantec.com/connect/articles/servicedesk-software-request-process-smp">SMP</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=24530d5f-01a3-464d-846b-01482ee0c85e&amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;tab=librarydocuments">Reports</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f39346c9-799f-4d1b-ba9b-7f0910cd9c74&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Hidden Reports</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=28879800-dd5e-436b-8f8b-9bc7301fbb1e&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">SQL</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=736fee28-7f45-497e-b208-b3de50cde839&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">WFs</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f4cef159-76c3-4b5b-9287-94aee6bec214&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">DLLs</a> (this)</li>
+</ul>
+<p>For this Article I will list the new Components in the DLLs that have been added for the Process.</p>
+<p>I'll be adding <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=85f6ec73-8a87-43b9-a87f-743497fa0fb0&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Component Articles</a> as an when, check back for updated links.</p>
+<p>If you check the usual <em>customlib</em> folder you will find the new DLLs.</p>
+<pre><code>[Install Drive]:\Program Files\Symantec\Workflow\Shared\customlib\
+</code></pre>
+<p><strong><img src="images/dll.png" alt="DLL" /> ServiceDesk.SoftwareRequest.Core.dll</strong></p>
+<ul>
+<li><p>ServiceDesk.SoftwareRequest.Core</p>
+<ul>
+<li>RequestedSoftwareDataService</li>
+<li>SoftwareRequestDataService
+<ul>
+<li>ListSoftwareInRequest</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ServiceDesk.SoftwareRequest.Core.Components</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9424808e-fdc2-4c41-aca4-c14aa838b954&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">GetRequestedSoftwareBySessionIdComponent</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=facb821e-573e-45cc-832e-d881aea77e37&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">GetSoftwareRequestBySessionIdComponent</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=79dcc4d5-42bb-4946-8484-b8912a7ea7c6&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">ListAvailableSoftwareComponent</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e1413deb-6b36-4008-b34d-19225f14b823&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">ListDeliveryPoliciesForManagedDeliveryPolicy</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=23fcefd1-e78c-452f-bd24-f6e12b1631dc&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">ListFiltersForTargetComponent</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f94e55e1-a628-4057-8223-6cf674215043&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">ListReleasesForSoftwareProductComponent</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a0ba3d1e-5e37-403b-a47f-4a3562c3a852&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">SaveRequestedSoftwareComponent</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f2c0071f-a4f5-4ae8-b57e-c45ca770893e&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">SaveSoftwareRequestComponent</a></li>
+<li>SoftwareRequestProcessComponent</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5fa352cb-728a-4e80-8e98-bb3f3afbe7fb&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">StartSoftwareDeliveryComponent</a></li>
+</ul>
+</li>
+<li><p>ServiceDesk.SoftwareRequest.Core.DataTypes</p>
+<ul>
+<li>AvailableSoftware</li>
+<li>ManagedDeliveryPolicy</li>
+<li>RequestedSoftware</li>
+<li>RequestedSoftwareStatus</li>
+<li>RequestedSoftwareType</li>
+<li>ResourceTargetFilter</li>
+<li>SdAmTaskCompleteMessage</li>
+<li>SdConfirmationTaskCompleteMessage</li>
+<li>SdDaTaskCompleteMessage</li>
+<li>SdDaTaskPauseMessage</li>
+<li>SdHoldTaskResumeMessage</li>
+<li>SdRemediationTaskCompleteMessage</li>
+<li>SdSmTaskCompleteMessage</li>
+<li>SoftwareDeliveryTaskAssignmentType</li>
+<li>SoftwareDeliveryTaskType</li>
+<li>SoftwareLicenseInfo</li>
+<li>SoftwareLicenseType</li>
+<li>SoftwareRelease</li>
+<li>SoftwareRequest</li>
+<li>SoftwareRequestTaskAssignmentType</li>
+<li>SoftwareRequestTaskType</li>
+<li>SrApprovalTaskCompleteMessage</li>
+<li>SrApprovalTaskPauseMessage</li>
+<li>SrDeliveryFlowCompleteMessage</li>
+<li>SrHoldTaskResumeMessage</li>
+<li>SrPendingTaskCloseMessage</li>
+<li>UserDevice</li>
+</ul>
+</li>
+<li><p>ServiceDesk.SoftwareRequest.Core.Properties</p>
+<ul>
+<li>AssemblyDataHandlersAttribute</li>
+<li>Settings</li>
+<li>StringResources</li>
+</ul>
+</li>
+<li><p>ServiceDesk.SoftwareRequest.Core.SoftwareDeliveryService</p>
+<ul>
+<li>KeyValueDataType</li>
+<li>SoftwareDeliveryService</li>
+<li>StartSoftwareDeliveryCompletedEventArgs</li>
+<li>StartSoftwareDeliveryReturn</li>
+</ul>
+</li>
+</ul>
+<p><strong><img src="images/dll.png" alt="DLL" /> ServiceDesk.SoftwareRequest.Automation.dll</strong></p>
+<ul>
+<li>ServiceDesk.SoftwareRequest.Automation.Actions</li>
+<li>ServiceDesk.SoftwareRequest.Automation.Conditions</li>
+<li>ServiceDesk.SoftwareRequest.Automation.Properties</li>
+<li>ServiceDesk.SoftwareRequest.Automation.RulesetArguments</li>
+<li>ServiceDesk.SoftwareRequest.Automation.TemplateContexts</li>
+</ul>
+<hr />
+<p>Documentation</p>
+<p>Symantec ServiceDesk 8.1 Documentation</p>
+<p><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=cfc7ef69-2520-4a10-9344-7a5de64ee9f8&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=digestviewer#bmcfc7ef69-2520-4a10-9344-7a5de64ee9f8">https://www.symantec.com/connect/forums/symantec-servicedesk-81-documentation</a></p>
+<ul>
+<li>Release Notes - <a href="http://www.symantec.com/docs/DOC9618">http://www.symantec.com/docs/DOC9618</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Added Software request process</td>
+<td>From this release onwards, you can create Software delivery requests, manage these requests and deliver software to the client computers using computer filters.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
