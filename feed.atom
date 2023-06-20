@@ -4,598 +4,1080 @@
 	<title>Alex Hedley</title>
 	<link rel="self" href="https://alexhedley.github.io/symantec-connect-articles" />
 	<rights>Copyright © 2023</rights>
-	<updated>2023-06-19T18:44:09Z</updated>
+	<updated>2023-06-20T18:28:24Z</updated>
 	<subtitle>Welcome to my Symantec Connect Articles!</subtitle>
 	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-restart-workflow-services</id>
-		<title>Workflow - Plugins - Protirus - Restart Workflow Services</title>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-examples</id>
+		<title>Workflow - Examples</title>
 		<author>
 			<name>AlexHedley</name>
 		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-restart-workflow-services" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="restart-workflow-services"&gt;Restart Workflow Services&lt;/h2&gt;
-&lt;p&gt;The 'Restart Workflow Services' plugin will restart the Workflow Service&amp;nbsp;(&lt;em&gt;swfsvr&lt;/em&gt;) as your user account.&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Services.png" alt="Services"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus 0"&gt;&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;Workflow Service (&lt;em&gt;swfsvr&lt;/em&gt;) will be restarted using the currently logged in user.&lt;/p&gt;
-&lt;h3 id="section"&gt;&lt;/h3&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;Open 'Task Tray Tool' - Start | All Programs | Symantec | Workflow Designer | Tools&lt;br&gt;
-("[Install Drive]:\Program Files\Symantec\Workflow\Tools\LogicBase.Local.TaskTray.exe")&lt;/p&gt;
-&lt;p&gt;Restart Server Extensions&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TaskTrayTool-RestartServerExtensions.png" alt="TaskTrayTool-RestartServerExtensions"&gt;&lt;/p&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-examples" />
+		<updated>2019-02-14T00:00:00Z</updated>
+		<content>&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt=""&gt;&amp;nbsp;Workflow comes with a set of Examples to get to grips with how to work with the Designer and allow you to run those common scenarios in your company.&lt;/p&gt;
+&lt;p&gt;Go to the following folder on your WF box.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Examples\
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
+&lt;p&gt;There are 6 &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/WorkflowProject.png" alt="WorkflowProject"&gt;&amp;nbsp;Workflows and 2&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int"&gt; Integration Projects.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;net stop swfsvr
-net start swfsvr
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="section-1"&gt;&lt;/h3&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the 'Protirus.Workflow.Plugins.xml' file.&lt;/p&gt;
-&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f83b1618-369f-46c5-aed4-459335fab063&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;New Hire&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
+&lt;li&gt;NewHireLib&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=10c3f25a-4786-43b0-92d8-d7342449ec17&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Request Access To Network Share&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0690277d-d0b8-410c-a2b3-0589b79bc3a6&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Request Cell Phone&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
+&lt;li&gt;CellPhoneRequestUserCustomLib&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=31380f2a-2e42-4725-938e-0942188f0c08&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Reset Password&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=67b40128-8bf8-4cfd-8662-e26cb4e315fc&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Terminate User&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=212baef3-189d-4030-8fdd-b2534c9b6a67&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Vacation Request&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;See the summaries below then click on the individual links for more info about the Projects.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NewHireLib.package&lt;/li&gt;
+&lt;li&gt;Symantec.Workflow.New Hire.package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Use this form to process a new hire.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Symantec.Workflow.RequestAccessToNetworkShare.package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This process will enable the user to request access/permissions to a shared drive. The requester can request for himself/herself or someone else. By default, the request is initially sent to the Share Manager for approval. (However, the recipient's manager can receive an approval step first; this step is disabled out of the box.) On approval from the Share Manager, the recipient is granted access to the shared folder. The Share Manager can also add the user to a group that has permission on that folder. If this is decided, the group manager receives an approval task for the request. If a group does not have a manager, as set in AD, the Service Managers group receives the task and can either add the user to the group, select a different group, or asisgn a manager to the group. If a new manager is assigned, that manager receives the original task to approve the addition of the new user; all subsequent tasks for this group will be handled by the new manager.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;CellPhoneRequestUserCustomLib.package&lt;/li&gt;
+&lt;li&gt;Symantec.Workflow.RequestCellPhone.package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Use this process to request a new cell phone, or a replacement cell phone for one that was lost, broken, or stolen. The process begins with submission of the request, followed by manager approval (unless the requestor is the recipient's manager), and processing by Purchasing. If a phone is broken, an additional screen provides information on what to do with the broken phone. If a phone is lost or stolen, an additional screen captures information on the event and the process forwards that information automatically to Security. New employees receiving a phone must agree to a liability/terms of usage agreement.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Symantec.Workflow.ResetPassword.package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Allows you to reset a password automatically in Active Directory.&amp;nbsp;&lt;br&gt;
+• Enables a manager to reset the Active Directory password for an employee. Also enables a user to request a password reset for another user, with manager approval required.&amp;nbsp;&lt;br&gt;
+• Initiated by browsing to a Password Reset Request form&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Symantec.Workflow.TerminateUser.package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This process starts with a request form that the requester fills in to request an employee's termination. The process then moves forward to get manager's approval. After the manager's approval, the process informs IT, HR, Facilities and Security &amp;nbsp;to complete the termination process.The manager can deny the request in which case the denial is sent to the requester with the reason of denial.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Symantec.Workflow.VacationRequest.package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This process enables a user to request time off. The process is intended to work in conjunction with a timeoff/HR-type system to determine whether an employee is eligible for time off, and to decrement that time. The time off request goes to a manager for processing, and upon approval or rejection, notification goes to the requester.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Documented on Connect by:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;​&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;The 'Restart Workflow Services' plugin will restart the Workflow Service (&lt;em&gt;swfsvr&lt;/em&gt;) as your user account.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt=""&gt;&amp;nbsp;Workflow comes with a set of Examples to get to grips with how to work with the Designer and allow you to run those common scenarios in your company.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-workflow-logs-folder</id>
-		<title>Workflow - Plugins - Protirus - Workflow Logs Folder</title>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-examples-newhire</id>
+		<title>Workflow - Examples - NewHire</title>
 		<author>
 			<name>AlexHedley</name>
 		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-workflow-logs-folder" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="open-workflow-logs-folder"&gt;Open&amp;nbsp;Workflow Logs Folder&lt;/h2&gt;
-&lt;p&gt;The 'Open Workflow Logs Folder' gets the install folder of Workflow and opens the Logs folder in Explorer.&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/FolderOpen_32.png" alt="FolderOpen 32"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus_0"&gt;&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;Opens the Workflow Logs Folder.&lt;/p&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;Open Explorer and navigate to '[Install Drive]:\Program Files\Symantec\Workflow\Logs'&lt;/p&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;p&gt;N/A&lt;/p&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the 'Protirus.Workflow.Plugins.xml' file.&lt;/p&gt;
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-examples-newhire" />
+		<updated>2019-02-14T00:00:00Z</updated>
+		<content>&lt;h2 id="new-hire"&gt;New Hire&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=443c6adf-6a56-4c7f-b727-0ddeb8f9e0d9&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow - Examples&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Use this form to process a new hire.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Author mail:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;name@email.com&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Process Prefix: "ITSR-"&lt;/p&gt;
 &lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;The 'Open Workflow Logs Folder' gets the install folder of Workflow and opens the Logs folder in Explorer.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-workflow-explorer</id>
-		<title>Workflow - Plugins - Protirus - Workflow Explorer</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-workflow-explorer" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="workflow-explorer-running-as"&gt;Workflow Explorer (Running As)&lt;/h2&gt;
-&lt;p&gt;The 'Workflow Explorer (Running As)' checks if Workflow Explorer is running and who has it open&amp;nbsp;(the owner).&lt;/p&gt;
-&lt;p&gt;This is handy because it can only be open on one machine but gives no indiciation if it doesn't open, you can then contact the user to close it.&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow.png"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus_0"&gt;&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;Domain\Username&amp;nbsp;or&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-Protirus-WorkflowExplorer-NoOwner.png" alt="Workflow Plugins Protirus WorkflowExplorer NoOwner"&gt;&lt;/p&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;Ctrl + Shift + Esc to open Windows Task Manager.&lt;/p&gt;
-&lt;p&gt;Click the "Processes" tab.&lt;/p&gt;
-&lt;p&gt;Tick ☑ "Show processes from all users"&lt;/p&gt;
-&lt;p&gt;Search for the Workflow Explorer (Symantec.Explorer.exe) and check the Process Owner.&lt;/p&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
+&lt;p&gt;| &lt;strong&gt;New Hire&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; &amp;nbsp; &amp;nbsp; Process a new hire (permanent, full time, part time, temp, intern...)&lt;br&gt;
+&lt;br&gt;The roles that are significant to this process are outlined in the process business model and include the following:&lt;br&gt;
+&lt;br&gt;Requester&amp;nbsp;  &lt;br&gt;				Human Resources&amp;nbsp;  &lt;br&gt;				New Hire Candidate&amp;nbsp;  &lt;br&gt;				Information Technology&amp;nbsp;  &lt;br&gt;				Payroll&amp;nbsp;  &lt;br&gt;				Security&amp;nbsp;  &lt;br&gt;				Facilities&amp;nbsp;  &lt;br&gt;				Training&lt;br&gt;
+&lt;br&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;Before making this workflow project live, understand and configure the following:&lt;br&gt;
+&lt;br&gt;1. From the Properties tab in the project in the Workflow Designer, set the following details:&lt;br&gt;
+&lt;br&gt;a. Global Email Information  &lt;br&gt;				&amp;nbsp;&amp;nbsp;i.SMTP Server – The server name or IP address of the outbound mail server  &lt;br&gt;				&amp;nbsp; ii. Mail From Address – Email address that all system generated emails should be sent from&lt;br&gt;
+&lt;br&gt;b. Administrative Contact  &lt;br&gt;				&amp;nbsp;&amp;nbsp;i. Administrative Contact Name – The person or group who should be made aware of any process issues  &lt;br&gt;				&amp;nbsp; ii. Administrative Contact Info – The preferred method by which the administrator be contacted&lt;br&gt;
+&lt;br&gt;c. Human Resources Contact Details  &lt;br&gt;				&amp;nbsp;&amp;nbsp;i. HR Fax  &lt;br&gt;				&amp;nbsp; ii. HR Phone&lt;br&gt;
+&lt;br&gt;d. Date Requirements  &lt;br&gt;				&amp;nbsp;&amp;nbsp;i. Offer Letter Expiration – The number of days an offer will remain valid once it is sent to a potential new hire  &lt;br&gt;				&amp;nbsp; ii. Minimum Days Required – The minimum number of days required to complete the new hire process (prevents requests with start dates that cannot be met due to time constraints)&lt;br&gt;
+&lt;br&gt;e.Task Email Addresses – These are the email addresses to which new hire tasks will be sent when appropriate  &lt;br&gt;				&amp;nbsp;&amp;nbsp;i. HR Email – Review requests and background findings  &lt;br&gt;				&amp;nbsp; ii. IT Email – Set up new network accounts and workstations  &lt;br&gt;				&amp;nbsp; iii. Facilities Manager – Grant security access to company properties  &lt;br&gt;				&amp;nbsp; iv. Security Manager – Complete badging and security paperwork  &lt;br&gt;				&amp;nbsp; v. Payroll Manager – Setup employees in the company payroll system  &lt;br&gt;				&amp;nbsp; vi. Background Check Email – Carryout background checks on prospective new employees  &lt;br&gt;				&amp;nbsp; vii. HR Manager – Handles escalated HR tasks when necessary&lt;br&gt;
+&lt;br&gt;&lt;strong&gt;General Process Rules&lt;/strong&gt;&lt;br&gt;
+&lt;/p&gt;&lt;ul&gt;				&lt;li&gt;Proposed start dates must be at least the number of days away as established by the MinimumDaysRequired project property (this is automatically enforced)&lt;/li&gt;				&lt;li&gt;Human Resources will determine which pre-hire tasks are required to be completed and will have final say over the suitability of candidates based on background checks&lt;/li&gt;				&lt;li&gt;By default all new hire tasks have a 2 day due date from the date created (configurable). The exception is the time extended to a candidate to review and decide upon an offer. &amp;nbsp;This is controlled by the OfferLetterExpiration project property&lt;/li&gt;			&lt;/ul&gt;
+&lt;br&gt;&lt;strong&gt;Step 1: &amp;nbsp;Submit Request&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;The requestor will enter all of the basic information about the potential new hire and the position they would fill. &amp;nbsp;At this point initial interviews have already occurred and the requester is asking to hire this specific person for the position indicated.&lt;br&gt;
+&lt;br&gt;When clicking “Next” there will be some background checks that occur to ensure that the entered data is complete properly formatted. &amp;nbsp;Errors (if any) will be brought to the users attention and they will be asked to make the necessary corrections. &amp;nbsp;If the data integrity is sound, they user will be asked to review the data and submit it or make any changes they deem necessary.&lt;br&gt;
+&lt;br&gt;&lt;strong&gt;Step 2: &amp;nbsp;HR Review&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;Human Resources will be notified by email that a request has been submitted. &amp;nbsp;Upon reviewing the information about the position and the candidate they will make an initial decision about whether or not to issue an offer letter.&lt;br&gt;
+&lt;br&gt;If the request is approved, the reviewer will need to indicate which additional tasks will need to be completed. If the request is denied, the reviewer will need to offer justification of the decision.&lt;br&gt;
+&lt;br&gt;The process would end and the requester would be notified if the initial request were denied. |
+| --- |&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Examples\
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
+&lt;li&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Int.png" alt="Int"&gt;&amp;nbsp;NewHireLib.package&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;p&gt;N/A&lt;/p&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the 'Protirus.Workflow.Plugins.xml' file.&lt;/p&gt;
-&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
+&lt;p&gt;This contains the Data Type to store your Employee Information in.&lt;/p&gt;
+&lt;p&gt;If you need extra fields, add them here, then update the&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/WorkflowProject.png" alt="WorkflowProject"&gt;&amp;nbsp;Workflow.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Examples_NewHireLib_EmployeeInformation.png" alt="Employee Information"&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
+&lt;li&gt;Symantec.Workflow.New Hire.package&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;The 'Workflow Explorer (Running As)' checks if Workflow Explorer is running and who has it open (the owner).&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-powershell</id>
-		<title>Workflow - Plugins - Protirus - Powershell</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-powershell" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="powershell"&gt;Powershell&lt;/h2&gt;
-&lt;p&gt;The 'Powershell' plugin opens a file picker, filters on Powershell file extensions (**.ps1*, *&lt;em&gt;.psm1&lt;/em&gt;, *&lt;em&gt;.psd1&lt;/em&gt;) and then runs the chosen file with custom param ($project) that can be used in your Powershell script.&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Powershell_32.png" alt="Powershell 32"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus 0."&gt;&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;Choose a Powershell file to run, you can chose whether to hide the powershell dialog.&lt;/p&gt;
-&lt;p&gt;This runs with a param of the Project Directory "-project"&lt;/p&gt;
-&lt;p&gt;So you can add the following to your powershell scripts to access this path.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;param([String]$project="")
-...
-write-output $project
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-Powershell.png" alt="Workflow Plugins Powershell"&gt;&lt;/p&gt;
-&lt;h3 id="workflow-plugins-powershell-openfile"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-Powershell-OpenFile.png" alt="Workflow Plugins Powershell OpenFile"&gt;&lt;/h3&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;Start | All Programs | Accessories | Windows PowerShell&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;powershell.exe -file "FILENAME"
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Or&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;powershell.exe -file "" -project ""
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Or&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;powershell.exe -windowstyle Hidden -file "" -project ""
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the 'Protirus.Workflow.Plugins.xml' file.&lt;/p&gt;
-&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;The 'Powershell' plugin opens a file picker, filters on Powershell file extensions (**.ps1*, *&lt;em&gt;.psm1&lt;/em&gt;, *&lt;em&gt;.psd1&lt;/em&gt;) and then runs the chosen file with custom param ($project) that can be used in your Powershell script.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus</id>
-		<title>Workflow - Plugins - Protirus</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;p&gt;Symantec &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow Manager has a number of Plugins available from install.&lt;/p&gt;
-&lt;p&gt;These are documented: &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=3b4c589a-aaaa-49a3-a610-7a307716dc53&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow Plugins&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can download a copy from the following Connect post:&lt;/p&gt;
+&lt;p&gt;There are a number of models to run through here&lt;/p&gt;
+&lt;p&gt;First we shall look at the Business Model.&lt;/p&gt;
+&lt;h3 id="business-model"&gt;Business Model&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/NewHireProcess.model_.png" alt="NewHireProcess"&gt;&lt;/p&gt;
+&lt;p&gt;Next the actual working processes.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Primary.model_.png" alt="Primary"&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Download&lt;/th&gt;
-&lt;th&gt;&lt;a href="https://www.symantec.com/connect/downloads/workflow-plugins-protirus"&gt;Protirus.Workflow.Plugins&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
-&lt;p&gt;I've created a bundle which are listed below, 'Model Info' down,&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Menu-Plugins-Protirus.png" alt="Workflow - Menu - Plugins - Protirus"&gt;&lt;/p&gt;
-&lt;p&gt;Each will be explained on their own pages.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=fa1db8eb-16be-4c74-95ba-2d5ba1de516b&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Model Info&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f98989b9-e12e-412d-870f-62ba194b9a6a&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Recycle App Pools&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=398434ef-3182-40ec-8a5c-dd41bfd28d78&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Restart IIS&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2ac8d6c4-e2f6-492b-a8f7-008c86fa6a70&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Restart Workflow Services&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=4cf9dc2d-aa7d-4e94-a3c8-197aa41677d4&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Powershell&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=c81ce6df-ab80-47e8-827e-eb75b67078c2&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Task Tray Tool&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9bc4e726-c60a-4f63-83cf-76f55d576992&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow Explorer&lt;/a&gt; (Running As)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Open &lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=7acbf6dd-adc2-412f-a09c-f2efdbf66c9a&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Workflow&amp;nbsp;Logs Folder&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=191d3b73-aa1c-4392-82b1-d6ec0c44e91c&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;Zip&lt;/a&gt; Project&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Protirus&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;This was just to test some basic info about a Project, get it's Icon etc&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There are some config options to allow customisation.&lt;/p&gt;
-&lt;p&gt;Included will be an XML file :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Protirus.Workflow.Plugins.xml
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Save this to the Plugins directory&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This currently has two sections, one to choose whether to show or hide each plugin in the menu. This is so you only need to have one DLL instead of individual but means you don't have to have a huge list showing.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  &amp;lt;plugins&amp;gt;
-    &amp;lt;pluginsDef&amp;gt;
-      &amp;lt;name&amp;gt;ModelInfoPlugin&amp;lt;/name&amp;gt;
-      &amp;lt;show&amp;gt;true&amp;lt;/show&amp;gt;
-    &amp;lt;/pluginsDef&amp;gt;
-  ...
-  &amp;lt;/plugins&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Swap &lt;em&gt;&amp;lt;show&amp;gt;true&amp;lt;/show&amp;gt;&lt;/em&gt; to&amp;nbsp;&lt;em&gt;&amp;lt;show&amp;gt;false&amp;lt;/show&amp;gt;&lt;/em&gt; if you wish to not see them.&lt;/p&gt;
-&lt;p&gt;The second section is specifically for the Zip plugin, it sets which Log files will be included, by default, in the list.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  &amp;lt;files&amp;gt;
-    &amp;lt;filesDef&amp;gt;
-      &amp;lt;name&amp;gt;processmanager.log&amp;lt;/name&amp;gt;
-      &amp;lt;show&amp;gt;true&amp;lt;/show&amp;gt;
-    &amp;lt;/filesDef&amp;gt;
-  ...
-  &amp;lt;/files&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Swap &lt;em&gt;&amp;lt;show&amp;gt;true&amp;lt;/show&amp;gt;&lt;/em&gt; to&amp;nbsp;&lt;em&gt;&amp;lt;show&amp;gt;false&amp;lt;/show&amp;gt;&lt;/em&gt; if you wish to not see them in the list, you can always manually add them.&lt;/p&gt;
-&lt;p&gt;I'm also using a NuGet package "&lt;a href="https://github.com/haf/DotNetZip.Semverd"&gt;DotNetZip&lt;/a&gt;", within the Zip Plugin to perform the zip of the Project / Log, this DLL (and XML) will also need to be included in the Plugins directory.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DotNetZip.dll&lt;/li&gt;
-&lt;li&gt;DotNetZip.xml&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id="asset-management-load-and-ready-equipment"&gt;Asset Management - Load and Ready Equipment&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AssetManagement-LoadandReadyEquipment.model_.png" alt="AssetManagement-LoadandReadyEquipment"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Equipment Setup&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;The individual responsible for this task has only two choices for completing it.&lt;br&gt;&lt;/p&gt;&lt;ol&gt;				&lt;li&gt;Indicate that the setup process is complete&amp;nbsp;&lt;/li&gt;				&lt;li&gt;Request an order for equipment that was not available in the existing inventory&lt;/li&gt;			&lt;/ol&gt;
+&lt;br&gt;If the setup process is completed, then IT’s part of the process is finished as well and the process will simply wait for the other departments to complete their tasks. &amp;nbsp;If new equipment is required we will proceed to the ordering phase of setup.&lt;br&gt;
+&lt;br&gt;The user is required to build the order list for necessary equipment by selecting the appropriate equipment type from the dropdown box and clicking “Add to Order List”. &amp;nbsp;The types of equipment available in the dropdown list is configurable. &amp;nbsp;Please see the process overview document for further discussion on customizing the process. |
+| --- |&lt;p&gt;&lt;/p&gt;
+&lt;h3 id="asset-management-order-equipment"&gt;Asset Management - Order Equipment&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AssetManagement-OrderEquipment.model_.png" alt="AssetManagement-OrderEquipment"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Equipment Setup (continued)&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;Once the necessary equipment has been requested, the person or group responsible for acquisitions will receive the equipment request via a task and will provide the order details once the list has been processed.&lt;br&gt;
+&lt;br&gt;The process now returns to the Equipment Setup phase and creates a new task for setting up the new equipment when it arrives. &amp;nbsp;The order details and vendor contact information for the new equipment order is also made available to the IT team for follow up if necessary. |
+| --- |&lt;/p&gt;
+&lt;h3 id="assign-empid"&gt;Assign EmpID&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/AssignEmpID.model_.png" alt="AssignEmpID"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Step 5: &amp;nbsp;Create Employee ID&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;After passing all background checks, the process will now begin to integrate the new employee into the corporate environment. &amp;nbsp;The first step of this is to create an employee ID for the new hire. &amp;nbsp;By default this task falls to Human Resources, but it will likely vary from one organization to another. &amp;nbsp;You can change the responsible party by editing the email address to which the task notification will be sent (customization will be further discussed at the end of this document).&lt;br&gt;
+&lt;br&gt;Once the new employee’s ID is created it needs to be entered into the process so that it can be utilized by other departments in subsequent steps. &amp;nbsp;From this point forward the supervisor for the new employee will also be notified following the completion of each task so that they may monitor the progress and stay apprised of any situations that may impact their employee on start day. |
+| --- |&lt;/p&gt;
+&lt;h3 id="background-check-types"&gt;Background Check Types&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/BackgroundCheckTypes.model_.png" alt="BackgroundCheckTypes"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Step 4: &amp;nbsp;Background Checks (continued)&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;Those responsible for carrying out the background checks will summarize their findings (if any) once they have completed the task.&lt;br&gt;
+&lt;br&gt;If there were no findings during the background check, the investigator will be required only to provide their contact details and indicate that there were no findings to report. &amp;nbsp;However, if the background check did generate findings, they will also be asked to provide a summary of those findings as well as supporting documentation. |
+| --- |&lt;/p&gt;
+&lt;h3 id="background-check"&gt;Background Check&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/BackgroundCheck.model_.png" alt="Background Check"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Step 4: &amp;nbsp;Background Checks&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;Human Resources will next determine which background checks will be required to be completed. &amp;nbsp;This will be highly dependent on the nature of the position being hired for and there are several options available by default.&lt;br&gt;
+&lt;br&gt;Once the necessary background checks have been determined, individual task will be created for any of the background check types that had elements selected: &amp;nbsp;Typical Background Check, Professional Verification or Financial Check.&lt;br&gt;
+&lt;br&gt;If all required background checks come back with no findings, then the process will automatically continue without any additional Human Resources input. &amp;nbsp;However, if there were any findings then Human Resources will be required to review the details and make a decision as to whether the potential new hire is still a viable candidate for employment.&lt;br&gt;
+&lt;br&gt;Remaining consistent with the earlier part of the process, if the reviewer denies the candidate at this point they will be required to provide justification for the decision. |
+| --- |&lt;/p&gt;
+&lt;h3 id="external-system-error"&gt;External System Error&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ExternalSystemError.model_.png" alt="ExternalSystemError"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;External System Errors&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;In the event of a error occuring with any of the external systems that must be used to complete the new hire process (a payroll system, for example) the daprtment for whom the system errored can indicate the error and generate a task for the systems administrator. &amp;nbsp;Once the admin has corrected the issue they will be able to return the original task to the department that reported the problem. |
+| --- |&lt;/p&gt;
+&lt;h3 id="facilities-set-up-access"&gt;Facilities-Set up access&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Facilities-Setupaccess.model_.png" alt="Facilities-Setupaccess"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Facilities Setup&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;A facilities representative must indicate when they have completed the required task and provide any additional information that may be relevant to the process. |
+| --- |&lt;/p&gt;
+&lt;h3 id="it-create-user-accounts"&gt;IT-Create User Accounts&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/IT-CreateUserAccounts.model_.png" alt="IT-Create User Accounts"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Create User Accounts&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;IT setup starts with creation of the new employees network user account.&lt;br&gt;
+&lt;br&gt;Once the new employee has the necessary user accounts their workstation (and any additional equipment required) can be set up as well. |
+| --- |&lt;/p&gt;
+&lt;h3 id="offer-letter"&gt;Offer Letter&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/OfferLetter.model_.png" alt="Offer Letter"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Step 3: &amp;nbsp;Offer Letter&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;Upon approval of the new hire request, Human Resources would put together an offer for the candidate and upload it to the new hire process. &amp;nbsp;This would be sent via email to the prospect along with instructions for responding to the offer. &amp;nbsp;At this point a new task is generated for Human Resources and they will have to wait and enter the candidate’s response when they receive it.&lt;br&gt;
+&lt;br&gt;If the candidate rejects the offer and does not ask for counter-terms then the process ends and the requester is notified that the candidate has decided not to accept the offer. &amp;nbsp;If the candidate accepts the offer Human Resources will then initiate background checks in Step 4. |
+| --- |&lt;/p&gt;
+&lt;h3 id="offer-not-accepted"&gt;Offer Not Accepted&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/OfferNotAccepted.model_.png" alt="OfferNotAccepted"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Step 3: &amp;nbsp;Offer Letter (continued)&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;If the candidate offer counter-terms Human Resources will determine if the new terms are acceptable and if so, generate a new offer letter.&lt;br&gt;
+&lt;br&gt;Once the new offer letter is completed and uploaded, the process will return to the beginning of Step 3 and Human Resources will once again await the candidate’s response to the new offer letter. |
+| --- |&lt;/p&gt;
+&lt;h3 id="orientation-and-training"&gt;Orientation and Training&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/OrientationandTraining.model_.png" alt="Orientation and Training"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Orientation and Training&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;In addition to the regular orientation session, the new employee may require some additional training. &amp;nbsp;Such training can be scheduled from this form. &amp;nbsp;By default the optional training is limited to Benefits, Ethics and Equipment training, but this can be customized to meet the additional needs of an organization. &amp;nbsp;Please see the process overview document for further discussion on customizing the process. |
+| --- |&lt;/p&gt;
+&lt;h3 id="payroll"&gt;Payroll&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Payroll.model_.png" alt="Payroll"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Payroll Setup&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;A payroll representative must indicate when they have completed the required task and provide any additional information that may be relevant to the process. |
+| --- |&lt;/p&gt;
+&lt;h3 id="security-badging"&gt;Security - Badging&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Security-Badging.model_.png" alt="Security - Badging"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Badging and Security Paperwork&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;A security representative must indicate when they have completed the required task and provide any additional information that may be relevant to the process. |
+| --- |&lt;/p&gt;
+&lt;h3 id="timeout-handling"&gt;Timeout Handling&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/TimeoutHandling.model_.png" alt="Timeout Handling"&gt;&lt;/p&gt;
+&lt;p&gt;| &lt;strong&gt;Handling Timeouts&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;In the event of a timeout during any step of the process, a task will be created for a process manager (the Human Resources manager by default) to determine how best to proceed with the process. &amp;nbsp;The options are to return the timed out task to the original assignee or to end the termination process. This event will be initiated if any step in the process is not completed within the allotted time. &amp;nbsp;By default most task will timeout after 2 days, but this can be configured by adjusting the timeout time span of the dialog workflow component for any task. |
+| --- |&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Properties&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Category&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;HREmail&lt;/td&gt;
+&lt;td&gt;Task Emails&lt;/td&gt;
+&lt;td&gt;HR@demo.local&lt;/td&gt;
+&lt;td&gt;Email details of the person/group who will review new hire requests and background check findings&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ITEmail&lt;/td&gt;
+&lt;td&gt;Task Emails&lt;/td&gt;
+&lt;td&gt;IT@demo.local&lt;/td&gt;
+&lt;td&gt;Email details of the person/group who will create network accounts and setup workstations&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CompanyName&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Symantec&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FacilitiesManager&lt;/td&gt;
+&lt;td&gt;Task Emails&lt;/td&gt;
+&lt;td&gt;Facilities@demo.local&lt;/td&gt;
+&lt;td&gt;Email details of the person/group responsible for granting security access to company property&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SecurityManager&lt;/td&gt;
+&lt;td&gt;Task Emails&lt;/td&gt;
+&lt;td&gt;Security@demo.local&lt;/td&gt;
+&lt;td&gt;Email details for the person/group who is responsible for granting security badges and completing security paperwork&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HRManager&lt;/td&gt;
+&lt;td&gt;Task Emails&lt;/td&gt;
+&lt;td&gt;HRManager@demo.local&lt;/td&gt;
+&lt;td&gt;Email details of the person/group who will be the escalation point for HR tasks when necessary&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HRFax&lt;/td&gt;
+&lt;td&gt;HR Contact Information&lt;/td&gt;
+&lt;td&gt;123-456-7890&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AdministratorContactName&lt;/td&gt;
+&lt;td&gt;Admin Contact Information&lt;/td&gt;
+&lt;td&gt;Administrator&lt;/td&gt;
+&lt;td&gt;Point of contact for process errors to be reported&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AdministratorContactInfo&lt;/td&gt;
+&lt;td&gt;Admin Contact Information&lt;/td&gt;
+&lt;td&gt;123-456-7890&lt;/td&gt;
+&lt;td&gt;Contact details for administrator point of contact&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SMTPServer&lt;/td&gt;
+&lt;td&gt;Global Email Settings&lt;/td&gt;
+&lt;td&gt;localhost&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MailFromAddress&lt;/td&gt;
+&lt;td&gt;Global Email Settings&lt;/td&gt;
+&lt;td&gt;no-reply@demo.local&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PayrollManager&lt;/td&gt;
+&lt;td&gt;Task Emails&lt;/td&gt;
+&lt;td&gt;Payroll@demo.local&lt;/td&gt;
+&lt;td&gt;Email details for the person/group who will setup employees in the payroll system&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OfferLetterExpiration&lt;/td&gt;
+&lt;td&gt;Date Requirements&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Set this field to the number of days that an offer letter will be valid after is has been sent.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MinimumDaysRequired&lt;/td&gt;
+&lt;td&gt;Date Requirements&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Set thiis field to the minimum number of days required to complete the hiring process (minimum &amp;nbsp;1 day)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HRPhone&lt;/td&gt;
+&lt;td&gt;HR Contact Information&lt;/td&gt;
+&lt;td&gt;123-456-7890&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BackgroundCheckEmail&lt;/td&gt;
+&lt;td&gt;Task Emails&lt;/td&gt;
+&lt;td&gt;Background@demo.local&lt;/td&gt;
+&lt;td&gt;Email details of the person/group who will carryout required background checks&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AdministratorEmail&lt;/td&gt;
+&lt;td&gt;Admin Contact Information&lt;/td&gt;
+&lt;td&gt;admin@demo.local&lt;/td&gt;
+&lt;td&gt;Email address for administrator point of contact&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Global Data&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;DocumentCategoryID&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Documented on Connect by:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus"&gt;&lt;/a&gt;​&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;Symantec &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;Workflow Manager has a number of Plugins available from install.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&amp;nbsp;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=443c6adf-6a56-4c7f-b727-0ddeb8f9e0d9&amp;amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;amp;tab=librarydocuments"&gt;Workflow - Examples&lt;/a&gt;&lt;/p&gt;</summary>
 	</entry>
 	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-task-tray-tool</id>
-		<title>Workflow - Plugins - Protirus - Task Tray Tool</title>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-asset-user-owners</id>
+		<title>SMP - Reports - Asset User Owners</title>
 		<author>
 			<name>AlexHedley</name>
 		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-task-tray-tool" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="task-tray-tool"&gt;Task Tray Tool&lt;/h2&gt;
-&lt;p&gt;The 'Task Tray Tool' plugin opens the Task Tray Tool app so the icon shows in the Task Tray ready for use, it was added to make it easier to find.&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus 0"&gt;&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;Opens the Task Tray Tool App in the Task Tray&lt;/p&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;Start | All Programs | Symantec | Workflow Designer | Tools | Task Tray Tool&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;"[Install Drive]:\Program Files\Symantec\Workflow\Tools\LogicBase.Local.TaskTray.exe"
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-asset-user-owners" />
+		<updated>2019-01-14T00:00:00Z</updated>
+		<content>&lt;h2 id="smp-smp"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="SMP"&gt;&amp;nbsp;SMP&lt;/h2&gt;
+&lt;h2 id="reports"&gt;Reports&lt;/h2&gt;
+&lt;h3 id="asset-user-owners"&gt;Asset User Owners&lt;/h3&gt;
+&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Associations | CMDB Assocation Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset User Owners&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​GUID&lt;/th&gt;
+&lt;th&gt;ed35a8d1-bf60-4771-9dde-092c146c485a&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​From Type&lt;/th&gt;
+&lt;th&gt;Asset&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;​To Type&lt;/td&gt;
+&lt;td&gt;​User&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | &amp;nbsp;Resource Types | Asset Types | Generic Asset Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Resource.png" alt="Resource"&gt; Asset&lt;/p&gt;
+&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Types | Organizational Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/User.png" alt="user"&gt; User&lt;/p&gt;
+&lt;p&gt;If you go to a Computer in&lt;/p&gt;
+&lt;p&gt;Home | Service and Asset Management | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/icnCustomView.gif" alt="icnCustomView"&gt;Manage Configuration Items&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/icnCustomView.gif" alt="icnCustomView"&gt;CI Management | Computers and Peripherals | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/computer16.png" alt="Computer"&gt;Computer&lt;/p&gt;
+&lt;p&gt;Scroll down to near the bottom there is a section for&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Asset Owners&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This allows you to edit which Owner you wish to have against the Asset.&lt;/p&gt;
+&lt;p&gt;This can either be&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
+&lt;li&gt;User&lt;/li&gt;
+&lt;li&gt;Department&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;p&gt;N/A&lt;/p&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the 'Protirus.Workflow.Plugins.xml' file.&lt;/p&gt;
-&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;The 'Task Tray Tool' plugin opens the Task Tray Tool app so the icon shows in the Task Tray ready for use, it was added to make it easier to find.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-recycle-app-pools</id>
-		<title>Workflow - Plugins - Protirus - Recycle App Pools</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-recycle-app-pools" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="recycle-app-pools"&gt;Recycle App Pools&lt;/h2&gt;
-&lt;p&gt;The 'Recycle App Pools' plugin allow you to Recycle a chosen App Pool via a Form.&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ApplicationPool.png" alt="Application Pool"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus 0"&gt;&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;A Form is displayed with a list of App Pools, clicking on an App Pool will display the Applications within it.&lt;/p&gt;
-&lt;p&gt;You can Recycle a chose App Pool and check on it's current Status.&lt;/p&gt;
-&lt;p&gt;You can also open IIS.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-RecycleAppPools.png" alt="Workflow - Plugins - RecycleAppPools"&gt;&lt;/p&gt;
-&lt;h3 id="section"&gt;&lt;/h3&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;Open IIS Manager (Start | Administrative Tools | Internet Information Services (IIS) Manager)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;%windir%\system32\inetsrv\InetMgr.exe
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;p&gt;N/A&lt;/p&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the 'Protirus.Workflow.Plugins.xml' file.&lt;/p&gt;
-&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;The 'Recycle App Pools' plugin allow you to Recycle a chosen App Pool via a Form.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-model-info</id>
-		<title>Workflow - Plugins - Protirus - Model Info</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-model-info" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="model-info"&gt;Model Info&lt;/h2&gt;
-&lt;p&gt;The Model Info plugin displays a list of all Models within the current Project. When you select a given Model a list of Components are displayed, showing their Id, Name and Description.&lt;/p&gt;
-&lt;p&gt;You can then Filter on a given Field.&lt;/p&gt;
-&lt;p&gt;This allows you to search for a Guid that maybe in Logs you are diagnosing.&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow.png" alt="Workflow"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;![Protirus 0](images\Protirus 0.png)&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;A Form opens which lists all the Models in the project and selecting a model displays a list of Components (with Guids) to search on.&lt;/p&gt;
-&lt;h3 id="workflow-plugins-modelinfo2"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-ModelInfo2.png" alt="Workflow Plugins ModelInfo2"&gt;&lt;/h3&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;See Article by &lt;a href="https://www.symantec.com/connect/user/sam-pace"&gt;Sam&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Workflow - Finding a model name using the model GUID&lt;br&gt;
-&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=02bb0c22-285e-41fa-b775-1c679a41b3e9&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/workflow-finding-model-name-using-model-guid&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;p&gt;N/A&lt;/p&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the Protirus.Workflow.Plugins.xml file.&lt;/p&gt;
-&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		<summary>&lt;p&gt;The Model Info plugin displays a list of all Models within the current Project. When you select a given Model a list of Components are displayed, showing their Id, Name and Description.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-restart-iis</id>
-		<title>Workflow - Plugins - Protirus - Restart IIS</title>
-		<author>
-			<name>AlexHedley</name>
-		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-restart-iis" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="restart-iis"&gt;Restart IIS&lt;/h2&gt;
-&lt;p&gt;The 'Restart IIS' plugin will restart IIS on the Workflow box using the currently logged in user..&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/WebServer.png" alt="WebServer"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus 0"&gt;&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;IIS will be restarted using the currently logged in user.&lt;/p&gt;
-&lt;h3 id="section"&gt;&lt;/h3&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;Open IIS Manager (Start | Administrative Tools | Internet Information Services (IIS) Manager)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;%windir%\system32\inetsrv\InetMgr.exe
+&lt;p&gt;If you then need this information in a Report you can use the following SQL.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DECLARE @UserGuid AS UniqueIdentifier = NULL
 
-iisreset
-
-Process.Start("net", "stop w3svc"); //net stop IISADMIN
-Process.Start("net", "start w3svc"); //net start IISADMIN
+SELECT&amp;nbsp;
+&amp;nbsp; &amp;nbsp; a.[Guid] AS [AssetGuid]
+&amp;nbsp; &amp;nbsp; ,a.[Name] AS [AssetName]
+&amp;nbsp; &amp;nbsp; --,rt.[Name] AS [AssetType]
+&amp;nbsp; &amp;nbsp; ,u.[Guid] AS [UserGuid]
+&amp;nbsp; &amp;nbsp; ,u.Email AS [UserEmail]
+FROM vRM_Asset_Item a
+INNER JOIN ResourceAssociation ra&amp;nbsp;
+&amp;nbsp; &amp;nbsp; ON a.Guid = ra.ParentResourceGuid AND ra.ResourceAssociationTypeGuid = 'ed35a8d1-bf60-4771-9dde-092c146c485a'
+INNER JOIN vUser u
+&amp;nbsp; &amp;nbsp; ON ra.ChildResourceGuid = u.Guid
+--INNER JOIN ResourceType rt
+--&amp;nbsp; &amp;nbsp; ON rt.Guid = a.ResourceTypeGuid
+WHERE&amp;nbsp;
+(
+&amp;nbsp; &amp;nbsp; (@UserGuid IS NULL)&amp;nbsp;
+&amp;nbsp; &amp;nbsp; OR (@UserGuid IS NOT NULL AND u.Guid = @UserGuid)
+)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;p&gt;N/A&lt;/p&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the 'Protirus.Workflow.Plugins.xml' file.&lt;/p&gt;
-&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </content>
-		<summary>&lt;p&gt;The 'Restart IIS' plugin will restart IIS on the Workflow box using the currently logged in user..&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Associations | CMDB Assocation Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset User Owners&lt;/p&gt;</summary>
 	</entry>
 	<entry>
-		<id>https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-zip</id>
-		<title>Workflow - Plugins - Protirus - Zip</title>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-asset-department-owners</id>
+		<title>SMP - Reports - Asset Department Owners</title>
 		<author>
 			<name>AlexHedley</name>
 		</author>
-		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/workflow-plugins-protirus-zip" />
-		<updated>2017-12-06T00:00:00Z</updated>
-		<content>&lt;h2 id="zip"&gt;Zip&lt;/h2&gt;
-&lt;p&gt;The 'Zip' Plugin has been produced to match similar functionality as the Altiris Log Viewer which also has a Zip function.&lt;/p&gt;
-&lt;p&gt;The 'Protirus.Workflow.Plugins.xml' has a &lt;em&gt;&amp;lt;files&amp;gt;&lt;/em&gt; section that can be configured to display which Log files will show by default. These can then be chosen and added to the package that is zipped.&lt;/p&gt;
-&lt;h3 id="plugin-icon"&gt;Plugin Icon&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Zip.png" alt="Zip"&gt;&lt;/p&gt;
-&lt;h3 id="author"&gt;Author&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus_0.png" alt="Protirus_0"&gt;&amp;nbsp;&lt;a href="https://www.protirus.com/"&gt;Protirus&lt;/a&gt;&amp;nbsp;(&lt;a href="https://www.symantec.com/connect/user/alexhedley"&gt;Alex Hedley&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="perform-action"&gt;Perform Action&lt;/h3&gt;
-&lt;p&gt;Open a Form that allows for Folder/File selection and then a Zip action to bundle the files to given directory.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Workflow-Plugins-Zip.png" alt="Workflow Plugins Zip"&gt;&lt;/p&gt;
-&lt;p&gt;Update the file with the ones you wish to show.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;files&amp;gt;
-    &amp;lt;filesDef&amp;gt;
-      &amp;lt;name&amp;gt;processmanager.log&amp;lt;/name&amp;gt;
-      &amp;lt;show&amp;gt;true&amp;lt;/show&amp;gt;
-    &amp;lt;/filesDef&amp;gt;
-  ...
-&amp;lt;/files&amp;gt;
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-asset-department-owners" />
+		<updated>2019-01-14T00:00:00Z</updated>
+		<content>&lt;h2 id="smp-smp"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="SMP"&gt;&amp;nbsp;SMP&lt;/h2&gt;
+&lt;h2 id="reports"&gt;Reports&lt;/h2&gt;
+&lt;h3 id="asset-department-owners"&gt;Asset Department&amp;nbsp;Owners&lt;/h3&gt;
+&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Associations | CMDB Assocation Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset Department Owner&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​GUID&lt;/th&gt;
+&lt;th&gt;1466e770-4413-4517-a89d-6599b8a7f144&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​From Type&lt;/th&gt;
+&lt;th&gt;Asset&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;​To Type&lt;/td&gt;
+&lt;td&gt;​Department&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | &amp;nbsp;Resource Types | Asset Types | Generic Asset Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Resource.png" alt="Resource"&gt; Asset&lt;/p&gt;
+&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Types | Organizational Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Department.png" alt="Department"&gt; Department&lt;/p&gt;
+&lt;p&gt;If you go to a Computer in&lt;/p&gt;
+&lt;p&gt;Home | Service and Asset Management | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/icnCustomView.gif" alt="icnCustomView"&gt;Manage Configuration Items&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/icnCustomView.gif" alt="icnCustomView"&gt;CI Management | Computers and Peripherals | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/computer16.png" alt="Computer"&gt;Computer&lt;/p&gt;
+&lt;p&gt;Scroll down to near the bottom there is a section for&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Asset Owners&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This allows you to edit which Owner you wish to have against the Asset.&lt;/p&gt;
+&lt;p&gt;This can either be&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User&lt;/li&gt;
+&lt;li&gt;Department&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you then need this information in a Report you can use the following SQL.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DECLARE @DepartmentGuid AS UniqueIdentifier = NULL
+
+SELECT&amp;nbsp;
+&amp;nbsp; &amp;nbsp; a.[Guid] AS [AssetGuid]
+&amp;nbsp; &amp;nbsp; ,a.[Name] AS [AssetName]
+&amp;nbsp; &amp;nbsp; --,rt.[Name] AS [AssetType]
+&amp;nbsp; &amp;nbsp; ,d.[_ResourceGuid] AS [DepartmentGuid]
+&amp;nbsp; &amp;nbsp; ,d.[Name] AS [DepartmentName]
+FROM vRM_Asset_Item a
+INNER JOIN ResourceAssociation ra&amp;nbsp;
+&amp;nbsp; &amp;nbsp; ON a.Guid = ra.ParentResourceGuid AND ra.ResourceAssociationTypeGuid = '1466e770-4413-4517-a89d-6599b8a7f144'
+INNER JOIN vDepartment d
+&amp;nbsp; &amp;nbsp; ON ra.ChildResourceGuid = d._ResourceGuid
+--INNER JOIN ResourceType rt
+--&amp;nbsp; &amp;nbsp; ON rt.Guid = a.ResourceTypeGuid
+WHERE&amp;nbsp;
+(
+&amp;nbsp; &amp;nbsp; (@DepartmentGuid IS NULL)&amp;nbsp;
+&amp;nbsp; &amp;nbsp; OR (@DepartmentGuid IS NOT NULL AND d._ResourceGuid = @DepartmentGuid)
+)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="alternative"&gt;Alternative&lt;/h3&gt;
-&lt;p&gt;Manually find the files and compress yourself.&lt;/p&gt;
-&lt;h3 id="location"&gt;Location&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;[Install Drive]:\Program Files\Symantec\Workflow\Designer\Plugins\
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id="dll"&gt;DLL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Protirus.Workflow.Plugins.dll&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="code"&gt;Code&lt;/h3&gt;
-&lt;p&gt;N/A&lt;/p&gt;
-&lt;h3 id="customise"&gt;Customise&lt;/h3&gt;
-&lt;p&gt;Can be hidden with a config change in the 'Protirus.Workflow.Plugins.xml' file.&lt;/p&gt;
-&lt;h3 id="documentation"&gt;Documentation&lt;/h3&gt;
-&lt;p&gt;[Display any related Documentation]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title URL
-&lt;ul&gt;
-&lt;li&gt;Chapter/Page #&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="support"&gt;Support&lt;/h3&gt;
-&lt;p&gt;[Display any related Support Documents]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Title
-&lt;ul&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </content>
-		<summary>&lt;p&gt;The 'Zip' Plugin has been produced to match similar functionality as the Altiris Log Viewer which also has a Zip function.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Associations | CMDB Assocation Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset Department Owner&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-departments-location</id>
+		<title>SMP - Reports - Departments Location</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-departments-location" />
+		<updated>2019-01-14T00:00:00Z</updated>
+		<content>&lt;h2 id="smp-smp"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="SMP"&gt;&amp;nbsp;SMP&lt;/h2&gt;
+&lt;h2 id="reports"&gt;Reports&lt;/h2&gt;
+&lt;h3 id="departments-location"&gt;Department's Location&lt;/h3&gt;
+&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Associations | CMDB Assocation Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Department's Location&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​GUID&lt;/th&gt;
+&lt;th&gt;​9e4ced04-c03f-473c-b0c3-1c1d1b8df49b&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​From Type&lt;/th&gt;
+&lt;th&gt;Department&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;​To Type&lt;/td&gt;
+&lt;td&gt;​Location&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Types | Organizational Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Department.png" alt="Department"&gt; Department&lt;/p&gt;
+&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Types | Organizational Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/location16.png" alt="Location"&gt; Location&lt;/p&gt;
+&lt;p&gt;If you go to a Department in&lt;/p&gt;
+&lt;p&gt;Home | Service and Asset Management | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/icnCustomView.gif" alt="icnCustomView"&gt;Manage Configuration Items&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/icnCustomView.gif" alt="icnCustomView"&gt;CI Management | Organisational Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/department16.png" alt="Department"&gt;&amp;nbsp;Department&lt;/p&gt;
+&lt;p&gt;Scroll down to near the bottom there is a section for&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Department's Location&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This allows you to edit which Location a Department is in.&lt;/p&gt;
+&lt;p&gt;If you then need this information in a Report you can use the following SQL.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DECLARE @LocationName AS nvarchar(255) = NULL
+DECLARE @DepartmentNameTerm AS nvarchar(255) = NULL
+
+SELECT
+&amp;nbsp; d.[Guid] AS [DepartmentGuid],
+&amp;nbsp; d.[Name] AS [DepartmentName],
+&amp;nbsp; l.[Guid] AS [LocationGuid],
+&amp;nbsp; l.[Name] AS [LocationName]
+FROM
+&amp;nbsp; vRM_Department_Item d
+&amp;nbsp; LEFT OUTER JOIN vRM_Location_Item l
+&amp;nbsp; INNER JOIN ResourceAssociation AS ra1 ON l.Guid = ra1.ChildResourceGuid&amp;nbsp;
+&amp;nbsp; &amp;nbsp; ON ra1.ParentResourceGuid = d.Guid&amp;nbsp;
+&amp;nbsp; &amp;nbsp; AND ra1.ResourceAssociationTypeGuid = '9e4ced04-c03f-473c-b0c3-1c1d1b8df49b'
+WHERE
+(
+((@LocationName IS NULL and (l.Name LIKE '%' or l.Name IS NULL)) OR (@LocationName IS NOT NULL AND l.Name = @LocationName))
+AND
+((@DepartmentNameTerm IS NULL and (d.Name LIKE '%' or d.Name IS NULL)) OR (@DepartmentNameTerm IS NOT NULL AND d.Name LIKE '%' + @DepartmentNameTerm + '%'))
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+		<summary>&lt;p&gt;Settings | Notification Server | Resource and Data Class Settings | Resource Associations | CMDB Assocation Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Department's Location&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-assets-location</id>
+		<title>SMP - Reports - Assets Location</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-assets-location" />
+		<updated>2019-01-14T00:00:00Z</updated>
+		<content>&lt;h2 id="smp-smp"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="SMP"&gt;&amp;nbsp;SMP&lt;/h2&gt;
+&lt;h2 id="reports"&gt;Reports&lt;/h2&gt;
+&lt;h3 id="assets-location"&gt;Asset's&amp;nbsp;Location&lt;/h3&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | Resource Associations |&amp;nbsp;CMDB Assocation Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset’s Location&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​GUID&lt;/th&gt;
+&lt;th&gt;05de450f-39ea-4aae-8c5f-77817889c27c&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;From Type&lt;/th&gt;
+&lt;th&gt;Asset&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;​To Type&lt;/td&gt;
+&lt;td&gt;Location&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | &amp;nbsp;Resource Types | Asset Types | Generic Asset Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Resource.png" alt="Resource"&gt; Asset&lt;/p&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | &amp;nbsp;Resource Types | Organisational Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/location16.png" alt="Location"&gt;&amp;nbsp;Location&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DECLARE @AssetGuid AS UniqueIdentifier = NULL --'00000000-0000-0000-0000-000000000000'&amp;nbsp;
+DECLARE @LocationGuid AS UniqueIdentifier = NULL --'00000000-0000-0000-0000-000000000000'&amp;nbsp;
+
+SELECT &amp;nbsp;
+&amp;nbsp; ri.[Guid] AS [AssetGuid]&amp;nbsp;&amp;nbsp;
+&amp;nbsp; ,ri.[Name] AS [AssetName]
+&amp;nbsp; --,rt.[Guid] AS [AssetTypeGuid]
+&amp;nbsp; --,rt.[Name] AS [AssetType]
+&amp;nbsp; ,l.[Guid] AS [LocationGuid]
+&amp;nbsp; ,l.[Name] AS [LocationName]&amp;nbsp;
+FROM &amp;nbsp;
+&amp;nbsp; vRM_Asset_Item ri &amp;nbsp;
+&amp;nbsp; INNER JOIN ResourceAssociation ra&amp;nbsp;
+&amp;nbsp; &amp;nbsp; ON ri.Guid = ra.ParentResourceGuid
+&amp;nbsp; &amp;nbsp; AND (ra.ResourceAssociationTypeGuid = '05de450f-39ea-4aae-8c5f-77817889c27c') --Location &amp;nbsp;
+&amp;nbsp; INNER JOIN vRM_Location_Item l&amp;nbsp;
+&amp;nbsp; &amp;nbsp; ON ra.ChildResourceGuid = l.Guid&amp;nbsp;
+&amp;nbsp; --INNER JOIN ResourceType rt
+&amp;nbsp; --&amp;nbsp; ON rt.Guid = ri.ResourceTypeGuid
+WHERE
+(
+&amp;nbsp; (@AssetGuid IS NOT NULL AND ri.Guid = @AssetGuid)
+&amp;nbsp; OR
+&amp;nbsp; (@LocationGuid IS NOT NULL AND l.Guid = @LocationGuid)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="location-hierarchy"&gt;Location Hierarchy&lt;/h3&gt;
+&lt;p&gt;If you have a Hierarchy of Locations it's handy to add this in your Reports.&lt;/p&gt;
+&lt;p&gt;Just add the &lt;strong&gt;Path&lt;/strong&gt; field.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT Guid, Path
+FROM dbo.fnAssetHierarchyTreeExcludeChildren('834BC951-D70F-48F4-9E8E-D7E32C68788D', NULL, 0x0, 0x0, 1)
+AS h
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;UK\England\Newcastle&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;query to build location hierarchy&lt;br&gt;
+&lt;a href="https://community.broadcom.com/groups/viewthread?MessageKey=08e7d06d-37d0-46c4-a878-1d9e318ce109&amp;amp;CommunityKey=2eae875e-f73e-4358-8452-7bb8f7f27f59&amp;amp;tab=digestviewer#bm08e7d06d-37d0-46c4-a878-1d9e318ce109"&gt;https://www.symantec.com/connect/forums/query-build-location-hierarchy&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="locations-by-parent-at-location"&gt;Locations&amp;nbsp;By Parent At Location&lt;/h3&gt;
+&lt;p&gt;You may just wish to find the parent of a Location.&lt;/p&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | Resource Associations |&amp;nbsp;CMDB Assocation Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Location Hierarchy&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​GUID&lt;/th&gt;
+&lt;th&gt;dc4689d9-1d2d-47cc-bf65-fd9437d08ed5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;From Type&lt;/th&gt;
+&lt;th&gt;Location&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;​To Type&lt;/td&gt;
+&lt;td&gt;Location&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | &amp;nbsp;Resource Types | Organisational Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/location16.png" alt="Location"&gt;&amp;nbsp;Location&lt;/p&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | &amp;nbsp;Resource Types | Organisational Types | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/location16.png" alt="Location"&gt;&amp;nbsp;Location&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DECLARE @ParentLocationGuid AS UniqueIdentifier = NULL
+
+SELECT&amp;nbsp;
+&amp;nbsp; &amp;nbsp; li.[Guid]
+&amp;nbsp; &amp;nbsp; ,li.[Name]
+&amp;nbsp; &amp;nbsp; ,l.[Guid] AS ParentLocationGuid
+&amp;nbsp; &amp;nbsp; ,l.[Name] AS ParentLocationName
+FROM
+&amp;nbsp; &amp;nbsp; vRM_Location_Item li
+INNER JOIN ResourceAssociation ra
+&amp;nbsp; &amp;nbsp; ON li.[Guid] = ra.ParentResourceGuid AND ra.ResourceAssociationTypeGuid = 'dc4689d9-1d2d-47cc-bf65-fd9437d08ed5'
+INNER JOIN vRM_Location_Item l
+&amp;nbsp; &amp;nbsp; ON ra.ChildResourceGuid = l.[Guid]
+WHERE
+&amp;nbsp; &amp;nbsp; l.[Guid] = @ParentLocationGuid
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+		<summary>&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | Resource Associations |&amp;nbsp;CMDB Assocation Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset’s Location&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-assets-status</id>
+		<title>SMP - Reports - Assets Status</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports-assets-status" />
+		<updated>2019-01-14T00:00:00Z</updated>
+		<content>&lt;h2 id="smp-smp"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="SMP"&gt;&amp;nbsp;SMP&lt;/h2&gt;
+&lt;h2 id="reports"&gt;Reports&lt;/h2&gt;
+&lt;h3 id="assets-status"&gt;Asset's&amp;nbsp;Status&lt;/h3&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | Resource Associations | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset’s Status&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;​GUID&lt;/th&gt;
+&lt;th&gt;3028166f-c0d6-41d8-9cb7-f64852e0fd01&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parent&lt;/th&gt;
+&lt;th&gt;Asset&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;​Child&lt;/td&gt;
+&lt;td&gt;​​Fixed Asset Status Resource Type&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | &amp;nbsp;Resource Types | Asset Types | Generic Asset Types |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Resource.png" alt="Resource"&gt; Asset&lt;/p&gt;
+&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | &amp;nbsp;Resource Types | Other Resources |&amp;nbsp;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/icn16asset_gen.gif" alt="Resource"&gt; Fixed Asset Status Resource Type&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If an Asset hasn't had a Status set it won't show as Active, so you need to check for this.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Get the Statuses of each Computer&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT &amp;nbsp;
+vComputer.Name AS [ComputerName], &amp;nbsp;
+vRM_Fixed_Asset_Status_Resource_Type_Item.Name AS [Status]&amp;nbsp;
+FROM ResourceAssociation &amp;nbsp;
+&amp;nbsp;INNER JOIN vComputer ON ResourceAssociation.ParentResourceGuid = vComputer.Guid &amp;nbsp;
+&amp;nbsp;INNER JOIN vRM_Fixed_Asset_Status_Resource_Type_Item &amp;nbsp;
+&amp;nbsp;ON ResourceAssociation.ChildResourceGuid = vRM_Fixed_Asset_Status_Resource_Type_Item.Guid&amp;nbsp;
+WHERE&amp;nbsp;
+&amp;nbsp;(ResourceAssociation.ResourceAssociationTypeGuid = '3028166f-c0d6-41d8-9cb7-f64852e0fd01')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;nbsp;SELECT&amp;nbsp;
+RM_ResourceComputer.Guid AS ComputerGuid, &amp;nbsp;
+RM_ResourceComputer.Name AS ComputerName, &amp;nbsp;
+vUser.Guid AS UserGuid, &amp;nbsp;
+vUser.Name AS [User],&amp;nbsp;
+vRM_Fixed_Asset_Status_Resource_Type_Item.Guid AS [StatusGuid],&amp;nbsp;
+vRM_Fixed_Asset_Status_Resource_Type_Item.Name AS [Status]&amp;nbsp;
+FROM&amp;nbsp;
+RM_ResourceComputer &amp;nbsp;
+INNER JOIN ResourceAssociation ON RM_ResourceComputer.Guid = ResourceAssociation.ParentResourceGuid &amp;nbsp;
+INNER JOIN vUser ON ResourceAssociation.ChildResourceGuid = vUser.Guid &amp;nbsp;
+INNER JOIN ResourceAssociation AS ResourceAssociation_1 ON RM_ResourceComputer.Guid = ResourceAssociation_1.ParentResourceGuid &amp;nbsp;
+INNER JOIN vRM_Fixed_Asset_Status_Resource_Type_Item ON ResourceAssociation_1.ChildResourceGuid = vRM_Fixed_Asset_Status_Resource_Type_Item.Guid&amp;nbsp;
+WHERE&amp;nbsp;
+(ResourceAssociation.ResourceAssociationTypeGuid = 'ed35a8d1-bf60-4771-9dde-092c146c485a') &amp;nbsp;
+AND &amp;nbsp;
+(ResourceAssociation_1.ResourceAssociationTypeGuid = '3028166f-c0d6-41d8-9cb7-f64852e0fd01')&amp;nbsp;
+AND&amp;nbsp;
+(&amp;nbsp;
+&amp;nbsp;( (@ComputerName IS NOT NULL) AND (RM_ResourceComputer.Name = @ComputerName) )&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;OR&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;( (@User IS NOT NULL) AND (vUser.Name = @User) )&amp;nbsp;
+&amp;nbsp; &amp;nbsp; )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you're interested in what Tables are used to maintain this check the following Article&lt;/p&gt;
+&lt;p&gt;Workflow - SMP - ASDK - Asset Ownership&lt;br&gt;
+&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=7e9fe111-ca99-4880-adee-6532190f0eea&amp;amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/workflow-smp-asdk-asset-ownership&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Settings | &amp;nbsp;Notification Server | Resource and Data Class Settings | Resource Associations | &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ResourceAssociation.png" alt="Resource Association"&gt;&amp;nbsp;Asset’s Status&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports</id>
+		<title>SMP - Reports</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-reports" />
+		<updated>2019-01-12T00:00:00Z</updated>
+		<content>&lt;h2 id="reports"&gt;Reports&lt;/h2&gt;
+&lt;p&gt;There are a number of &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="SMP"&gt;&amp;nbsp;SMP &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports"&gt;&amp;nbsp;Reports pre-installed but you can also create your own.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I thought it might be helpful to document how to create Reports to get the most common information people require, this could be an Asset's Status, it's Location, Department, Inventory data etc. Sometimes the joins aren't obvious or you find a Report with some information but not all and you need to merge the two.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2fd7062e-c4ea-4218-9f2b-8432c7d4a197&amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;tab=librarydocuments"&gt;Asset User Owners&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d211974a-4488-42a8-87eb-46d7e33a4902&amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;tab=librarydocuments"&gt;Asset Department Owners&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=080d8d03-44cf-4155-aa50-be3a5972ba34&amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;tab=librarydocuments"&gt;Asset's Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=4c38ad49-1705-4729-a4d6-3bc20fc50c7b&amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;tab=librarydocuments"&gt;Asset's Location&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.symantec.com/connect/articles/smp-reports-asset-info"&gt;Asset Info&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=415ef9bf-0236-4dc0-b544-3e7848ab7bdc&amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;tab=librarydocuments"&gt;Department's Location&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ToDo&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inventory (AeX ...)
+&lt;ul&gt;
+&lt;li&gt;Disk Space&lt;/li&gt;
+&lt;li&gt;Last Check In Date&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please add links to any useful Reports you've found or made.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please comment below for any Reports you'd like adding to the list.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="sse"&gt;SSE&lt;/h3&gt;
+&lt;p&gt;I would advise adding the SSE Reports provided by &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Symantec.png" alt="Symantec"&gt;&amp;nbsp;Symantec, these are useful for any Support Cases you raise.&lt;/p&gt;
+&lt;p&gt;SSE Reports&lt;br&gt;
+HOWTO52986&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.HOWTO52986.html"&gt;https://support.symantec.com/en_US/article.HOWTO52986.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SSE Reports for ITMS&lt;br&gt;
+TECH227522&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.TECH227522.html"&gt;https://support.symantec.com/en_US/article.TECH227522.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ITMS 7.5 - Checking Agent Plug-ins versions via SMP reports&lt;br&gt;
+SSE SMP reports&lt;br&gt;
+Mauro Dalvit (&lt;a href="https://www.symantec.com/connect/user/mauro-dalvit"&gt;https://www.symantec.com/connect/user/mauro-dalvit&lt;/a&gt;)&lt;br&gt;
+&lt;a href="https://community.broadcom.com/groups/viewdocument?DocumentKey=9c42e8e6-52bf-4e19-91e9-e21581325c89&amp;amp;CommunityKey=36a652c6-c7e1-4701-af0f-b978f701f102&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/blogs/itms-75-checking-agent-plug-ins-versions-smp-reports&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="connect-groups"&gt;Connect Group(s)&lt;/h3&gt;
+&lt;p&gt;You can also join a Group which has useful Connect info:&lt;/p&gt;
+&lt;p&gt;Reporting&lt;br&gt;
+&lt;a href="https://www.symantec.com/connect/groups/reporting"&gt;https://www.symantec.com/connect/groups/reporting&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="symantec-articles"&gt;Symantec Articles&lt;/h3&gt;
+&lt;p&gt;Of course check out any Articles from JS, he's written up a list of many of the pre-canned Reports:&lt;/p&gt;
+&lt;p&gt;Joel Smith (&lt;a href="https://www.symantec.com/connect/user/joel-smith"&gt;https://www.symantec.com/connect/user/joel-smith&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Software Management Resource Schema 7.1&lt;br&gt;
+&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6b2044d1-c7de-46b7-a1a0-32be72c92311&amp;amp;CommunityKey=ef59d715-7ea1-41c6-97f3-dd1bcc10d0c3&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/software-management-resource-schema-71&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Part 1: Discovery, Inventory, and Asset&lt;br&gt;
+List of Reports and Associated Queries within the Symantec Management Platform and Solutions 7.5 SP1, Part 1: Discovery, Inventory, and Asset&lt;br&gt;
+&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=873ca7e4-b9cc-476e-be48-dfa557d13bc0&amp;amp;CommunityKey=bf23126f-6eab-4bbe-965d-e26838c079e0&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/list-reports-and-associated-queries-within-symantec-management-platform-and-solutions-75-sp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Part 2: Software Management&lt;br&gt;
+List of Reports and Associated Queries within the Symantec Management Platform and Solutions 7.5 SP, Part 2: Software Management&lt;br&gt;
+&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a057238d-cffc-4964-80ff-960218553bfe&amp;amp;CommunityKey=bf23126f-6eab-4bbe-965d-e26838c079e0&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/list-reports-and-associated-queries-within-symantec-management-platform-and-solutions-75--0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Part 3: Symantec Management Platform&lt;br&gt;
+List of Reports and Associated Queries within the Symantec Management Platform and Solutions 7.5 SP1, Part 3: Symantec Management Platform&lt;br&gt;
+&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=94bfe18c-a603-4564-af7f-51a813662070&amp;amp;CommunityKey=bf23126f-6eab-4bbe-965d-e26838c079e0&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/list-reports-and-associated-queries-within-symantec-management-platform-and-solutions-75--1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Part 4: Computer and Server Management&lt;br&gt;
+List of Reports and Associated Queries within the Symantec Management Platform and Solutions 7.5 SP1, Part 4: Computer and Server Management&lt;br&gt;
+&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2c0c6b5f-76b8-4eac-a910-161091fdfa2e&amp;amp;CommunityKey=bf23126f-6eab-4bbe-965d-e26838c079e0&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/list-reports-and-associated-queries-within-symantec-management-platform-and-solutions-75--2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Part 5: Other Management Solutions&lt;br&gt;
+List of Reports and Associated Queries within the Symantec Management Platform and Solutions 7.5 SP1, Part 5: Other Management Solutions&lt;br&gt;
+&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=1c2e993d-233a-4920-b2b2-b21b6269b4f7&amp;amp;CommunityKey=bf23126f-6eab-4bbe-965d-e26838c079e0&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/list-reports-and-associated-queries-within-symantec-management-platform-and-solutions-75--3&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="helpful-reports"&gt;Helpful Reports&lt;/h3&gt;
+&lt;p&gt;Symantec CMDB Reporting - How to find the right SQL Table&lt;br&gt;
+&lt;a href="https://community.broadcom.com/groups/viewdocument?DocumentKey=bfd66368-e76e-43ef-8270-ac5b1f78de11&amp;amp;CommunityKey=d89b2b1b-1b1c-40c7-88de-8a8a52ebf2a5&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/videos/symantec-cmdb-reporting-how-find-right-sql-table&lt;/a&gt;&lt;br&gt;
+By:&amp;nbsp;&lt;a href="https://www.symantec.com/connect/user/odami"&gt;odami&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT * FROM INFORMATION_SCHEMA .COLUMNS WHERE COLUMN_NAME LIKE '%Software%'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Useful SQL queries concerning Collections/Filters&lt;br&gt;
+&lt;a href="https://community.broadcom.com/groups/viewdocument?DocumentKey=f5b18caf-a738-45a1-99e9-688abf47b244&amp;amp;CommunityKey=d5a4f95a-fa38-4bdd-82d5-2daec4b3ca5c&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/useful-sql-queries-concerning-collectionsfilters&lt;/a&gt;&lt;br&gt;
+By:&amp;nbsp;&lt;a href="https://www.symantec.com/connect/user/sk"&gt;sk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The SQL behind the Activity Center's "Manage &amp;gt; Software" console view&lt;br&gt;
+&lt;a href="https://community.broadcom.com/groups/viewdocument?DocumentKey=3bde76b0-0d9f-426b-b6f3-71e33d2b1527&amp;amp;CommunityKey=d5a4f95a-fa38-4bdd-82d5-2daec4b3ca5c&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/sql-behind-activity-centers-manage-software-console-view&lt;/a&gt;&lt;br&gt;
+By:&amp;nbsp;&lt;a href="https://www.symantec.com/connect/user/sk"&gt;sk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Understanding the ResourceAssociation table&lt;br&gt;
+&lt;a href="https://community.broadcom.com/groups/viewdocument?DocumentKey=ddf1d88c-7851-49c9-98e5-2677d209195d&amp;amp;CommunityKey=d5a4f95a-fa38-4bdd-82d5-2daec4b3ca5c&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/blogs/understanding-resourceassociation-table&lt;/a&gt;&lt;br&gt;
+By:&amp;nbsp;&lt;a href="https://www.symantec.com/connect/user/sk"&gt;sk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Query behind software view in Enhanced console views&lt;br&gt;
+&lt;a href="https://community.broadcom.com/groups/viewthread?MessageKey=523db5a6-71fd-42ff-bfff-792cde53a618&amp;amp;CommunityKey=2eae875e-f73e-4358-8452-7bb8f7f27f59&amp;amp;tab=digestviewer#bm523db5a6-71fd-42ff-bfff-792cde53a618"&gt;https://www.symantec.com/connect/forums/query-behind-software-view-enhanced-console-views&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="schemas"&gt;Schemas&lt;/h3&gt;
+&lt;p&gt;Symantec Management Platform 7.1 Database Schema&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.DOC3724.html"&gt;https://support.symantec.com/en_US/article.DOC3724.html&lt;/a&gt;&lt;br&gt;
+DOC3724&lt;/p&gt;
+&lt;p&gt;What is the Database structure (Schema)?&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.HOWTO1107.html"&gt;https://support.symantec.com/en_US/article.HOWTO1107.html&lt;/a&gt;&lt;br&gt;
+HOWTO1107&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="symantec-support"&gt;Symantec Support&lt;/h3&gt;
+&lt;p&gt;How to create a custom report for assets&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.HOWTO100089.html"&gt;https://support.symantec.com/en_US/article.HOWTO100089.html&lt;/a&gt;&lt;br&gt;
+HOWTO100089&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;There are a number of &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="SMP"&gt;&amp;nbsp;SMP &lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ReportsFolder.png" alt="Reports"&gt;&amp;nbsp;Reports pre-installed but you can also create your own.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/smp-resource-target-operations</id>
+		<title>SMP - Resource Target - Operations</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/smp-resource-target-operations" />
+		<updated>2018-11-29T00:00:00Z</updated>
+		<content>&lt;h2 id="smp-smp"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/smp.png" alt="SMP"&gt;&amp;nbsp;SMP&lt;/h2&gt;
+&lt;h3 id="resource-target"&gt;Resource Target&lt;/h3&gt;
+&lt;h3 id="operation"&gt;Operation&lt;/h3&gt;
+&lt;p&gt;What are the different Opertions?&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;#&lt;/th&gt;
+&lt;th&gt;Operation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;Union&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Intersect&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Except&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;They are mentioned in the following Forum post:&lt;/p&gt;
+&lt;p&gt;Create Resource Target component&lt;br&gt;
+&lt;a href="https://community.broadcom.com/groups/viewthread?MessageKey=e2f88907-fcdc-42bf-9dd5-2996237bf4df&amp;amp;CommunityKey=56cfcefc-8f2b-4200-b0e3-e33f564377e6&amp;amp;tab=digestviewer#bme2f88907-fcdc-42bf-9dd5-2996237bf4df"&gt;https://www.symantec.com/connect/forums/create-resource-target-component&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The "operation" element in each Target Filter defines the logical operation that will be performed between the resources contained in the the filter and base organizational group (in the case of the first filter), or between the filter's resources and the resource set derived from the previous filter opertation (in the case of the second and subsequent filters). Only three values are allowed: "Intersect," "Union," and "Except."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you want to see which Filters are in a Target you can use a Report added to SD in 8.1 or run the following SQL.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ServiceDesk - Software Request Process - Reports
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=24530d5f-01a3-464d-846b-01482ee0c85e&amp;amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;amp;tab=librarydocuments"&gt;https://www.symantec.com/connect/articles/servicedesk-software-request-process-reports&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Filters for Target&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/FiltersforTarget_SQL.png" alt="Filters for Target SQL"&gt;&lt;/p&gt;
+&lt;p&gt;For Example:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;All Computers without Software Update Plug-in Installed Target&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://localhost/Altiris/NS/ItemAsXml.aspx?ItemGuid=96F806F1-D46D-47AA-BB40-2E2E5EFBF4C3"&gt;http://localhost/Altiris/NS/ItemAsXml.aspx?ItemGuid=96F806F1-D46D-47AA-BB40-2E2E5EFBF4C3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;TargetName&lt;/th&gt;
+&lt;th&gt;CollectionName&lt;/th&gt;
+&lt;th&gt;FilterType&lt;/th&gt;
+&lt;th&gt;Operation&lt;/th&gt;
+&lt;th&gt;CollectionGuid&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;All Computers without Software Update Plug-in Installed Target&lt;/td&gt;
+&lt;td&gt;Windows Computers&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;E3A71B08-1612-44A6-9F71-7D359D5475B4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;All Computers without Software Update Plug-in Installed Target&lt;/td&gt;
+&lt;td&gt;Computers with Software Update Plug-in Installed&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;D3BA9CA7-5E71-4D76-B961-1BA0B436AACB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;All Computers without Software Update Plug-in Installed Target&lt;/td&gt;
+&lt;td&gt;Windows Computers Requiring Symantec Management Agent Upgrade&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;04B75635-A594-48B6-9A2F-B79A0D78F6B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;All Computers without Software Update Plug-in Installed Target&lt;/td&gt;
+&lt;td&gt;UNIX/Linux/Mac Computers Requiring Symantec Management Agent Upgrade&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;EDC60302-F96A-4BBC-9B68-402EAEAD63D5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;All Computers without Software Update Plug-in Installed Target&lt;/td&gt;
+&lt;td&gt;All Computers&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;EB3A1A12-E1C7-4431-B060-F0333E4E488C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;All Computers without Software Update Plug-in Installed Target&lt;/td&gt;
+&lt;td&gt;Linux Computers&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;6D05AC39-2CBF-4DA0-BCA1-0E64CA22A59C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As XML&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;targetFilters&amp;gt;
+ &amp;lt;targetFilter guid="{657df9f3-f6a5-4d1f-afd4-27e845c96d24}" type="Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter" assembly="Altiris.NS.StandardItems" offset="0"&amp;gt;
+  &amp;lt;operation&amp;gt;Intersect&amp;lt;/operation&amp;gt; 
+  &amp;lt;resourceCollectionGuid&amp;gt;{e3a71b08-1612-44a6-9f71-7d359d5475b4}&amp;lt;/resourceCollectionGuid&amp;gt; 
+ &amp;lt;/targetFilter&amp;gt;
+ &amp;lt;targetFilter guid="{38f6c355-8cd9-4b04-8f72-7680f479b979}" type="Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter" assembly="Altiris.NS.StandardItems" offset="1"&amp;gt;
+  &amp;lt;operation&amp;gt;Union&amp;lt;/operation&amp;gt; 
+  &amp;lt;resourceCollectionGuid&amp;gt;{6d05ac39-2cbf-4da0-bca1-0e64ca22a59c}&amp;lt;/resourceCollectionGuid&amp;gt; 
+  &amp;lt;/targetFilter&amp;gt;
+ &amp;lt;targetFilter guid="{5b6b51f1-6a29-4a7a-bf4f-296fe9e1f33b}" type="Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter" assembly="Altiris.NS.StandardItems" offset="2"&amp;gt;
+  &amp;lt;operation&amp;gt;Except&amp;lt;/operation&amp;gt; 
+  &amp;lt;resourceCollectionGuid&amp;gt;{d3ba9ca7-5e71-4d76-b961-1ba0b436aacb}&amp;lt;/resourceCollectionGuid&amp;gt; 
+ &amp;lt;/targetFilter&amp;gt;
+ &amp;lt;targetFilter guid="{6322d66d-7b96-4594-b352-375c546780ec}" type="Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter" assembly="Altiris.NS.StandardItems" offset="3"&amp;gt;
+  &amp;lt;operation&amp;gt;Except&amp;lt;/operation&amp;gt; 
+  &amp;lt;resourceCollectionGuid&amp;gt;{04b75635-a594-48b6-9a2f-b79a0d78f6b5}&amp;lt;/resourceCollectionGuid&amp;gt; 
+ &amp;lt;/targetFilter&amp;gt;
+ &amp;lt;targetFilter guid="{947f3bc8-c74b-4ded-b041-444137a5875e}" type="Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter" assembly="Altiris.NS.StandardItems" offset="4"&amp;gt;
+  &amp;lt;operation&amp;gt;Except&amp;lt;/operation&amp;gt; 
+  &amp;lt;resourceCollectionGuid&amp;gt;{edc60302-f96a-4bbc-9b68-402eaead63d5}&amp;lt;/resourceCollectionGuid&amp;gt; 
+  &amp;lt;/targetFilter&amp;gt;
+ &amp;lt;targetFilter guid="{edb9c0cf-1ee9-4ba2-bc47-5bdf23ad5b05}" type="Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter" assembly="Altiris.NS.StandardItems" offset="5"&amp;gt;
+  &amp;lt;operation&amp;gt;Intersect&amp;lt;/operation&amp;gt; 
+  &amp;lt;resourceCollectionGuid&amp;gt;{eb3a1a12-e1c7-4431-b060-f0333e4e488c}&amp;lt;/resourceCollectionGuid&amp;gt; 
+ &amp;lt;/targetFilter&amp;gt;
+&amp;lt;/targetFilters&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The Operation Column is an Int (ENUM) in SQL so just shows the number, not the name.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.protirus.com/"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/Protirus.png" alt="Protirus.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;What are the different Opertions?&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<id>https://alexhedley.github.io/symantec-connect-articles/posts/ict-documentation</id>
+		<title>ICT Documentation</title>
+		<author>
+			<name>AlexHedley</name>
+		</author>
+		<link href="https://alexhedley.github.io/symantec-connect-articles/posts/ict-documentation" />
+		<updated>2018-11-28T00:00:00Z</updated>
+		<content>&lt;h2 id="ict-logo"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ictimage100px.png" alt="ICT Logo"&gt;&lt;/h2&gt;
+&lt;h2 id="information-centric-tagging-ict"&gt;Information Centric Tagging (ICT)&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.symantec.com/products/information-centric-tagging"&gt;https://www.symantec.com/products/information-centric-tagging&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="section"&gt;15.5&lt;/h3&gt;
+&lt;p&gt;Symantec Information Centric Tagging 15.5 Documentation Library&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://support.symantec.com/en_US/article.DOC11257.html"&gt;https://support.symantec.com/en_US/article.DOC11257.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;h3 id="section-1"&gt;15.1&lt;/h3&gt;
+&lt;p&gt;Product Guides for version 15.1 of Symantec Information Centric Tagging and Symantec Information Centric Security Module (Documentation Library)&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.DOC11006.html"&gt;https://support.symantec.com/en_US/article.DOC11006.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Symantec Information Centric Tagging and Symantec Information Centric Security Module System Requirements for version 15.1&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.TECH250504.html"&gt;https://support.symantec.com/en_US/article.TECH250504.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="section-2"&gt;15.0&lt;/h3&gt;
+&lt;p&gt;Product Guides for Symantec Information Centric Tagging 15.0 (Documentation Library)&lt;br&gt;
+&lt;a href="https://support.symantec.com/en_US/article.DOC10620.html"&gt;https://support.symantec.com/en_US/article.DOC10620.html&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="symantec-product-documentation"&gt;Symantec Product Documentation&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://support.symantec.com/content/unifiedweb/en_US/Documentation.1234300.2117893.html"&gt;https://support.symantec.com/content/unifiedweb/en_US/Documentation.1234300.2117893.html&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;To find most ICT Documentation on the Knowledge Base&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the&amp;nbsp;&lt;strong&gt;Enterprise Support&lt;/strong&gt;page at&amp;nbsp;&lt;a href="http://www.symantec.com/business/support/index?page=home"&gt;www.symantec.com/business/support/index?page=home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Under&amp;nbsp;&lt;strong&gt;TOP PRODUCTS&lt;/strong&gt;, click&amp;nbsp;&lt;strong&gt;Supported Products A to Z&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;On the&amp;nbsp;&lt;strong&gt;Supported Products A-Z&lt;/strong&gt;&amp;nbsp;page, click "&lt;strong&gt;ICT"&lt;/strong&gt;.&lt;br&gt;
+This&amp;nbsp;opens the Workflow documentation landing page.&lt;/li&gt;
+&lt;li&gt;To find content, you can either search or browse.&lt;br&gt;
+&lt;strong&gt;To search:&lt;/strong&gt;&amp;nbsp;&lt;br&gt;
+Type a keyword or phrase in the&amp;nbsp;&lt;strong&gt;Knowledge Base Search&lt;/strong&gt;&amp;nbsp;field and click the search symbol (magnifying glass).&lt;br&gt;
+&lt;strong&gt;To browse:&lt;/strong&gt;&lt;br&gt;
+Click a documentation type heading&amp;nbsp;for a complete listing of content&amp;nbsp;in the category.&lt;br&gt;
+(Documentation, How To, Best Practices, Known Issue, Release Notes, Troubleshooting)&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+		<summary>&lt;p&gt;&lt;a href="https://www.symantec.com/products/information-centric-tagging"&gt;https://www.symantec.com/products/information-centric-tagging&lt;/a&gt;&lt;/p&gt;</summary>
 	</entry>
 </feed>

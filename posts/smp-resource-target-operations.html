@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - SMP - Resource Target - Operations</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/smp-resource-target-operations'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - SMP - Resource Target - Operations' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/smp-resource-target-operations' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            SMP - Resource Target - Operations
+          </h1>
+            <div class="meta">Published on Thursday, 29 November 2018</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <h2 id="smp-smp"><img src="images/smp.png" alt="SMP" /> SMP</h2>
+<h3 id="resource-target">Resource Target</h3>
+<h3 id="operation">Operation</h3>
+<p>What are the different Opertions?</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Union</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Intersect</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Except</td>
+</tr>
+</tbody>
+</table>
+<p>They are mentioned in the following Forum post:</p>
+<p>Create Resource Target component<br />
+<a href="https://community.broadcom.com/groups/viewthread?MessageKey=e2f88907-fcdc-42bf-9dd5-2996237bf4df&amp;CommunityKey=56cfcefc-8f2b-4200-b0e3-e33f564377e6&amp;tab=digestviewer#bme2f88907-fcdc-42bf-9dd5-2996237bf4df">https://www.symantec.com/connect/forums/create-resource-target-component</a></p>
+<blockquote>
+<p>The &quot;operation&quot; element in each Target Filter defines the logical operation that will be performed between the resources contained in the the filter and base organizational group (in the case of the first filter), or between the filter's resources and the resource set derived from the previous filter opertation (in the case of the second and subsequent filters). Only three values are allowed: &quot;Intersect,&quot; &quot;Union,&quot; and &quot;Except.&quot;</p>
+</blockquote>
+<p>If you want to see which Filters are in a Target you can use a Report added to SD in 8.1 or run the following SQL.</p>
+<ul>
+<li>ServiceDesk - Software Request Process - Reports
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=24530d5f-01a3-464d-846b-01482ee0c85e&amp;CommunityKey=206bac34-051d-4ea1-b726-4ea8778c1986&amp;tab=librarydocuments">https://www.symantec.com/connect/articles/servicedesk-software-request-process-reports</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Filters for Target</strong></p>
+<p><img src="images/FiltersforTarget_SQL.png" alt="Filters for Target SQL" /></p>
+<p>For Example:</p>
+<p><strong>All Computers without Software Update Plug-in Installed Target</strong></p>
+<ul>
+<li><a href="http://localhost/Altiris/NS/ItemAsXml.aspx?ItemGuid=96F806F1-D46D-47AA-BB40-2E2E5EFBF4C3">http://localhost/Altiris/NS/ItemAsXml.aspx?ItemGuid=96F806F1-D46D-47AA-BB40-2E2E5EFBF4C3</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>TargetName</th>
+<th>CollectionName</th>
+<th>FilterType</th>
+<th>Operation</th>
+<th>CollectionGuid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All Computers without Software Update Plug-in Installed Target</td>
+<td>Windows Computers</td>
+<td>1</td>
+<td>1</td>
+<td>E3A71B08-1612-44A6-9F71-7D359D5475B4</td>
+</tr>
+<tr>
+<td>All Computers without Software Update Plug-in Installed Target</td>
+<td>Computers with Software Update Plug-in Installed</td>
+<td>1</td>
+<td>2</td>
+<td>D3BA9CA7-5E71-4D76-B961-1BA0B436AACB</td>
+</tr>
+<tr>
+<td>All Computers without Software Update Plug-in Installed Target</td>
+<td>Windows Computers Requiring Symantec Management Agent Upgrade</td>
+<td>1</td>
+<td>2</td>
+<td>04B75635-A594-48B6-9A2F-B79A0D78F6B5</td>
+</tr>
+<tr>
+<td>All Computers without Software Update Plug-in Installed Target</td>
+<td>UNIX/Linux/Mac Computers Requiring Symantec Management Agent Upgrade</td>
+<td>1</td>
+<td>2</td>
+<td>EDC60302-F96A-4BBC-9B68-402EAEAD63D5</td>
+</tr>
+<tr>
+<td>All Computers without Software Update Plug-in Installed Target</td>
+<td>All Computers</td>
+<td>1</td>
+<td>1</td>
+<td>EB3A1A12-E1C7-4431-B060-F0333E4E488C</td>
+</tr>
+<tr>
+<td>All Computers without Software Update Plug-in Installed Target</td>
+<td>Linux Computers</td>
+<td>1</td>
+<td>0</td>
+<td>6D05AC39-2CBF-4DA0-BCA1-0E64CA22A59C</td>
+</tr>
+</tbody>
+</table>
+<p>As XML</p>
+<pre><code>&lt;targetFilters&gt;
+ &lt;targetFilter guid=&quot;{657df9f3-f6a5-4d1f-afd4-27e845c96d24}&quot; type=&quot;Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter&quot; assembly=&quot;Altiris.NS.StandardItems&quot; offset=&quot;0&quot;&gt;
+  &lt;operation&gt;Intersect&lt;/operation&gt; 
+  &lt;resourceCollectionGuid&gt;{e3a71b08-1612-44a6-9f71-7d359d5475b4}&lt;/resourceCollectionGuid&gt; 
+ &lt;/targetFilter&gt;
+ &lt;targetFilter guid=&quot;{38f6c355-8cd9-4b04-8f72-7680f479b979}&quot; type=&quot;Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter&quot; assembly=&quot;Altiris.NS.StandardItems&quot; offset=&quot;1&quot;&gt;
+  &lt;operation&gt;Union&lt;/operation&gt; 
+  &lt;resourceCollectionGuid&gt;{6d05ac39-2cbf-4da0-bca1-0e64ca22a59c}&lt;/resourceCollectionGuid&gt; 
+  &lt;/targetFilter&gt;
+ &lt;targetFilter guid=&quot;{5b6b51f1-6a29-4a7a-bf4f-296fe9e1f33b}&quot; type=&quot;Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter&quot; assembly=&quot;Altiris.NS.StandardItems&quot; offset=&quot;2&quot;&gt;
+  &lt;operation&gt;Except&lt;/operation&gt; 
+  &lt;resourceCollectionGuid&gt;{d3ba9ca7-5e71-4d76-b961-1ba0b436aacb}&lt;/resourceCollectionGuid&gt; 
+ &lt;/targetFilter&gt;
+ &lt;targetFilter guid=&quot;{6322d66d-7b96-4594-b352-375c546780ec}&quot; type=&quot;Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter&quot; assembly=&quot;Altiris.NS.StandardItems&quot; offset=&quot;3&quot;&gt;
+  &lt;operation&gt;Except&lt;/operation&gt; 
+  &lt;resourceCollectionGuid&gt;{04b75635-a594-48b6-9a2f-b79a0d78f6b5}&lt;/resourceCollectionGuid&gt; 
+ &lt;/targetFilter&gt;
+ &lt;targetFilter guid=&quot;{947f3bc8-c74b-4ded-b041-444137a5875e}&quot; type=&quot;Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter&quot; assembly=&quot;Altiris.NS.StandardItems&quot; offset=&quot;4&quot;&gt;
+  &lt;operation&gt;Except&lt;/operation&gt; 
+  &lt;resourceCollectionGuid&gt;{edc60302-f96a-4bbc-9b68-402eaead63d5}&lt;/resourceCollectionGuid&gt; 
+  &lt;/targetFilter&gt;
+ &lt;targetFilter guid=&quot;{edb9c0cf-1ee9-4ba2-bc47-5bdf23ad5b05}&quot; type=&quot;Altiris.NS.StandardItems.Targeting.ResourceCollectionTargetFilter&quot; assembly=&quot;Altiris.NS.StandardItems&quot; offset=&quot;5&quot;&gt;
+  &lt;operation&gt;Intersect&lt;/operation&gt; 
+  &lt;resourceCollectionGuid&gt;{eb3a1a12-e1c7-4431-b060-f0333e4e488c}&lt;/resourceCollectionGuid&gt; 
+ &lt;/targetFilter&gt;
+&lt;/targetFilters&gt;
+</code></pre>
+<p>The Operation Column is an Int (ENUM) in SQL so just shows the number, not the name.</p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus.png" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

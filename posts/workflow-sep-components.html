@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - SEP - Components</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sep-components'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - SEP - Components' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-sep-components' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - SEP - Components
+          </h1>
+            <div class="meta">Published on Wednesday, 9 May 2018</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p><img src="images/QuarantineMachine.png" alt="QuarantineMachine" /></p>
+<p>If you create a new Project and add the Integration Library &quot;Symantec.Components.SEP.dll&quot;</p>
+<pre><code>[Install Drive]:\Program Files\Symantec\Workflow\Shared\components\Symantec.Components.SEP.dll
+</code></pre>
+<p>This will then allow you to use the Components within your Process.</p>
+<h3 id="properties">Properties</h3>
+<p>3 new Properties will be added to your Project when you drag on a component.</p>
+<p>Project Properties</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SEPUsername</td>
+<td><em>sepuser</em></td>
+</tr>
+<tr>
+<td>SEPPassword</td>
+<td><em>***********</em></td>
+</tr>
+<tr>
+<td>SEPURL</td>
+<td>https://sepserver:8443/spc-webservice</td>
+</tr>
+</tbody>
+</table>
+<p>Update these to values that will work in your environment.</p>
+<h3 id="components">Components</h3>
+<p><img src="images/Workflow_SEP_Components_1.png" alt="Workflow_SEP_Components_1" /></p>
+<p><img src="images/Workflow_SEP_Components_2.png" alt="Workflow_SEP_Components_2" /></p>
+<p>Symantec<br />
+SEP</p>
+<p>Admin</p>
+<ul>
+<li>Create Domain Admin Account</li>
+<li>Create Limited Admin Account</li>
+<li>Create System Admin Account</li>
+<li>Delete Admin Account</li>
+<li>Get Admin Account List</li>
+<li>Get Database Info</li>
+<li>Get Server Properties</li>
+</ul>
+<p>Clients</p>
+<ul>
+<li>Add Computer Account</li>
+<li>Clear Client List</li>
+<li>Get All Group GUIDs</li>
+<li>Get Client Group Settings</li>
+<li>Get Client Group Structure</li>
+<li>Get Client List</li>
+<li>Get Client List Page</li>
+<li>Get Clients In Group Brief</li>
+<li>Move Client</li>
+</ul>
+<p>Commands</p>
+<ul>
+<li>Clear Command Detail List</li>
+<li>Get Command Detail Page</li>
+<li>Get Command Status Detail</li>
+<li>Get Command Status Summary</li>
+<li>Get Command Status Summary End Time</li>
+<li>Run Client Command Enable AP</li>
+<li>Run Client Command Reboot</li>
+<li>Run Client Command Scan</li>
+<li>Run Client Command Update Content</li>
+<li>Run Client Command Update Content And Scan</li>
+<li>Run Group Command Enable AP</li>
+<li>Run Group Command Reboot</li>
+<li>Run Group Command Scan</li>
+<li>Run Group Command Update Content</li>
+<li>Run Group Command Update Content And Scan</li>
+<li>Run Client Command Disable NTP</li>
+<li>Run Client Command Enable NTP</li>
+<li>Run Group Command Disable NTP</li>
+<li>Run Group Command Enable NTP</li>
+</ul>
+<p>Policies</p>
+<ul>
+<li>Assign Policy To Group</li>
+<li>Get App Policy List</li>
+<li>Get Av Policy List</li>
+<li>Get Ce Policy List</li>
+<li>Get Custom Ips Policy List</li>
+<li>Get Fw Policy List</li>
+<li>Get Hi Policy List</li>
+<li>Get Ids Policy List</li>
+<li>Get Lu Content Policy List</li>
+<li>Get Lu Policy Settings List</li>
+<li>Withdraw Policy From Group</li>
+</ul>
+<hr />
+<h3 id="updated-versions">Updated Versions</h3>
+<p>With the release of  <img src="images/Workflow.png" alt="Workflow" /> WF 8.1 RU5 a selection of <img src="images/SEPTaskTray.png" alt="SEP Task Tray" /> SEP 14 APIs were updated into a Components Library</p>
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=27d3a6a2-c04b-4cc4-81b6-58f991cc21f3&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - SEP 14 - Components</a></li>
+</ul>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

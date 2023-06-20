@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - SMP - ASDK - Time Critical Management</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/smp-asdk-time-critical-management'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - SMP - ASDK - Time Critical Management' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/smp-asdk-time-critical-management' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            SMP - ASDK - Time Critical Management
+          </h1>
+            <div class="meta">Published on Saturday, 29 September 2018</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>IT Management Suite (ITMS) 8.5 Documentation<br />
+DOC11076<br />
+<a href="https://support.symantec.com/en_US/article.DOC11076.html">https://support.symantec.com/en_US/article.DOC11076.html</a></p>
+<table>
+<thead>
+<tr>
+<th>SMP Version:</th>
+<th>8.5</th>
+</tr>
+</thead>
+</table>
+<p>Workflow 8.5 Release Notes<br />
+DOC11090<br />
+<a href="http://www.symantec.com/docs/DOC11090">http://www.symantec.com/docs/DOC11090</a></p>
+<p>pg 6 / 13</p>
+<p>Time Critical Management</p>
+<p>New Features</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Critical Management portal</td>
+<td>The <strong>Time Critical Management</strong> portal lets you gather inventory on endpoints in real time so that you can perform immediate hardware and software state analysis. You can also perform various actions on endpoints in real time.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://help.symantec.com/cs/itms8.5/WORKSPACES/v128281304_v125848311/About-Time-Critical-Management?locale=EN_US">https://help.symantec.com/cs/itms8.5/WORKSPACES/v128281304_v125848311/About-Time-Critical-Management?locale=EN_US</a></p>
+<blockquote>
+<p>The Time Critical Management workspace lets you gather inventory on endpoints in real time so that you can perform immediate hardware and software state analysis. You can also perform various actions on endpoints in real time.</p>
+<p>To allow receiving the inventory data and running tasks on endpoints in real time, persistent connection is implemented and used for communication between Notification Server and endpoints. Persistent connection also allows real time communication with the endpoints that are outside of the internal corporate network and use Cloud-enabled Management (CEM) to communicate with Notification Server.</p>
+<p>See About the Symantec Management Agent communication using persistent connection</p>
+<p>Depending on the Time Critical Management task, you can perform it either in the Time Critical Management workspace or in the Symantec Management Console.
+Table: Time Critical Management tasks</p>
+<p>| Task | Portal | Description |
+| --- | --- | --- |
+| Verify that the inventory data is up-to-date. | Time Critical Management | On the Time Critical Management page, you can search for data classes for which you want to verify that the data is up-to-date.<br>
+<br>If the data is older than you require, you can immediately update it.<br>
+<br>See <a href="https://help.symantec.com/cs/ITMS8.5/WORKSPACES/v128086707_v125848311/Verifying-that-the-inventory-data-is-up-to-date?locale=EN_US" title="Verifying that the inventory data is up-to-date">Verifying that the inventory data is up-to-date</a> |
+| Run tasks in real time. | Time Critical Management | After you find the data classes that you require, you can then select endpoints on which you want to perform further actions. For example, you can run a specific task on selected systems.<br>
+<br>See <a href="https://help.symantec.com/cs/ITMS8.5/WORKSPACES/v128086816_v125848311/Running-a-task-in-real-time?locale=EN_US" title="Running a task in real time">Running a task in real time</a><br>
+<br>You can save selected endpoints as a target or a CSV file, or send the results in an email.<br>
+<br>See <a href="https://help.symantec.com/cs/ITMS8.5/WORKSPACES/v128086813_v125848311/Create-Resource-Target-dialog-box?locale=EN_US" title="Create Resource Target dialog box">Create Resource Target dialog box</a><br>
+<br>See <a href="https://help.symantec.com/cs/ITMS8.5/WORKSPACES/v128086819_v125848311/Specify-Email-Parameters-dialog-box?locale=EN_US" title="Specify Email Parameters dialog box">Specify Email Parameters dialog box</a> |
+| Immediately push policies to the endpoints. | Symantec Management Console | You can select any policy and push it immediately to the required endpoints.<br>
+<br>Note that the policy is immediately delivered to the endpoints, but it runs according to the specified schedule.<br>
+<br>See <a href="https://help.symantec.com/cs/ITMS8.5/SMPLAT/v128281310_v125258922/Pushing-a-policy-in-real-time?locale=EN_US" title="Pushing a policy in real time">Pushing a policy in real time</a> |</p>
+<p>To open the Time Critical Management workspace, use the menu in the Symantec Management Console or enter the Symantec Endpoint Management Workspaces URL in the web browser.</p>
+</blockquote>
+<p>This brings the associated ASDK methods:</p>
+<p>| Feature | Description |
+| --- | --- |
+| New features of ASDK. | The following enhancements are introduced in ASDK:<br>
+<br>■ On a server side, ASDK is able to run tasks and policies over the WebSocket protocol. ASDK is extended with methods specific to Time Critical Management:<br>
+<ul>				<li>TaskManagement.ExecuteTCMTask</li>				<li>TaskManagement.GetTCMTaskStatus</li>				<li>TaskManagement.GetTCMTaskResults</li>				<li>TaskManagement.GetTCMTaskResult</li>				<li>ResourceManagementLib.PushPolicy</li>			</ul>
+<br>■ <strong>CreateResourceTarget</strong> method can now create a target in a custom folder if the <strong>parentFolderGuid</strong> element with custom folder's Guid is in target's source XML.<br>
+<br>If the <strong>parentFolderGuid</strong> element is not in source XML, the target is created in the root target folder. |</p>
+<p>Lets look at these individually</p>
+<p><strong>Task Management</strong></p>
+<ul>
+<li>http://localhost/Altiris/ASDK.Task/TaskManagementService.asmx</li>
+</ul>
+<p>There are 4 new methods.</p>
+<h2 id="add-inputs">Add Inputs</h2>
+<ul>
+<li>ExecuteTCMTask
+<ul>
+<li>taskGuid</li>
+<li>executionName</li>
+<li>inputParameters</li>
+</ul>
+</li>
+</ul>
+<p>Returns</p>
+<pre><code>&lt;ExecuteTCMTaskResult&gt;guid&lt;/ExecuteTCMTaskResult&gt;
+</code></pre>
+<ul>
+<li><p>GetTCMTaskStatus</p>
+<ul>
+<li>taskId - Guid</li>
+</ul>
+  <GetTCMTaskStatusResult>
+    <ID>guid</ID>
+    <NotStarted>int</NotStarted>
+    <InProgress>int</InProgress>
+    <Completed>int</Completed>
+    <Total>int</Total>
+    <Failed>int</Failed>
+    <Succeeded>int</Succeeded>
+    <Progress>double</Progress>
+  </GetTCMTaskStatusResult>
+</li>
+<li><p>GetTCMTaskResults</p>
+<ul>
+<li>taskId - Guid</li>
+</ul>
+</li>
+</ul>
+<p>This returns an Array of</p>
+<pre><code>&lt;TCMTaskStatusResult&gt;
+  &lt;Agent&gt;guid&lt;/Agent&gt;
+  &lt;Result&gt;None or Started or Failed or Succeeded or Executed&lt;/Result&gt;
+&lt;/TCMTaskStatusResult&gt;
+</code></pre>
+<ul>
+<li>GetTCMTaskResult
+<ul>
+<li>taskId - Guid</li>
+<li>agent - Guid</li>
+</ul>
+</li>
+</ul>
+<p>This returns</p>
+<pre><code>&lt;GetTCMTaskResultResult&gt;None or Started or Failed or Succeeded or Executed&lt;/GetTCMTaskResultResult&gt;
+</code></pre>
+<p>As with most ASDK methods if there is an input of a Guid there is another version created which allows a string instead.</p>
+<ul>
+<li>GetTCMTaskResult2
+<ul>
+<li>taskId - string</li>
+<li>agent - string</li>
+</ul>
+</li>
+</ul>
+<p><strong>Resource Management</strong></p>
+<ul>
+<li><p>http://localhost/altiris/askd.ns/ResourceManagementService.asmx</p>
+</li>
+<li><p>PushPolicy</p>
+<ul>
+<li>ploicy - Guid</li>
+</ul>
+</li>
+</ul>
+<p>This returns an Array</p>
+<pre><code>&lt;PushPolicyResult&gt;
+  &lt;Agent&gt;guid&lt;/Agent&gt;
+  &lt;Status&gt;Pushed or NotConnected or EmptyPolicy or ActionFailed&lt;/Status&gt;
+&lt;/PushPolicyResult&gt;
+</code></pre>
+<hr />
+<p>There is the associated Console element</p>
+<p>Login to the SMP</p>
+<p>Home | Time Critical Management</p>
+<pre><code>http://localhost/altiris/workspaces/timecriticalmanagement
+</code></pre>
+<hr />
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - ServiceDesk - API - Configuring</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-api-configuring'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - ServiceDesk - API - Configuring' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/servicedesk-api-configuring' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            ServiceDesk - API - Configuring
+          </h1>
+            <div class="meta">Published on Monday, 1 October 2018</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d54b726c-cf91-42f3-a0fe-436a3d559c14&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Index</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=becb0e82-72b6-40da-ad93-e5f3aad8afcd&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Configuring</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6d994fd8-1056-49a7-8228-488a03300d41&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Extending</a></li>
+<li>Endpoints
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=30d60bd5-f273-41b4-a1ff-67a40becd4dd&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Authorization</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=9a8c56d0-0069-49df-8f18-a4228bddd4a8&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">ChangeRequest</a></li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=bf651a3b-b5a6-4054-b348-3aa2c4414826&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Incident</a></li>
+</ul>
+</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=739bf091-178b-4fd7-b214-0b62f4db987c&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Demo</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ServiceDesk Version:</th>
+<th>8.5</th>
+</tr>
+</thead>
+</table>
+<blockquote>
+<h2 id="configuring-the-api">Configuring the API</h2>
+<p>Prior to first use, some setup is necessary. You’ll have to configure some settings in the Web.config file in the root folder. These settings have comments explaining what they are. Many of the settings should be left alone but a few will need to be provided. Note that changes to the web config are picked up automatically by IIS and resetting IIS after editing the config is not necessary.</p>
+<p>Note that, by default, the web config setting which enables the API for use (ApiEnabled) is set to 'false'. All requests will result in a 403 (Forbidden) response until this setting is set to 'true'.</p>
+<h3 id="section"></h3>
+<p>Authentication and Security</p>
+<p>This API passes through authentication from ProcessManager. The API consumer is responsible for providing credentials to the authentication endpoint of this API and for storing and managing the resulting authentication token. The token must be provided on all subsequent requests as the Authorization header in the following format.</p>
+<pre><code>{
+    &quot;key&quot;: &quot;Authorization&quot;,
+    &quot;value&quot;: &quot;token tokenvalue&quot;
+}
+</code></pre>
+<p>Obviously, for production environments you should only allow secure (https) connections.</p>
+<p>ProcessManager sessions are cached at the API level. The API uses its own session timeout value, found in Web.config, which should be set to a value less than or equal to the ProcessManager session timeout. With each request, the expiration datetime for the session is extended. Still, it is possible that the API consumer may make a request on a session that is active in the API but has expired in ProcessManager. If this occurs, it is simply necessary to reauthenticate and retry the request.</p>
+</blockquote>
+<h3 id="web.config">Web.config</h3>
+<pre><code>[Install Drive]:\Program Files\Symantec\Workflow\ServiceDesk API\Web.config
+</code></pre>
+<p>As said above, make sure to change &quot;ApiEnabled&quot; to &quot;true&quot;</p>
+<pre><code>&lt;add key=&quot;ApiEnabled&quot; value=&quot;true&quot;/&gt;
+</code></pre>
+<p>Settings</p>
+<pre><code>&lt;appSettings&gt;
+    &lt;!-- ServiceDesk settings (Be careful here. Some of these should most likely not be changed. It's
+            recommended to run this API project within the same IIS environment as ServiceDesk --&gt;
+
+    &lt;!-- All API calls will be rejected with a 403 Not Authorized until this flag is set to true --&gt;
+    &lt;add key=&quot;ApiEnabled&quot; value=&quot;true&quot;/&gt;
+    &lt;!--The url, including scheme prefix, of the root of the ServiceDesk host server for http traffic --&gt;    
+    &lt;add key=&quot;ServiceDeskBaseUrl&quot; value=&quot;http://localhost&quot; /&gt;
+    &lt;!--The relative url to the processmanager portal --&gt;
+    &lt;add key=&quot;ProcessManagerBaseUrl&quot; value=&quot;processmanager&quot; /&gt;
+    &lt;!--The relative url of the Incident Management workflow's virtual directory --&gt;
+    &lt;add key=&quot;IncidentManagementBaseUrl&quot; value=&quot;SD.IncidentManagementSimple&quot; /&gt;
+    &lt;!--The Service ID of the Incident Management workflow project (Very unlikely this should change) --&gt;
+    &lt;add key=&quot;IncidentManagementServiceId&quot; value=&quot;INCIDENT-MGMT&quot; /&gt;
+    &lt;!-- The relative url of the Change Management workflow's virtual directory --&gt;
+    &lt;add key=&quot;ChangeManagementBaseUrl&quot; value=&quot;SD.ChangeManagementSimple&quot;/&gt;
+    &lt;!-- The Service ID of the Change Management workflow project (Very unlikely this should change) --&gt;
+    &lt;add key=&quot;ChangeManagementServiceId&quot; value=&quot;CHANGE-MGMT&quot;/&gt;
+    &lt;!--The base url (NOT including scheme prefix) of the server running SymQ (Usually the same as ServiceDesk server) --&gt;
+    &lt;add key=&quot;SymQServerName&quot; value=&quot;localhost&quot; /&gt;
+    &lt;!--The name of the ORM message queue in SymQ. This can be found in Workflow Explorer. It should almost always be left 'local.orm' --&gt;
+    &lt;add key=&quot;OrmMessageQueue&quot; value=&quot;local.orm&quot; /&gt;
+    &lt;!--The name of the workflow response queue in SymQ. This can be found in Workflow Explorer. --&gt;
+    &lt;add key=&quot;WorkflowResponseQueue&quot; value=&quot;LBME.WorkflowResponseQueue&quot; /&gt;
+    &lt;!--Timeout for all ProcessManager web service requests (in milliseconds)--&gt;
+    &lt;add key=&quot;ServiceRequestTimeout&quot; value=&quot;90000&quot; /&gt;
+    &lt;!--Time before the API will refresh its ProcessManager session. This value should &lt;= the workflow server's session timeout --&gt;
+    &lt;add key=&quot;ProcessManagerSessionDuration&quot; value=&quot;20&quot; /&gt;
+    &lt;!--The GUID of the ServiceDeskSettings application profile. Highly unlikely this should ever change --&gt;
+    &lt;add key=&quot;ServiceDeskAppProfileId&quot; value=&quot;4811A757-6FA3-4759-822B-86611331CF85&quot; /&gt;
+&lt;/appSettings&gt;
+</code></pre>
+<h3 id="log">Log</h3>
+<pre><code>E:\Program Files\Symantec\Workflow\ServiceDesk API\ServiceDeskApi.log
+</code></pre>
+<hr />
+<h3 id="note">Note</h3>
+<p>Currently a change in the web.config is needed to display the individual methods, backup the web.config and make the following change under the &quot;system.web&quot; section from</p>
+<pre><code>  &lt;system.web&gt;
+    &lt;authentication mode=&quot;None&quot; /&gt;
+    &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.5.2&quot; /&gt;
+    &lt;httpRuntime targetFramework=&quot;4.5.2&quot; /&gt;
+  &lt;/system.web&gt;
+</code></pre>
+<p>to</p>
+<pre><code>  &lt;system.web&gt;
+    &lt;authentication mode=&quot;None&quot; /&gt;
+    &lt;compilation debug=&quot;true&quot; targetFramework=&quot;4.5.2&quot;&gt;
+        &lt;assemblies&gt;
+            &lt;add assembly=&quot;System.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; /&gt;
+        &lt;/assemblies&gt;
+    &lt;/compilation&gt;
+    &lt;httpRuntime targetFramework=&quot;4.5.2&quot; /&gt;
+  &lt;/system.web&gt;
+</code></pre>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

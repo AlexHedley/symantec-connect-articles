@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Alex Hedley - Workflow - Integration - Generators</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-integration-generators'>
+
+      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Alex Hedley' />
+  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Alex Hedley - Workflow - Integration - Generators' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-integration-generators' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead no-image">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Integration - Generators
+          </h1>
+            <div class="meta">Published on Friday, 13 July 2018</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>There are a number of Project Types in <img src="images/Workflow.png" alt="Workflow.png" /> Symantec Workflow Manager, when you open the Application and go to File | New</p>
+<ul>
+<li>Workflow</li>
+<li>Decision Only</li>
+<li><strong>Integration</strong></li>
+<li>Monitoring</li>
+<li>Forms (Web)</li>
+<li>Web Application</li>
+</ul>
+<p>In the below series of Articles I'm going to run through each type, explain how to create and use them within your Workflows.</p>
+<h2 id="integration">Integration</h2>
+<h3 id="generators">Generators</h3>
+<p>There is an Article '<a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a1269708-e6cc-4885-a3a4-a1dbc25ef815&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">Generators in Symantec Workflow</a>' from '<a href="https://www.symantec.com/connect/user/jordan-pusey">Jordan Pusey</a>' that has videos.</p>
+<p>There are a number of Videos listed on '<a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=f2d449a1-354f-48c2-a3f8-1c09494ccfb9&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow Videos</a>'</p>
+<h3 id="database">Database</h3>
+<ul>
+<li>Filter Generator
+<ul>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=44a544b9-7712-4424-a831-9089878f94dd&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the Filter Generator in Workflow Solution</a> (<a href="https://www.symantec.com/connect/user/reecardo">reecardo</a>)</li>
+</ul>
+</li>
+<li>Query/Script Generator
+<ul>
+<li>[A] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2fe8b3ce-9df8-402a-a899-c5978fd16142&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Integrating SQL Data with Workflow</a> (<a href="https://www.symantec.com/connect/user/africo">africo</a>)</li>
+</ul>
+</li>
+<li>Stored Procedure Caller Generator
+<ul>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=e66f2cc9-5be9-44ea-b479-32671100af6c&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">Using the Stored Procedure Caller Generator in Workflow Solution</a></li>
+<li>[A] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=8f73c7ed-c990-4f9a-873f-5f1364b48dce&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Handling SQL Data - Leveraging SQL Stored Procedures in Workflow</a> (<a href="https://www.symantec.com/connect/user/africo">africo</a>)</li>
+</ul>
+</li>
+<li>Table Generator
+<ul>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=11ee2e37-a1fc-436f-925a-f80f59147f50&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">SQL Table Generator (Video 1) - Read Records and Display in a Datagrid</a> (<a href="https://www.symantec.com/connect/user/sturnbow">sturnbow</a>)</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=1c3961cf-6ea7-4e16-9e4d-aa7107998f97&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=digestviewer#bm1c3961cf-6ea7-4e16-9e4d-aa7107998f97">Video - SQL Table Generator (Video 1) Read Records</a> (<a href="https://www.symantec.com/connect/user/sturnbow">sturnbow</a>)</li>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=240c28bb-2b6a-469f-a4f4-7cc9b3da93bf&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">SQL Table Generator (Video 2) Insert Record</a> (<a href="https://www.symantec.com/connect/user/sturnbow">sturnbow</a>)</li>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=c013afd5-495c-4b80-8161-9728b2efbeb6&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">SQL Table Generator (Video 3) Edit/Update Records</a> (<a href="https://www.symantec.com/connect/user/sturnbow">sturnbow</a>)</li>
+</ul>
+</li>
+<li>Fast Table Generator</li>
+</ul>
+<h3 id="xml">XML</h3>
+<ul>
+<li>DTD Generator
+<ul>
+<li>[A] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=09950dcf-6e62-4867-aad1-150085bf9f88&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - Integration - Generators - DTD Generator</a> (<a href="https://www.symantec.com/connect/user/alexhedley">AlexHedley</a>)</li>
+</ul>
+</li>
+<li>XML Schema Generator
+<ul>
+<li>[A] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a849ca02-4503-4fca-8c1e-85f2401b7c02&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">Workflow Tutorial: Creating Dynamic XML Schema</a></li>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=a849ca02-4503-4fca-8c1e-85f2401b7c02&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">Workflow Tutorial: Creating Dynamic XML Schema</a></li>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=2d34b816-5825-4a1c-a6b4-38245f9e3772&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">Reading XML Data into a Workflow</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="microsoft">Microsoft</h3>
+<ul>
+<li>Excel Generator</li>
+<li>InfoPath Generator</li>
+<li>LDAP Generator</li>
+<li>SharePoint Lists Generator
+<ul>
+<li>[A] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=fbe39421-7a58-488a-bece-628eaf42a11a&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Sharepoint</a> (<a href="https://www.symantec.com/connect/user/alexhedley">AlexHedley</a>)</li>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=42f191d6-b08f-4880-b543-5ad43d58ede8&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">SharePoint &amp; Report Generator Video</a> (<a href="https://www.symantec.com/connect/user/sturnbow">sturnbow</a>)</li>
+<li>[F] <a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=200faf64-4b02-4e31-b031-b1caf9514703&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=digestviewer#bm200faf64-4b02-4e31-b031-b1caf9514703">Video - SharePoint and NS Report Generator</a> (<a href="https://www.symantec.com/connect/user/sturnbow">sturnbow</a>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="flatfiles">FlatFiles</h3>
+<ul>
+<li>Fixed Length Generator</li>
+<li>Fixed Length Generator (Extended)</li>
+<li>Separated Values Generator</li>
+<li>Separated Values Generator (Extended)</li>
+</ul>
+<h3 id="enterprise-resources">Enterprise Resources</h3>
+<ul>
+<li>WCF Service Caller Generator</li>
+<li>Web Service Caller Generator
+<ul>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=7d413f83-dd96-4e73-9f5e-b4e0d7c21bab&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">Web Service Generator</a> (<a href="https://www.symantec.com/connect/user/sturnbow">sturnbow</a>)</li>
+<li>[F] <a href="https://community.broadcom.com/symantecenterprise/viewthread?MessageKey=51c69635-c609-46dd-abbb-4a7f6ddec947&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=digestviewer#bm51c69635-c609-46dd-abbb-4a7f6ddec947">Video - Web Service Generator</a> (<a href="https://www.symantec.com/connect/user/sturnbow">sturnbow</a>)</li>
+</ul>
+</li>
+<li>Automation Library Generator</li>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=0c51c681-c801-4bcb-a02d-2c9c33c76f78&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">REST Generator</a></li>
+</ul>
+<h3 id="authoring">Authoring</h3>
+<ul>
+<li>User Defined Type with DB Mapping (ORM)</li>
+<li>User Defined Type
+<ul>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=7704aa90-e008-4a99-90d1-64c15234ea2f&amp;CommunityKey=492058b4-42be-43e7-991d-986f1ea9ba7f&amp;tab=librarydocuments">Creating Custom Complex Data Types in Workflow Solution</a></li>
+</ul>
+</li>
+<li>Custom Workflow Interaction</li>
+</ul>
+<h3 id="more">More</h3>
+<ul>
+<li>.NET Library Generator</li>
+<li>Script Generator (C#)
+<ul>
+<li>[V] <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5fb6f58e-30e2-47c4-a1e1-9de72f40d289&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the Script Generator in Workflow</a> (<a href="https://www.symantec.com/connect/user/reecardo">reecardo</a>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="symantec-workflow-for-smp-7.0">Symantec Workflow For SMP 7.0</h3>
+<ul>
+<li>Reports Component Generator for NS 7.0
+<ul>
+<li><a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=6d93d32e-78ea-49e9-92f2-8086b925a313&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Using the Report Generator in Workflow</a> (<a href="https://www.symantec.com/connect/user/reecardo">reecardo</a>)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="symantec-support">Symantec Support</h3>
+<p>About the component generators</p>
+<p>HOWTO61885</p>
+<p><a href="https://support.symantec.com/en_US/article.HOWTO61885.html">https://support.symantec.com/en_US/article.HOWTO61885.html</a></p>
+<hr />
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a></p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>
