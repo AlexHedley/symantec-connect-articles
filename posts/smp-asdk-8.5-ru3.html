@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Symantec Connect - SMP - ASDK - 8.5 RU3</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/smp-asdk-8.5-ru3'>
+
+      <link type="application/rss+xml" rel="alternate" title="Symantec Connect" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Symantec Connect" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Symantec Connect' />
+  <meta name="msapplication-tooltip" content='Symantec Connect' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Symantec Connect - SMP - ASDK - 8.5 RU3' />
+    <meta property="og:image" content='/symantec-connect-articles/images/header.png' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/smp-asdk-8.5-ru3' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Symantec Connect</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/stats">Stats</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(&quot;/symantec-connect-articles/images/header.png&quot;)">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            SMP - ASDK - 8.5 RU3
+          </h1>
+            <div class="meta">Published on Wednesday, 23 October 2019</div>
+              <div class="mt-3">
+                  <a href="/symantec-connect-articles/tags/smp" class="badge text-bg-light"> SMP</a>
+                  <a href="/symantec-connect-articles/tags/asdk" class="badge text-bg-light"> ASDK</a>
+                  <a href="/symantec-connect-articles/tags/8.5-ru3" class="badge text-bg-light"> 8.5 RU3</a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>With the release of ITMS 8.5 RU3 there were some new Web Service methods added to the following:</p>
+<p>| Feature | Description |
+| --- | --- |
+| Enhancements of the Symantec Administrator Software Development Kit (ASDK) application programming interface (API). | The Symantec ASDK provides APIs that you can use to automate and customize the Symantec Management Platform. You can call APIs through Web services, COM, and the Windows command line (CLI). In 8.5 RU3, the following new API methods for interfacing with Task Management are introduced:<br>
+<br>■ CreateClientJob  <br>				■ CreateServerJob  <br>				■ AddTaskFirstToJob  <br>				■ AddTaskLastToJob  <br>				■ CreateJobCondition  <br>				■ AddJobConditionRules  <br>				■ AddTaskToJobConditionThenGroup  <br>				■ AddTaskToJobConditionElseGroup  <br>				■ RemoveJobCondition  <br>				■ RemoveNodeFromJob  <br>				■ RemoveAllNodesFromJob  <br>				■ ConfirmJobChanges<br>
+<br>For more information, see the Symantec ASDK Help at<br>
+<br><br>    C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Symantec\ASDK |
+| Enhancements of Patch Management Workflow Web Service application programming interface (API). | Patch Management Workflow Web Service is installed with Patch Management Solution. The service contains API that accesses the functionality of Notification Server (NS) and lets you perform various patch management actions.<br>
+<br>You can access the service at<br>
+<br><br>    http://localhost/Altiris/patchmanagementcore/patchworkflowsvc.asmx<br><br>
+<br>In 8.5 RU3, the following enhancements are introduced:<br>
+<br>■ HTML Help page The page includes list of available methods, detailed method descriptions, and usage examples for some methods. You can access the page at<br>
+<br><br>    http://localhost/Altiris/patchmanagementcore/patchworkflowsvc.html<br><br>
+<br>■ New API methods:<br>
+<br>- CreateWindowsUpdateAssessmentTask  <br>				- CreateWindowsUpdateInstallationTask  <br>				- EditWindowsUpdateAssessmentTask  <br>				- EditWindowsUpdateInstallationTask<br>
+<br>For more information, see the knowledge base article <a href="https://support.symantec.com/us/en/article.doc11543.html">DOC11543</a>. |</p>
+<h3 id="task-management-service">Task Management Service</h3>
+<ul>
+<li>CreateClientJob</li>
+<li>CreateServerJob</li>
+<li>AddTaskFirstToJob</li>
+<li>AddTaskLastToJob</li>
+<li>CreateJobCondition</li>
+<li>AddJobConditionRules</li>
+<li>AddTaskToJobConditionThenGroup</li>
+<li>AddTaskToJobConditionElseGroup</li>
+<li>RemoveJobCondition</li>
+<li>RemoveNodeFromJob</li>
+<li>RemoveAllNodesFromJob</li>
+<li>ConfirmJobChanges</li>
+</ul>
+<h3 id="patch-management-service">Patch Management Service</h3>
+<ul>
+<li>CreateWindowsUpdateAssessmentTask</li>
+<li>CreateWindowsUpdateInstallationTask</li>
+<li>EditWindowsUpdateAssessmentTask</li>
+<li>EditWindowsUpdateInstallationTask</li>
+</ul>
+<p>You may want to update the Zero Day Patch <img src="images/Workflow_0.png" alt="Workflow" /> Workflow to leverage these new methods:</p>
+<p>Workflow Template - Zero Day Patch<br />
+<a href="https://www.symantec.com/connect/videos/workflow-template-zero-day-patch">https://www.symantec.com/connect/videos/workflow-template-zero-day-patch</a></p>
+<hr />
+<p>To keep track of updates you can compare Web Service Methods using a tool I've written</p>
+<ul>
+<li><a href="https://protirus.github.io/SMPWebServiceDiff/">https://protirus.github.io/SMPWebServiceDiff/</a></li>
+</ul>
+<hr />
+<h3 id="documentation">Documentation</h3>
+<p>Symantec™ IT Management Suite 8.5 RU3 Release Notes<br />
+<a href="https://support.symantec.com/us/en/article.doc11603.html">https://support.symantec.com/us/en/article.doc11603.html</a><br />
+doc11603</p>
+
+
+        
+
+      </div>
+    </div>
+  <div id="comments-container" class="row">
+    <script src="https://giscus.app/client.js"
+        data-repo='alexhedley/symantec-connect-articles'
+        data-repo-id='R_kgDOH723Rw'
+        data-category-id='DIC_kwDOH723R84CXRav'
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">&#xA9; Alex Hedley 2015-2020</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

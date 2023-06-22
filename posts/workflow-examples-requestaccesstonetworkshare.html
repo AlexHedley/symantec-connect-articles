@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Symantec Connect - Workflow - Examples - RequestAccessToNetworkShare</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-examples-requestaccesstonetworkshare'>
+
+      <link type="application/rss+xml" rel="alternate" title="Symantec Connect" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Symantec Connect" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Symantec Connect' />
+  <meta name="msapplication-tooltip" content='Symantec Connect' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Symantec Connect - Workflow - Examples - RequestAccessToNetworkShare' />
+    <meta property="og:image" content='/symantec-connect-articles/images/header.png' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-examples-requestaccesstonetworkshare' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Symantec Connect</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/stats">Stats</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(&quot;/symantec-connect-articles/images/header.png&quot;)">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Examples - RequestAccessToNetworkShare
+          </h1>
+            <div class="meta">Published on Thursday, 14 February 2019</div>
+              <div class="mt-3">
+                  <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow</a>
+                  <a href="/symantec-connect-articles/tags/examples" class="badge text-bg-light"> Examples</a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <h2 id="request-access-to-network-share">Request Access To Network Share</h2>
+<p><img src="images/Workflow.png" alt="Workflow" /> <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=443c6adf-6a56-4c7f-b727-0ddeb8f9e0d9&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - Examples</a></p>
+<p>Name</p>
+<blockquote>
+<p>Symantec.Workflow.RequestAccessToNetworkShare</p>
+</blockquote>
+<p>Type</p>
+<blockquote>
+<p>Workflow</p>
+</blockquote>
+<p>Description</p>
+<blockquote>
+<p>This process will enable the user to request access/permissions to a shared drive. The requester can request for himself/herself or someone else. By default, the request is initially sent to the Share Manager for approval. (However, the recipient's manager can receive an approval step first; this step is disabled out of the box.) On approval from the Share Manager, the recipient is granted access to the shared folder. The Share Manager can also add the user to a group that has permission on that folder. If this is decided, the group manager receives an approval task for the request. If a group does not have a manager, as set in AD, the Service Managers group receives the task and can either add the user to the group, select a different group, or assign a manager to the group. If a new manager is assigned, that manager receives the original task to approve the addition of the new user; all subsequent tasks for this group will be handled by the new manager.</p>
+</blockquote>
+<p>Author mail:</p>
+<blockquote>
+<p>nancy_mitchelmore&#64;symantec.com</p>
+</blockquote>
+<p>Process Prefix: &quot;ITSR-&quot;</p>
+<h3 id="documentation">Documentation</h3>
+<p>| <strong>Process Structure</strong><br>
+<br>This process is structured to include an approval process and is dependent upon date from the Active Directory.  In order for the recipient to receive access, he/she must be approved by the share folder’s owner as well as the group manager (if one a group exists).  If at any time a folder owner does not exist, the request will be routed to the AD Administrator.  If a group manager does not exist, the request will be routed to the Service Managers group.<br>
+<br>The process is composed of three (3) main forms – the Request Form (where the requester can request for himself/herself or someone else), an Approval form (for the folder’s owner) and an Action form, (for the group manager). An email notification is sent out to the requester and recipient upon resolution. Another email notification is sent out to the requester, recipient and the manager upon completion. In reviewing the workflow, you will see components such as the Dialog Workflow, the Form Builder, the Terminating Form Builder, Set Process State/Status, Add Process Contact, and Send Email. |
+| --- |</p>
+<h3 id="business-model">Business Model</h3>
+<p><img src="images/RequestAccessToNetworkShare_RequestAccesstoSharedDrive.model_.png" alt="Business Model" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+</table>
+<h3 id="primary">Primary</h3>
+<p><img src="images/RequestAccessToNetworkShare_Primary.model_.png" alt="Primary" /></p>
+<p>| The roles significant to this process are the Share Managers (owner of the Active Directory folder), AD Administrator, Group Managers (manager of an AD group), and the recipient’s manager, should manager approval be desired.<br>
+<br>This process includes an approval process and is dependent upon data from Active Directory (AD).  A user can gain access to an AD folder two ways: 1) approval by the share manager (folder’s owner) for access to the folder, 2) recommendation by the share manager to join a group that has permission to the folder, then approval by the group manager.<br>
+<br>If at any time a folder owner does not exist, the request will be routed to the AD Administrator. If a group manager does not exist, the request will be routed to the Service Managers group.<br>
+<br>The process is composed of three (3) main forms – the Request Form (where the requester can request for himself/herself or someone else), an Approval form (for the folder’s owner), and an Action form, (for the group manager). E-mail notification is sent out to the requester and recipient upon resolution. Another e-mail notification is sent to the requester, recipient, and the manager upon completion.<br>
+<br>The process starts by browsing to the Network Share Request Form. The user may request access to a shared folder for himself/herself, or for someone else.  When requesting for someone else, the Search for User link is available on the form. This may be applicable in situations where a user cannot access the form and has to ask another user to submit his/her request. The person for whom the request is submitted becomes the recipient. The requester must select a shared folder, the type of permission requested for the shared folder, and the date required.  Additionally, a reason must be provided for the request.  The image below shows the Interaction Setup of the main Dialog Workflow. The requester information is stored in a global variable.<br>
+<br><strong>Customization</strong><br>
+<br>Currently, this process bypasses the recipient’s manager approval.  This can be enabled by editing the True/False component (#1.49):<br>
+<ul>				<li>Right Click on component #1.49</li>				<li>Choose Edit Component</li>				<li>Navigate to the Settings Tab</li>				<li>Check “Is Enabled”</li>			</ul> |
+| --- |</p>
+<h3 id="get-approval-from-ad-manager">Get Approval From AD Manager</h3>
+<p><img src="images/RequestAccessToNetworkShare_GetApprovalFromADManager.model_.png" alt="Get Approval From AD Manager" /></p>
+<p>| <strong>Step 3:  Group Manager Approves/Denies the request</strong><br>
+<br>If the folder’s owner chooses to add a user to a group, the group’s manager* will be tasked with handling the request. At this time, the group’s manager may approve or deny the request.  If approved, the user is added and the process completes.<br>
+<br>*NOTE:  if a group does not have an associated manager, the Service Managers will be tasked instead. |
+| --- |</p>
+<h3 id="get-approval-from-service-manager">Get Approval From Service Manager</h3>
+<p><img src="images/RequestAccessToNetworkShare_GetApprovalFromServiceManager.model_.png" alt="Get Approval From Service Manager" /></p>
+<p>| <strong>Step 4:  Service Manager Approves/Denies the request</strong><br>
+<br>In the event the selected group does not have an associated manager, the Service Manager is tasked to determine how to handle the request. At this time, the Service Manager may choose to add the user to the requested group, select another group, or assign a manager to the group. If a manager is assigned to the group, then he/she will receive a task as described in step 3. Otherwise, the user will be added to the selected group. |
+| --- |</p>
+<h3 id="get-manager-approval">Get Manager Approval</h3>
+<p><img src="images/RequestAccessToNetworkShare_GetManagerApproval.model_.png" alt="Get Manager Approval" /></p>
+<p>| <strong>Step 2:  Share Folder’s Owner Approves/Denies the request</strong><br>
+<br>The share folder’s owner* is tasked to decide how to handle the request.  At this time, he/she may choose to request the user be added to a group that has access to the shared folder, or simply add the user to the folder. If folder’s owner decides to add the user to a group, the group’s manager must approve this selection as well (which happens next in the process). If the folder’s owner decides to add the user to the folder, the user is added and the process completes.<br>
+<br>*NOTE:  if a share folder does not have an associated owner, the AD Administrator will be tasked instead. |
+| --- |</p>
+<h3 id="get-approval-from-requesters-manager">Get Approval From Requester's Manager</h3>
+<p><img src="images/RequestAccessToNetworkShare_GetApprovalFromRequestersManager.model_.png" alt="Get Approval From Requester's Manager" /></p>
+<p>| <strong>Customization</strong><br>
+<br>In the event the requester is not the recipient's manager, you may want to require manager approval.  Currently, this step is bypassed.  This can be enabled by editing the Text Equals component (#1.49):<br>
+<ul>				<li>Right Click on component #1.49</li>				<li>Choose Edit Component</li>				<li>Navigate to the Settings Tab</li>				<li>Check “Is Enabled”</li>			</ul> |
+| --- |</p>
+<h3 id="critical-errors">Critical Errors</h3>
+<p><img src="images/RequestAccessToNetworkShare_CriticalErrors.model_.png" alt="Critical Errors" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+</table>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Category</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMTPServer</td>
+<td></td>
+<td>localhost</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupServiceManagers</td>
+<td></td>
+<td>ServiceManagers&#64;symantec.com</td>
+<td></td>
+</tr>
+<tr>
+<td>ADAdministrator</td>
+<td></td>
+<td>ADAdmin&#64;symantec.com</td>
+<td></td>
+</tr>
+<tr>
+<td>ErrorContactName</td>
+<td></td>
+<td>Error Admin</td>
+<td></td>
+</tr>
+<tr>
+<td>ErrorContactInfo</td>
+<td></td>
+<td>ErrorAdmin&#64;symantec.com</td>
+<td></td>
+</tr>
+<tr>
+<td>MailFromAddress</td>
+<td></td>
+<td>no-reply&#64;symantec.com</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>AD Credentials and Config too</p>
+<p><strong>Global Data</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requester</td>
+<td>User</td>
+<td>LogicBase.Core.Ensemble.UserMan.User</td>
+</tr>
+<tr>
+<td>AddUserToShare</td>
+<td>Logical (true/false)</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>ProxySecurityToken</td>
+<td>Contains Anonymous Authentication Credentials</td>
+</tr>
+<tr>
+<td>CurrentStatus</td>
+<td>Text</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a href="https://www.symantec.com/connect/user/toomas">Toomas</a> wrote an Article about the other Project.</p>
+<pre><code>[Install Drive]:\Program Files\Symantec\Workflow\WorkflowProjects
+</code></pre>
+<ul>
+<li>SD.RequestAccessToNetworkShare.package</li>
+</ul>
+<p>What do I need to know about Request Access To Network Share in ServiceDesk 7.5/7.5 SP1?<br />
+<a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=80c1807b-1aea-462c-9d4d-681af8c87f2b&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">https://www.symantec.com/connect/articles/what-do-i-need-know-about-request-access-network-share-servicedesk-7575-sp1</a></p>
+<hr />
+<p>Documented on Connect by:</p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a>​</p>
+
+
+        
+
+      </div>
+    </div>
+  <div id="comments-container" class="row">
+    <script src="https://giscus.app/client.js"
+        data-repo='alexhedley/symantec-connect-articles'
+        data-repo-id='R_kgDOH723Rw'
+        data-category-id='DIC_kwDOH723R84CXRav'
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">&#xA9; Alex Hedley 2015-2020</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

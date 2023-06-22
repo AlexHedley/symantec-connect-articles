@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="AlexHedley">
+
+  <title>Symantec Connect - Workflow - Examples - TerminateUser</title>
+
+  <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-examples-terminateuser'>
+
+      <link type="application/rss+xml" rel="alternate" title="Symantec Connect" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Symantec Connect" href="/symantec-connect-articles/feed.atom" />
+
+  <meta name="application-name" content='Symantec Connect' />
+  <meta name="msapplication-tooltip" content='Symantec Connect' />
+  <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
+
+  <meta property="og:title" content='Symantec Connect - Workflow - Examples - TerminateUser' />
+    <meta property="og:image" content='/symantec-connect-articles/images/header.png' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-examples-terminateuser' />
+
+  <link rel="icon" href='/symantec-connect-articles/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/symantec-connect-articles/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/symantec-connect-articles/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  <link href="/symantec-connect-articles/scss/TabGroup.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Symantec Connect</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/posts">Posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/stats">Stats</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/about">About</a>
+  </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(&quot;/symantec-connect-articles/images/header.png&quot;)">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Workflow - Examples - TerminateUser
+          </h1>
+            <div class="meta">Published on Thursday, 14 February 2019</div>
+              <div class="mt-3">
+                  <a href="/symantec-connect-articles/tags/workflow" class="badge text-bg-light"> Workflow</a>
+                  <a href="/symantec-connect-articles/tags/examples" class="badge text-bg-light"> Examples</a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <h2 id="terminate-user">Terminate User</h2>
+<p><img src="images/Workflow.png" alt="Workflow" /> <a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=443c6adf-6a56-4c7f-b727-0ddeb8f9e0d9&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments">Workflow - Examples</a></p>
+<p>Description:</p>
+<blockquote>
+<p>This process starts with a request form that the requester fills in to request an employee's termination. The process then moves forward to get manager's approval. After the manager's approval, the process informs IT, HR, Facilities and Security  to complete the termination process.The manager can deny the request in which case the denial is sent to the requester with the reason of denial.</p>
+</blockquote>
+<p>Author Mail:</p>
+<blockquote>
+<p>support&#64;symantec.com</p>
+</blockquote>
+<p>Process Prefix: &quot;ITSR-&quot;</p>
+<p>Documentation</p>
+<p>| <strong>Employee Termination Process</strong>  <br>				  <br>				<strong>Introduction</strong>  <br>				  <br>				This document provides an overview of the Employee termination workflow project. Using a workflow to manage the process provides reliability in the authorization, processing, and communication between different departments within your organization.  <br>				  <br>				The roles that are significant to this process are outlined in the process business model and include the following:<br>
+<ul>				<li>Requester </li>				<li>Human Resources </li>				<li>Information Technology </li>				<li>Payroll </li>				<li>Security </li>				<li>Facilities<br>					 </li>			</ul>
+<br>This image represents a high-level overview of the process and can also found under the process Business Model when the project is open in Workflow Designer:<br>
+<br><strong>Prerequisites</strong><br>
+<br>Before making this workflow project live, understand and configure the following:<br>
+<br>1. From the Properties tab in the project in the Workflow Designer, set the following details:  <br>				   a. Global Email Information  <br>				      i. SMTP Server – The server name or IP address of the outbound mail server  <br>				      ii. EMail From Address – Email address that all system generated emails should be sent from  <br>				   b. Administrative Contact  <br>				      i. Administrator Contact Name – The person or group who should be made aware of any process issues  <br>				      ii. Administrator Contact Info – The preferred method by which the administrator be contacted (used for instructing the user how to contact the system administrator in the event of a process error)  <br>				   c. Task Email Addresses – These are the email addresses to which new hire tasks will be sent when appropriate  <br>				      i. HR Email – Review requests and background findings  <br>				      ii. IT Email – Set up new network accounts and workstations  <br>				      iii. Facilities Email – Grant security access to company properties  <br>				      iv. Security Email – Complete badging and security paperwork  <br>				      v. Payroll Email – Setup employees in the company payroll system  <br>				      vi. HR Manager – Handles escalated HR tasks when necessary  <br>				  <br>				<strong>Process Structure</strong>  <br>				  <br>				Reviewing the process in Workflow Designer you will find that it is composed of several models within the project tree.  These roughly correspond to the various tasks that are required during the termination process.  Each step is customizable to meet the needs of a particular company. |
+| --- |</p>
+<p><img src="images/WorkflowProject.png" alt="Workflow Project" /> Symantec.Workflow.TerminateUser.package</p>
+<p>First we shall look at the Business Model.</p>
+<p><img src="images/TerminateUser_TerminateEmployee.model_.png" alt="Employee" /></p>
+<p><strong>Models</strong></p>
+<p>Primary</p>
+<p><img src="images/TerminateUser_Primary.model_.png" alt="Primary" /></p>
+<p>Linked Models to others.</p>
+<p>Facilities Termination Process</p>
+<p><img src="images/TerminateUser_FacilitiesTerminationProcess.model_.png" alt="Facilities Termination Process" /></p>
+<p><strong>Dialog Workflow(s)</strong></p>
+<ul>
+<li>Facilities Action Required For Employee Termination Process</li>
+</ul>
+<p>HR Termination Process</p>
+<p><img src="images/TerminateUser_HRTerminationProcess.model_.png" alt="HR Termination Process" /></p>
+<p><strong>Dialog Workflow(s)</strong></p>
+<ul>
+<li>HR Approval Required</li>
+<li>HR Action Required For Employee Termination Process</li>
+</ul>
+<p>IT Termination Process</p>
+<p><img src="images/TerminateUser_ITTerminationProcess.model_.png" alt="IT Termination Process" /></p>
+<p><strong>Dialog Workflow(s)</strong></p>
+<ul>
+<li>IT Action Required For Employee Termination Process
+<ul>
+<li>We can use an escalation model here if Risk is not handled in time.</li>
+</ul>
+</li>
+</ul>
+<p>Payroll Termination Process</p>
+<p><img src="images/TerminateUser_PayrollTerminationProcess.model_.png" alt="Payroll Termination Process" /></p>
+<p><strong>Dialog Workflow(s)</strong></p>
+<ul>
+<li>Payroll Dept. Action Required For Employee Termination Process</li>
+</ul>
+<p>Security Termination Process</p>
+<p><img src="images/TerminateUser_SecurityTerminationProcess.model_.png" alt="Security Termination Process" /></p>
+<p><strong>Dialog Workflow(s)</strong></p>
+<ul>
+<li>Security Dept. Action Required For Employee Termination Process</li>
+</ul>
+<p>Terminate User Request</p>
+<p><img src="images/TerminateUser_TerminateUserRequest.model_.png" alt="Terminate User Request" /></p>
+<p><strong>Dialog Workflow(s)</strong></p>
+<ul>
+<li>Employee Termination Request</li>
+</ul>
+<p>Timeout Handling</p>
+<p><img src="images/TerminateUser_TimeoutHandling.model_.png" alt="Timeout Handling" /></p>
+<p><strong>Dialog Workflow(s)</strong></p>
+<ul>
+<li>Handle Timeouts</li>
+</ul>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Category</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HREmail</td>
+<td>Task Emails</td>
+<td>HR&#64;demo.local</td>
+</tr>
+<tr>
+<td>ITEmail</td>
+<td>Task Emails</td>
+<td>IT&#64;demo.local</td>
+</tr>
+<tr>
+<td>FacilitiesEmail</td>
+<td>Task Emails</td>
+<td>Facilities&#64;demo.local</td>
+</tr>
+<tr>
+<td>SecurityEmail</td>
+<td>Task Emails</td>
+<td>Security&#64;demo.local</td>
+</tr>
+<tr>
+<td>EmailFromAddress</td>
+<td>Global Email Settings</td>
+<td>no-reply&#64;demo.local</td>
+</tr>
+<tr>
+<td>SMTPServer</td>
+<td>Global Email Settings</td>
+<td>localhost</td>
+</tr>
+<tr>
+<td>PayrollEmail</td>
+<td>Task Emails</td>
+<td>Payroll&#64;demo.local</td>
+</tr>
+<tr>
+<td>AdministratorContactName</td>
+<td>Administrator</td>
+<td>John Doe</td>
+</tr>
+<tr>
+<td>AdministratorContactInfo</td>
+<td>Administrator</td>
+<td>Admin&#64;demo.local</td>
+</tr>
+<tr>
+<td>HRManager</td>
+<td>Task Emails</td>
+<td>HRManager&#64;demo.local</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Global Data</strong></p>
+<p>N/A</p>
+<p>Documented on Connect by:</p>
+<p><a href="https://www.protirus.com/"><img src="images/Protirus.png" alt="Protirus" /></a>​</p>
+
+
+        
+
+      </div>
+    </div>
+  <div id="comments-container" class="row">
+    <script src="https://giscus.app/client.js"
+        data-repo='alexhedley/symantec-connect-articles'
+        data-repo-id='R_kgDOH723Rw'
+        data-category-id='DIC_kwDOH723R84CXRav'
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">&#xA9; Alex Hedley 2015-2020</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/symantec-connect-articles/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/symantec-connect-articles/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/symantec-connect-articles/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/symantec-connect-articles/js/clean-blog.js'></script>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQV2ZWNX32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CQV2ZWNX32');
+    </script>
+  
+
+</body>
+
+</html>

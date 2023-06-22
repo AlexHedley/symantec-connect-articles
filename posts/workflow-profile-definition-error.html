@@ -7,18 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="AlexHedley">
 
-  <title>Alex Hedley - Workflow Profile Definition Error</title>
+  <title>Symantec Connect - Workflow Profile Definition Error</title>
 
   <link rel="canonical" href='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-profile-definition-error'>
 
-      <link type="application/rss+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.rss" />
-      <link type="application/atom+xml" rel="alternate" title="Alex Hedley" href="/symantec-connect-articles/feed.atom" />
+      <link type="application/rss+xml" rel="alternate" title="Symantec Connect" href="/symantec-connect-articles/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" title="Symantec Connect" href="/symantec-connect-articles/feed.atom" />
 
-  <meta name="application-name" content='Alex Hedley' />
-  <meta name="msapplication-tooltip" content='Alex Hedley' />
+  <meta name="application-name" content='Symantec Connect' />
+  <meta name="msapplication-tooltip" content='Symantec Connect' />
   <meta name="msapplication-starturl" content='/symantec-connect-articles/' />
 
-  <meta property="og:title" content='Alex Hedley - Workflow Profile Definition Error' />
+  <meta property="og:title" content='Symantec Connect - Workflow Profile Definition Error' />
+    <meta property="og:image" content='/symantec-connect-articles/images/header.png' />
   <meta property="og:type" content="website" />
   <meta property="og:url" content='https://alexhedley.github.io/symantec-connect-articles/posts/workflow-profile-definition-error' />
 
@@ -48,7 +49,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href='/symantec-connect-articles/'>Alex Hedley</a>
+    <a class="navbar-brand" href='/symantec-connect-articles/'>Symantec Connect</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fas fa-bars"></i>
@@ -62,6 +63,9 @@
     <a class="nav-link" href="/symantec-connect-articles/tags">Tags</a>
   </li>
   <li class="nav-item">
+    <a class="nav-link" href="/symantec-connect-articles/stats">Stats</a>
+  </li>
+  <li class="nav-item">
     <a class="nav-link" href="/symantec-connect-articles/about">About</a>
   </li>
 
@@ -72,7 +76,7 @@
 
 
   <!-- Page Header -->
-  <header class="masthead no-image">
+  <header class="masthead" style="background-image: url(&quot;/symantec-connect-articles/images/header.png&quot;)">
   <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
@@ -98,37 +102,72 @@
       <div id="content" class="col-md-12">
         <p>Have you ever tried to add a Profile and got an error:</p>
 <p>&quot;Value cannot be null. Parameter name: value&quot;</p>
-<p><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3401451-files_Add%20Profile%20Definition.png" alt="Add Profile Definition.png" /></p>
+<p><img src="images/article-3401451-files_Add+Profile+Definition.png" alt="Add Profile Definition.png" /></p>
 <hr />
-<p>You can't have a <span style="font-family: &quot;Arial&quot;, sans-serif; font-size: 10pt">uniqueidentifier as a datatype for your Foreign Key or include this another in your Profile.</span></p>
+<p>You can't have a uniqueidentifier as a datatype for your Foreign Key or include this another in your Profile.</p>
 <hr />
 <p>You can't have your Foreign Key Field (usually SessionID) as the <u>first</u> Field in your Table/View.</p>
 <hr />
-<p><span style="font-family: &quot;Arial&quot;, sans-serif; font-size: 10pt">Check the data types on the fields you are selecting. If you see any &quot;<em>nchar</em>&quot; change them to <em>nvarchar</em>.</p>
-<p>This shouldn't be a problem with respect to the data, anything you can fit in an nchar will also fit in nvarchar of the same size.</span></p>
+<p>Check the data types on the fields you are selecting. If you see any &quot;<em>nchar</em>&quot; change them to <em>nvarchar</em>.</p>
+<p>This shouldn't be a problem with respect to the data, anything you can fit in an nchar will also fit in nvarchar of the same size.</p>
 <hr />
 <p>If you look in the Logs</p>
-<p><INSTALL FOLDER>:\Program Files\Symantec\Workflow\Logs*<em>processmanager.log</em>*</p>
+<p>&lt;INSTALL FOLDER&gt;:\Program Files\Symantec\Workflow\Logs*<em>processmanager.log</em>*</p>
 <p>you should see a similar error:</p>
-<pre>Error,20 April 2015 08:11:43,[global] Application 'LogicBase.Ensemble' error [global] Client Host Information: [global] IP: ::1 [global] HostName: ::1 [global] -- error.ToString() -- [global] System.Web.HttpCompileException: e:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices\**<PROFILE NAME>**Service.asmx(76): error CS1001: Identifier expected [global] at System.Web.Compilation.AssemblyBuilder.Compile() [global] at System.Web.Compilation.BuildProvidersCompiler.PerformBuild() [global] at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath) [global] at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile) [global] at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile) [global] at System.Web.UI.WebServiceParser.GetCompiledType(String inputFile, HttpContext context) [global] at System.Web.Services.Protocols.WebServiceHandlerFactory.GetHandler(HttpContext context, String verb, String url, String filePath) [global] at System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) [global] at System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig) [global] at System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() [global] at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)</pre>
+<pre><code>Error,20 April 2015 08:11:43,[global] Application 'LogicBase.Ensemble' error
+[global] Client Host Information:
+[global] IP: ::1
+[global] HostName: ::1
+[global] -- error.ToString() --
+[global] System.Web.HttpCompileException: e:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices\&lt;PROFILE NAME&gt;Service.asmx(76): error CS1001: Identifier expected
+[global]    at System.Web.Compilation.AssemblyBuilder.Compile()
+[global]    at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+[global]    at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+[global]    at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+[global]    at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+[global]    at System.Web.UI.WebServiceParser.GetCompiledType(String inputFile, HttpContext context)
+[global]    at System.Web.Services.Protocols.WebServiceHandlerFactory.GetHandler(HttpContext context, String verb, String url, String filePath)
+[global]    at System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+[global]    at System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+[global]    at System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+[global]    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)
+</code></pre>
 <hr />
 <p>When a Profile is created an .asmx file is created in the following folder:</p>
-<p><INSTALL DRIVE>:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices**<PROFILE NAME>**Service.asmx</p>
+<p>&lt;INSTALL DRIVE&gt;:\Program Files\Symantec\Workflow\ProcessManager\ProfileServices**&lt;PROFILE NAME&gt;**Service.asmx</p>
 <p>There is also a record added to</p>
 <p>[ProcessManager].[dbo].[ProfileDefinition]</p>
 <hr />
 <p>To add a new Profile</p>
 <p><strong>Process Manager</strong> | <strong>Admin</strong> | <strong>Data</strong> | <strong>Lists and Profiles</strong></p>
 <p><strong>Add Profile Definition (Existing Table)</strong></p>
-<p><img src="/connect/sites/default/files/users/user-2946791/Add%20Profile%20Definition%20%28Existing%20Table%29.png" alt="Add Profile Definition (Existing Table).png" /></p>
+<p><img src="images/Add%2520Profile%2520Definition%2520%2528Existing%2520Table%2529.png" alt="Add Profile Definition (Existing Table).png" /></p>
 <hr />
-<p><a href="http://protirus.com/"><img src="https://higherlogicdownload.s3.amazonaws.com/BROADCOM/SymantecInlineImages/article-3401451-files_Protirus.png" alt="Protirus.png" /></a></p>
+<p><a href="http://protirus.com/"><img src="images/article-3401451-files_Protirus.png" alt="Protirus.png" /></a></p>
 
 
         
 
       </div>
     </div>
+  <div id="comments-container" class="row">
+    <script src="https://giscus.app/client.js"
+        data-repo='alexhedley/symantec-connect-articles'
+        data-repo-id='R_kgDOH723Rw'
+        data-category-id='DIC_kwDOH723R84CXRav'
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  </div>
   </div>
 
   <hr>
@@ -138,7 +177,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <p class="copyright">Copyright &#xA9; 2023</p>
+        <p class="copyright">&#xA9; Alex Hedley 2015-2020</p>
 
         <ul class="list-inline text-center small">
             <li class="list-inline-item">
