@@ -1,0 +1,18 @@
+Title: Stats
+IsPage: true
+ShowInNavbar: true
+Order: 400
+---
+
+@* @foreach (IDocument document in Model.GetChildren())
+{
+    @Html.Raw(document.GetString(Keys.Title))
+} *@
+
+@foreach(IGrouping<int, IDocument> group in Document
+                                            .GetChildren()
+                                            .GroupBy(x => x.GetDateTime(WebKeys.Published).Year)
+                                            .OrderByDescending(x => x.Key))
+{
+    <h1 class="bg-dark text-light p-2">@group.Key: #@group.Count()</h1>
+}

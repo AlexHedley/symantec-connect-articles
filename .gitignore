@@ -5,4 +5,7 @@
 src/cache/
 src/output/
 
+#REMOVE
 date.txt
+src/input/posts/_/
+src/input/images/_/
