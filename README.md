@@ -31,3 +31,9 @@ Symantec Connect Articles since migrated to [https://community.broadcom.com/](ht
 - http://localhost:5080
 
 `dotnet run -- serve` to serve `output` folder.
+
+## Development
+
+`dotnet run --environment Development -- preview`
+
+[appsettings.Development.json](src/appsettings.Development.json)
