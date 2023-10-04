@@ -5,8 +5,8 @@
 		<link>https://alexhedley.github.io/symantec-connect-articles</link>
 		<description>Welcome to my Symantec Connect Articles!</description>
 		<copyright>© Alex Hedley 2015-2020</copyright>
-		<pubDate>Sun, 02 Jul 2023 14:14:14 GMT</pubDate>
-		<lastBuildDate>Sun, 02 Jul 2023 14:14:14 GMT</lastBuildDate>
+		<pubDate>Wed, 04 Oct 2023 17:36:53 GMT</pubDate>
+		<lastBuildDate>Wed, 04 Oct 2023 17:36:53 GMT</lastBuildDate>
 		<item>
 			<title>DLP - API - REST</title>
 			<link>https://alexhedley.github.io/symantec-connect-articles/posts/dlp-api-rest</link>
@@ -192,38 +192,6 @@ TECH251590&lt;br&gt;
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
 		<item>
-			<title>ICDx - API</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-api</link>
-			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-api</guid>
-			<pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;h2 id="icdx-logo-icdx"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ICDx-logo-small.png" alt="ICDx Logo"&gt;&amp;nbsp;ICDx&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.symantec.com/theme/integrated-cyber-defense"&gt;Product Page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="api"&gt;API&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;ICDx provides both AMQP-based and REST APIs. The headers and message content are&amp;nbsp;identical for both APIs.&lt;br&gt;
-ICDx uses the Advanced Message Queuing Protocol (AMQP) as its primary protocol and&amp;nbsp;interface. AMQP is a networking protocol that enables conforming client applications to&amp;nbsp;communicate with conforming messaging middleware brokers.&lt;br&gt;
-The ICDx API is defined as a set of JSON-encoded messages and headers, which are sent&amp;nbsp;and received over a message bus. ICDx uses the RabbitMQ implementation of AMQP.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Symantec™ Integrated Cyber Defense Exchange 1.3.1 API Guide&lt;br&gt;
-&lt;a href="https://support.symantec.com/us/en/article.DOC11590.html"&gt;https://support.symantec.com/us/en/article.DOC11590.html&lt;/a&gt;&lt;br&gt;
-DOC11590&lt;/p&gt;
-&lt;h3 id="actions"&gt;Actions&lt;/h3&gt;
-&lt;p&gt;SEP&lt;/p&gt;
-&lt;p&gt;Remediate/file action example - Symantec Endpoint Protection Manager action adapter in ICDx&lt;br&gt;
-&lt;a href="https://support.symantec.com/us/en/article.HOWTO130637.html"&gt;https://support.symantec.com/us/en/article.HOWTO130637.html&lt;/a&gt;&lt;br&gt;
-HOWTO130637&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
 			<title>ICDx - Apps</title>
 			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-apps</link>
 			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
@@ -263,6 +231,78 @@ DOC11582&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/sentinel/connect-symantec"&gt;Connect your Symantec ICDx appliance&lt;/a&gt;&amp;nbsp;(MS Article)&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>ICDx</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx</link>
+			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/icdx</guid>
+			<pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;h2 id="icdx-logo-icdx"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ICDx-logo-small.png" alt="ICDx Logo"&gt;&amp;nbsp;ICDx&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.symantec.com/theme/integrated-cyber-defense"&gt;Product Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="documentation"&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;For a list of documentation either check the below Connect Article or Support.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=12610099-5aed-45ee-b7aa-65b4f3fba4be&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.symantec.com/home/ICDX_1.3.1?locale=EN_US"&gt;Help&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://support.symantec.com/us/en/product.icdx.html"&gt;Support&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="collectors-and-forwarders"&gt;Collectors and Forwarders&lt;/h3&gt;
+&lt;p&gt;There are a number of Collectors that can be configured to retrieve data, you can then Forward this onto your SIEM of choice.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=53c4ee6e-5498-481a-b18e-4606ed97d8d4&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;Collectors and Forwarders&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="api"&gt;API&lt;/h2&gt;
+&lt;p&gt;The API has a number of endpoints available for collecting data and actioning.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=761d6ab3-eae2-4704-917c-fa617e335611&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="apps"&gt;Apps&lt;/h2&gt;
+&lt;p&gt;A number of apps have been developed for Integration with ICDx, these include ServiceNow, Elastic Search, Splunk, to name a few:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5d513ef0-c5b2-45f8-936d-a74e9d06626a&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;Apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>ICDx - API</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-api</link>
+			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-api</guid>
+			<pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;h2 id="icdx-logo-icdx"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ICDx-logo-small.png" alt="ICDx Logo"&gt;&amp;nbsp;ICDx&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.symantec.com/theme/integrated-cyber-defense"&gt;Product Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="api"&gt;API&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ICDx provides both AMQP-based and REST APIs. The headers and message content are&amp;nbsp;identical for both APIs.&lt;br&gt;
+ICDx uses the Advanced Message Queuing Protocol (AMQP) as its primary protocol and&amp;nbsp;interface. AMQP is a networking protocol that enables conforming client applications to&amp;nbsp;communicate with conforming messaging middleware brokers.&lt;br&gt;
+The ICDx API is defined as a set of JSON-encoded messages and headers, which are sent&amp;nbsp;and received over a message bus. ICDx uses the RabbitMQ implementation of AMQP.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Symantec™ Integrated Cyber Defense Exchange 1.3.1 API Guide&lt;br&gt;
+&lt;a href="https://support.symantec.com/us/en/article.DOC11590.html"&gt;https://support.symantec.com/us/en/article.DOC11590.html&lt;/a&gt;&lt;br&gt;
+DOC11590&lt;/p&gt;
+&lt;h3 id="actions"&gt;Actions&lt;/h3&gt;
+&lt;p&gt;SEP&lt;/p&gt;
+&lt;p&gt;Remediate/file action example - Symantec Endpoint Protection Manager action adapter in ICDx&lt;br&gt;
+&lt;a href="https://support.symantec.com/us/en/article.HOWTO130637.html"&gt;https://support.symantec.com/us/en/article.HOWTO130637.html&lt;/a&gt;&lt;br&gt;
+HOWTO130637&lt;/p&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
@@ -310,46 +350,6 @@ DOC11583&lt;/p&gt;
 &lt;p&gt;Symantec™ Integrated Cyber Defense Exchange 1.3.1 API Guide&lt;br&gt;
 &lt;a href="https://support.symantec.com/us/en/article.DOC11590.html"&gt;https://support.symantec.com/us/en/article.DOC11590.html&lt;/a&gt;&lt;br&gt;
 DOC11590&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>ICDx</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx</link>
-			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/icdx</guid>
-			<pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;h2 id="icdx-logo-icdx"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ICDx-logo-small.png" alt="ICDx Logo"&gt;&amp;nbsp;ICDx&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.symantec.com/theme/integrated-cyber-defense"&gt;Product Page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="documentation"&gt;Documentation&lt;/h2&gt;
-&lt;p&gt;For a list of documentation either check the below Connect Article or Support.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=12610099-5aed-45ee-b7aa-65b4f3fba4be&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://help.symantec.com/home/ICDX_1.3.1?locale=EN_US"&gt;Help&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://support.symantec.com/us/en/product.icdx.html"&gt;Support&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="collectors-and-forwarders"&gt;Collectors and Forwarders&lt;/h3&gt;
-&lt;p&gt;There are a number of Collectors that can be configured to retrieve data, you can then Forward this onto your SIEM of choice.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=53c4ee6e-5498-481a-b18e-4606ed97d8d4&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;Collectors and Forwarders&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="api"&gt;API&lt;/h2&gt;
-&lt;p&gt;The API has a number of endpoints available for collecting data and actioning.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=761d6ab3-eae2-4704-917c-fa617e335611&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;API&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="apps"&gt;Apps&lt;/h2&gt;
-&lt;p&gt;A number of apps have been developed for Integration with ICDx, these include ServiceNow, Elastic Search, Splunk, to name a few:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5d513ef0-c5b2-45f8-936d-a74e9d06626a&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;Apps&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
