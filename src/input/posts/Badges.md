@@ -31,3 +31,5 @@ published: 2018-02-28
 ![Ribbon Red](images/Ribbon_Red.png "Ribbon Red")
 
 ![Trusted Advisor (Broadcom)](images/TrustedAdvisor_B.png "Trusted Advisor (Broadcom)")
+
+<!-- https://community.broadcom.com/landingpage/trustedadvisors -->
