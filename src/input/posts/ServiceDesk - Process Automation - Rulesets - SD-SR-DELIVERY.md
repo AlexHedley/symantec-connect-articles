@@ -12,6 +12,10 @@ published: 2018-05-03
 broadcomUrl: https://community.broadcom.com/search?executeSearch=true&SearchTerm=ServiceDesk%20-%20Process%20Automation%20-%20Rulesets%20-%20SD-SR-DELIVERY&l=1
 ---
 
+<?# Markdown ?>
+<?!^ "./../includes/posts/servicedesk-process-automation.md" /?>
+<?#/ Markdown ?>
+
 Admin | Process Automation | [Choose Service] | Service Dashboard
   
 Manage Rulesets

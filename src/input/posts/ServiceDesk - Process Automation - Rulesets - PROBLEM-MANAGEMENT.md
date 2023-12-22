@@ -12,6 +12,10 @@ published: 2018-05-03
 broadcomUrl: https://community.broadcom.com/symantecenterprise/viewdocument/servicedesk-process-automation-10?CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&tab=librarydocuments
 ---
 
+<?# Markdown ?>
+<?!^ "./../includes/posts/servicedesk-process-automation.md" /?>
+<?#/ Markdown ?>
+
 Admin | Process Automation | [Choose Service] | Service Dashboard
   
 Manage Rulesets

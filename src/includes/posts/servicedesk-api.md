@@ -7,8 +7,6 @@
   - [Incident](servicedesk-api-incident) [![Broadcom](../posts/images/broadcom.png "Broadcom")][6]
 - [Demo](servicedesk-api-demo) [![Broadcom](../posts/images/broadcom.png "Broadcom")][7]
 
-<!-- <?# Link "/foo/bar" /?> -->
-
 ---
 
 [1]: (https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=d54b726c-cf91-42f3-a0fe-436a3d559c14&amp;CommunityKey=04ead5e9-3643-4118-b853-afa5a58710c6&amp;tab=librarydocuments)
