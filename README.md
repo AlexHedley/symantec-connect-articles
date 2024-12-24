@@ -28,6 +28,8 @@ Symantec Connect Articles since migrated to [https://community.broadcom.com/](ht
 
 `dotnet run -- preview`
 
+`cd src && dotnet run -- preview`
+
 - http://localhost:5080
 
 `dotnet run -- serve` to serve `output` folder.
