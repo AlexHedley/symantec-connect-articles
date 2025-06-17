@@ -5,8 +5,58 @@
 		<link>https://alexhedley.github.io/symantec-connect-articles</link>
 		<description>Welcome to my Symantec Connect Articles!</description>
 		<copyright>© Alex Hedley 2015-2020</copyright>
-		<pubDate>Wed, 21 May 2025 18:39:30 GMT</pubDate>
-		<lastBuildDate>Wed, 21 May 2025 18:39:30 GMT</lastBuildDate>
+		<pubDate>Tue, 17 Jun 2025 21:50:46 GMT</pubDate>
+		<lastBuildDate>Tue, 17 Jun 2025 21:50:46 GMT</lastBuildDate>
+		<item>
+			<title>DLP - API - REST</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/dlp-api-rest</link>
+			<description>&lt;p&gt;What's New and What's Changed in Symantec Data Loss Prevention 15.x&lt;br&gt;
+DOC10601&lt;br&gt;
+&lt;a href="https://support.symantec.com/us/en/article.doc10601.html"&gt;https://support.symantec.com/us/en/article.doc10601.html&lt;/a&gt;&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/dlp-api-rest</guid>
+			<pubDate>Mon, 10 Feb 2020 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;What's New and What's Changed in Symantec Data Loss Prevention 15.x&lt;br /&gt;
+DOC10601&lt;br /&gt;
+&lt;a href="https://support.symantec.com/us/en/article.doc10601.html"&gt;https://support.symantec.com/us/en/article.doc10601.html&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;th&gt;15.7&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Enforce Server and platform features&lt;br /&gt;
+Table 1-5 New and changed Enforce Server and platform features for Symantec Data Loss Prevention 15.7&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Feature&lt;/th&gt;
+&lt;th&gt;Short description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;New incident reporting APIs based on REST&lt;/td&gt;
+&lt;td&gt;The new Incident Reporting REST API provides easier implementation and expanded functionality compared to the original Incident Reporting and Update API, which was based on SOAP.  &lt;br&gt;			See “New incident reporting APIs based on REST” on page 23.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;New incident reporting APIs based on REST&lt;br /&gt;
+Data Loss Prevention 15.7 makes available a set of public RESTful APIs for incident reporting.&lt;br /&gt;
+You can use the REST APIs to integrate incident data with other applications to provide dynamic reporting, create a custom incident remediation process, or support business processes that rely on DLP incidents.&lt;br /&gt;
+The new REST APIs replace the capabilities of the Incident Reporting and Update API, which was based on SOAP technology. REST APIs are generally better performing and easier to use that SOAP-based APIs. While the SOAP-based APIs for incident reporting are still supported, new integrations requiring custom incident reporting should leverage theREST-based APIs. The Incident Reporting and Update SOAP APIs are deprecated in Data Loss Prevention 15.7.&lt;br /&gt;
+For more information about the incident reporting REST APIs, refer to the DLP 15.7 REST API documentation.&lt;/p&gt;
+&lt;p&gt;Symantec™ Data Loss Prevention 15.7&lt;br /&gt;
+REST API Guide&lt;br /&gt;
+&lt;a href="https://apidocs.symantec.com/home/DLP15.7"&gt;https://apidocs.symantec.com/home/DLP15.7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SOAP-based Incident Reporting and Update API, and Incident Data Views&lt;br /&gt;
+The SOAP-based version of the Incident Reporting and Update API and Incident Data Views are deprecated.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
 		<item>
 			<title>DLP - API - PowerShell</title>
 			<link>https://alexhedley.github.io/symantec-connect-articles/posts/dlp-api-powershell</link>
@@ -49,56 +99,6 @@
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;What's New and What's Changed in Symantec Data Loss Prevention 15.x&lt;br /&gt;
-DOC10601&lt;br /&gt;
-&lt;a href="https://support.symantec.com/us/en/article.doc10601.html"&gt;https://support.symantec.com/us/en/article.doc10601.html&lt;/a&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Version&lt;/th&gt;
-&lt;th&gt;15.7&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;p&gt;Enforce Server and platform features&lt;br /&gt;
-Table 1-5 New and changed Enforce Server and platform features for Symantec Data Loss Prevention 15.7&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Feature&lt;/th&gt;
-&lt;th&gt;Short description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;New incident reporting APIs based on REST&lt;/td&gt;
-&lt;td&gt;The new Incident Reporting REST API provides easier implementation and expanded functionality compared to the original Incident Reporting and Update API, which was based on SOAP.  &lt;br&gt;			See “New incident reporting APIs based on REST” on page 23.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;New incident reporting APIs based on REST&lt;br /&gt;
-Data Loss Prevention 15.7 makes available a set of public RESTful APIs for incident reporting.&lt;br /&gt;
-You can use the REST APIs to integrate incident data with other applications to provide dynamic reporting, create a custom incident remediation process, or support business processes that rely on DLP incidents.&lt;br /&gt;
-The new REST APIs replace the capabilities of the Incident Reporting and Update API, which was based on SOAP technology. REST APIs are generally better performing and easier to use that SOAP-based APIs. While the SOAP-based APIs for incident reporting are still supported, new integrations requiring custom incident reporting should leverage theREST-based APIs. The Incident Reporting and Update SOAP APIs are deprecated in Data Loss Prevention 15.7.&lt;br /&gt;
-For more information about the incident reporting REST APIs, refer to the DLP 15.7 REST API documentation.&lt;/p&gt;
-&lt;p&gt;Symantec™ Data Loss Prevention 15.7&lt;br /&gt;
-REST API Guide&lt;br /&gt;
-&lt;a href="https://apidocs.symantec.com/home/DLP15.7"&gt;https://apidocs.symantec.com/home/DLP15.7&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;SOAP-based Incident Reporting and Update API, and Incident Data Views&lt;br /&gt;
-The SOAP-based version of the Incident Reporting and Update API and Incident Data Views are deprecated.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>DLP - API - REST</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/dlp-api-rest</link>
-			<description>&lt;p&gt;What's New and What's Changed in Symantec Data Loss Prevention 15.x&lt;br&gt;
-DOC10601&lt;br&gt;
-&lt;a href="https://support.symantec.com/us/en/article.doc10601.html"&gt;https://support.symantec.com/us/en/article.doc10601.html&lt;/a&gt;&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/dlp-api-rest</guid>
-			<pubDate>Mon, 10 Feb 2020 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;What's New and What's Changed in Symantec Data Loss Prevention 15.x&lt;br /&gt;
 DOC10601&lt;br /&gt;
 &lt;a href="https://support.symantec.com/us/en/article.doc10601.html"&gt;https://support.symantec.com/us/en/article.doc10601.html&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -192,6 +192,67 @@ TECH251590&lt;br&gt;
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
 		<item>
+			<title>ICDx - API</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-api</link>
+			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-api</guid>
+			<pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;h2 id="icdx-logo-icdx"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ICDx-logo-small.png" alt="ICDx Logo"&gt;&amp;nbsp;ICDx&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.symantec.com/theme/integrated-cyber-defense"&gt;Product Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="api"&gt;API&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ICDx provides both AMQP-based and REST APIs. The headers and message content are&amp;nbsp;identical for both APIs.&lt;br&gt;
+ICDx uses the Advanced Message Queuing Protocol (AMQP) as its primary protocol and&amp;nbsp;interface. AMQP is a networking protocol that enables conforming client applications to&amp;nbsp;communicate with conforming messaging middleware brokers.&lt;br&gt;
+The ICDx API is defined as a set of JSON-encoded messages and headers, which are sent&amp;nbsp;and received over a message bus. ICDx uses the RabbitMQ implementation of AMQP.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Symantec™ Integrated Cyber Defense Exchange 1.3.1 API Guide&lt;br&gt;
+&lt;a href="https://support.symantec.com/us/en/article.DOC11590.html"&gt;https://support.symantec.com/us/en/article.DOC11590.html&lt;/a&gt;&lt;br&gt;
+DOC11590&lt;/p&gt;
+&lt;h3 id="actions"&gt;Actions&lt;/h3&gt;
+&lt;p&gt;SEP&lt;/p&gt;
+&lt;p&gt;Remediate/file action example - Symantec Endpoint Protection Manager action adapter in ICDx&lt;br&gt;
+&lt;a href="https://support.symantec.com/us/en/article.HOWTO130637.html"&gt;https://support.symantec.com/us/en/article.HOWTO130637.html&lt;/a&gt;&lt;br&gt;
+HOWTO130637&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>ICDx - Collectors and Forwarders</title>
+			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-collectors-and-forwarders</link>
+			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
+			<author>AlexHedley</author>
+			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
+			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-collectors-and-forwarders</guid>
+			<pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;h2 id="icdx-logo-icdx"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ICDx-logo-small.png" alt="ICDx Logo"&gt;&amp;nbsp;ICDx&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.symantec.com/theme/integrated-cyber-defense"&gt;Product Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="collectors-and-forwarders"&gt;Collectors and Forwarders&lt;/h2&gt;
+&lt;p&gt;Collector and Forwarder Support matrix for ICDx&lt;br&gt;
+&lt;a href="https://support.symantec.com/us/en/article.tech252892.html"&gt;https://support.symantec.com/us/en/article.tech252892.html&lt;/a&gt;&lt;br&gt;
+TECH252892&lt;/p&gt;
+&lt;h3 id="dlp"&gt;DLP&lt;/h3&gt;
+&lt;p&gt;The DLP Incident Data Views is an excellent article on how data is related in DLP, this is very useful even if you don't use ICDx.&lt;/p&gt;
+&lt;p&gt;Preparing to configure Symantec Data Loss Prevention collectors&lt;br&gt;
+&lt;a href="https://support.symantec.com/us/en/article.HOWTO129892.html"&gt;https://support.symantec.com/us/en/article.HOWTO129892.html&lt;/a&gt;&lt;br&gt;
+HOWTO129892&lt;/p&gt;
+&lt;h3 id="sep"&gt;SEP&lt;/h3&gt;
+&lt;p&gt;etc&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
 			<title>ICDx</title>
 			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx</link>
 			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
@@ -228,38 +289,6 @@ TECH251590&lt;br&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://community.broadcom.com/symantecenterprise/viewdocument?DocumentKey=5d513ef0-c5b2-45f8-936d-a74e9d06626a&amp;amp;CommunityKey=b3175e2c-b99e-479f-ae6b-010f3cb2c8e9&amp;amp;tab=librarydocuments"&gt;Apps&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>ICDx - API</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-api</link>
-			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-api</guid>
-			<pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;h2 id="icdx-logo-icdx"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ICDx-logo-small.png" alt="ICDx Logo"&gt;&amp;nbsp;ICDx&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.symantec.com/theme/integrated-cyber-defense"&gt;Product Page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="api"&gt;API&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;ICDx provides both AMQP-based and REST APIs. The headers and message content are&amp;nbsp;identical for both APIs.&lt;br&gt;
-ICDx uses the Advanced Message Queuing Protocol (AMQP) as its primary protocol and&amp;nbsp;interface. AMQP is a networking protocol that enables conforming client applications to&amp;nbsp;communicate with conforming messaging middleware brokers.&lt;br&gt;
-The ICDx API is defined as a set of JSON-encoded messages and headers, which are sent&amp;nbsp;and received over a message bus. ICDx uses the RabbitMQ implementation of AMQP.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Symantec™ Integrated Cyber Defense Exchange 1.3.1 API Guide&lt;br&gt;
-&lt;a href="https://support.symantec.com/us/en/article.DOC11590.html"&gt;https://support.symantec.com/us/en/article.DOC11590.html&lt;/a&gt;&lt;br&gt;
-DOC11590&lt;/p&gt;
-&lt;h3 id="actions"&gt;Actions&lt;/h3&gt;
-&lt;p&gt;SEP&lt;/p&gt;
-&lt;p&gt;Remediate/file action example - Symantec Endpoint Protection Manager action adapter in ICDx&lt;br&gt;
-&lt;a href="https://support.symantec.com/us/en/article.HOWTO130637.html"&gt;https://support.symantec.com/us/en/article.HOWTO130637.html&lt;/a&gt;&lt;br&gt;
-HOWTO130637&lt;/p&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
@@ -303,35 +332,6 @@ DOC11582&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/sentinel/connect-symantec"&gt;Connect your Symantec ICDx appliance&lt;/a&gt;&amp;nbsp;(MS Article)&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>ICDx - Collectors and Forwarders</title>
-			<link>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-collectors-and-forwarders</link>
-			<description>&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;</description>
-			<author>AlexHedley</author>
-			<enclosure url="https://alexhedley.github.io/symantec-connect-articles/images/header.png" length="0" type="image" />
-			<guid>https://alexhedley.github.io/symantec-connect-articles/posts/icdx-collectors-and-forwarders</guid>
-			<pubDate>Mon, 09 Dec 2019 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;h2 id="icdx-logo-icdx"&gt;&lt;img src="https://alexhedley.github.io/symantec-connect-articles/images/ICDx-logo-small.png" alt="ICDx Logo"&gt;&amp;nbsp;ICDx&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Symantec’s Integrated Cyber Defense (ICD) Platform unifies products, services and partners to drive down the cost and complexity of cyber security, while protecting enterprises against sophisticated threats. ICD combines information protection, threat protection, identity management, compliance and other advanced services, powered by shared intelligence and automation across endpoints, networks, applications, and clouds.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.symantec.com/theme/integrated-cyber-defense"&gt;Product Page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="collectors-and-forwarders"&gt;Collectors and Forwarders&lt;/h2&gt;
-&lt;p&gt;Collector and Forwarder Support matrix for ICDx&lt;br&gt;
-&lt;a href="https://support.symantec.com/us/en/article.tech252892.html"&gt;https://support.symantec.com/us/en/article.tech252892.html&lt;/a&gt;&lt;br&gt;
-TECH252892&lt;/p&gt;
-&lt;h3 id="dlp"&gt;DLP&lt;/h3&gt;
-&lt;p&gt;The DLP Incident Data Views is an excellent article on how data is related in DLP, this is very useful even if you don't use ICDx.&lt;/p&gt;
-&lt;p&gt;Preparing to configure Symantec Data Loss Prevention collectors&lt;br&gt;
-&lt;a href="https://support.symantec.com/us/en/article.HOWTO129892.html"&gt;https://support.symantec.com/us/en/article.HOWTO129892.html&lt;/a&gt;&lt;br&gt;
-HOWTO129892&lt;/p&gt;
-&lt;h3 id="sep"&gt;SEP&lt;/h3&gt;
-&lt;p&gt;etc&lt;/p&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
